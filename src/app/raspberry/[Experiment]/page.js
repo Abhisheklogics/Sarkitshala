@@ -1,28 +1,31 @@
-
+'use client'
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import getData from "@/app/apiCall";
 
-
+import { useEffect,useState } from "react";
 const CodeBox = dynamic(() => import('@/components/code/code'), { ssr: false });
 const Loading = dynamic(() => import('@/components/loading/Loading'), { ssr: false });
-export async function generateMetadata({params})
- {
-  await params.Experiment
-  const ExperimentName=await getData(`${process.env.DOMAIN}/api/experiments/Res`,params.Experiment)
- 
-  return {
-    title:ExperimentName.ExperimentName
-  }
-}
-export default async function Page({ params }) {
-  let data=await getData(`${process.env.DOMAIN}/api/experiments/Res`,params.Experiment)
+
+export default  function Page({ params }) {
+   const [data, setData] = useState(null);
+    useEffect(() => {
+      const fetchExperimentData = async () => {
+        const res = await getData(`/api/experiments/Res`, params.Experiment);
+        setData(res);
+      };
+      fetchExperimentData();
+    }, [params.Experiment]);
+  
+    if (!data) {
+      return <p>Loading...</p>;
+    }
   
     return (
     <>
       <div className="h-fit w-full p-6 bg-white bg-cover rounded-xl leading-10 text-justify break-words 
 
-      md:h-fit md:w-[790px] md:ml-[330px] md:mt-[-630px] 2xl:ml-[430px] md:p-5 md:bg-white md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap ">
+      md:h-fit md:w-[790px] md:ml-[330px] md:mt-[-270px] 2xl:ml-[430px] md:p-5 md:bg-white md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap ">
       
           <h1 className="md:text-center capitalize md:text-2xl text-xl font-bold md:font-light
           md:text-center md:text-2xl">{data.ExperimentName}</h1>

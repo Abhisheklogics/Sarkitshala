@@ -1,5 +1,6 @@
-
+'use client'
 import getData from "../apiCall";
+import { useEffect,useState } from "react";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 const CodeBox=dynamic(()=>import('@/components/code/code'),{
@@ -10,39 +11,20 @@ const CodeBox=dynamic(()=>import('@/components/code/code'),{
 })
 
 
-export const metadata = {
-  title: 'Raspberry Pi with LED: A Beginner\'s Guide to Circuit Design', // Descriptive and engaging title
-  description: 'Explore how to control LEDs using Raspberry Pi. Learn basic circuit design and programming to make LED projects with Raspberry Pi for beginners in electronics and IoT.',
-  openGraph: {
-    title: 'Raspberry Pi with LED: A Beginner\'s Guide to Circuit Design',
-    description: 'A step-by-step guide to controlling LEDs with Raspberry Pi. Perfect for beginners learning basic circuit design and programming in the world of electronics.',
-    url: 'https://adhayanshala.netlify.app/raspberry-pi-with-led', // Replace with actual URL
-    images: [
-      {
-        url: 'https://example.com/path-to-image.jpg', // Use an image that is relevant to the content
-        width: 1200,
-        height: 630,
-        alt: 'Raspberry Pi with LED circuit design'
-      }
-    ],
-    site_name: 'CircuitHub',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Raspberry Pi with LED: A Beginner\'s Guide to Circuit Design',
-    description: 'Control LEDs with Raspberry Pi. A perfect beginner guide for Raspberry Pi projects and electronics enthusiasts.',
-    image: 'https://example.com/path-to-image.jpg', // Same high-quality image as OpenGraph
-    creator: '@CircuitHub', // Your Twitter handle or site's handle
-  },
-  keywords: 'Raspberry Pi, LED, Circuit Design, Electronics, IoT Projects, Raspberry Pi Tutorials, LED Control, Embedded Systems, DIY Electronics, Programming', // Relevant keywords for SEO
-  canonical: 'https://adhayanshala.netlify.app/raspberry-pi-with-led', // Replace with actual canonical URL
-  robots: 'index, follow', // Let search engines index and follow the page
-  author: 'CircuitHub Team',
-};
-
-export default  async function Page() {
+export default   function Page() {
   
-  let data =await getData(`${process.env.DOMAIN}/api/experiments/Res`, 1);
+  const [data, setData] = useState(null);
+      useEffect(() => {
+        const fetchExperimentData = async () => {
+          const res = await getData(`/api/experiments/Res`, 1);
+          setData(res);
+        };
+        fetchExperimentData();
+      }, []);
+    
+      if (!data) {
+        return <p>Loading...</p>;
+      }
   
 
   return (

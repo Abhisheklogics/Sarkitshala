@@ -1,4 +1,5 @@
-
+'use client'
+import { useState,useEffect } from "react";
 import getData from "@/app/apiCall";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -9,53 +10,24 @@ const CodeBox = dynamic(() => import('@/components/code/code'), {
 const Loading = dynamic(() => import('@/components/loading/Loading'), {
   ssr: false
 });
-export async function generateStaticParams() {
-  console.log('Fetching from:', `${process.env.DOMAIN}/api/experiments/Arduino`);
-  
-  let res = await fetch(`${process.env.DOMAIN}/api/experiments/Arduino`);
-  console.log('Response:', res);
-
-  let data = await res.json();
-  console.log('Data:', data);
-
-  return data.map(({ ExperimentId }) => ExperimentId);
-}
-
-export const metadata = {
-  title: 'Arduino with LED: A Complete Guide for Beginners', // More descriptive title
-  description: 'Learn how to use Arduino with LED in your projects. Explore step-by-step instructions for beginners to create amazing circuits and experiments using Arduino and LED technology.',
-  openGraph: {
-    title: 'Arduino with LED: A Complete Guide for Beginners',
-    description: 'Step-by-step guide to using Arduino with LED, including basic tutorials and circuit design tips. Perfect for beginners exploring electronics and programming.',
-    url: 'https://adhayanshala.netlify.app/arduino-with-led', // Dynamic URL (update with actual URL)
-    images: [
-      {
-        url: 'https://example.com/path-to-image.jpg', // Use a relevant and high-quality image for OpenGraph
-        width: 1200,
-        height: 630,
-        alt: 'Arduino with LED experiment - Step-by-step guide'
-      }
-    ],
-    site_name: 'CircuitHub',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'Arduino with LED: A Complete Guide for Beginners',
-    description: 'Learn how to use Arduino with LED in your projects. A great resource for beginners in electronics and programming.',
-    image: 'https://example.com/path-to-image.jpg', // Same high-quality image as above
-    creator: '@CircuitHub', // Add the creator's Twitter handle for better engagement
-  },
-  keywords: 'Arduino, LED, Electronics, Circuit Design, Arduino Projects, Beginner Electronics, IoT, Programming with Arduino, Arduino Tutorial', // More targeted keywords
-  canonical: 'https://adhayanshala.netlify.app/arduino', // Ensure this is the correct URL to prevent duplicate content
-  robots: 'index, follow', // Allow search engines to index the page and follow links
-  author: 'CircuitHub Team', // Add author information
-};
 
  
 
-export default async function Page() {
- 
-let data=  await getData(`${process.env.DOMAIN}/api/experiments/Arduino`,1)
+export default function Page() {
+
+ const [data, setData] = useState(null);
+  useEffect(() => {
+    const fetchExperimentData = async () => {
+      const res = await getData(`/api/experiments/Arduino`, 1);
+      setData(res);
+    };
+    fetchExperimentData();
+  }, []);
+
+  if (!data) {
+    return <p>Loading...</p>;
+  }
+
   return (
     <>
     

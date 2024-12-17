@@ -1,4 +1,4 @@
-
+'use client'
 
 import dynamic from "next/dynamic";
 
@@ -8,20 +8,22 @@ const CodeBox=dynamic(()=>import('@/components/code/code'),{
  const Loading=dynamic(()=>import('@/components/loading/Loading'),{
   ssr:false
 })
-export async function generateMetadata({params})
- {
-  await params.Experiment
-  const ExperimentName=await getData(`${process.env.DOMAIN}/api/experiments/Esp`,params.Experiment)
- 
-  return {
-    title:ExperimentName.ExperimentName
-  }
-}
 import getData from "@/app/apiCall";
-
-export default  async function Page({params}) {
+import { useEffect,useState } from "react";
+export default   function Page({params}) {
   
-  let data=getData(`${process.env.DOMAIN}/api/experiments/Esp`,params.Experiment)
+ const [data, setData] = useState(null);
+     useEffect(() => {
+       const fetchExperimentData = async () => {
+         const res = await getData(`/api/experiments/Esp`, params.Experiment);
+         setData(res);
+       };
+       fetchExperimentData();
+     }, [params.Experiment]);
+   
+     if (!data) {
+       return <p>Loading...</p>;
+     }
  
     return (
         <>

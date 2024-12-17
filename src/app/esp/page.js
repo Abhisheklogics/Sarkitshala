@@ -1,45 +1,27 @@
- 
+ 'use client'
 import getData from "@/app/apiCall";
 import dynamic from "next/dynamic";
 const Loading=dynamic(()=>import('@/components/loading/Loading'),{
   ssr:false
 })
-
+import { useEffect,useState } from "react";
 const CodeBox=dynamic(()=>import('@/components/code/code'),{
   ssr:false
 })
-export const metadata = {
-  title: 'ESP with DHT11: Interfacing Humidity & Temperature Sensor', // Descriptive title
-  description: 'Learn how to interface the DHT11 temperature and humidity sensor with an ESP board. A complete guide for beginners to build weather monitoring systems and IoT projects using ESP and DHT11.',
-  openGraph: {
-    title: 'ESP with DHT11: Interfacing Humidity & Temperature Sensor',
-    description: 'Step-by-step guide to interfacing the DHT11 sensor with ESP. Learn to collect and display temperature and humidity data, ideal for IoT and smart home projects.',
-    url: 'https://adhayanshala.netlify.app/esp-with-dht11', // Replace with actual URL
-    images: [
-      {
-        url: 'https://example.com/path-to-image.jpg', // Ensure the image is relevant to the content
-        width: 1200,
-        height: 630,
-        alt: 'ESP with DHT11 sensor setup for weather monitoring'
-      }
-    ],
-    site_name: 'CircuitHub',
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: 'ESP with DHT11: Interfacing Humidity & Temperature Sensor',
-    description: 'Build your own IoT project with ESP and DHT11 sensor for weather monitoring. Great for beginners and hobbyists.',
-    image: 'https://example.com/path-to-image.jpg', // Same image as OpenGraph
-    creator: '@CircuitHub', // Your Twitter handle or site's handle
-  },
-  keywords: 'ESP, DHT11, Temperature Sensor, Humidity Sensor, IoT Projects, Electronics, Weather Monitoring, Embedded Systems, DIY Electronics, Smart Home', // Broader keyword targeting
-  canonical: 'https://adhayanshala.netlify.app/esp-with-dht11', // Replace with actual canonical URL
-  robots: 'index, follow', // Allow search engines to index and follow the page
-  author: 'CircuitHub Team',
-};
 
-export default async function Page() {
- let data=await getData(`${process.env.DOMAIN}/api/experiments/Esp`, 1) 
+export default  function Page() {
+ const [data, setData] = useState(null);
+     useEffect(() => {
+       const fetchExperimentData = async () => {
+         const res = await getData(`/api/experiments/Esp`, 1);
+         setData(res);
+       };
+       fetchExperimentData();
+     }, []);
+   
+     if (!data) {
+       return <p>Loading...</p>;
+     } 
  
   return (
    

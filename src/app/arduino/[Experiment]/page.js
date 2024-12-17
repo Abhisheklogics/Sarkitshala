@@ -1,4 +1,5 @@
-
+'use client'
+import { useState,useEffect } from "react";
 import getData from "@/app/apiCall";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -10,44 +11,20 @@ const Loading = dynamic(() => import('@/components/loading/Loading'), {
   ssr: false
 });
 
-export async function generateMetadata({ params }) {
-  await params.Experiment;
-  const ExperimentName = await getData(`${process.env.DOMAIN}/api/experiments/Arduino`, params.Experiment);
 
-  return {
-    title: ExperimentName.ExperimentName, // Clear and concise title
-    description: ExperimentName.overview, // Engaging description with target keywords
-    openGraph: {
-      title: ExperimentName.ExperimentName,
-      description: ExperimentName.overview,
-      url: `https://adhayanshala.netlify.app/${params.Experiment}`, // Dynamic URL based on the experiment
-      images: [
-        {
-          url: ExperimentName.image1, // Main image for OpenGraph (ensure it's optimized and relevant)
-          width: 1200,
-          height: 630,
-          alt: `${ExperimentName.ExperimentName} - Visual representation of the experiment`
-        }
-      ],
-      site_name: "circuitHub", // Clear site branding
-    },
-    twitter: {
-      card: "summary_large_image",
-      title: ExperimentName.ExperimentName,
-      description: ExperimentName.overview,
-      image: ExperimentName.image1, // Ensure high-quality image is used
-      creator: "@CircuitHub", // Twitter handle for the creator or site
-    },
-    keywords: `Arduino, ESP, Soil Moisture, IoT Projects, Embedded Systems, Electronics, Circuit Design, Smart Agriculture`, // More targeted keywords
-    canonical: `https://adhayanshala.netlify.app/${params.Experiment}`, // Canonical URL to avoid duplicate content issues
-    robots: "index, follow", // Ensure search engines can index the page
-    author: "CircuitHub Team", // Add author information
-  };
-}
+export default  function Page({ params }) {
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    const fetchExperimentData = async () => {
+      const res = await getData(`/api/experiments/Arduino`, params.Experiment);
+      setData(res);
+    };
+    fetchExperimentData();
+  }, [params.Experiment]);
 
-export default async function Page({ params }) {
-  
-let data=await getData(`${process.env.DOMAIN}/api/experiments/Arduino`,params.Experiment)
+  if (!data) {
+    return <p>Loading...</p>;
+  }
   if (data.pinDiagramInfo) {
     console.log('hello');
     return (
