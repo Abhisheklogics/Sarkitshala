@@ -2,26 +2,26 @@
 import Link from "next/link";
 import { useState } from "react";
 
-// A reusable button component for toggling sections
-const ToggleButton = ({ toggle, setToggle, label }) => (
+// Reusable button component for toggling sections
+const ToggleButton = ({ label, onClick }) => (
   <button
-    onClick={setToggle}
-    className="md:py-2 px-1 md:w-[310px] hover:bg-gray-200 text-center mb-6"
+    onClick={onClick}
+    className="md:py-2 px-1 relative md:w-[210px] h-fit hover:bg-gray-200 text-center mb-6"
   >
     <h1 className="font-bold text-gray-800 md:text-left">{label}</h1>
   </button>
 );
 
-// Reusable list component for experiment links
+
 const ExperimentLinks = ({ toggle, links }) => (
   <ul className={`${toggle ? "block" : "hidden"} space-y-4`}>
-    {links.map((experiment, index) => (
+    {links.map((link, index) => (
       <li key={index}>
         <Link
-          href={experiment.href}
-          className="block px-4 py-2 rounded-md text-sm text-gray-900 hover:bg-gray-200"
+          href={link.href}
+          className="block py-2  rounded-md text-sm text-gray-900 hover:bg-gray-200"
         >
-          {experiment.text}
+          {link.text}
         </Link>
       </li>
     ))}
@@ -70,7 +70,7 @@ export default function RootLayout({ children }) {
 
   return (
     <>
-      {/* Mobile toggle button */}
+    
       <button
         className="md:hidden block bg-blue-500 text-white p-2 mt-36 rounded-md m-4"
         onClick={() => handleToggle("toggle1")}
@@ -88,9 +88,8 @@ export default function RootLayout({ children }) {
           {experiments.map((experiment) => (
             <div key={experiment.key}>
               <ToggleButton
-                toggle={toggles[experiment.key]}
-                setToggle={() => handleToggle(experiment.key)}
                 label={experiment.label}
+                onClick={() => handleToggle(experiment.key)}
               />
               <ExperimentLinks
                 toggle={toggles[experiment.key]}
@@ -102,7 +101,7 @@ export default function RootLayout({ children }) {
       </div>
 
       {/* Article section */}
-      <div className="hidden md:block md:absolute md:ml-[1100px] md:mt-[-630px] 2xl:ml-[1200px] md:h-[320px] md:w-72 md:bg-white md:p-1 md:rounded">
+      <div className="hidden md:block md:absolute md:ml-[1100px] md:mt-[-50px] 2xl:ml-[1240px] md:h-[320px] md:w-72 md:bg-white md:p-1 md:rounded">
         <h1 className="md:mt-2 md:text-2xl md:ml-4">In this Article</h1>
         <ul className="md:ml-4 md:mt-4 md:grid md:gap-2 md:text-sm">
           <li>Introduction</li>
