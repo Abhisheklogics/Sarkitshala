@@ -72,9 +72,9 @@ export default  function Page() {
             md:text-2xl md:mt-14 ">{data.pinDiagramInfo}</h2>
            
               
-            <div className="ml-20  h-[300px]
+            <div className="ml-20  mt-10
             md:ml-20  md:h-[300px]">
-              <Image height={400} width={500}  className="md:ml-[-40px]
+              <Image height={400} width={500}  className="md:ml-[-40px] h-fit w-fit
            " loading="lazy"
           src={data.image3} alt="Experiment Image" />
              

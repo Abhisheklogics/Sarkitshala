@@ -33,7 +33,7 @@ export default   function Page() {
        
         <div className="h-fit w-full p-6 bg-white bg-cover rounded-xl leading-10 text-justify break-words  
 
-          md:h-fit md:w-[750px] 2xl:md:w-[800px]  md:ml-[330px] md:mt-32   2xl:ml-[400px]
+          md:h-fit md:w-[750px] 2xl:md:w-[800px]  md:ml-[330px] md:mt-28   2xl:ml-[400px]
       md:p-5 md:bg-white md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap 
       ">
          
