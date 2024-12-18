@@ -3,12 +3,19 @@ import Link from "next/link";
 import { useState } from "react";
 
 // Reusable button component for toggling sections
-const ToggleButton = ({ label, onClick }) => (
+const ToggleButton = ({ label, onClick, isOpen }) => (
   <button
     onClick={onClick}
-    className="md:py-2 px-1 relative md:w-[210px] h-fit hover:bg-gray-200 text-center mb-6"
+    className="md:py-2 py-3 px-1 relative w-full md:w-[310px] h-fit hover:bg-gray-100 text-left mb-6"
   >
-    <h1 className="font-bold text-gray-800 md:text-left">{label}</h1>
+    <div className="flex justify-between items-center">
+      <h1 className="font-bold text-gray-800">{label}</h1>
+      <span
+        className={`transform transition-transform ${isOpen ? 'rotate-180' : ''} md:absolute md:right-4 top-1`}
+      >
+        ▼
+      </span>
+    </div>
   </button>
 );
 
@@ -19,7 +26,7 @@ const ExperimentLinks = ({ toggle, links }) => (
       <li key={index}>
         <Link
           href={link.href}
-          className="block py-2  rounded-md text-sm text-gray-900 hover:bg-gray-200"
+          className="block py-2 rounded-md text-sm text-gray-900 text-center  hover:bg-gray-200"
         >
           {link.text}
         </Link>
@@ -70,7 +77,7 @@ export default function RootLayout({ children }) {
 
   return (
     <>
-    
+      {/* Toggle button for mobile view */}
       <button
         className="md:hidden block bg-blue-500 text-white p-2 mt-36 rounded-md m-4"
         onClick={() => handleToggle("toggle1")}
@@ -82,14 +89,15 @@ export default function RootLayout({ children }) {
       <div
         className={`${
           toggles.toggle1 ? "block" : "hidden"
-        } md:block relative flex flex-col ml-1 2xl:ml-36`}
+        } md:block relative flex flex-col ml-1 2xl:ml-10 transition-transform bg-white`}
       >
-        <div className="inset-0 md:w-72 bg-white rounded-md p-4 mt-4 md:ml-12 md:mt-40 2xl:ml-0 transition-transform">
+        <div className="inset-0 md:w-72 md:bg-white md:absolute rounded-md p-4 mt-4 md:ml-12 md:mt-40 2xl:ml-0">
           {experiments.map((experiment) => (
             <div key={experiment.key}>
               <ToggleButton
                 label={experiment.label}
                 onClick={() => handleToggle(experiment.key)}
+                isOpen={toggles[experiment.key]}
               />
               <ExperimentLinks
                 toggle={toggles[experiment.key]}
@@ -100,8 +108,8 @@ export default function RootLayout({ children }) {
         </div>
       </div>
 
-      {/* Article section */}
-      <div className="hidden md:block md:absolute md:ml-[1100px] md:mt-[-50px] 2xl:ml-[1240px] md:h-[320px] md:w-72 md:bg-white md:p-1 md:rounded">
+      {/* Sidebar section on the right for "In this Article" */}
+      <div className="hidden md:block md:absolute md:ml-[1100px] md:mt-[150px] 2xl:ml-[1250px] md:h-[320px] md:w-72 md:bg-white md:p-1 md:rounded">
         <h1 className="md:mt-2 md:text-2xl md:ml-4">In this Article</h1>
         <ul className="md:ml-4 md:mt-4 md:grid md:gap-2 md:text-sm">
           <li>Introduction</li>

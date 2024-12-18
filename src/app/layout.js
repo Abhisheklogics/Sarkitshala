@@ -44,9 +44,9 @@ export default function RootLayout({ children }) {
         <meta name="description" content={metadata.description} />
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="/favicon.ico" />
-        {/* Include additional meta tags here */}
+        
       </head>
-      <body className={`${inter.className} bg-#EAF0F1`}>
+      <body className={`${inter.className} `}>
         <Header />
         <main>{children}</main>
       </body>

@@ -1,10 +1,12 @@
  'use client'
 import getData from "@/app/apiCall";
 import dynamic from "next/dynamic";
+import Image from "next/image";
 const Loading=dynamic(()=>import('@/components/loading/Loading'),{
   ssr:false
 })
 import { useEffect,useState } from "react";
+
 const CodeBox=dynamic(()=>import('@/components/code/code'),{
   ssr:false
 })
@@ -20,8 +22,10 @@ export default  function Page() {
      }, []);
    
      if (!data) {
-       return <p>Loading...</p>;
-     } 
+      return <p><Loading/></p>;
+    }
+
+
  
   return (
    
@@ -39,8 +43,8 @@ export default  function Page() {
           ">{data.ExperimentName}</h1>
          
            <div className="mt-6
-           md:ml-40 md:mt-6"> <img className="h-60 w-fit
-           md:h-[250px] md:w-[400px]" loading="lazy"
+           md:ml-40 md:mt-6"> <Image height={400} width={500}  className="md:ml-[-40px]
+           " loading="lazy"
           src={data.image1} alt="Experiment Image" /></div>
           <h1 className="mt-4  text-sm ml-2
           md:mt-4  md:text-sm md:ml-2 font-bold">Made By : Aman Raj</h1>
@@ -58,7 +62,9 @@ export default  function Page() {
             <div className="ml-12 mt-8
             md:ml-12 md:mt-8">
              
-                <img className="w-full h-44 ml-[-40px] md:w-fit md:h-fit"  loading="lazy" src={data.image2} alt="Specifications" />
+             <Image height={500} width={700}  className="
+           " loading="lazy"
+          src={data.image2} alt="Experiment Image" />
              
             </div>
     
@@ -68,9 +74,9 @@ export default  function Page() {
               
             <div className="ml-20  h-[300px]
             md:ml-20  md:h-[300px]">
-             
-                <img  className='md:mt-2 md:h-[300px] md:w-[420px]
-                md:mt-6 md:h-44 md:w-[300px]' loading="lazy" src={data.image3} alt="Specifications" />
+              <Image height={400} width={500}  className="md:ml-[-40px]
+           " loading="lazy"
+          src={data.image3} alt="Experiment Image" />
              
             </div>
     
@@ -81,8 +87,9 @@ export default  function Page() {
             <div className="ml-32 mt-10
             md:ml-60   md:mt-10">
              
-             <img className="md:h-80 md:w-96 md:ml-0
-             md:h-72 md:w-72" loading="lazy" src={data.image4} alt="Specifications" />
+             <Image height={400} width={400}  className="md:ml-[-40px]
+           " loading="lazy"
+          src={data.image4} alt="Experiment Image" />
           
          </div>
             

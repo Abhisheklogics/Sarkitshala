@@ -1,6 +1,7 @@
 'use client'
 
 import dynamic from "next/dynamic";
+import Image from "next/image";
 
 const CodeBox=dynamic(()=>import('@/components/code/code'),{
   ssr:false
@@ -22,8 +23,10 @@ export default   function Page({params}) {
      }, [params.Experiment]);
    
      if (!data) {
-       return <p>Loading...</p>;
-     }
+      return <p><Loading/></p>;
+    }
+
+
  
     return (
         <>
@@ -33,7 +36,7 @@ export default   function Page({params}) {
       ">
         <h1 className="  text-center text-2xl md:text-center md:text-2xl
       ">{data.ExperimentName}</h1>
-       <div className="md:ml-32 md:mt-6 mt-6"> <img className="md:h-60 md:w-96 md:ml-10" loading="lazy"
+       <div className="md:ml-32 md:mt-6 mt-6"> <Image  height={400} width={500} className=" " loading="lazy"
       src={data.image1} alt="Experiment Image" /></div>
        <h1 className="md:mt-4  md:text-sm md:ml-2 mt-4  text-sm ml-2 font-bold">madeBy : Aman raj</h1>
         <h2 className="md:text-sm md:mt-2 ">{data.madeBy}</h2>
@@ -45,20 +48,23 @@ export default   function Page({params}) {
       
         <div className="md:ml-12 md:mt-8">
          
-            <img className="md:h-fit md:w-fit " loading="lazy" src={data.image2} alt="Specifications" />
+        <Image  height={400} width={700} className="ml-10 " loading="lazy"
+      src={data.image2} alt="Experiment Image" />
          
         </div>
 
         <h2 className="md:text-2xl md:mt-14 ">{data.pinDiagramInfo}</h2>
        
           
-     {data.ExperimentId == '1' ?<div className="md:ml-20  md:h-[300px]">
+     {data.ExperimentId == '1' || data.ExperimentId == '2' || data.ExperimentId == '3'|| data.ExperimentId == '4'|| data.ExperimentId == '5'|| data.ExperimentId == '7' ?<div className="md:ml-20  ">
          
-         <img  className='md:mt-2 md:h-[300px] md:w-[420px]' loading="lazy" src={data.image3} alt="Specifications" />
+      <Image  height={500} width={600} className=" md:mt-10 md:ml-40" loading="lazy"
+      src={data.image3} alt="Experiment Image" />
       
      </div>:<div className="md:ml-20  md:h-[300px]">
          
-         <img  className='md:mt-10 md:h-fit md:w-fit md:ml-32' loading="lazy" src={data.image3} alt="Specifications" />
+         <Image  height={300} width={200} className="ml-40 md:mt-20 " loading="lazy"
+      src={data.image3} alt="Experiment Image" />
       
      </div>} 
       
@@ -68,7 +74,8 @@ export default   function Page({params}) {
         
         <div className="md:ml-32 md:mt-10">
          
-         <img className="md:h-80 md:w-96 md:ml-24" loading="lazy" src={data.image4} alt="Specifications" />
+        <Image  height={400} width={500} className=" md:ml-20" loading="lazy"
+      src={data.image4} alt="Experiment Image" />
       
      </div>
         

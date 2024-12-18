@@ -23,7 +23,7 @@ export default   function Page() {
       }, []);
     
       if (!data) {
-        return <p>Loading...</p>;
+        return <p><Loading/></p>;
       }
   
 
@@ -33,7 +33,7 @@ export default   function Page() {
        
         <div className="h-fit w-full p-6 bg-white bg-cover rounded-xl leading-10 text-justify break-words  
 
-          md:h-fit md:w-[750px] 2xl:md:w-[790px]  md:ml-[330px] md:mt-[-300px]   2xl:ml-[430px]
+          md:h-fit md:w-[750px] 2xl:md:w-[800px]  md:ml-[330px] md:mt-32   2xl:ml-[400px]
       md:p-5 md:bg-white md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap 
       ">
          
@@ -42,7 +42,7 @@ export default   function Page() {
               md:text-center md:text-2xl 
       ">{data.ExperimentName}</h1>
         <div className=" mt-6
-        md:ml-32 md:mt-6"><img  className="h-52 w-full 
+        md:ml-32 md:mt-6"><Image height={300} width={400} className=" 
         md:h-[260px] md:w-[470px] md:ml-0"
          src={data.image1} alt="Experiment Image" /></div>
         <h2 className="text-sm mt-2 font-bold

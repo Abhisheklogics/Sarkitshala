@@ -86,9 +86,9 @@ export default function RootLayout({ children }) {
         </ul>
       </div>
 
-      {/* Main Content */}
+      
       <div className="flex-1 p-4">
-        {/* Main content goes here */}
+      
       </div>
     </div>
  <div>{children}</div>

@@ -17,7 +17,7 @@ const Footer = () => {
      
         <div className="mb-4 md:mb-0">
           <h1 className="text-2xl font-bold">Your Logo</h1>
-          <p className="text-sm text-white">© 2024 Your Website Name.</p>
+          <p className="text-sm text-white">Sarkitshala</p>
         </div>
 
         
@@ -31,14 +31,14 @@ const Footer = () => {
         
         <div className="mt-4 md:mt-0 text-center md:text-left">
           <p className="text-sm text-gray-300 mb-2">Contact Us</p>
-          <p className="text-sm text-gray-300">123 Street, City</p>
+          <p className="text-sm text-gray-300">dayalbagh education institute</p>
         </div>
       </div>
 
       
       <div className="bg-green-900">
         <div className="max-w-7xl mx-auto px-4 py-2 text-sm text-gray-300 text-center md:text-left">
-          <p>Privacy Policy | Terms of Service</p>
+          
         </div>
       </div>
     </footer>

@@ -11,7 +11,6 @@ const Loading = dynamic(() => import('@/components/loading/Loading'), {
   ssr: false
 });
 
- 
 
 export default function Page() {
 
@@ -24,16 +23,19 @@ export default function Page() {
     fetchExperimentData();
   }, []);
 
-  if (!data) {
-    return <p>Loading...</p>;
-  }
-
+  
+if(!data)
+{
+  return (
+    <Loading/>
+  )
+}
   return (
     <>
-    
+   
     
       <div className="h-fit w-full p-5 bg-white bg-cover rounded-xl leading-8 text-justify break-words font-light  
-      md:h-fit md:w-[790px] md:ml-[320px] md:mt-[-640px] 2xl:ml-[430px] md:p-5 md:bg-white md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap ">
+      md:h-fit md:w-[790px] md:ml-[320px] md:mt-[-740px] 2xl:ml-[430px] md:p-5 md:bg-white md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap ">
        
           <h1 className=" capitalize text-2xl md:text-center md:text-2xl md:text-center capitalize md:text-2xl text-xl font-bold md:font-light
 ">
