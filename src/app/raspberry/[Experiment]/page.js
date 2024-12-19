@@ -1,14 +1,22 @@
-
+'use client'
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import getData from "@/app/apiCall";
 
-
+import { useEffect,useState } from "react";
 const CodeBox = dynamic(() => import('@/components/code/code'), { ssr: false });
 const Loading = dynamic(() => import('@/components/loading/Loading'), { ssr: false });
 
-export default async function Page({ params }) {
-   const data = await getData(`${process.env.DOMAIN}/api/experiments/Esp`, params.Experiment)
+export default  function Page({ params }) {
+   const [data, setData] = useState(null);
+    useEffect(() => {
+      const fetchExperimentData = async () => {
+        const res = await getData(`/api/experiments/Res`, params.Experiment);
+        setData(res);
+      };
+      fetchExperimentData();
+    }, [params.Experiment]);
+  
     if (!data) {
         return <p><Loading/></p>;
       }

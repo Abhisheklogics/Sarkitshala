@@ -1,8 +1,8 @@
-
+'use client'
 
 import dynamic from "next/dynamic";
 import Image from "next/image";
-
+import { useEffect,useState } from "react";
 const CodeBox=dynamic(()=>import('@/components/code/code'),{
   ssr:false
 })
@@ -12,9 +12,17 @@ const CodeBox=dynamic(()=>import('@/components/code/code'),{
 import getData from "@/app/apiCall";
 
 
-export const revalidate = 3600*24*30 
-export default   async function Page({params}) {
-  const data = await getData(`${process.env.DOMAIN}/api/experiments/Esp`, params.Experiment)
+
+export default   function Page({params}) {
+ const [data, setData] = useState(null);
+       useEffect(() => {
+         const fetchExperimentData = async () => {
+           const res = await getData(`/api/experiments/Esp`, params.Experiment);
+           setData(res);
+         };
+         fetchExperimentData();
+       }, []);
+   
  
      if (!data) {
       return <p><Loading/></p>;

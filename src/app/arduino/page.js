@@ -1,4 +1,5 @@
-
+'use client'
+import { useState,useEffect } from "react";
 import getData from "@/app/apiCall";
 import dynamic from "next/dynamic";
 import Image from "next/image";
@@ -10,11 +11,18 @@ const Loading = dynamic(() => import('@/components/loading/Loading'), {
   ssr: false
 });
 
-export const revalidate = 3600*24*30
-export default async function Page() {
 
- 
-  const data = await getData(`${process.env.DOMAIN}/api/experiments/Arduino`, 1)
+export default function Page() {
+
+ const [data, setData] = useState(null);
+  useEffect(() => {
+    const fetchExperimentData = async () => {
+      const res = await getData(`/api/experiments/Arduino`, 1);
+      setData(res);
+    };
+    fetchExperimentData();
+  }, []);
+
   
 if(!data)
 {
