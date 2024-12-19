@@ -14,11 +14,11 @@ export const metadata= {
   openGraph: {
     title: "sarkitshala.site",
     description: "A brief description of your app.",
-    url: image1, // Ensure this is your actual URL
+    url: '../../public/images/Bristo.jpg', // Ensure this is your actual URL
     siteName: "sarkitshala.site",
     images: [
       {
-        url: image1,
+        url: '../../public/images/Bristo.jpg',
         width: 1200,
         height: 630,
         alt: "An image that represents your app",
