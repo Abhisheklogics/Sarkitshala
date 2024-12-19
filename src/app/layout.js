@@ -41,6 +41,7 @@ export default function RootLayout({ children }) {
       <head>
         <meta charSet="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="google-site-verification" content="4D8wK0hdldsYIVNcbA1a-04Bdv-tzUuLkIxG4guNo6w" />
         <meta name="description" content={metadata.description} />
         <meta name="robots" content="index, follow" />
         <link rel="icon" href="/favicon.ico" />
