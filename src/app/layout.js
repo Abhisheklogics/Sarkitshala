@@ -14,7 +14,7 @@ export const metadata= {
   openGraph: {
     title: "Your App Title",
     description: "A brief description of your app.",
-    url: "https://yourwebsite.com", // Ensure this is your actual URL
+    url: image1, // Ensure this is your actual URL
     siteName: "Your App Name",
     images: [
       {
