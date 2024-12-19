@@ -4,7 +4,7 @@ import Header from "@/components/Header/Header";
 
 
 const inter = Inter({ subsets: ["latin"] });
-
+import image1 from '../../public/images/Bristo.jpg'
 export const metadata= {
   title:{
     default:'Learning website - HomePage',
@@ -18,7 +18,7 @@ export const metadata= {
     siteName: "Your App Name",
     images: [
       {
-        url: "https://yourwebsite.com/og-image.jpg", // URL of the Open Graph image
+        url: image1,
         width: 1200,
         height: 630,
         alt: "An image that represents your app",
