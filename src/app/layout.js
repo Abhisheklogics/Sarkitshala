@@ -12,10 +12,10 @@ export const metadata= {
   },
   description: "A brief description of your app for better SEO.",
   openGraph: {
-    title: "Your App Title",
+    title: "sarkitshala.site",
     description: "A brief description of your app.",
     url: image1, // Ensure this is your actual URL
-    siteName: "Your App Name",
+    siteName: "sarkitshala.site",
     images: [
       {
         url: image1,
