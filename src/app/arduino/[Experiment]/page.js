@@ -222,85 +222,62 @@ const CodeBox = dynamic(() => import('@/components/code/code'), {
 export async function generateMetadata({ params }) {
   await params.Experiment;
   let ExperimentName;
-  let domians='http://localhost:3000/'
-  let domiansD='https://sarkitshala.site/'
-  if(domians == 'http://localhost:3000/')
-  {
-    ExperimentName = await getData(`${domians}/api/experiments/Arduino`, params.Experiment);
-  }
-  if(domiansD == 'https://sarkitshala.site/')
-    {
-      ExperimentName = await getData(`${domians}/api/experiments/Arduino`, params.Experiment);
-    }
- 
+  let domain = process.env.DOMAIN || 'http://localhost:3000/'; // Use environment variable
+
+  ExperimentName = await getData(`${domain}/api/experiments/Arduino`, params.Experiment);
 
   return {
     title: ExperimentName.ExperimentName,
-    robots:{
-      index:true,
-      follow:true
+    robots: {
+      index: true,
+      follow: true
     },
-     // Clear and concise title
-    description: ExperimentName.overview, 
-    // Engaging description with target keywords
+    description: ExperimentName.overview,
     openGraph: {
       title: ExperimentName.ExperimentName,
       description: ExperimentName.overview,
-      url: `https://sarkitshala.site/${params.Experiment}`, // Dynamic URL based on the experiment
+      url: `${domain}/${params.Experiment}`, // Dynamic URL based on the experiment
       images: [
         {
-          url: ExperimentName.image1, // Main image for OpenGraph (ensure it's optimized and relevant)
+          url: ExperimentName.image1,
           width: 1200,
           height: 630,
           alt: `${ExperimentName.ExperimentName} - Visual representation of the experiment`
         }
       ],
-      site_name: "sarkitshala", // Clear site branding
+      site_name: 'sarkitshala',
     },
     twitter: {
-      card: "summary_large_image",
+      card: 'summary_large_image',
       title: ExperimentName.ExperimentName,
       description: ExperimentName.overview,
-      image: ExperimentName.image1, // Ensure high-quality image is used
-      creator: "@sarkitshala", // Twitter handle for the creator or site
+      image: ExperimentName.image1,
+      creator: '@sarkitshala',
     },
-    keywords: `Arduino, ESP, Soil Moisture, IoT Projects, Embedded Systems, Electronics, Circuit Design, Smart Agriculture`, // More targeted keywords
-    canonical: `https://sarkitshala.site/${params.Experiment}`, // Canonical URL to avoid duplicate content issues
-    robots: "index, follow", // Ensure search engines can index the page
-    author: "sarkitshala Team", // Add author information
+    keywords: 'Arduino, ESP, Soil Moisture, IoT Projects, Embedded Systems, Electronics, Circuit Design, Smart Agriculture',
+    canonical: `${domain}/${params.Experiment}`,
+    robots: 'index, follow',
+    author: 'sarkitshala Team',
   };
 }
+
 // This function is for generating static parameters for the page
-export async function generateStaticParams() {
-  let response;
-  let domian1='http://localhost:3000/'
 
-  let domian2='https://sarkitshala.site/'
-
-  if(domian1 == 'http://localhost:3000/' )
-  {
-     response = await getData("http://localhost:3000/api/experiments/Arduino");
+  export async function generateStaticParams() {
+    let response;
+    const domain = process.env.DOMAIN || 'http://localhost:3000/'; // Use environment variable
   
-    
+    response = await getData(`${domain}/api/experiments/Arduino`);
+  
+    const data = await response;
+    const posts = data.experiments || [];
+  
+    return posts.map((post) => ({
+      ExperimentId: String(post.ExperimentId),
+    }));
   }
-  if(domian2 == 'https://sarkitshala.site/' )
-    {
-       response = await getData("https://sarkitshala.site/api/experiments/Arduino");
-    
-      
-    }
- 
-  // Assuming response contains an array of experiments
-  const data = await response; // You don't need .json() here if getData already parses the response
+  
 
-  const posts = data.experiments || []; // Adjust this based on your API response
-
-  console.log(posts);
-  // Map through the experiments to return the dynamic params
-  return posts.map((post) => ({
-    ExperimentId: String(post.ExperimentId),
-  }));
-}
 
 // Main Page Component
 export default async function Page({ params }) {

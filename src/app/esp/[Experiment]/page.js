@@ -218,59 +218,36 @@ export default async function Page({ params }) {
 }
 */
 
-// Next.js will invalidate the cache when a
-// request comes in, at most once every 60 seconds.
-// Revalidate the page every 60 seconds
-// Default page component for handling dynamic routes
-// Generate static params for static generation at build time
+
 import dynamic from "next/dynamic";
 import Image from "next/image";
+import getData from "@/app/apiCall";
 const CodeBox=dynamic(()=>import('@/components/code/code'),{
   ssr:false
 })
 export async function generateMetadata({params})
  {
-
-  let ExperimentName;
-  let domians='http://localhost:3000/'
-  let domiansD='https://sarkitshala.site/'
   await params.Experiment
-   if(domians == 'http://localhost:3000/')
-    {
-      ExperimentName = await getData(`${domians}/api/experiments/Esp`, params.Experiment);
-    }
-    if(domiansD == 'https://sarkitshala.site/')
-      {
-        ExperimentName = await getData(`${domians}/api/experiments/Esp`, params.Experiment);
-      }
+  let ExperimentName;
+  let domain = process.env.DOMAIN || 'http://localhost:3000/';
+  
+   
    
   
- 
+ ExperimentName = await getData(`${domain}/api/experiments/Esp`,params.Experiment)
   return {
     title:ExperimentName.ExperimentName
   }
 }
 
 
-import getData from "@/app/apiCall";
+
 export async function generateStaticParams() {
+  
   let response;
-    let domian1='http://localhost:3000/'
+  const domain = process.env.DOMAIN || 'http://localhost:3000/';
   
-    let domian2='https://sarkitshala.site/'
-  
-    if(domian1 == 'http://localhost:3000/' )
-    {
-       response = await getData("http://localhost:3000/api/experiments/Esp");
-    
-      
-    }
-    if(domian2 == 'https://sarkitshala.site/' )
-      {
-         response = await getData("https://sarkitshala.site/api/experiments/Esp");
-      
-        
-      }
+  response = await getData(`${domain}/api/experiments/Esp`);
   
   const data = await response;
   // Log the response structure to understand how the data is structured
