@@ -260,7 +260,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-// This function is for generating static parameters for the page
+
 
   export async function generateStaticParams() {
     let response;
@@ -280,7 +280,7 @@ export async function generateMetadata({ params }) {
 
 // Main Page Component
 export default async function Page({ params }) {
-  const { Experiment } = params; // Destructure params to get the dynamic experiment ID
+  const { Experiment } = await params; // Destructure params to get the dynamic experiment ID
 
   // Get the post data dynamically using the ExperimentId
   const data = await getData(`https://sarkitshala.site/api/experiments/Arduino`, Experiment);
