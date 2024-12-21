@@ -235,10 +235,30 @@ export async function generateMetadata({params})
   
  ExperimentName = await getData(`https://sarkitshala.site/api/experiments/Esp`,params.Experiment)
   return {
-    title:ExperimentName.ExperimentName
+    title: ExperimentName.ExperimentName,
+    robots: {
+      index: true,
+      follow: true
+    },
+    description: ExperimentName.overview,
+    openGraph: {
+      title: ExperimentName.ExperimentName,
+      description: ExperimentName.overview,
+      url: `https://sarkitshala.site/${params.Experiment}`, // Dynamic URL based on the experiment
+      images: [
+        {
+          url: ExperimentName.image1,
+          width: 1200,
+          height: 630,
+          alt: `${ExperimentName.ExperimentName} - Visual representation of the experiment`
+        },
+
+        
+      ],
+      site_name: 'sarkitshala'
   }
 }
-
+ }
 
 
 export async function generateStaticParams() {
