@@ -222,9 +222,8 @@ const CodeBox = dynamic(() => import('@/components/code/code'), {
 export async function generateMetadata({ params }) {
   await params.Experiment;
   let ExperimentName;
-  let domain = process.env.DOMAIN || 'http://localhost:3000/' // Use environment variable
-
-  ExperimentName = await getData(`${domain}/api/experiments/Arduino`, params.Experiment);
+  
+  ExperimentName = await getData(`https://sarkitshala.site/api/experiments/Arduino`, params.Experiment);
 
   return {
     title: ExperimentName.ExperimentName,
@@ -265,9 +264,9 @@ export async function generateMetadata({ params }) {
 
   export async function generateStaticParams() {
     let response;
-    const domain = process.env.DOMAIN || 'http://localhost:3000/'// Use environment variable
+    
   
-    response = await getData(`${domain}/api/experiments/Arduino`);
+    response = await getData(`https://sarkitshala.site/api/experiments/Arduino`);
   
     const data = await response;
     const posts = data.experiments || [];
@@ -284,7 +283,7 @@ export default async function Page({ params }) {
   const { Experiment } = params; // Destructure params to get the dynamic experiment ID
 
   // Get the post data dynamically using the ExperimentId
-  const data = await getData(`${process.env.DOMAIN}/api/experiments/Arduino`, Experiment);
+  const data = await getData(`https://sarkitshala.site/api/experiments/Arduino`, Experiment);
 
   return (
     <>

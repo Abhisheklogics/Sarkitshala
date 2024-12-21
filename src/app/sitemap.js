@@ -1,48 +1,24 @@
 export default async function sitemap() {
-  let ardurl = [];
-  let Espurl = [];
-
-  // Dynamically select the domain based on environment (use environment variables)
-  const domain = process.env.DOMAIN || (process.env.NODE_ENV === 'production' 
-    ? 'https://sarkitshala.site' 
-    : 'http://localhost:3000');
+ 
   
-  try {
-    // Fetch Arduino experiments
-    let res = await fetch(`${domain}/api/experiments/Arduino`);
-    let data = await res.json();
-    ardurl = data.map(({ ExperimentId }) => ({
-      url: `${domain}/arduino/${ExperimentId}`
-    }));
-
-    // Fetch ESP experiments
-    let res2 = await fetch(`${domain}/api/experiments/Esp`);
-    let data2 = await res2.json();
-    Espurl = data2.map(({ ExperimentId }) => ({
-      url: `${domain}/esp/${ExperimentId}`,
-      priority: 1,
-    }));
-  } catch (error) {
-    console.error('Error fetching data for sitemap:', error);
-  }
-
+ 
   return [
     {
-      url: `${domain}/arduino`,
+      url: `https://sarkitshala.site/arduino`,
       changeFrequency: 'monthly',
       priority: 1,
     },
-    ...ardurl,
+   
     {
-      url: `${domain}/raspberry`,
+      url: `https://sarkitshala.site/raspberry`,
       changeFrequency: 'monthly',
       priority: 1,
     },
     {
-      url: `${domain}/esp`,
+      url: `https://sarkitshala.site/esp`,
       changeFrequency: 'monthly',
       priority: 1,
     },
-    ...Espurl
+   
   ];
 }

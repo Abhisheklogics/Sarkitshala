@@ -229,12 +229,11 @@ export async function generateMetadata({params})
  {
   await params.Experiment
   let ExperimentName;
-  let domain = process.env.DOMAIN || 'http://localhost:3000/';
-  
+ 
    
    
   
- ExperimentName = await getData(`${domain}/api/experiments/Esp`,params.Experiment)
+ ExperimentName = await getData(`https://sarkitshala.site/api/experiments/Esp`,params.Experiment)
   return {
     title:ExperimentName.ExperimentName
   }
@@ -245,9 +244,9 @@ export async function generateMetadata({params})
 export async function generateStaticParams() {
   
   let response;
-  const domain = process.env.DOMAIN || 'http://localhost:3000/'
   
-  response = await getData(`${domain}/api/experiments/Esp`);
+  
+  response = await getData(`https://sarkitshala.site/api/experiments/Esp`);
   
   const data = await response;
   // Log the response structure to understand how the data is structured
@@ -268,7 +267,7 @@ export async function generateStaticParams() {
 export default async function Page({ params }) {
   const { Experiment } =await params; 
   // Get the dynamic parameter from the URL
-  const data = await getData(`${process.env.DOMAIN}/api/experiments/Esp`, Experiment)
+  const data = await getData(`https://sarkitshala.site/api/experiments/Esp`, Experiment)
     
 
   return (

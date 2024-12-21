@@ -113,32 +113,3 @@ if(!data)
 }
 
 
-/*
-
- const [data, setData] = useState([]);
-  //const [loading, setLoading] = useState(false);
-  let fetchData=useCallback(async ()=>{
-    try {
-      setLoading(true);
-      const response = await getData(`/api/experiments/Arduino`, 1);
-      setData(response);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    } finally {
-      setLoading(false);
-    }
-  },[data])
-
-  useEffect(() => {
-    
-    fetchData();
-  }, [data]);
-
-  if (loading) {
-    return (
-      <div className="flex justify-center items-center h-screen">
-        <Loading /> 
-      </div>
-    );
-  }
-*/
