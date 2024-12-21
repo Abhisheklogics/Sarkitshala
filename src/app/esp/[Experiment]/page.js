@@ -229,7 +229,7 @@ export async function generateMetadata({params})
  {
   await params.Experiment
   let ExperimentName;
-  let domain = process.env.DOMAIN || 'http://localhost:3000/';
+  let domain = process.env.DOMAIN ;
   
    
    
@@ -245,7 +245,7 @@ export async function generateMetadata({params})
 export async function generateStaticParams() {
   
   let response;
-  const domain = process.env.DOMAIN || 'http://localhost:3000/';
+  const domain = process.env.DOMAIN 
   
   response = await getData(`${domain}/api/experiments/Esp`);
   

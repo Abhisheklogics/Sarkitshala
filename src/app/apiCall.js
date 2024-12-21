@@ -7,6 +7,7 @@ export default async function getData(url, exNum) {
       headers: {
         'Content-Type': 'application/json',
       },
+      
     });
 
    

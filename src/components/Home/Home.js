@@ -31,7 +31,7 @@ const Footer=dynamic(()=>import('../Footer/Footer'))
 
     // Check if the device is mobile
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768); // Set to true if mobile, false if desktop
+      setIsMobile(window.innerWidth < 468); // Set to true if mobile, false if desktop
     };
 
     // Check on resize
