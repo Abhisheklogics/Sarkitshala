@@ -235,7 +235,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: ExperimentName.ExperimentName,
       description: ExperimentName.overview,
-      url: `${domain}/${params.Experiment}`, // Dynamic URL based on the experiment
+      url: `https://sarkitshala.site/${params.Experiment}`, // Dynamic URL based on the experiment
       images: [
         {
           url: ExperimentName.image1,
@@ -246,15 +246,9 @@ export async function generateMetadata({ params }) {
       ],
       site_name: 'sarkitshala',
     },
-    twitter: {
-      card: 'summary_large_image',
-      title: ExperimentName.ExperimentName,
-      description: ExperimentName.overview,
-      image: ExperimentName.image1,
-      creator: '@sarkitshala',
-    },
+   
     keywords: 'Arduino, ESP, Soil Moisture, IoT Projects, Embedded Systems, Electronics, Circuit Design, Smart Agriculture',
-    canonical: `${domain}/${params.Experiment}`,
+    canonical: `https://sarkitshala.site/${params.Experiment}`,
     robots: 'index, follow',
     author: 'sarkitshala Team',
   };
