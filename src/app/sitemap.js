@@ -1,9 +1,11 @@
 export default async function sitemap() {
   let ardurl = [];
   let Espurl = [];
-  
-  // Dynamically determine the domain based on environment
-  const domain = process.env.NODE_ENV === 'production' ? 'https://sarkitshala.site/' : 'http://localhost:3000/';
+
+  // Dynamically select the domain based on environment (use environment variables)
+  const domain = process.env.DOMAIN || (process.env.NODE_ENV === 'production' 
+    ? 'https://sarkitshala.site' 
+    : 'http://localhost:3000');
   
   try {
     // Fetch Arduino experiments
