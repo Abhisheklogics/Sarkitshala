@@ -4,7 +4,6 @@ import Header from "@/components/Header/Header";
 
 
 const inter = Inter({ subsets: ["latin"] });
-import image1 from '../../public/images/Bristo.jpg'
 export const metadata= {
   title:{
     default:'Sarkitshala - HomePage',
@@ -32,9 +31,9 @@ export const metadata= {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Your App Title",
-    description: "A brief description of your app.",
-    image: "https://yourwebsite.com/twitter-image.jpg", // URL of the Twitter card image
+    title: "Sarkitshala - HomePage",
+    description: "Sarkitshala offers a collection of experiments and knowledge related to Arduino, Raspberry Pi, and ESP platforms. Explore hands-on projects, tutorials, and resources to enhance your understanding of electronics and programming.",
+    image: "../../public/images/Bristo.jpg",
   },
 };
 

@@ -25,7 +25,7 @@ const Footer = () => {
         
         <div className="mt-4 md:mt-0 text-center md:text-left">
        
-          <p className="text-sm text-gray-300">Dayalbagh Education Enstitute , Agra</p>
+          <p className="text-sm text-gray-300">Dayalbagh Education Institute , Agra</p>
         </div>
       </div>
 
