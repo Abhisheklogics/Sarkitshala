@@ -1,22 +1,79 @@
-'use client'
+
 import Image from "next/image";
 import dynamic from "next/dynamic";
 
 import getData from "@/app/apiCall";
-import { useEffect,useState } from "react";
+
 const CodeBox = dynamic(() => import('@/components/code/code'), { ssr: false });
 const Loading = dynamic(() => import('@/components/loading/Loading'), { ssr: false });
-
-export default  function Page({ params }) {
-   const [data, setData] = useState(null);
-    useEffect(() => {
-      const fetchExperimentData = async () => {
-        const res = await getData(`/api/experiments/Res`, params.Experiment);
-        setData(res);
-      };
-      fetchExperimentData();
-    }, [params.Experiment]);
+export async function generateMetadata({params})
+ {
+  await params.Experiment
+  let ExperimentName;
+ 
+   
+   
   
+ ExperimentName = await getData(`https://sarkitshala.site/api/experiments/Res`,params.Experiment)
+  return {
+    title: ExperimentName.ExperimentName,
+    robots: {
+      index: true,
+      follow: true
+    },
+    description: ExperimentName.overview,
+    openGraph: {
+      title: ExperimentName.ExperimentName,
+      description: ExperimentName.overview,
+      url: `https://sarkitshala.site/${params.Experiment}`, // Dynamic URL based on the experiment
+      images: [
+        {
+          url: ExperimentName.image1,
+          width: 1200,
+          height: 630,
+          alt: `${ExperimentName.ExperimentName} - Visual representation of the experiment`
+        },
+
+        
+      ],
+      site_name: 'sarkitshala',
+      twitter: {
+        card: "summary_large_image",
+        site: '@sarkitshala', 
+        title: ExperimentName.ExperimentName,
+        description:ExperimentName.overview,
+        image: ExperimentName.image1,
+      }
+  }
+}
+ }
+export async function generateStaticParams() {
+  
+  let response;
+  
+  
+  response = await getData(`https://sarkitshala.site/api/experiments/Res`);
+  
+  const data = await response;
+ 
+
+  
+  const posts = data.experiments || []; 
+
+  if (!Array.isArray(posts)) {
+    throw new Error('Expected experiments to be an array');
+  }
+
+  
+  return posts.map((post) => ({
+    ExperimentId: String(post.ExperimentId),
+  }));
+}
+export default async function Page({ params }) {
+    const { Experiment } =await params; 
+    // Get the dynamic parameter from the URL
+    const data = await getData(`https://sarkitshala.site/api/experiments/Res`, Experiment)
+      
     if (!data) {
         return <p><Loading/></p>;
       }

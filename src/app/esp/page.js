@@ -64,7 +64,7 @@ const [data, setData] = useState(null);
       <p className="md:mt-4 mt-4">{data.component}</p>
 
     
-      <div className="ml-12 mt-8
+      <div className="ml-1   mt-8
       md:ml-12 md:mt-8">
        
        <Image height={500} width={700}  className="
@@ -79,7 +79,7 @@ const [data, setData] = useState(null);
         
       <div className="ml-20  mt-10
       md:ml-20  md:h-[300px]">
-        <Image height={400} width={500}  className="md:ml-[-40px] h-fit w-fit
+        <Image height={400} width={500}  className="md:ml-[-40px] 
      " loading="lazy"
     src={data.image3} alt="Experiment Image" />
        
@@ -89,7 +89,7 @@ const [data, setData] = useState(null);
       <h2 className=" text-2xl 
       md:text-2xl ">{data.CircuitDiagramInfo}</h2>
       
-      <div className="ml-32 mt-10
+      <div className="ml-10 mt-10
       md:ml-60   md:mt-10">
        
        <Image height={400} width={400}  className="md:ml-[-40px]
@@ -101,7 +101,7 @@ const [data, setData] = useState(null);
 
       <h1 className="text-2xl
       md:text-2xl ">Steps:</h1>
-      <div className="ml-4
+      <div className="ml-4 leading-10
       md:ml-14">
         <p className="md:mt-4 ">{data.step}</p>
         {data.step1 && <p className="mt-2

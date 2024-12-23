@@ -16,6 +16,12 @@ export default async function sitemap() {
      url:`https://sarkitshala.site/esp/${ExperimentId}`,
      priority: 1,
    }))
+   let res3= await fetch( `https://sarkitshala.site/api/experiments/Esp`)
+   let data3= await res3.json()
+    let resurl=data3.map(({ExperimentId})=>({
+      url:`https://sarkitshala.site/Res/${ExperimentId}`,
+      priority: 1,
+    }))
     return [
       {
         url: `https://sarkitshala.site/arduino`,
@@ -29,6 +35,7 @@ export default async function sitemap() {
         changeFrequency: 'monthly',
         priority: 1,
       },
+      ...resurl,
       
       {
         url: `https://sarkitshala.site/esp`,

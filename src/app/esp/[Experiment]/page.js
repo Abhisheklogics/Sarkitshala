@@ -255,7 +255,14 @@ export async function generateMetadata({params})
 
         
       ],
-      site_name: 'sarkitshala'
+      site_name: 'sarkitshala',
+      twitter: {
+        card: "summary_large_image",
+        site: '@sarkitshala', // Optional: add your Twitter handle
+        title: ExperimentName.ExperimentName,
+        description:ExperimentName.overview,
+        image: ExperimentName.image1,
+      }
   }
 }
  }
@@ -307,18 +314,18 @@ export default async function Page({ params }) {
       <p className="md:mt-2">{data.madeByinfo}</p>
       
       <h2 className="md:mt-10">{data.overview}</h2>
-      <h2 className="md:text-2xl md:mt-10">Hardware components</h2>
+      <h2 className="md:text-2xl md:mt-10  text-2xl  mt-10">Hardware components</h2>
       <p className="md:mt-4">{data.component}</p>
 
       <div className="md:ml-12 md:mt-8">
-        <Image height={400} width={700} className="ml-10" loading="lazy" src={data.image2} alt="Experiment Image" />
+        <Image height={400} width={700} className="ml-1 mt-10" loading="lazy" src={data.image2} alt="Experiment Image" />
       </div>
 
-      <h2 className="md:text-2xl md:mt-14">{data.pinDiagramInfo}</h2>
+      <h2 className="md:text-2xl md:mt-14  text-2xl  mt-10">{data.pinDiagramInfo}</h2>
 
       {data.ExperimentId == '1' || data.ExperimentId == '2' || data.ExperimentId == '3' || data.ExperimentId == '4' || data.ExperimentId == '5' || data.ExperimentId == '7' ? (
-        <div className="md:ml-20">
-          <Image height={500} width={600} className="md:mt-10 md:ml-40" loading="lazy" src={data.image3} alt="Experiment Image" />
+        <div className="">
+          <Image height={500} width={600} className="md:mt-10 md:ml-40 mt-10" loading="lazy" src={data.image3} alt="Experiment Image" />
         </div>
       ) : (
         <div className="md:ml-20 md:h-[300px]">
@@ -326,15 +333,15 @@ export default async function Page({ params }) {
         </div>
       )}
 
-      <h2 className="md:text-2xl">{data.CircuitDiagramInfo}</h2>
+      <h2 className="md:text-2xl  text-2xl  mt-10">{data.CircuitDiagramInfo}</h2>
 
       <div className="md:ml-32 md:mt-10">
-        <Image height={400} width={500} className="md:ml-20" loading="lazy" src={data.image4} alt="Experiment Image" />
+        <Image height={400} width={500} className="md:ml-20    mt-10" loading="lazy" src={data.image4} alt="Experiment Image" />
       </div>
 
       <h1 className="md:text-2xl">Steps:</h1>
-      <div className="md:ml-14">
-        <p className="md:mt-4">{data.step}</p>
+      <div className="md:ml-14 leading-10 ">
+        <p className="md:mt-4 ">{data.step}</p>
         {data.step1 && <p className="md:mt-2">1: {data.step1}</p>}
         {data.step2 && <p className="md:mt-2">2: {data.step2}</p>}
         {data.step3 && <p className="md:mt-2">3: {data.step3}</p>}
