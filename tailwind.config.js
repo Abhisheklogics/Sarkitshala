@@ -16,12 +16,20 @@ module.exports = {
         typing: {
           "0%": {
             width: "0%",
-            
+            color:'white',
             visibility: "hidden",
-            color:''
+           
+          },
+          '25%':{
+            color:'white',
+            fontWieght:'bold'
           },
           '50%':{
             color:'black',
+            fontWieght:'bold'
+          },
+          '75%':{
+            color:'blue',
             fontWieght:'bold'
           },
           "100%": {

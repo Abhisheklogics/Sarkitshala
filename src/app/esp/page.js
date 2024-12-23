@@ -23,7 +23,7 @@ const [data, setData] = useState(null);
         };
         fetchExperimentData();
       }, []);
-  
+ 
   if(!data)
   {
  return (
@@ -42,7 +42,7 @@ const [data, setData] = useState(null);
        md:h-fit md:w-[770px] md:text-md md:ml-[300px] md:mt-[-400px] 
     md:p-5 md:bg-white md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap 
     ">
-      <h1 className=" text-center text-2xl  md:text-center capitalize md:text-2xl text-xl font-bold md:font-light
+      <h1 className="  text-2xl  md:text-center capitalize md:text-2xl text-xl font-bold md:font-light
 
       md:text-center md:text-2xl
     ">{data.ExperimentName}</h1>
@@ -52,16 +52,16 @@ const [data, setData] = useState(null);
      " loading="lazy"
     src={data.image1} alt="Experiment Image" /></div>
     <h1 className="mt-4  text-sm ml-2
-    md:mt-4  md:text-sm md:ml-2 font-bold">Made By : Aman Raj</h1>
+    md:mt-4  md:text-sm md:ml-2 font-bold">Written By : Aman Raj</h1>
       <h2 className="text-sm mt-2
       md:text-sm md:mt-2">{data.madeBy}</h2>
       <p className="mt-2
       md:mt-2">{data.madeByinfo}</p>
       <h2 className="  mt-10
         md:mt-10 ">{data.overview}</h2>
-      <h2 className=" text-2xl  mt-10
+      <h2 className=" text-2xl  mt-10 font-bold md:font-light
       md:text-2xl  md:mt-10 ">Hardware components</h2>
-      <p className="md:mt-4 mt-4">{data.component}</p>
+      <p className="md:mt-4 mt-10">{data.component}</p>
 
     
       <div className="ml-1   mt-8
@@ -73,7 +73,7 @@ const [data, setData] = useState(null);
        
       </div>
 
-      <h2 className="text-2xl mt-14
+      <h2 className="text-2xl mt-14 md:font-light font-bold
       md:text-2xl md:mt-14 ">{data.pinDiagramInfo}</h2>
      
         
@@ -86,7 +86,7 @@ const [data, setData] = useState(null);
       </div>
 
 
-      <h2 className=" text-2xl 
+      <h2 className=" text-2xl font-bold md:font-light
       md:text-2xl ">{data.CircuitDiagramInfo}</h2>
       
       <div className="ml-10 mt-10
@@ -99,7 +99,7 @@ const [data, setData] = useState(null);
    </div>
       
 
-      <h1 className="text-2xl
+      <h1 className="text-2xl font-bold mt-10  md:font-light
       md:text-2xl ">Steps:</h1>
       <div className="ml-4 leading-10
       md:ml-14">
@@ -147,12 +147,12 @@ const [data, setData] = useState(null);
         
         
       </div>
-
-      <h2 className="mt-4 text-2xl
+ 
+      <h2 className="mt-4 text-2xl   font-bold md:font-light
       md:mt-4 md:text-2xl ">Code:</h2>
       <CodeBox codeString={data.code} language={'c'} num={data.ExperimentId} exNam='esp'/>
       
-      <h3 className="text-2xl  mt-6
+      <h3 className="text-2xl  mt-6 font-bold md:font-light
       md:text-2xl  md:mt-6">Result</h3>
       <p className="mt-6
       md:mt-6">{data.result}</p>

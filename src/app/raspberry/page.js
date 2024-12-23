@@ -26,7 +26,10 @@ export default   function Page() {
         return <p><Loading/></p>;
       }
   
-
+if(data.madeBy=='This article written by- Kumkum Yadav')
+{
+ console.log('hello')
+}
   return (
   
       <>
@@ -52,7 +55,7 @@ export default   function Page() {
          <p className="mt-6
         md:mt-6">{data.madeByinfo2}</p>
         <h2 className=" text-2xl  mt-10
-        md:text-2xl  md:mt-10">{data.overview}</h2>
+        md:text-2xl  md:mt-10 font-bold md:font-light">{data.overview}</h2>
         <p className="mt-10
         md:mt-10">{data.overviewinfo1}</p>
          <p className="mt-10
@@ -60,7 +63,7 @@ export default   function Page() {
 
         <div>
           <p className="mt-10 text-2xl
-          md:mt-10 md:text-2xl">{data.Material}</p>
+          md:mt-10 md:text-2xl font-bold md:font-light">{data.Material}</p>
           {data.Material1 && <p className="mt-4
           md:ml-10 md:mt-4">1: {data.Material1}</p>}
           {data.Material2 && <p className=" mt-2
@@ -76,31 +79,31 @@ export default   function Page() {
    
         
        <div className="
-            mt-8
-            md:ml-28 md:mt-8"><Image width={400} height={100} src={data.image2} alt="Specifications" /></div>
+            mt-12
+            md:ml-28 md:mt-8"><Image width={400} height={300}  className='md:w-fit' src={data.image2} alt="Specifications" /></div>
          
       
            
        
         
         
-          <h2 className="text-2xl mt-8
+          <h2 className="text-2xl mt-20 font-bold md:font-light
            md:text-2xl md:mt-8">{data.pinDiagramInfo}</h2>
       
     
-        <div className="mt-6
-           md:ml-36 md:mt-6"><Image height={100}  width={400} src={data.image3} alt="Pin Diagram" /></div>
+        <div className="mt-12
+           md:ml-36 md:mt-10"><Image height={100}  width={400} src={data.image3} alt="Pin Diagram" /></div>
     
-          <h2 className="mt-4 text-2xl 
-           md:mt-4 md:text-2xl ">{data.CircuitDiagramInfo}</h2>
+          <h2 className="mt-10 text-2xl 
+           md:mt-4 md:text-2xl font-bold md:font-light">{data.CircuitDiagramInfo}</h2>
          
      
-         <div className="ml-10 mt-8
-           md:ml-44"><Image height={200}  width={400} src={data.image4} alt="Circuit Diagram" /></div>
+         <div className="ml-10 mt-10
+           md:ml-44 md:mt-20"><Image height={200}  width={400} src={data.image4} alt="Circuit Diagram" /></div>
          
 
-        <h1 className="text-2xl  mt-6
-        md:text-2xl  md:mt-6 ">Steps:</h1>
+        <h1 className="text-2xl  mt-10
+        md:text-2xl  md:mt-6 font-bold md:font-light">Steps</h1>
         <div className="leading-10">
           <p className="md:mt-4 ">{data.step}</p>
           {data.step1 && <p className="mt-2
@@ -123,10 +126,10 @@ export default   function Page() {
         
         </div>
 
-        <h2 className="mt-4 text-2xl
-        md:mt-4 md:text-2xl">Code:</h2>
+        <h2 className="mt-4 text-2xl font-bold md:font-light
+        md:mt-4 md:text-2xl">Code</h2>
      <CodeBox  language={'c'} num={data.ExperimentId} exNam='Raspberry' />
-        <h3 className="text-2xl mt-4
+        <h3 className="text-2xl mt-10 font-bold md:font-light
         md:text-2xl md:mt-4">Result</h3>
         <p className="mt-4
         md:mt-4">{data.result}</p>

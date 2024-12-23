@@ -21,11 +21,13 @@ export async function generateMetadata({params})
       index: true,
       follow: true
     },
+    url: 'https://sarkitshala.site',
+    siteName: "sarkitshala.site",
     description: ExperimentName.overview,
     openGraph: {
       title: ExperimentName.ExperimentName,
       description: ExperimentName.overview,
-      url: `https://sarkitshala.site/${params.Experiment}`, // Dynamic URL based on the experiment
+      url: `https://sarkitshala.site/${params.Experiment}`, 
       images: [
         {
           url: ExperimentName.image1,
@@ -37,6 +39,8 @@ export async function generateMetadata({params})
         
       ],
       site_name: 'sarkitshala',
+      keywords: 'Raspberry Pi, ESP, Soil Moisture, IoT Projects, Embedded Systems, Electronics, Circuit Design, Smart Agriculture',
+    
       twitter: {
         card: "summary_large_image",
         site: '@sarkitshala', 
@@ -71,7 +75,7 @@ export async function generateStaticParams() {
 }
 export default async function Page({ params }) {
     const { Experiment } =await params; 
-    // Get the dynamic parameter from the URL
+    
     const data = await getData(`https://sarkitshala.site/api/experiments/Res`, Experiment)
       
     if (!data) {
@@ -86,7 +90,7 @@ export default async function Page({ params }) {
       md:h-fit md:w-[790px] md:ml-[330px]  md:mt-28 2xl:ml-[400px] md:p-5 md:bg-white md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap ">
       
           <h1 className="md:text-center capitalize md:text-2xl text-xl font-bold md:font-light
-          md:text-center md:text-2xl">{data.ExperimentName}</h1>
+          md:text-center md:text-2xl">{data.ExperimentName.trim()}</h1>
           
          {data.ExperimentId != '3'  ?
          <div className="md:ml-32 md:mt-6 mt-6 md:w-fit  md:h-fit w-full ml-4">
@@ -112,7 +116,7 @@ export default async function Page({ params }) {
           <h2 className=" text-sm mt-4 md:text-sm md:mt-2 font-bold ">{data.madeBy}</h2>
           <p className="md:mt-6 mt-6">{data.madeByinfo1}</p>
           <p className="md:mt-6 mt-6">{data.madeByinfo2}</p>
-          <h2 className="md:text-2xl md:mt-10 text-2xl  mt-10">{data.overview}</h2>
+          <h2 className="md:text-2xl md:mt-10 text-2xl  mt-10">{data.overview.trim()}</h2>
           <p className="md:mt-10 md:leading-8 mt-10">{data.overviewinfo1}</p>
           <p className="md:mt-10 md:leading-8 mt-10">{data.overviewinfo2}</p>
 
@@ -135,7 +139,7 @@ export default async function Page({ params }) {
                 width={400}
                 height={300}
                 loading="lazy"
-                className="md:ml-20 md:w-fit h-fit"
+                className="md:ml-10 mt-4 md:w-fit h-fit"
                 objectFit="cover"
               />
             </div>
@@ -153,7 +157,7 @@ export default async function Page({ params }) {
           )}
           
           {data.ExperimentId === '8' && (
-            <div className="md:ml-28 md:mt-12">
+            <div className="md:ml-28 mt-4 md:mt-12">
               <Image
                 src={data.image3}
                 alt="Pin Diagram"
@@ -179,24 +183,24 @@ export default async function Page({ params }) {
               />
             </div>
           ) : (
-            <div className="md:ml-36 md:mt-6 mt-10 ml-[-40px]">
+            <div className="md:ml-36 md:mt-12 mt-12 ml-[-40px]">
               <Image
                 src={data.image3}
                 alt="Pin Diagram"
                 width={400}
-                height={200}
-                className="  ml-6"
+                height={300}
+                className=" md:w-fit ml-6"
                 objectFit="cover"
               />
             </div>
           )}
 
-          <h2 className={data.ExperimentId === '8' ? "md:mt-10 md:text-2xl text-2xl mt-4  " : "md:mt-4 md:text-2xl text-2xl mt-4"}>
+          <h2 className={data.ExperimentId === '8' ? "md:mt-10 md:text-2xl text-2xl mt-8  " : "md:mt-4 md:text-2xl text-2xl mt-10"}>
             {data.CircuitDiagramInfo}
           </h2>
 
           {data.ExperimentId == '7'  ? (
-            <div className="md:ml-32 mt-6 ml-4 ml-10 ">
+            <div className="md:ml-32 mt-10 ml-4 ml-10 ">
               <Image
                 src={data.image5}
                 alt="Pin Diagram"
@@ -206,13 +210,13 @@ export default async function Page({ params }) {
                 objectFit="cover"
               />
             </div>
-          ):<div className="md:ml-32 mt-6 ml-4 ml-10 ">
+          ):<div className="md:ml-32 mt-10  ml-10 ">
           <Image
             src={data.image4}
             alt="Pin Diagram"
             width={400}
             height={330}
-            className="mt-10"
+            className="mt-14"
             objectFit="cover"
           />
         </div>}

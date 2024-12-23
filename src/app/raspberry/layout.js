@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
 
   return (
     <>
-      {/* Toggle button for mobile view */}
+     
       <button
         className="md:hidden block bg-blue-500 text-white p-2 mt-36 rounded-md m-4"
         onClick={() => handleToggle("toggle1")}
@@ -85,7 +85,7 @@ export default function RootLayout({ children }) {
         {toggles.toggle1 ? "Hide Experiments" : "Show Experiments"}
       </button>
 
-      {/* Sidebar for experiment categories */}
+    
       <div
         className={`${
           toggles.toggle1 ? "block" : "hidden"
@@ -108,8 +108,7 @@ export default function RootLayout({ children }) {
         </div>
       </div>
 
-      {/* Sidebar section on the right for "In this Article" */}
-      <div className="hidden md:block md:absolute md:ml-[1100px] md:mt-[150px] 2xl:ml-[1250px] md:h-[320px] md:w-72 md:bg-white md:p-1 md:rounded">
+      <div className="hidden md:block md:absolute md:ml-[1100px] md:mt-[150px] 2xl:ml-[1250px] md:h-[320px] md:w-60 md:bg-white md:p-1 md:rounded">
         <h1 className="md:mt-2 md:text-2xl md:ml-4">In this Article</h1>
         <ul className="md:ml-4 md:mt-4 md:grid md:gap-2 md:text-sm">
           <li>Introduction</li>
@@ -124,7 +123,7 @@ export default function RootLayout({ children }) {
         </ul>
       </div>
 
-      {/* Main content area */}
+      
       <div className="flex-1 p-4">{children}</div>
     </>
   );

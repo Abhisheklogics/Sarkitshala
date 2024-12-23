@@ -231,6 +231,8 @@ export async function generateMetadata({ params }) {
       index: true,
       follow: true
     },
+    url: 'https://sarkitshala.site',
+    siteName: "sarkitshala.site",
     description: ExperimentName.overview,
     openGraph: {
       title: ExperimentName.ExperimentName,
@@ -247,7 +249,7 @@ export async function generateMetadata({ params }) {
       site_name: 'sarkitshala',
     },
    
-    keywords: 'Arduino, ESP, Soil Moisture, IoT Projects, Embedded Systems, Electronics, Circuit Design, Smart Agriculture',
+    keywords: 'Arduino, ESP, Soil Moisture,Abhishek ,Aman ,Amarjeet sir, IoT Projects, Embedded Systems, Electronics, Circuit Design, Smart Agriculture',
     canonical: `https://sarkitshala.site/${params.Experiment}`,
     robots: 'index, follow',
     author: 'sarkitshala Team',
@@ -272,11 +274,11 @@ export async function generateMetadata({ params }) {
   
 
 
-// Main Page Component
-export default async function Page({ params }) {
-  const { Experiment } = await params; // Destructure params to get the dynamic experiment ID
 
-  // Get the post data dynamically using the ExperimentId
+export default async function Page({ params }) {
+  const { Experiment } = await params; 
+
+ 
   const data = await getData(`https://sarkitshala.site/api/experiments/Arduino`, Experiment);
 
   return (
@@ -312,12 +314,12 @@ export default async function Page({ params }) {
         <p className="mt-8 md:mt-4">{data.overviewinfo1}</p>
         <p className="mt-8 md:mt-8">{data.overviewinfo2}</p>
 
-        <div className="mt-10 md:ml-20">
+        <div className="mt-12 md:ml-20">
          {data.ExperimentId == '1' || data.ExperimentId == '3' || data.ExperimentId == '4' || data.ExperimentId == '5' ||data.ExperimentId == '6' || data.ExperimentId == '7' || data.ExperimentId == '8'  || data.ExperimentId == '9' || data.ExperimentId == '10' || data.ExperimentId =='11'? 
          <Image
             width={500}
             height={440}
-            className=" sm:h-fit bg-none md:w-fit sm:w-full md:ml-4"
+            className="    md:ml-4"
             src={data.image2}
             alt="Specifications"
           />: <Image
@@ -333,17 +335,17 @@ export default async function Page({ params }) {
        
         {data.ExperimentId == '1' || data.ExperimentId == '2' || data.ExperimentId=='3'  || data.ExperimentId=='4' || data.ExperimentId=='5'|| data.ExperimentId=='6'|| data.ExperimentId=='7'|| data.ExperimentId=='8'|| data.ExperimentId=='9'|| data.ExperimentId=='10' || data.ExperimentId=='11' ? (
         <div>
-          <h2 className="mt-8 capitalize text-2xl md:mt-6 md:text-2xl">
+          <h2 className="mt-12 capitalize text-2xl md:mt-10 md:text-2xl">
             {data.pinDiagramInfo}
           </h2>
-          <div className="mt-8 capitalize rounded ml-10 md:ml-44 md:mt-10 md:rounded">
+          <div className="mt-12 capitalize rounded ml-10 md:ml-44 md:mt-12 md:rounded">
             <Image height={300} width={450} src={data.image3} />
           </div>
 
-          <h2 className="mt-8 capitalize text-2xl md:mt-6 md:text-2xl">
+          <h2 className="mt-12 capitalize text-2xl md:mt-10 md:text-2xl">
             {data.CircuitDiagramInfo}
           </h2>
-          <div className="mt-8 md:ml-24 md:mt-10 w-fit h-fit">
+          <div className="mt-12 md:ml-24 md:mt-12 w-fit h-fit">
             <Image height={400} width={500} src={data.image4} />
           </div>
         </div>
@@ -355,24 +357,24 @@ export default async function Page({ params }) {
 
       {data.ExperimentId == '12'  ? (
         <div>
-          <h2 className="mt-2 capitalize text-2xl md:mt-2 md:text-2xl">
+          <h2 className="mt-12 capitalize text-2xl md:mt-6 md:text-2xl">
             {data.pinDiagramInfo}
           </h2>
-          <div className="ml-2 mt-4 md:ml-32 md:mt-10 md:ml-60">
+          <div className="ml-12 mt-8 md:ml-32 md:mt-12 md:ml-60">
             <Image height={100} width={350} src={data.image3} />
           </div>
-          <div className="mt-2 text-2xl md:mt-6 md:text-2xl md:mt-10 ">
+          <div className="mt-12 text-2xl md:mt-8 md:text-2xl md:mt-10 ">
           <h2 >
           Pin Diagram of Push Button
           </h2>
           </div>
-          <div className="ml-2 mt-6 md:ml-32 md:mt-4 md:mt-10  md:ml-60 ">
+          <div className="ml-12 mt-6 md:ml-32 md:mt-8 md:mt-10  md:ml-60 ">
             <Image height={100} width={350} src={data.image4} className="md:mt-10"/>
           </div>
-          <h2 className="mt-2  capitalize text-2xl md:mt-2 md:text-2xl">
+          <h2 className="mt-12  capitalize text-2xl md:mt-8 md:text-2xl">
             {data.CircuitDiagramInfo}
           </h2>
-          <div className="ml-2 mt-6 md:ml-60 md:mt-4 ">
+          <div className="ml-12 mt-8 md:ml-60 md:mt-4 ">
             <Image height={100} width={450} src={data.image5} className="md:mt-10"/>
           </div>
         </div>
@@ -381,25 +383,25 @@ export default async function Page({ params }) {
       )}
 
 {data.ExperimentId == '13'  ? (
-        <div className="md:mt-10">
-          <h2 className="mt-2 text-2xl capitalize md:mt-2 md:text-2xl">
+        <div className="md:mt-12 mt-12">
+          <h2 className="mt-12 text-2xl capitalize md:mt-4 md:text-2xl">
             {data.pinDiagramInfo}
           </h2>
-          <div className="ml-2 mt-6 md:ml-32 md:mt-10 md:ml-60">
+          <div className="ml-2 mt-12 md:ml-32 md:mt-12 md:ml-60">
             <Image height={100} width={350} src={data.image3} />
           </div>
-          <div className="mt-2 capitalize text-2xl md:mt-6 md:text-2xl md:mt-10 ">
+          <div className="mt-12 capitalize text-2xl md:mt-8 md:text-2xl md:mt-10 ">
           <h2 >
           Pin Diagram of Arduino
           </h2>
           </div>
-          <div className="ml-2 mt-6 md:ml-32 md:mt-4 md:mt-10  md:ml-60 ">
+          <div className="ml-2 mt-12 md:ml-32 md:mt-4 md:mt-12  md:ml-60 ">
             <Image height={100} width={350} src={data.image4} className="md:mt-10"/>
           </div>
-          <h2 className="mt-2 capitalize text-2xl md:mt-2 md:text-2xl">
+          <h2 className="mt-12 capitalize text-2xl md:mt-6 md:text-2xl">
             {data.CircuitDiagramInfo}
           </h2>
-          <div className="ml-2 mt-10 md:ml-60 md:mt-4 ">
+          <div className="ml-2 mt-12 md:ml-60 md:mt-8 ">
             <Image height={100} width={450} src={data.image5} className="md:mt-10"/>
           </div>
         </div>

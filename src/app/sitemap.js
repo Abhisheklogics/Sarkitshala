@@ -42,7 +42,12 @@ export default async function sitemap() {
         changeFrequency: 'monthly',
         priority: 1,
       },
-      ...Espurl
+      ...Espurl,
+      {
+        url: `https://sarkitshala.site/about`,
+        changeFrequency: 'monthly',
+        priority: 1,
+      },
     
     ];
   }

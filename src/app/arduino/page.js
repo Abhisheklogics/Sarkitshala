@@ -65,8 +65,8 @@ if(!data)
           <div className="mt-10 md:ml-20">
               <Image
                 width={500}
-                height={400}
-                className="md:h-fit  md:w-fit ml-2 bg-none"
+                height={440}
+                className=" ml-2 bg-none"
                 src={data.image2}
                 alt="Specifications"
               />

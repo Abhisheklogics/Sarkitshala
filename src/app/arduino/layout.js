@@ -1,10 +1,11 @@
 'use client';
 import Link from "next/link";
-import { useState } from "react";
-import Image from "next/image";
+import { useState  } from "react";
 
-// Reusable button component for toggling sections
+
+
 const ToggleButton = ({ label, onClick, isOpen }) => (
+  
   <button
     onClick={onClick}
     className="md:py-2 py-3 px-1 relative w-full md:w-[310px] h-fit hover:bg-gray-100 text-left mb-6"
@@ -34,7 +35,9 @@ const ToggleLinks = ({ toggle, links }) => (
 );
 
 export default function RootLayout({ children }) {
-  // State for toggling sections dynamically
+  
+ 
+  
   const [toggles, setToggles] = useState({
     toggle1: false,
     toggle2: false,
@@ -43,7 +46,7 @@ export default function RootLayout({ children }) {
     toggle5: false,
   });
 
-  // Function to handle the toggling state
+  
   const handleToggle = (toggleKey) => {
     setToggles((prevState) => ({
       ...prevState,
@@ -51,7 +54,7 @@ export default function RootLayout({ children }) {
     }));
   };
 
-  // Experiment categories and their respective links
+  
   const experiments = [
     {
       label: "Experiments",
@@ -101,7 +104,7 @@ export default function RootLayout({ children }) {
 
   return (
     <>
-      {/* Button to show/hide experiment section */}
+    
       <button
         className="md:hidden block bg-blue-500 text-white p-2 rounded-md mt-36 ml-4"
         onClick={() => handleToggle('toggle1')}
@@ -109,11 +112,11 @@ export default function RootLayout({ children }) {
         {toggles.toggle1 ? "Hide Experiments" : "Show Experiments"}
       </button>
 
-      {/* Sidebar for experiment categories */}
-      <div
+    
+      <div 
         className={`${toggles.toggle1 ? "block" : "hidden"} md:block relative flex flex-col mt-2 md:mt-36 ml-1 md:ml-4 2xl:ml-10`}
       >
-        <div className="md:w-72 h-[700px] bg-white bg-gray-100 rounded p-4">
+        <div className="md:w-72 h-fit md:h-[700px] bg-white bg-gray-100 rounded p-4">
           {experiments.map((experiment, index) => (
             <div key={index}>
               <ToggleButton
@@ -127,8 +130,8 @@ export default function RootLayout({ children }) {
         </div>
       </div>
 
-      {/* In this Article sidebar (Desktop only) */}
-      <div className="hidden md:block md:w-72 h-[350px] md:absolute md:mt-[-720px] md:ml-[1110px] 2xl:ml-[1230px] bg-white p-4 rounded shadow-sm">
+    
+      <div className="hidden md:block md:w-60 h-[350px] md:absolute md:mt-[-720px] md:ml-[1110px] 2xl:ml-[1230px] bg-white p-4 rounded shadow-sm">
         <h1 className="text-2xl text-gray-800">In this Article</h1>
         <ul className="mt-4 space-y-2 text-sm">
           <li>Introduction</li>
@@ -142,7 +145,7 @@ export default function RootLayout({ children }) {
         </ul>
       </div>
 
-      {/* Main content */}
+    
       <div className="flex-1 p-4">{children}</div>
     </>
   );

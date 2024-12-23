@@ -7,14 +7,17 @@ const inter = Inter({ subsets: ["latin"] });
 import image1 from '../../public/images/Bristo.jpg'
 export const metadata= {
   title:{
-    default:'Learning website - HomePage',
+    default:'Sarkitshala - HomePage',
+    template:"%s - Sarkitshala"
 
   },
-  description: "A brief description of your app for better SEO.",
+  description: "Sarkitshala offers a collection of experiments and knowledge related to Arduino, Raspberry Pi, and ESP platforms. Explore hands-on projects, tutorials, and resources to enhance your understanding of electronics and programming.",
+  url: 'https://sarkitshala.site',
+  siteName: "sarkitshala.site",
   openGraph: {
     title: "sarkitshala.site",
     description: "",
-    url: '../../public/images/Bristo.jpg', // Ensure this is your actual URL
+    url: '../../public/images/Bristo.jpg', 
     siteName: "sarkitshala.site",
     images: [
       {
