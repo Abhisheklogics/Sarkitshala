@@ -55,12 +55,7 @@ const About = () => {
               <strong>Abhishek Kumar</strong> - Full Stack Developer: With experience in both front-end and back-end technologies, I strive to create seamless and intuitive user experiences. I have expertise in building scalable applications using Next.js, React, and Node.js.
             </p>
 
-            <div className="mt-8 text-center">
-              <p className="text-xl font-semibold text-gray-800">Connect with us</p>
-              <div className="mt-4">
-                <a href="mailto:your-email@example.com" className="text-blue-500 hover:underline">Email Us</a>
-              </div>
-            </div>
+          
           </div>
         </div>
       </div>
