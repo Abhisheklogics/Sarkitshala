@@ -81,7 +81,10 @@ export default async function Page({ params }) {
     if (!data) {
         return <p><Loading/></p>;
       }
-  
+      if (data.madeBy.includes('This article written by-')) {
+        data.madeBy = data.madeBy.replace('This article written by', 'Written By');
+      }
+      
 
     return (
     <>

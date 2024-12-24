@@ -26,10 +26,10 @@ export default   function Page() {
         return <p><Loading/></p>;
       }
   
-if(data.madeBy=='This article written by- Kumkum Yadav')
-{
- console.log('hello')
-}
+      if (data.madeBy.includes('This article written by -')) {
+        data.madeBy = data.madeBy.replace('This article written by ', 'Written By ');
+      }
+      
   return (
   
       <>

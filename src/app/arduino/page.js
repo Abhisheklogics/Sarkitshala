@@ -30,6 +30,13 @@ if(!data)
     <Loading/>
   )
 }
+if (data.madeBy.includes('MADE BY') || data.madeBy.includes('This article written by ') || data.madeBy.includes('Made By')) {
+
+  data.madeBy = data.madeBy.replace('This article written by', 'Written By');
+  data.madeBy = data.madeBy.replace('Made By', 'Written By');
+  data.madeBy = data.madeBy.replace('MADE BY', 'Written By');
+}
+
   return (
     <>
    

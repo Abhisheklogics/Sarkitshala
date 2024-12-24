@@ -280,7 +280,13 @@ export default async function Page({ params }) {
 
  
   const data = await getData(`https://sarkitshala.site/api/experiments/Arduino`, Experiment);
+  if (data.madeBy.includes('MADE BY') || data.madeBy.includes('This article written by') || data.madeBy.includes('Made By') ||data.madeBy.includes('This article writtem by') ) {
 
+    data.madeBy = data.madeBy.replace('This article written by', 'Written By');
+    data.madeBy = data.madeBy.replace('Made By', 'Written By');
+    data.madeBy = data.madeBy.replace('MADE BY', 'Written By');
+    data.madeBy = data.madeBy.replace('This article writtem by', 'Written By')
+  }
   return (
     <>
      
