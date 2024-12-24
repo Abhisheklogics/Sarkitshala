@@ -3,7 +3,8 @@ export default async function sitemap() {
   let res= await fetch( `https://sarkitshala.site/api/experiments/Arduino`)
   let data= await res.json()
    let ardurl=data.map(({ExperimentId})=>({
-     url:`https://sarkitshala.site/arduino/${ExperimentId}`
+     url:`https://sarkitshala.site/arduino/${ExperimentId}`,
+     priority: 1
    }))
     
     
