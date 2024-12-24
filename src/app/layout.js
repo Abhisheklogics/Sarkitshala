@@ -46,8 +46,9 @@ export default function RootLayout({ children }) {
         <meta name="google-site-verification" content="4D8wK0hdldsYIVNcbA1a-04Bdv-tzUuLkIxG4guNo6w" />
         <meta name="description" content={metadata.description} />
         <meta name="robots" content="index, follow" />
-        <link rel="icon" href="/favicon.ico" />
-        
+        <link rel="shortcut icon" href="./favicon.ico" />
+
+
       </head>
       <body className={`${inter.className} `}>
         <Header />

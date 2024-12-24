@@ -57,7 +57,7 @@ console.log(list.scrollHeight,list.clientHeight,maxScroll)
   };
 
   return (
-    <div className="h-[450px] w-[360px] bg-white rounded-md overflow-hidden ml-4 mt-4
+    <div className="h-[450px] w-[360px] bg-white rounded-md md:overflow-hidden ml-6 mt-4
      md:h-[420px] md:shadow-lg md:w-[360px] md:bg-white md:mt-[-440px] md:ml-[870px]   2xl:ml-[980px] md:rounded-md">
       
     
@@ -67,7 +67,7 @@ console.log(list.scrollHeight,list.clientHeight,maxScroll)
       
       
       <ul
-        className="h-full md:overflow-hidden text-sm"
+        className="h-full md:overflow-hidden  overflow-scroll text-sm"
         ref={listRef}
         onMouseEnter={handleUserInteractionStart}
         onMouseLeave={handleUserInteractionEnd}
