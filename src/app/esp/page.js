@@ -2,6 +2,49 @@
 
 import image1 from '../../../public/images/ESP.png'
 import Image from 'next/image';
+
+export const metadata = {
+  title: {
+    default: 'Explore ESP Projects - Sarkitshala',
+  },
+  description:
+    'The ESP8266 and ESP32 are popular microcontrollers with built-in Wi-Fi (and Bluetooth for the ESP32) capabilities, widely used in IoT projects for their affordability and versatility. Learn with expert guidance from Amarjeet Singh Chauhan, Aman Raj, and Abhishek Kumar.',
+  robots: 'index, follow',
+  openGraph: {
+    title: 'Explore ESP Projects - Sarkitshala',
+    description:
+      'Learn Esp32 , Arduino, IoT, and Embedded Systems with projects, tutorials, and real-world applications. Guided by experts in the field, including Amarjeet Singh Chauhan.',
+    url: 'https://sarkitshala.site',
+    images: [
+      {
+        url: 'https://sarkitshala.site/public/images/ESP.png',
+        width: 1200,
+        height: 630,
+        alt: 'Sarkitshala - Explore ESP Projects  and Tutorials',
+      },
+    ],
+    site_name: 'Sarkitshala',
+    type: 'website',
+    locale: 'en_US',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    site: '@sarkitshala',
+    title: 'Explore ESP Projects - Sarkitshala',
+    description:
+      'The ESP8266 and ESP32 are popular microcontrollers with built-in Wi-Fi (and Bluetooth for the ESP32) capabilities, widely used in IoT projects for their affordability and versatility. Learn with expert guidance from Amarjeet Singh Chauhan. Learn with Sarkitshala experts.',
+    image: 'https://sarkitshala.site/public/images/ESP.png',
+  },
+  keywords:
+    'Arduino, IoT, Embedded Systems, Robotics, Smart Agriculture, Electronics, Arduino Projects, Tutorials, Circuit Diagrams, Arduino IDE, LED Projects, Raspberry Pi, Home Automation, Ultrasonic Sensor, Servo Motor, DHT11, Sensors, Arduino Experiments, ESP8266, ESP32, Wi-Fi Microcontrollers, MicroPython, PlatformIO',
+  author: 'Sarkitshala Team (Amarjeet Singh Chauhan, Aman Raj, Abhishek Kumar)',
+  esp: {
+    summary: 'The ESP8266 and ESP32 are popular microcontrollers with built-in Wi-Fi (and Bluetooth for the ESP32) capabilities, widely used in IoT projects for their affordability and versatility.',
+    details: 'The ESP8266 is a Wi-Fi microchip with a full TCP/IP stack, ideal for basic IoT projects requiring Wi-Fi connectivity. The ESP32, with added Bluetooth support, dual-core CPU, and more GPIO pins, is suitable for complex applications like robotics and real-time data processing.',
+    usage: 'Both ESP8266 and ESP32 can be programmed using the Arduino IDE, MicroPython, and PlatformIO, making them accessible for users of all skill levels.'
+  }
+};
+
 export default function Page() {
   const data = {
     ExperimentName: 'ESP8266 / ESP32 ',

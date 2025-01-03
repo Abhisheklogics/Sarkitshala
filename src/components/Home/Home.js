@@ -76,6 +76,3 @@ const Footer=dynamic(()=>import('../Footer/Footer'))
 }
  export default Home1
 
- /*// Track if device is mobile
- data-aos={isMobile ? undefined : "fade-left"} 
- */

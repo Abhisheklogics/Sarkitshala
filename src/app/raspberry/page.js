@@ -15,7 +15,7 @@ export const metadata = {
     url: 'https://sarkitshala.site',
     images: [
       {
-        url: 'https://sarkitshala.site/images/raspberry-pi-projects.jpg',
+        url: 'https://sarkitshala.site/images/public/images/RP.png',
         width: 1200,
         height: 630,
         alt: 'Sarkitshala - Raspberry Pi Projects and Tutorials',
@@ -31,7 +31,7 @@ export const metadata = {
     title: 'Explore Raspberry Pi Projects - Sarkitshala',
     description:
       'Discover hands-on Raspberry Pi projects and tutorials. Learn IoT, Robotics, and DIY Electronics with Sarkitshala experts.',
-    image: 'https://sarkitshala.site/images/raspberry-pi-projects.jpg',
+    image: 'https://sarkitshala.site/images/public/images/RP.png',
   },
   keywords:
     'Raspberry Pi, IoT, Robotics, Home Automation, Raspberry Pi Tutorials, Raspberry Pi Projects, GPIO Pins, DIY Electronics, Embedded Systems, Python Programming, Raspberry Pi OS, Sensors, Raspberry Pi 4, Media Centers, Raspberry Pi Zero, Linux, Smart Agriculture',
@@ -52,7 +52,7 @@ export default function Page() {
           
         
   <Image height={400} width={600} src={image1} className='mt-6 md:ml-20 rounded'/>
-          <h2 className="text-sm mt-2 font-bold md:text-sm md:mt-2">Written by: Upendra</h2>
+          <h2 className="text-sm mt-2 font-bold md:text-sm md:mt-2">Written by: Upendra Prawal</h2>
         
 
           <h2 className="text-2xl mt-10 md:text-2xl md:mt-10 font-bold ">What is Raspberry Pi?</h2>

@@ -1,5 +1,5 @@
-// app/api/searchArduinoData/route.js
-import { NextRequest, NextResponse } from 'next/server';
+
+import { NextResponse } from 'next/server';
 import { Arduino} from '@/models/arduinomodels'; 
 import dbConnect from '@/lib/databaseConnect';
 

@@ -16,7 +16,7 @@ export const metadata = {
     url: 'https://sarkitshala.site',
     images: [
       {
-        url: 'https://sarkitshala.site/images/default-image.jpg',
+        url: 'https://sarkitshala.site/opengraph-image.jpg',
         width: 1200,
         height: 630,
         alt: 'Sarkitshala - Arduino Projects and Tutorials',
@@ -32,7 +32,7 @@ export const metadata = {
     title: 'Explore Arduino Projects - Sarkitshala',
     description:
       'Discover tutorials, projects, and innovations in Arduino, IoT, and Embedded Systems. Learn with Sarkitshala experts.',
-    image: 'https://sarkitshala.site/',
+    image: 'https://sarkitshala.site/opengraph-image.jpg',
   },
   keywords:
     'Arduino, IoT, Embedded Systems, Robotics, Smart Agriculture, Electronics, Arduino Projects, Tutorials, Circuit Diagrams, Arduino IDE, LED Projects, Raspberry Pi, Home Automation, Ultrasonic Sensor, Servo Motor, DHT11, Sensors, Arduino Experiments',
@@ -50,7 +50,7 @@ export default function Page() {
     
     <Image height={400} width={600} src={image1} className='mt-6 md:ml-20 rounded' alt='Arduino Image'/>
     
-    <h2 className="text-sm mt-6 md:text-sm md:mt-4 font-bold">Written By: Upendra</h2>
+    <h2 className="text-sm mt-6 md:text-sm md:mt-4 font-bold">Written By: Upendra Prawal</h2>
     <p className="mt-2 md:mt-2">Arduino was developed by a group of developers from Italy in 2005, led by Massimo Banzi.</p>
     
     <h2 className="text-2xl mt-8 md:text-2xl md:mt-8 font-bold ">

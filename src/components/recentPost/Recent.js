@@ -59,7 +59,7 @@ console.log(list.scrollHeight,list.clientHeight,maxScroll)
 
   return (
     <div className="h-[450px] w-[360px] bg-white rounded-md md:overflow-hidden ml-6 mt-4
-     md:h-[420px] md:shadow-lg md:w-[360px] md:bg-white md:mt-[-440px] md:ml-[870px]   2xl:ml-[980px] md:rounded-md">
+     md:h-[420px] md:shadow-lg md:w-[360px] md:bg-white md:mt-[-410px] md:ml-[870px]   2xl:ml-[980px] md:rounded-md">
       
     
       <div className="text-start font-bold text-2xl text-white bg-gradient-to-r from-green-700 to-green-300 rounded-sm p-4">

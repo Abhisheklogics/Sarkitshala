@@ -3,13 +3,15 @@ import image1 from '../../../public/images/D.png'
 import Image from 'next/image';
 const Drone = () => {
   return (
+    <div className="h-fit w-full p-5 bg-white bg-cover rounded-xl leading-8 text-justify break-words 
+    md:h-fit md:w-[790px] md:ml-[320px] mt-24 2xl:ml-[430px] md:p-5 md:bg-white md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap ">
     
       
-      <div className="max-w-lg mt-24 md:ml-[400px] md:w-[900px] bg-white rounded-lg shadow-xl p-8">
+      
       
         <h1 className="text-3xl font-bold text-center text-gray-800 mb-4">Drone</h1>
-        <Image height={400} width={600} src={image1} className='mt-6  rounded'/>
-        <div className="text-lg text-gray-700">
+        <Image height={400} width={600} src={image1} className='mt-6  md:ml-20 rounded'/>
+        <div className="text-lg  text-gray-700">
           <p className="mb-4">
             A drone typically consists of several key components that allow it to fly and operate effectively.
           </p>
@@ -38,6 +40,7 @@ const Drone = () => {
            
           </div>
         </div>
+   
       </div>
   
   );
