@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
    };
    
     return {
-      title: `Learn How to ${ExperimentName.ExperimentName} – Beginner's Guide  `,
+      title: ` ${ExperimentName.ExperimentName} – Sarkitshala `,
       description:  generateSeoDescription(ExperimentName.overviewinfo1),
       url: `https://sarkitshala.com/raspberry/${params.Experiment}`,
       siteName: "sarkitshala.com",

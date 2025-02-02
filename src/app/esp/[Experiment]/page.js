@@ -24,7 +24,7 @@ export async function generateMetadata({ params }) {
     };
 
     return {
-      title: `Learn How to ${ExperimentName.ExperimentName} with ESP32 – Beginner's Guide`,
+      title: ` ${ExperimentName.ExperimentName} Using ESP –Sarkitshala`,
       robots: { index: true, follow: true },
       description: generateSeoDescription(ExperimentName.overview),
       url: `https://sarkitshala.com/esp/${params.Experiment}`,
