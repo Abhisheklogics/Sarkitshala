@@ -24,6 +24,7 @@ export const metadata = {
     site_name: 'Sarkitshala',
     keywords: 'IoT, Raspberry Pi, Embedded Systems, Arduino, ESP, Drones, Electronics, Smart Agriculture, Tutorials, Projects, Amarjeet Singh Chauhan, Aman Raj',
   },
+
   twitter: {
     card: 'summary_large_image', 
     site: '@sarkitshala', 
