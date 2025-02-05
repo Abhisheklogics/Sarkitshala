@@ -3,14 +3,14 @@ import image1 from '../../../public/images/ar.png'
 import Image from 'next/image';
 
 export const metadata = {
-    title: "Learn Arduino: Projects, Tutorials - Sarkitshala",
-    description: "Master Arduino with hands-on projects & step-by-step tutorials. Learn Arduino pin functions, sensors, communication, and IoT applications with expert guidance.",
+    title: "Best Arduino Projects & Tutorials for Beginners - Sarkitshala",
+    description: "Arduino Projects & Tutorials. Learn pin functions, IoT, sensors & communication methods with step-by-step guides. Start your Arduino journey today!",
     alternates: {
       canonical: "https://sarkitshala.com/arduino",
     },
     openGraph: {
-      title: "Arduino Projects & Tutorials - Learn with Sarkitshala",
-      description: "Explore Arduino with practical tutorials, pin functions, digital & analog interfaces, and communication methods. Get started with Arduino programming today!",
+      title: "Best Arduino Projects & Tutorials for Beginners - Sarkitshala",
+      description: "Arduino Projects & Tutorials. Learn pin functions, IoT, sensors & communication methods with step-by-step guides. Start your Arduino journey today!",
       url: "https://sarkitshala.com/arduino",
       images: [
         {
@@ -26,11 +26,11 @@ export const metadata = {
     twitter: {
       card: "summary_large_image",
       site: "@sarkitshala",
-      title: "Learn Arduino: Hands-on Projects & Pin Functions",
-      description: "Discover Arduino with easy-to-follow tutorials on pin functions, digital & analog I/O, and IoT applications. Start your Arduino journey now!",
+      title: "Best Arduino Projects & Tutorials for Beginners - Sarkitshala",
+      description: "Arduino Projects & Tutorials. Learn pin functions, IoT, sensors & communication methods with step-by-step guides. Start your Arduino journey today!",
       image: "https://sarkitshala.com/opengraph-image.jpg",
     },
-    keywords:  'Arduino , Overview of Arduino , Arduino Pins',
+    keywords:  'Arduino projects, Best Arduino tutorials, Arduino for beginners, Arduino pin functions, IoT with Arduino, Arduino sensor tutorials',
   };
   
 

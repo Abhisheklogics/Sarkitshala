@@ -44,9 +44,7 @@ export async function generateMetadata({ params }) {
       keywords: [
         `${ExperimentName.ExperimentName}`, 
         "Raspberry Pi Projects", 
-        "DHT11 Sensor", 
-        "Circuit Design", 
-        "Python Programming", 
+        "DHT11 Sensor",
         "GPIO Pins",
         'DHT11',
         "LED",

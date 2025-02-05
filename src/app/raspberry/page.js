@@ -2,41 +2,37 @@
 import image1 from '../../../public/images/RP.png'
 import Image from 'next/image';
 export const metadata = {
-  title: {
-    default: 'Raspberry Pi  Projects & Tutorials – Sarkitshala ',
-  },
-  description:
-    'Explore hands-on Raspberry Pi projects and tutorials in IoT, Robotics, and Home Automation. Learn with expert guidance from Sarkitshala Team.',
-  robots: 'index, follow',
+  title: "Raspberry Pi Projects & Tutorials for IoT & Robotics - Sarkitshala",
+  description: "Explore 50+ Raspberry Pi Projects for IoT, Robotics, and Home Automation. Learn step-by-step with tutorials, programming guides, and expert insights from Sarkitshala.",
+  robots: "index, follow",
   openGraph: {
-    title: 'Raspberry Pi Projects & Tutorials - Sarkitshala',
-    description:
-      'Discover hands-on Raspberry Pi tutorials and projects for IoT, Robotics, and DIY Electronics. Step-by-step guidance from experts.',
-    url: 'https://sarkitshala.com/raspberry',
+    title: "Best Raspberry Pi Projects, Tutorials & IoT for Beginners - Sarkitshala",
+    description: "Explore 50+ hands-on Raspberry Pi tutorials for IoT, Robotics, and DIY Electronics. Get step-by-step guidance from expert instructors.",
+    url: "https://sarkitshala.com/raspberry",
     images: [
       {
-        url: 'https://sarkitshala.com/images/public/images/RP.png',
+        url: "https://sarkitshala.com/images/public/images/RP.png",
         width: 1200,
         height: 630,
-        alt: 'Sarkitshala - Raspberry Pi Projects and Tutorials',
+        alt: "Sarkitshala - Raspberry Pi Projects and Tutorials",
       },
     ],
-    site_name: 'Sarkitshala',
-    type: 'website',
-    locale: 'en_US',
+    site_name: "Sarkitshala",
+    type: "website",
+    locale: "en_US",
   },
   twitter: {
-    card: 'summary_large_image',
-    site: '@sarkitshala',
-    title: 'Explore Raspberry Pi Projects | Sarkitshala',
-    description:
-      'Discover hands-on Raspberry Pi projects and tutorials for IoT, Robotics, and DIY Electronics. Expert guidance for all levels.',
-    image: 'https://sarkitshala.com/images/public/images/RP.png',
+    card: "summary_large_image",
+    site: "@sarkitshala",
+    title: "Explore Raspberry Pi Projects | Sarkitshala",
+    description: "Discover hands-on Raspberry Pi projects and tutorials for IoT, Robotics, and DIY Electronics. Expert guidance for all levels.",
+    image: "https://sarkitshala.com/images/public/images/RP.png",
   },
-  canonical: 'https://sarkitshala.com/raspberry',
-  keywords:  'Raspberry Pi tutorials,Raspberry Pi,Key Features of Raspberry Pi  ',
-  author: 'Sarkitshala Team (Amarjeet Singh Chauhan, Aman Raj)',
+  canonical: "https://sarkitshala.com/raspberry",
+  keywords: "Raspberry Pi Projects, IoT with Raspberry Pi, Robotics, Raspberry Pi tutorials for beginners, Home Automation",
+  author: "Sarkitshala Team (Amarjeet Singh Chauhan, Aman Raj)",
 };
+
 
 
 export default function Page() {
