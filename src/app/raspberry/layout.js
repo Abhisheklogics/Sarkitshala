@@ -26,7 +26,7 @@ const ExperimentLinks = ({ toggle, links }) => (
       <li key={index}>
         <Link
           href={link.href}
-          className="block px-1 p-2 rounded-md text-sm text-gray-900   hover:text-blue-600 ml-2  hover:bg-gray-200"
+          className="block px-3 p-2 rounded-md text-sm text-gray-900    ml-2  hover:text-blue-600"
         >
           {link.text}
         </Link>
@@ -81,7 +81,7 @@ export default function RootLayout({ children }) {
           toggles.toggle1 ? "block" : "hidden"
         } md:block relative flex flex-col ml-1 2xl:ml-10 transition-transform bg-white`}
       >
-        <div className="inset-0 md:w-72 md:bg-white md:absolute ml-2 rounded-md p-4 mt-4 md:ml-4 md:mt-36 2xl:ml-10">
+        <div className="inset-0 md:w-[330px] md:bg-white md:absolute ml-2 rounded-md p-4 mt-4 md:ml-4 md:mt-28 2xl:ml-10">
           {experiments.map((experiment) => (
             <div key={experiment.key}>
               <ToggleButton

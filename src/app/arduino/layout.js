@@ -28,7 +28,7 @@ const ToggleLinks = ({ toggle, links }) => (
       <li key={index}>
         <Link
           href={link.href}
-          className="block px-4 p-2 rounded-md text-sm  hover:text-blue-600 text-blue-950 hover:bg-gray-200"
+          className="block px-4 p-2 rounded-md text-sm   hover:text-blue-600"
         >
           {link.text}
         </Link>
@@ -75,7 +75,7 @@ export default function RootLayout({ children }) {
   return (
     <>
       <header className="">
-        <button
+        <button 
           className="md:hidden block bg-blue-500 text-white p-2 rounded-md mt-36 ml-4"
           onClick={() => handleToggle('toggle1')}
         >
@@ -84,10 +84,10 @@ export default function RootLayout({ children }) {
       </header>
 
       <nav
-        className={`${toggles.toggle1 ? "block" : "hidden"} md:block  relative flex flex-col mt-2 md:mt-36 ml-0 md:ml-4 2xl:ml-10`}
+        className={`${toggles.toggle1 ? "block" : "hidden"} md:block  relative flex flex-col mt-2 md:mt-28 ml-0 md:ml-4 2xl:ml-10`}
         aria-label="Sidebar Navigation"
       >
-        <div className="md:w-72 h-fit md:h-[700px] bg-white bg-gray-100 rounded p-4">
+        <div className="md:w-[330px] h-fit md:h-[700px]  rounded p-4">
           {experiments.map((experiment, index) => (
             <section key={index}>
               <ToggleButton

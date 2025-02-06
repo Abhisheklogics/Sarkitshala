@@ -2,6 +2,7 @@
 import getData from "@/app/apiCall";
 import Image from "next/image";
 import dynamic from "next/dynamic";
+import Link from "next/link";
 const CodeBox = dynamic(() => import('@/components/code/code'), {
   ssr: false
 });
@@ -80,12 +81,12 @@ export default async function Page({ params }) {
   
   return (
     <>
-     
+  
     <div className="h-fit w-full p-5 bg-white bg-cover rounded-xl leading-8 text-justify break-words 
-    md:h-fit md:w-[790px] md:ml-[330px] md:mt-[-740px] 2xl:ml-[430px] md:p-5 md:bg-white md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap  md:bg-fixed">
+    md:h-fit md:w-[790px] md:ml-[330px] md:mt-[-720px] 2xl:ml-[430px] md:p-5 md:bg-white md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap  md:bg-fixed">
 
     
-        <h1 className="text-center capitalize md:text-3xl text-xl font-bold hover:text-blue-500">{data.ExperimentName}</h1>
+        <h1  className="text-center capitalize md:text-3xl text-xl font-bold hover:text-blue-500">{data.ExperimentName}</h1>
 
         {data.ExperimentId=='5'|| data.ExperimentId=='4'?<div className="mt-4 ml-[-10px] md:ml-32 md:mt-4">
           <Image

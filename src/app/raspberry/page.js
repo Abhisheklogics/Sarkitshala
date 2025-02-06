@@ -40,7 +40,7 @@ export default function Page() {
   return (
     <>
         <div className="h-fit w-full p-4 mt-[-20px] bg-white bg-cover rounded-xl leading-10 text-justify break-words  
-          md:h-fit md:w-[750px] 2xl:md:w-[800px] md:ml-[330px] md:mt-28 2xl:ml-[400px]
+          md:h-fit md:w-[730px] 2xl:md:w-[800px] md:ml-[330px] md:mt-24 2xl:ml-[400px]
           md:p-5 md:bg-white md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap">
           
           <h1 className="text-center capitalize md:text-3xl text-xl font-bold hover:text-blue-500 md:text-center md:text-2xl">

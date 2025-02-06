@@ -26,6 +26,7 @@ export const metadata = {
     description: "Master Arduino, Raspberry Pi, and ESP development with hands-on tutorials & projects on Sarkitshala. Start your IoT journey today!",
     image: "https://sarkitshala.com/opengraph-image.jpg",
   },
+
 };
 
 export default function Home() {
