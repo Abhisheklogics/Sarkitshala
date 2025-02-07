@@ -11,11 +11,11 @@ const CodeBox = dynamic(() => import('@/components/code/code'), {
 export async function generateMetadata({ params }) {
   const ExperimentName = await getData(`https://sarkitshala.com/api/experiments/ArduinoMeta`, params.Experiment);
   const generateSeoDescription = (text, maxLength = 160) => {
-    const truncatedText = text.length > maxLength 
-        ? `${text.slice(0, text.lastIndexOf(' ', maxLength)).trim()}...` 
-        : text.trim();
-    return `${truncatedText} Learn more about Arduino projects on Sarkitshala.`;
-};
+    return text.length > maxLength 
+      ? `${text.substring(0, maxLength).trim()}...` 
+      : text.trim();
+  };
+  
 
   if(ExperimentName.ExperimentName.includes('Interfacing'))
     {
@@ -34,7 +34,7 @@ export async function generateMetadata({ params }) {
     openGraph: {
       title: `${ExperimentName.ExperimentName} | Arduino Projects & Tutorials`,
       description: generateSeoDescription(ExperimentName.overviewinfo1),
-      url: `https://sarkitshala.com/arduino${params.Experiment}`,
+      url: `https://sarkitshala.com/arduino/${params.Experiment}`,
       images: [
         {
           url: ExperimentName.image1 || 'https://sarkitshala.com/opengraph-image.jpg',
@@ -45,7 +45,7 @@ export async function generateMetadata({ params }) {
       ],
       site_name: 'Sarkitshala',
     },
-    keywords: `${ExperimentName.ExperimentName}, LED , OLED, LCD,Ultrasonic Sensor ,Arduino Push Button`,
+   keywords: `${ExperimentName.ExperimentName}, Arduino circuits, IoT projects, microcontroller interfacing, beginner electronics, LED ,Sensor`,
     canonical: `https://sarkitshala.com/arduino/${params.Experiment}`,
     author: 'Sarkitshala Team (Amarjeet Singh Chauhan, Aman Raj)'
   };
@@ -88,24 +88,14 @@ export default async function Page({ params }) {
     
         <h1  className="text-center capitalize md:text-3xl text-xl font-bold hover:text-blue-500">{data.ExperimentName}</h1>
 
-        {data.ExperimentId=='5'|| data.ExperimentId=='4'?<div className="mt-4 ml-[-10px] md:ml-32 md:mt-4">
-          <Image
-            width={500}
-            height={200}
-            className="md:ml:4 md:h-52 mt-0 md:w-[500px] rounded  md:h-[280px] w-full"
-            src={data.image1}
-             loading="lazy"
-            alt={`${data.ExperimentName} - Experiment Image `}
-          />
-        </div>:<Image
-            width={600}
-            height={200}
-            className=" md:mt-4 md:h-fit   rounded md:w-[500px]  md:ml-28 mt-4 "
-            src={data.image1}
-             loading="lazy"
-            alt={`${data.ExperimentName} - Experiment Image `}
-          />}
-
+        <Image
+  width={data.ExperimentId === '5' || data.ExperimentId === '4' ? 300 : 500}
+  height={data.ExperimentId === '5' || data.ExperimentId === '4' ? 200 : 400}
+   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px "
+  src={data.image1}
+  alt={`${data.ExperimentName} - Experiment Image`}
+ className="md:ml-28 mt-4 md:rounded"
+/>
         <h2 className="text-sm mt-6 font-bold p-1 hover:text-blue-500">{data.madeBy}</h2>
         <p className="mt-2 hover:text-blue-500">{data.madeByinfo}</p>
         <p className="mt-2 md:mt-2">{data.madeByinfo1}</p>
@@ -115,129 +105,37 @@ export default async function Page({ params }) {
         <p className="mt-8 md:mt-8">{data.overviewinfo2}</p>
 
         <div className="mt-12 md:ml-20">
-         {data.ExperimentId == '1' || data.ExperimentId == '3' || data.ExperimentId == '4' || data.ExperimentId == '5' ||data.ExperimentId == '6' || data.ExperimentId == '7' || data.ExperimentId == '8'  || data.ExperimentId == '9' || data.ExperimentId == '10' || data.ExperimentId =='11'? 
-         <Image
+        <Image
             width={500}
             height={440}
-             loading="lazy"
+            
+             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px "
             className="   w-full h-full md:ml-4"
             src={data.image2} 
             alt={`${data.ExperimentName} - Specifications `}
-          />: <Image
-          width={450}
-          height={400}
-           loading="lazy"
-          className="ml-2 md:h-fit md:w-fit md:ml-4 bg-none "
-          src={data.image2}
-          alt={`${data.ExperimentName} - Specifications `}
-        />}
+          />
         
         </div>
 
-       
-        {data.ExperimentId == '1' || data.ExperimentId == '2' || data.ExperimentId=='3'  || data.ExperimentId=='4' || data.ExperimentId=='5'|| data.ExperimentId=='6'|| data.ExperimentId=='7'|| data.ExperimentId=='8'|| data.ExperimentId=='9'|| data.ExperimentId=='10' || data.ExperimentId=='11' ? (
-        <div>
+        
+          <div>
           <h2 className="hover:text-blue-500 mt-12 capitalize text-lg md:mt-10 md:text-2xl font-bold md:font-bold ">
             {data.pinDiagramInfo}
           </h2>
           <div className="mt-12 capitalize rounded ml-10 md:ml-44 md:mt-12 md:rounded">
-            <Image  loading="lazy" height={300} width={450} src={data.image3} alt={`${data.ExperimentName} -  Pin Diagram `}/>
+            <Image height={300} width={450}  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px " src={data.image3} alt={`${data.ExperimentName} -  Pin Diagram `}/>
           </div>
 
           <h2 className="hover:text-blue-500 mt-12 capitalize text-lg md:mt-10 md:text-2xl font-bold ">
             {data.CircuitDiagramInfo}
           </h2>
           <div className="mt-12 md:ml-24 md:mt-12 w-fit h-fit">
-            <Image  loading="lazy" height={400} width={500} src={data.image4} alt={`${data.ExperimentName} - Circuit Diagram`} />
+            <Image  height={400} width={500}  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px " src={data.image4} alt={`${data.ExperimentName} - Circuit Diagram`} />
           </div>
         </div>
-      ) : (
-        ''
-      )}
 
-
-
-      {data.ExperimentId == '12'  ? (
-        <div>
-          <h2 className="hover:text-blue-500 mt-12 capitalize text-lg md:mt-6 md:text-2xl font-bold ">
-            {data.pinDiagramInfo}
-          </h2>
-          <div className="ml-12 mt-8 md:ml-32 md:mt-12 md:ml-60">
-            <Image  loading="lazy" height={100} width={350} src={data.image3} alt={`${data.ExperimentName} -  Pin Diagram `} />
-          </div>
-          <div className="hover:text-blue-500 mt-12 text-lg md:mt-8 md:text-2xl md:mt-10 font-bold ">
-          <h2 >
-          Pin Diagram of Push Button
-          </h2>
-          </div>
-          <div className="ml-12 mt-6 md:ml-32 md:mt-8 md:mt-10  md:ml-60 ">
-            <Image  loading="lazy" height={100} width={350} src={data.image4} className="md:mt-10" alt={`${data.ExperimentName} - Circuit Diagram`}/>
-          </div>
-          <h2 className="mt-12 hover:text-blue-500 capitalize text-lg md:mt-8 md:text-2xl font-bold ">
-            {data.CircuitDiagramInfo}
-          </h2>
-          <div className="ml-12 mt-8 md:ml-60 md:mt-4 ">
-            <Image  loading="lazy" height={100} width={450} src={data.image5} className="md:mt-10" alt={`${data.ExperimentName} - Circuit Diagram`}/>
-          </div>
-        </div>
-      ) : (
-        ''
-      )}
-
-{data.ExperimentId == '13'  ? (
-        <div className="md:mt-12 mt-12">
-          <h2 className="hover:text-blue-500 mt-12 text-lg capitalize md:mt-4 md:text-2xl font-bold ">
-            {data.pinDiagramInfo}
-          </h2>
-          <div className="ml-2 mt-12 md:ml-32 md:mt-12 md:ml-60">
-            <Image  loading="lazy" height={100} width={350} src={data.image3} alt={`${data.ExperimentName} -  Pin Diagram `}/>
-          </div>
-          <div className="hover:text-blue-500 mt-12 capitalize text-lg md:mt-8 md:text-2xl md:mt-10 font-bold ">
-          <h2 >
-          Pin Diagram of Arduino
-          </h2>
-          </div>
-          <div className="ml-2 mt-12 md:ml-32 md:mt-4 md:mt-12  md:ml-60 ">
-            <Image  loading="lazy" height={100} width={350} src={data.image4} className="md:mt-10" alt={`${data.ExperimentName} - Circuit Diagram`}/>
-          </div>
-          <h2 className="hover:text-blue-500 mt-12 capitalize text-lg md:mt-6 md:text-2xl font-bold">
-            {data.CircuitDiagramInfo}
-          </h2>
-          <div className="ml-2 mt-12 md:ml-60 md:mt-8 ">
-            <Image  loading="lazy" height={100} width={450} src={data.image5} className="md:mt-10" alt={`${data.ExperimentName} - Circuit Diagram`}/>
-          </div>
-        </div>
-      ) : (
-        ''
-      )}
-
-      
-{data.ExperimentId == '14'  ? (
-        <div className="md:mt-20">
-          <h2 className="mt-2 hover:text-blue-500 capitalize text-lg md:mt-2 md:text-2xl font-bold ">
-            {data.pinDiagramInfo}
-          </h2>
-          <div className="ml-2 mt-6 md:ml-32 md:mt-10 md:ml-60">
-            <Image  loading="lazy" height={100} width={400} src={data.image3} alt={`${data.ExperimentName} -  Pin Diagram `}/>
-          </div>
-          <div className="mt-2 hover:text-blue-500 capitalize text-lg md:mt-6 md:text-2xl md:mt-10 font-bold ">
-          <h2 >
-          Pin Diagram of Push Button
-          </h2>
-          </div>
-          <div className="ml-2 mt-4 md:ml-32 md:mt-4 md:mt-10  md:ml-60 ">
-            <Image  loading="lazy" height={100} width={300} src={data.image4} className="md:mt-10" alt={`${data.ExperimentName} - Circuit Diagram`}/>
-          </div>
-          <h2 className="mt-2 hover:text-blue-500 capitalize text-lg md:mt-2 md:text-2xl font-bold ">
-            {data.CircuitDiagramInfo}
-          </h2>
-          <div className="ml-2 mt-10 md:ml-40 md:mt-10 ">
-            <Image  loading="lazy" height={100} width={570} src={data.image5} className="md:mt-10" alt={`${data.ExperimentName} - Circuit Diagram`}/>
-          </div>
-        </div>
-      ) : (
-        ''
-      )}
+       
+     
     {data.ExperimentId=='14'?'':<div><h3 className="md:text-2xl text-lg mt-20 font-bold hover:text-blue-500">Steps</h3>
         <div className="leading-10">
           {data.step && <p>{data.step}</p>}

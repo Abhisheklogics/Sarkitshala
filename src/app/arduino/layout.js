@@ -57,17 +57,17 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'led'}`, text: "Interfacing LED" },
         { href: `/arduino/${'7-segment-display'}`, text: "Interfacing Seven Segement Display" },
         { href: `/arduino/${'oled'}`, text: "Interfacing OLED" },
-        { href: `/arduino/${'led-push-button'}`, text: "Interfacing LED with Push Button" },
-        { href: `/arduino/${'oled-push-button'}`, text: "Interfacing Push Button with OLED" },
         { href: `/arduino/${'pir-sensor'}`, text: "Interfacing PIR Sensor" },
         { href: `/arduino/${'soil-moisture'}`, text: "Interfacing Soil Moisture Sensor" },
-        { href: `/arduino/${'dht22'}`, text: "Interfacing DHT22" },
         { href: `/arduino/${'dc-motor'}`, text: "Interfacing DC Motor" },
         { href: `/arduino/${'servo-motor'}`, text: "Interfacing Servo Motor" },
         { href: `/arduino/${'gear-motor'}`, text: "Interfacing Gear Motor" },
         { href: `/arduino/${'traffic-light'}`, text: "Interfacing Traffic Light" },
         { href: `/arduino/${'lcd'}`, text: "Interfacing LCD" },
-        { href: `/arduino/${'ulrasonic-sensor-led'}`, text: "Interfacing Ultrasonic with LED" }
+        { href: `/arduino/${'ulrasonic-sensor-led'}`, text: "Interfacing Ultrasonic with LED" },
+        { href: `/arduino/${'oled-push-button'}`, text: "Interfacing Push Button with OLED" },
+        { href: `/arduino/${'dht22'}`, text: "Interfacing DHT22" },
+        { href: `/arduino/${'led-push-button'}`, text: "Interfacing LED with Push Button" }
        ],
     },
   ];

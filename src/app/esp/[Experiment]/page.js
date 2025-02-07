@@ -121,7 +121,7 @@ export default async function Page({ params }) {
       <h1 className=" font-bold text-2xl text-center md:text-2xl hover:text-blue-500">{data.ExperimentName}</h1>
       
       <div className="md:ml-32 md:mt-6 mt-4">
-        <Image height={400} width={500} className="rounded " loading="lazy" src={data.image1} alt={`${data.ExperimentName} - Experiment Image`} />
+        <Image height={400} width={500}  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px" className="rounded "  src={data.image1} alt={`${data.ExperimentName} - Experiment Image`} />
       </div>
 
       <h2 className="md:mt-4 md:text-sm md:ml-2 mt-4 text-sm ml-2 font-bold hover:text-blue-500">Written By: Aman Raj</h2>
@@ -133,25 +133,21 @@ export default async function Page({ params }) {
       <p className="md:mt-4">{data.component}</p>
 
       <div className="md:ml-12 md:mt-8">
-        <Image height={400} width={700} className="ml-1 md:ml-[-10px]  mt-10" loading="lazy" src={data.image2} alt={`${data.ExperimentName} - Specifications`} />
+        <Image height={400} width={700} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px"  className="ml-1 md:ml-[-10px]  mt-10"  src={data.image2} alt={`${data.ExperimentName} - Specifications`} />
       </div>
 
       <h2 className="md:text-2xl md:mt-14  text-lg  font-bold  mt-10 hover:text-blue-500">{data.pinDiagramInfo}</h2>
 
-      {data.ExperimentId == '1' || data.ExperimentId == '2' || data.ExperimentId == '3' || data.ExperimentId == '4' || data.ExperimentId == '5' || data.ExperimentId == '7' ? (
-        <div className="">
-          <Image height={500} width={400} className="md:mt-20 md:ml-40 mt-10 rounded" loading="lazy" src={data.image3} alt={`${data.ExperimentName} - Pin Diagram`}/>
-        </div>
-      ) : (
+ 
         <div className="md:ml-20 md:h-[300px]">
-          <Image height={300} width={200} className="ml-40 md:mt-24" loading="lazy" src={data.image3} alt={`${data.ExperimentName} - Pin Diagram`} />
+          <Image height={300} width={200}  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px" className="ml-40 md:mt-24"  src={data.image3} alt={`${data.ExperimentName} - Pin Diagram`} />
         </div>
-      )}
+     
 
       <h2 className="md:text-2xl font-bold text-lg hover:text-blue-500 mt-12">{data.CircuitDiagramInfo}</h2>
 
       <div className="md:ml-32 md:mt-10">
-        <Image height={400} width={500} className="md:ml-24    mt-10" loading="lazy" src={data.image4} alt={`${data.ExperimentName} - Circuit Diagram`} />
+        <Image height={400} width={500} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px" className="md:ml-24    mt-10"  src={data.image4} alt={`${data.ExperimentName} - Circuit Diagram`} />
       </div>
 
       <h3 className="md:text-2xl text-lg hover:text-blue-500 font-bold hover:text-blue-500 mt-10">Steps</h3>

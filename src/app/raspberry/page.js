@@ -48,7 +48,7 @@ export default function Page() {
           </h1>
           
         
-  <Image  loading="lazy" height={400} width={600} src={image1} className='mt-6 md:ml-14 rounded'/>
+  <Image  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px" height={400} width={500} src={image1} className='mt-6 md:ml-24 rounded'/>
           <h2 className="text-sm mt-2 font-bold md:text-sm md:mt-2 hover:text-blue-500">Written by: Upendra Prawal</h2>
         
 

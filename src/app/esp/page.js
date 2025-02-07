@@ -84,7 +84,7 @@ export default function Page() {
           md:text-center md:text-2xl  hover:text-blue-500 
         ">{data.ExperimentName}</h1>
        
-       <Image alt="ESP8266 and ESP32 Projects" height={400} width={600} src={image1} loading="lazy" className='mt-6 md:ml-14 rounded'/>
+       <Image alt="ESP8266 and ESP32 Projects"   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px" height={500} width={500} src={image1}  className='mt-6 md:ml-24 rounded'/>
 
         <h2 className="mt-4 text-sm ml-2
         md:mt-4 md:text-sm md:ml-2 font-bold hover:text-blue-500">Written By : Aman Raj</h2>
