@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import dynamic from "next/dynamic";
-
+import Link from "next/link";
 import getData from "@/app/apiCall";
 
 
@@ -145,14 +145,14 @@ export default async function Page({ params }) {
          
 
           <h2 className=" text-sm mt-4 md:text-sm md:mt-2 font-bold hover:text-blue-500">{data.madeBy}</h2>
-          <p className="md:mt-6 mt-6">{data.madeByinfo1}</p>
+          <p className="md:mt-6 mt-6" id="introduction">{data.madeByinfo1}</p>
           <p className="md:mt-6 mt-6">{data.madeByinfo2}</p>
-          <h2 className="md:text-2xl md:mt-10 text-lg  font-bold mt-10 hover:text-blue-500">{data.overview}</h2>
+          <h2 className="md:text-2xl md:mt-10 text-lg  font-bold mt-10 hover:text-blue-500" id="Overview">{data.overview}</h2>
           <p className="md:mt-10 md:leading-8 mt-10">{data.overviewinfo1}</p>
           <p className="md:mt-10 md:leading-8 mt-10">{data.overviewinfo2}</p>
 
           <div className="md:leading-10 ">
-            <p className="md:mt-10 md:text-2xl mt-10 text-lg  font-bold hover:text-blue-500">{data.Material}</p>
+            <p className="md:mt-10 md:text-2xl mt-10 text-lg  font-bold hover:text-blue-500" id="Hardware-Components">{data.Material}</p>
             {data.Material1 && <p className="md:ml-10 md:mt-4 mt-4">1: {data.Material1}</p>}
             {data.Material2 && <p className="md:ml-10 md:mt-2 mt-4">2: {data.Material2}</p>}
             {data.Material3 && <p className="md:ml-10 md:mt-2 mt-4">3: {data.Material3}</p>}
@@ -174,7 +174,7 @@ export default async function Page({ params }) {
               />
             </div>
          
-            <h2 className="md:text-2xl md:mt-20 text-lg  mt-8 hover:text-blue-500" >
+            <h2 className="md:text-2xl md:mt-20 text-lg  mt-8 hover:text-blue-500" id="Pin-Diagram">
             {data.pinDiagramInfo}
           </h2>
          
@@ -196,7 +196,7 @@ export default async function Page({ params }) {
           
            
   
-          <h2 className="md:mt-10 md:text-2xl text-lg mt-8  hover:text-blue-500" >
+          <h2 className="md:mt-10 md:text-2xl text-lg mt-8  hover:text-blue-500"  id="Circuit-Diagram">
             {data.CircuitDiagramInfo}
           </h2>
 
@@ -212,7 +212,7 @@ export default async function Page({ params }) {
               />
             </div>
       
-          <h3 className="md:text-2xl md:mt-6 font-bold text-lg  mt-8 hover:text-blue-500">Steps</h3>
+          <h3 className="md:text-2xl md:mt-6 font-bold text-lg  mt-8 hover:text-blue-500" id="Steps">Steps</h3>
           <div className="md:leading-10">
             <p className="md:mt-4">{data.step}</p>
             {data.step1 && <p className="md:mt-2 mt-4">1: {data.step1}</p>}
@@ -225,13 +225,28 @@ export default async function Page({ params }) {
             {data.step8 && <p className="md:mt-2">8: {data.step8}</p>}
           </div>
 
-          <h3 className="md:mt-4 md:text-2xl text-lg font-bold mt-8 hover:text-blue-500">Code</h3>
+          <h3 className="md:mt-4 md:text-2xl text-lg font-bold mt-8 hover:text-blue-500" id="Code">Code</h3>
           <CodeBox num={data.ExperimentId} exNam='Raspberry' language={'c'} />
           
-          <h3 className="md:text-2xl md:mt-4 text-lg  font-bold mt-8 hover:text-blue-500">Conclusion</h3>
+          <h3 className="md:text-2xl md:mt-4 text-lg  font-bold mt-8 hover:text-blue-500" id="Conclusion">Conclusion</h3>
           <p className="md:mt-4">{data.result}</p>
        
       </div>
+      <div className="md:block hidden  p-4 shadow-md rounded-md md:fixed md:right-1 2xl:right-2 md:top-24 md:w-fit  max-w-xs mx-auto mt-4">
+      <p className="font-semibold text-lg">In this Article</p>
+      <div className="flex flex-col gap-2 mt-3 text-sm md:text-md ">
+        <Link href="#introduction" className="hover:text-blue-600">Introduction</Link>
+        <Link href="#Overview" className="hover:text-blue-600">Overview of Experiment</Link>
+        <Link href="#Hardware-Components" className="hover:text-blue-600">Hardware Components</Link>
+        <Link href="#Pin-Diagram" className="hover:text-blue-600">Pin Diagram</Link>
+        <Link href="#Circuit-Diagram" className="hover:text-blue-600">Circuit Diagram</Link>
+        <Link href="#Steps" className="hover:text-blue-600">Steps</Link>
+        <Link href="#Code" className="hover:text-blue-600">Code</Link>
+
+        <Link href="#Conclusion" className="hover:text-blue-600">Conclusion</Link>
+        
+      </div>
+    </div>
     </>
   );
 }

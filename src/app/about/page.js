@@ -37,38 +37,58 @@ export const metadata = {
 
 const About = () => {
   return (
-    <>
-      <div className="min-h-screen mt-20 flex items-center justify-center bg-gradient-to-r from-blue-500 to-gray-900 hover:from-purple-500 hover:to-blue-500 py-12 px-6">
-        <div className="max-w-4xl w-full bg-white shadow-lg rounded-lg p-8">
-          <h1 className="text-4xl font-bold text-center text-gray-800 mb-6 hover:text-blue-600">About Us</h1>
-          <div className="text-md   ">
-            <p className="mb-4">
-              Welcome to Sarkitshala! We are a team of passionate developers and educators dedicated to delivering high-quality experiments, projects, and tutorials in the fields of IoT, Embedded Systems, Raspberry Pi, Arduino, ESP, and Drones. 
-            </p>
-            <p className="mb-4">
-              <strong className='hover:text-blue-600'>Amarjeet Singh Chauhan</strong> - A visionary educator and leader, Amarjeet Sir has been pivotal in guiding countless students and professionals. With deep expertise in IoT, Embedded Systems, and Robotics, he has played a key role in shaping the careers of aspiring engineers. His passion for teaching, coupled with his unwavering support, has made him a beacon of inspiration and knowledge within the tech community, empowering students to reach their full potential.
-            </p>
-            <p className="mb-4">
-              <strong className='hover:text-blue-600'>Aman Raj</strong> - A skilled and creative developer who brings a wealth of innovative ideas to every project. His ability to solve complex problems with simple, effective solutions makes him an invaluable part of our team. Aman ensures that every tutorial and project on Sarkitshala is up to date and aligned with the latest industry trends.
-            </p>
-            <p className="mb-4">
-              Our platform is home to a wide range of free tutorials, projects, and experiments on popular topics like:
-            </p>
-            <ul className="list-disc ml-6 mb-4">
-              <li>Raspberry Pi Projects</li>
-              <li>Arduino Experiments</li>
-              <li>ESP Projects and Tutorials</li>
-              <li>Drone Technology and Applications</li>
-              <li>Smart Agriculture Solutions</li>
-              <li>IoT Applications and Embedded Systems</li>
-            </ul>
-            <p className="mb-4">
-              At Sarkitshala, we believe in empowering the next generation of innovators by providing them with hands-on, practical learning resources. Join us as we explore new technologies and make cutting-edge advancements accessible to all.
-            </p>
-          </div>
-        </div>
+    <div className="mt-[100px] bg-gray-100 text-gray-900 flex flex-col items-center p-6">
+      <div className="max-w-3xl text-center">
+        <h1 className="text-4xl font-bold text-blue-600">About Us</h1>
+        <p className="mt-[50px] text-lg">
+          Welcome to <span className="font-semibold">Sarkitshala.com</span>, a dedicated online platform created to support and nurture the next generation of technologists, students, researchers, and faculty members. We are committed to providing free, high-quality tutorials that equip learners with in-depth knowledge and practical skills in technology, circuits, IoT, drones, robotics, and beyond.
+        </p>
       </div>
-    </>
+
+      <div className="mt-10 max-w-4xl bg-white p-6 rounded-2xl shadow-lg">
+        <h2 className="text-2xl font-semibold text-gray-800">Our Mission</h2>
+        <p className="mt-2 text-gray-700">
+        In today’s rapidly evolving world, technology plays a crucial role in shaping industries, education, and innovation. At Sarkitshala, we believe that knowledge should be freely accessible to all, regardless of background or financial constraints. That’s why our platform is entirely free and open source, ensuring that students, educators, and researchers have unrestricted access to valuable learning resources.
+        </p>
+      </div>
+
+      <div className="mt-10 max-w-4xl bg-white p-6 rounded-2xl shadow-lg">
+        <h2 className="text-2xl font-semibold text-gray-800">Bridging the Gap Between Theory and Practice</h2>
+        <p className="mt-2 text-gray-700">
+        While many educational platforms focus solely on theoretical concepts, Sarkitshala takes a hands-on approach. We go beyond textbooks and lectures, offering practical, real-world applications of technology. Our tutorials are designed to:
+        </p><br/>
+        <ul>
+          <li>✅ <b>Simplify Complex Concepts: </b>Breaking down intricate topics into easy-to-understand explanations.</li>
+          <li>✅ <b>Encourage Hands-on Learning: </b>Providing step-by-step guides, projects, and real-world examples.</li>
+          <li>✅ <b>Support Innovation and Research: </b>Enabling researchers and faculty members to explore new advancements.</li>
+          <li>✅ <b>Enhance Career and Academic Growth: </b>Helping students and professionals develop industry-relevant skills.</li>
+        </ul>
+        </div>
+
+        {/* Who Can Benefit ? */}
+        <div className="mt-10 max-w-4xl bg-white p-6 rounded-2xl shadow-lg">
+        <h2 className="text-2xl font-semibold text-gray-800">Who Can Benefit ?</h2>
+        <p className="mt-2 text-gray-700">
+        While many educational platforms focus solely on theoretical concepts, Sarkitshala takes a hands-on approach. We go beyond textbooks and lectures, offering practical, real-world applications of technology. Our tutorials are designed to:
+        </p><br/>
+        <ul>
+          <li>✅ <b>Students: </b>Whether you're a beginner or an advanced learner, our tutorials provide structured learning paths to help you master technology and circuit design.</li>
+          <li>✅ <b>Researchers: </b>We offer cutting-edge insights into emerging fields like IoT, robotics, and AI, aiding researchers in their experiments and innovations.</li>
+          <li>✅ <b>Faculty Members: </b>Our well-researched content serves as a valuable teaching resource, helping educators enhance their curriculum with practical examples and case studies.</li>
+          <li>✅ <b>Tech Enthusiasts & Hobbyists: </b>Whether you love experimenting with circuits or building your own tech projects, Sarkitshala provides everything you need to bring your ideas to life.</li>
+        </ul>
+        </div>
+
+      <div className="mt-10 max-w-4xl bg-white p-6 rounded-2xl shadow-lg">
+        <h2 className="text-2xl font-semibold text-gray-800">Join Us</h2>
+        <p className="mt-2 text-gray-700">
+          🚀 Start exploring today and take your technological skills to the next level!
+        </p>
+        <a href="https://Sarkitshala.com" target="_blank" rel="noopener noreferrer" className="mt-4 inline-block bg-blue-600 text-white px-6 py-2 rounded-lg hover:bg-blue-700">
+          Visit Sarkitshala
+        </a>
+      </div>
+    </div>
   );
 };
 

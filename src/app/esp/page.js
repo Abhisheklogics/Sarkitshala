@@ -49,31 +49,50 @@ export const metadata = {
 
 export default function Page() {
   const data = {
-    ExperimentName: ' ESP32 ',
-
-    madeByinfo: 'This page explains the details of the ESP8266 and ESP32 microcontrollers.',
-    overview: 'The ESP8266 and ESP32 are very affordable compared to other Wi-Fi or Bluetooth solutions, making them attractive for hobbyists and developers working on small projects or prototypes.',
-    espExplanation: `
-      The ESP8266 and ESP32 are popular microcontrollers with built-in Wi-Fi (and Bluetooth for the ESP32) capabilities. These chips have become a staple in the Internet of Things (IoT) community due to their low cost, ease of use, and ability to connect to the internet and control other devices.
-
-      
-      The ESP8266 is a Wi-Fi microchip with a full TCP/IP stack, which allows it to connect to a Wi-Fi network and communicate with other devices over the internet. It's commonly used in home automation, IoT, and smart home projects. Despite being more affordable and having fewer features compared to the ESP32, the ESP8266 is still highly efficient for basic IoT applications like connecting sensors, lights, and switches to the internet.
-
-       ESP32:
-      The ESP32 is a more advanced microcontroller compared to the ESP8266. It offers a range of additional features, including:
-      - Bluetooth (Classic and BLE)
-      - More GPIO pins for interfacing with sensors, motors, etc.
-      - Higher processing power with a dual-core CPU
-      - More memory for handling larger applications
-      These additional capabilities make the ESP32 ideal for more complex IoT applications, such as robotics, wearable devices, industrial automation, and real-time data processing.
-
-      Both the ESP8266 and ESP32 can be programmed using the Arduino IDE or other platforms like MicroPython and PlatformIO, making them accessible to a wide range of users from beginners to experts. They can be easily integrated into projects that require wireless communication, and with their affordable price, they provide a lot of value for anyone looking to develop IoT applications.
-
-      In summary:
-      - ESP8266: Great for basic IoT projects that require Wi-Fi connectivity.
-      - ESP32: Offers more features and power for advanced IoT applications with both Wi-Fi and Bluetooth connectivity.
+    ExperimentName: "ESP8266 & ESP32 Setup Guide",
+    madeByinfo: "This guide explains how to set up ESP8266 and ESP32 with Arduino IDE and connect them to WiFi.",
+    overview: "The ESP8266 and ESP32 are affordable microcontrollers with built-in WiFi and Bluetooth, ideal for IoT and smart home projects.",
+    espSetupGuide: `
+      1. Download and install Arduino IDE from https://www.arduino.cc/en/software.
+      2. Open Arduino IDE → File → Preferences → Add the following URLs:
+         - https://dl.espressif.com/dl/package_esp32_index.json
+         - https://arduino.esp8266.com/stable/package_esp8266com_index.json
+      3. Install the ESP8266 and ESP32 board packages from Board Manager.
+      4. If required, install the USB-to-Serial driver (CP210x or CH340).
+      5. Connect the ESP board via USB and select the correct COM port.
+      6. Upload the Blink sketch to test the setup.
+      7. To connect to WiFi, use the provided WiFi code.
     `,
+    blinkCode: {
+      esp8266: `
+        void setup() { pinMode(2, OUTPUT); }
+        void loop() { digitalWrite(2, HIGH); delay(1000); digitalWrite(2, LOW); delay(1000); }
+      `,
+      esp32: `
+        void setup() { pinMode(2, OUTPUT); }
+        void loop() { digitalWrite(2, HIGH); delay(1000); digitalWrite(2, LOW); delay(1000); }
+      `
+    },
+    wifiSetupCode: `
+      #include <WiFi.h>  // For ESP32
+      // #include <ESP8266WiFi.h>  // For ESP8266
+      const char* ssid = "Your_SSID"; 
+      const char* password = "Your_PASSWORD";
+  
+      void setup() {
+        Serial.begin(115200);
+        WiFi.begin(ssid, password);
+        while (WiFi.status() != WL_CONNECTED) { delay(500); Serial.print("."); }
+        Serial.println("Connected to WiFi!");
+      }
+  
+      void loop() {
+        Serial.println(WiFi.localIP());
+        delay(5000);
+      }
+    `
   };
+  
 
   return (
     <>
@@ -99,7 +118,7 @@ export default function Page() {
        
         <div className="mt-10">
           <h2 className="text-lg md:text-2xl font-bold hover:text-blue-500">What is  ESP32?</h2>
-          <p className="mt-4">{data.espExplanation}</p>
+          <p className="mt-4">{data.espSetupGuide}</p>
         </div>
       </div>
     </>

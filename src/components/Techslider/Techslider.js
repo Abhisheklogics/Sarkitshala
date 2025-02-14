@@ -55,7 +55,7 @@ export default function SimpleSlider() {
         <div className="h-[170px] w-[160px] bg-gray-100 p-2 
         md:h-[240px] md:w-72 md:bg-gray-100 shadow-lg rounded flex flex-col justify-center items-center p-4 mx-4">
           <Link href="/arduino">
-            <Image  height={200} width={300}  className="w-fit h-fit md:w-fit md:h-fit mt-2 rounded" src={image2} alt="Arduino" />
+            <Image   height={200} width={300}  className="w-fit h-fit md:w-fit md:h-fit mt-2 rounded" src={image2} alt="Arduino" />
             <p className='text-center mt-8 bg-gray-200 p-1 hover:bg-blue-700 hover:text-white active:bg-gray-900
               md:text-center md:mt-4 md:bg-gray-200 md:p-1 md:hover:bg-blue-700 md:hover:text-white md:active:bg-gray-900'>
               Arduino

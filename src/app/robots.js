@@ -1,10 +1,10 @@
 export default function robots() {
   return {
     rules: {
-      userAgent: '*',  
-      allow: '*',      
-      disallow: '/services',  
+      userAgent: '*',
+      allow: '/',
+      disallow: ['/*?_rsc=' ],
     },
-    sitemap: `https://sarkitshala.com/sitemap.xml`,  
+    sitemap: `https://sarkitshala.com/sitemap.xml`,
   };
 }

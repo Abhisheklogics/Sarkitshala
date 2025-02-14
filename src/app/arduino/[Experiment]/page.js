@@ -98,9 +98,9 @@ export default async function Page({ params }) {
 />
         <h2 className="text-sm mt-6 font-bold p-1 hover:text-blue-500">{data.madeBy}</h2>
         <p className="mt-2 hover:text-blue-500">{data.madeByinfo}</p>
-        <p className="mt-2 md:mt-2">{data.madeByinfo1}</p>
+        <p className="mt-2 md:mt-2" id="introduction">{data.madeByinfo1}</p>
         <p className="mt-2 md:mt-6">{data.madeByinfo2}</p>
-        <h2 className="md:text-2xl mt-8 font-bold text-lg hover:text-blue-500">{data.overview}</h2>
+        <h2 className="md:text-2xl mt-8 font-bold text-lg hover:text-blue-500" id="Overview">{data.overview}</h2>
         <p className="mt-8 md:mt-4">{data.overviewinfo1}</p>
         <p className="mt-8 md:mt-8">{data.overviewinfo2}</p>
 
@@ -119,14 +119,14 @@ export default async function Page({ params }) {
 
         
           <div>
-          <h2 className="hover:text-blue-500 mt-12 capitalize text-lg md:mt-10 md:text-2xl font-bold md:font-bold ">
+          <h2 className="hover:text-blue-500 mt-12 capitalize text-lg md:mt-10 md:text-2xl font-bold md:font-bold " id="Pin-Diagram">
             {data.pinDiagramInfo}
           </h2>
           <div className="mt-12 capitalize rounded ml-10 md:ml-44 md:mt-12 md:rounded">
             <Image height={300} width={450}  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px " src={data.image3} alt={`${data.ExperimentName} -  Pin Diagram `}/>
           </div>
 
-          <h2 className="hover:text-blue-500 mt-12 capitalize text-lg md:mt-10 md:text-2xl font-bold ">
+          <h2 className="hover:text-blue-500 mt-12 capitalize text-lg md:mt-10 md:text-2xl font-bold " id="Circuit-Diagram">
             {data.CircuitDiagramInfo}
           </h2>
           <div className="mt-12 md:ml-24 md:mt-12 w-fit h-fit">
@@ -136,7 +136,7 @@ export default async function Page({ params }) {
 
        
      
-    {data.ExperimentId=='14'?'':<div><h3 className="md:text-2xl text-lg mt-20 font-bold hover:text-blue-500">Steps</h3>
+    {data.ExperimentId=='14'?'':<div><h3 className="md:text-2xl text-lg mt-20 font-bold hover:text-blue-500" id="Steps">Steps</h3>
         <div className="leading-10">
           {data.step && <p>{data.step}</p>}
           {data.step1 && <p className="mt-4">1: {data.step1}</p>}
@@ -150,13 +150,27 @@ export default async function Page({ params }) {
 
 
   
-        <h3 className="md:text-2xl text-lg mt-10 font-bold hover:text-blue-500">Code</h3>
+        <h3 className="md:text-2xl text-lg mt-10 font-bold hover:text-blue-500" id="Code">Code</h3>
         <CodeBox num={data.ExperimentId} exNam="ard" language={'c'} />
 
       
-        <h3 className="md:text-2xl mt-6 text-lg font-bold hover:text-blue-500">Conclusion</h3>
+        <h3 className="md:text-2xl mt-6 text-lg font-bold hover:text-blue-500" id="Conclusion">Conclusion</h3>
         <p className="mt-6">{data.result}</p>
     
+    </div>
+    <div className="md:block hidden  p-4 shadow-md rounded-md md:fixed md:right-1 2xl:right-2 md:top-24 md:w-fit  max-w-xs mx-auto mt-4">
+      <p className="font-semibold text-lg">In this article</p>
+      <div className="flex flex-col gap-2 mt-3 text-sm md:text-md ">
+        <Link href="#introduction" className="hover:text-blue-600">Introduction</Link>
+        <Link href="#Overview" className="hover:text-blue-600">Overview of Experiment</Link>
+        <Link href="#Pin-Diagram" className="hover:text-blue-600">Pin Diagram</Link>
+        <Link href="#Circuit-Diagram" className="hover:text-blue-600">Circuit Diagram</Link>
+        <Link href="#Steps" className="hover:text-blue-600">Steps</Link>
+        <Link href="#Code" className="hover:text-blue-600">Code</Link>
+
+        <Link href="#Conclusion" className="hover:text-blue-600">Conclusion</Link>
+        
+      </div>
     </div>
   </>
 

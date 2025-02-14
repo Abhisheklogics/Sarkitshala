@@ -4,6 +4,7 @@
 import dynamic from "next/dynamic";
 import Image from "next/image";
 import getData from "@/app/apiCall";
+import Link from "next/link";
 const CodeBox=dynamic(()=>import('@/components/code/code'),{
   ssr:false
 })
@@ -128,15 +129,15 @@ export default async function Page({ params }) {
       <h2 className="md:text-sm md:mt-2">{data.madeBy}</h2>
       <p className="md:mt-2 mt-10">{data.madeByinfo}</p>
       
-      <h2 className="md:mt-10">{data.overview}</h2>
-      <h2 className="md:text-2xl md:mt-10  text-lg   font-bold mt-10 hover:text-blue-500">Hardware components</h2>
+      <h2 className="md:mt-10" id="Introduction">{data.overview}</h2>
+      <h2 className="md:text-2xl md:mt-10  text-lg   font-bold mt-10 hover:text-blue-500" >Hardware components</h2>
       <p className="md:mt-4">{data.component}</p>
 
-      <div className="md:ml-12 md:mt-8">
+      <div className="md:ml-12 md:mt-8" id="Hardware-components">
         <Image height={400} width={700} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px"  className="ml-1 md:ml-[-10px]  mt-10"  src={data.image2} alt={`${data.ExperimentName} - Specifications`} />
       </div>
 
-      <h2 className="md:text-2xl md:mt-14  text-lg  font-bold  mt-10 hover:text-blue-500">{data.pinDiagramInfo}</h2>
+      <h2 className="md:text-2xl md:mt-14  text-lg  font-bold  mt-10 hover:text-blue-500" id="Pin-Diagram">{data.pinDiagramInfo}</h2>
 
  
         <div className="md:ml-20 md:h-[300px]">
@@ -144,13 +145,13 @@ export default async function Page({ params }) {
         </div>
      
 
-      <h2 className="md:text-2xl font-bold text-lg hover:text-blue-500 mt-12">{data.CircuitDiagramInfo}</h2>
+      <h2 className="md:text-2xl font-bold text-lg hover:text-blue-500 mt-12" id="Circuit-Diagram">{data.CircuitDiagramInfo}</h2>
 
       <div className="md:ml-32 md:mt-10">
         <Image height={400} width={500} sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px" className="md:ml-24    mt-10"  src={data.image4} alt={`${data.ExperimentName} - Circuit Diagram`} />
       </div>
 
-      <h3 className="md:text-2xl text-lg hover:text-blue-500 font-bold hover:text-blue-500 mt-10">Steps</h3>
+      <h3 className="md:text-2xl text-lg hover:text-blue-500 font-bold hover:text-blue-500 mt-10" id="Steps">Steps</h3>
       <div className="md:ml-14 leading-10 mt-4 ">
         <p className="md:mt-4 ">{data.step}</p>
         {data.step1 && <p className="md:mt-2">1: {data.step1}</p>}
@@ -175,13 +176,27 @@ export default async function Page({ params }) {
         {data.step20 && <p className="md:mt-2">20: {data.step20}</p>}
       </div>
 
-      <h3 className="md:mt-4 md:text-2xl text-lg font-bold hover:text-blue-500 mt-10">Code</h3>
+      <h3 className="md:mt-4 md:text-2xl text-lg font-bold hover:text-blue-500 mt-10" id='Code'>Code</h3>
       <CodeBox language={'c'} num={data.ExperimentId} exNam='esp' />
 
-      <h3 className="md:text-2xl text-lg md:mt-6 mt-10 hover:text-blue-500 font-bold">Conclusion</h3>
+      <h3 className="md:text-2xl text-lg md:mt-6 mt-10 hover:text-blue-500 font-bold" id="Conclusion">Conclusion</h3>
       <p className="md:mt-6">{data.result}</p>
     </div>
-   
+    <div className="md:block hidden  p-4 shadow-md rounded-md md:fixed md:right-1 2xl:right-2 md:top-24 md:w-fit  max-w-xs mx-auto mt-4">
+      <p className="font-semibold text-lg">In this article</p>
+      <div className="flex flex-col gap-2 mt-3 text-sm md:text-md ">
+        <Link href="#Introduction" className="hover:text-blue-600">Introduction</Link>
+
+        <Link href="#Hardware-Components" className="hover:text-blue-600">Hardware Components</Link>
+        <Link href="#Pin-Diagram" className="hover:text-blue-600">Pin Diagram</Link>
+        <Link href="#Circuit-Diagram" className="hover:text-blue-600">Circuit Diagram</Link>
+        <Link href="#Steps" className="hover:text-blue-600">Steps</Link>
+        <Link href="#Code" className="hover:text-blue-600">Code</Link>
+
+        <Link href="#Conclusion" className="hover:text-blue-600">Conclusion</Link>
+        
+      </div>
+      </div>
   </>
   );
 }
