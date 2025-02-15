@@ -17,12 +17,9 @@ export async function generateMetadata({ params }) {
   };
   
 
-  if(ExperimentName.ExperimentName.includes('Interfacing'))
-    {
-      ExperimentName.ExperimentName= ExperimentName.ExperimentName.replace('Interfacing','Interface')
-    }
+ 
   return {
-    title: ` ${ExperimentName.ExperimentName} using Arduino - Sarkitshala`,
+    title: ` ${ExperimentName.title}  `,
 
     robots: {
       index: true,

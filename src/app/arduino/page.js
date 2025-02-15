@@ -30,7 +30,7 @@ export const metadata = {
       description: "Arduino Projects & Tutorials. Learn pin functions, IoT, sensors & communication methods with step-by-step guides. Start your Arduino journey today!",
       image: "https://sarkitshala.com/opengraph-image.jpg",
     },
-    keywords:  'Arduino projects, Best Arduino tutorials, Arduino for beginners, Arduino pin functions, IoT with Arduino, Arduino sensor tutorials',
+    keywords:  ['What is Arduino', 'Arduino Digital Pins', 'Arduino Analog Pins', 'Arduino Power Pins' ,'Arduino PWM Pins', 'Arduino Communication Pins']
   };
   
 
@@ -55,8 +55,8 @@ export default function Page() {
      <div className="h-fit w-full p-5 bg-white bg-cover rounded-xl leading-8 text-justify break-words 
     md:h-fit md:w-[790px] md:ml-[330px] md:mt-[-730px] 2xl:ml-[430px] md:p-5 md:bg-white md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap ">
     
-    <h1 id='Arduino' className="capitalize hover:text-blue-500 text-2xl text-center md:text-2xl capitalize md:text-3xl text-xl font-bold">
-        Arduino
+    <h1 id='Arduino' className=" hover:text-blue-500 text-2xl text-center md:text-2xl  md:text-3xl text-xl font-bold">
+    What is Arduino 
     </h1>
 
     <Image height={400} width={500}  loading="lazy" src={image1} className='mt-6 md:ml-28 rounded' alt='Arduino Image'/>

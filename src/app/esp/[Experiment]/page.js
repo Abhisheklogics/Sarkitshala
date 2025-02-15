@@ -13,10 +13,7 @@ export async function generateMetadata({ params }) {
   try {
     ExperimentName = await getData(`https://sarkitshala.com/api/experiments/EspMeta`, params.Experiment);
 
-    if (ExperimentName.ExperimentName.includes('Interfacing')) {
-      ExperimentName.ExperimentName = ExperimentName.ExperimentName.replace('Interfacing', 'Interface');
-    }
-
+   
     const generateSeoDescription = (text, maxLength = 160) => {
       const truncatedText = text.length > maxLength
         ? `${text.slice(0, text.lastIndexOf(' ', maxLength)).trim()}...`
