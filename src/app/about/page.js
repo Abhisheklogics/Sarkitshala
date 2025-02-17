@@ -1,13 +1,13 @@
 const About = () => {
   return (
     <div className="mt-[100px] bg-gray-100 text-gray-900 flex flex-col items-center p-6">
-      <div className="max-w-3xl text-center">
-        <h1 className="text-4xl font-bold text-blue-600">About Us</h1>
+      <h1 className="text-4xl font-bold text-blue-600">About Us</h1>
+      <div className="mt-10 max-w-4xl bg-white p-6 rounded-2xl shadow-lg">
         <p className="mt-[50px] text-lg">
           Welcome to <span className="font-semibold">Sarkitshala.com</span>, a dedicated online platform created to support and nurture the next generation of technologists, students, researchers, and faculty members. We are committed to providing free, high-quality tutorials that equip learners with in-depth knowledge and practical skills in technology, circuits, IoT, drones, robotics, and beyond.
         </p>
       </div>
-
+z
       <div className="mt-10 max-w-4xl bg-white p-6 rounded-2xl shadow-lg">
         <h2 className="text-2xl font-semibold text-gray-800">Our Mission</h2>
         <p className="mt-2 text-gray-700">
