@@ -20,7 +20,7 @@ export default function Header() {
           <div className="flex md:order-1 space-x-3 md:space-x-0 rtl:space-x-reverse"></div>
 
           <div className="md:mt-6 mt-[-5px] ml-4 items-center justify-between w-full text-gray-900 md:w-auto md:order-1" id="navbar-sticky">
-            <ul className="flex ml-[-15px] md:relative md:left-24 p-3 md:p-0 rounded-lg md:space-x-8 rtl:space-x-reverse md:mt-0 md:border-0 md:bg-white overflow-x-auto whitespace-nowrap overscroll-x-contain flex-nowrap">
+            <ul className="flex ml-[-15px] md:relative md:left-24 p-3 md:p-0 rounded-lg md:space-x-8 rtl:space-x-reverse md:mt-2 md:border-0 md:bg-white overflow-x-auto whitespace-nowrap overscroll-x-contain flex-nowrap">
               <li>
                 <Link href="/" className="block py-2 px-3 text-gray-900 rounded md:bg-transparent md:p-0">Home</Link>
               </li>
