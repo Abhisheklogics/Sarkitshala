@@ -7,7 +7,6 @@ const About = () => {
           Welcome to <span className="font-semibold">Sarkitshala.com</span>, a dedicated online platform created to support and nurture the next generation of technologists, students, researchers, and faculty members. We are committed to providing free, high-quality tutorials that equip learners with in-depth knowledge and practical skills in technology, circuits, IoT, drones, robotics, and beyond.
         </p>
       </div>
-z
       <div className="mt-10 max-w-4xl bg-white p-6 rounded-2xl shadow-lg">
         <h2 className="text-2xl font-semibold text-gray-800">Our Mission</h2>
         <p className="mt-2 text-gray-700">
