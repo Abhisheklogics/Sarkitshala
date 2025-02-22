@@ -280,6 +280,56 @@ return(
       
         <h3 className="md:text-2xl mt-6 text-lg font-bold hover:text-blue-500" id="Conclusion">Conclusion</h3>
         <p className=" mt-10 max-w-4xl bg-white p-6 rounded-2xl shadow-lg">{data.result}</p>
+        <div className="mt-4 max-w-4xl bg-white p-6 rounded-2xl shadow-lg">
+      <h3 className="text-lg font-semibold mb-2 text-center">More Experiments of Arduino</h3>
+      <div className="flex flex-wrap  gap-4 ">
+    <p className=" bg-white p-2 px-4 rounded-lg shadow-md text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-gray-100 hover:shadow-lg">
+       <Link href={`arduino/${'interfacing-led'}`}>Interfacing LED</Link>
+    </p>
+    <p className="bg-white p-2 px-4 rounded-lg shadow-md text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-gray-100 hover:shadow-lg">
+       <Link href={`/arduino/${'interfacing-rgb-led'}`}>Interfacing an RGB LED</Link>
+    </p>
+    <p className=" bg-white p-2 px-4 rounded-lg shadow-md text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-gray-100 hover:shadow-lg">
+       <Link href={`/arduino/${'interfacing-7-segment-display'}`}>Interfacing Seven Segement Display</Link>
+    </p>
+    <p className=" bg-white p-2 px-4 rounded-lg shadow-md text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-gray-100 hover:shadow-lg">
+       <Link href={`/arduino/${'interfacing-oled'}`}>Interfacing OLED</Link>
+    </p>
+    <p className=" bg-white p-2 px-4 rounded-lg shadow-md text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-gray-100 hover:shadow-lg">
+       <Link href={`/arduino/${'interfacing-pir-sensor'}`}>Interfacing PIR Sensor</Link>
+    </p>
+    <p className=" bg-white p-2 px-4 rounded-lg shadow-md text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-gray-100 hover:shadow-lg">
+       <Link href={`/arduino/${'interfacing-soil-moisture'}`}>Interfacing Soil Moisture Sensor</Link>
+    </p>
+    <p className=" bg-white p-2 px-4 rounded-lg shadow-md text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-gray-100 hover:shadow-lg">
+       <Link href={`/arduino/${'interfacing-traffic-light-system'}`}>Interfacing Traffic Light</Link>
+    </p>
+    <p className=" bg-white p-2 px-4 rounded-lg shadow-md text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-gray-100 hover:shadow-lg">
+       <Link href={`/arduino/${'interfacing-ultrasonic-sensor-with-led'}`}>Interfacing Ultrasonic with LED</Link>
+    </p>
+    <p className=" bg-white p-2 px-4 rounded-lg shadow-md text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-gray-100 hover:shadow-lg">
+       <Link href={`/arduino/${'interfacing-dc-motor'}`}>Interfacing DC Motor</Link>
+    </p>
+    <p className=" bg-white p-2 px-4 rounded-lg shadow-md text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-gray-100 hover:shadow-lg">
+       <Link href={`/arduino/${'interfacing-servo-motor'}`}>Interfacing Servo Motor</Link>
+    </p>
+    <p className=" bg-white p-2 px-4 rounded-lg shadow-md text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-gray-100 hover:shadow-lg">
+       <Link href={`/arduino/${'interfacing-gear-motor'}`}>Interfacing Gear Motor</Link>
+    </p>
+    <p className=" bg-white p-2 px-4 rounded-lg shadow-md text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-gray-100 hover:shadow-lg">
+       <Link href={`/arduino/${'interfacing-lcd'}`}>Interfacing LCD</Link>
+    </p>
+    <p className=" bg-white p-2 px-4 rounded-lg shadow-md text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-gray-100 hover:shadow-lg">
+       <Link href={`/arduino/${'interfacing-dht22'}`}>Interfacing DHT22</Link>
+    </p>
+    <p className=" bg-white p-2 px-4 rounded-lg shadow-md text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-gray-100 hover:shadow-lg">
+       <Link href={`/arduino/${'interfacing-led-with-push-button'}`}>Interfacing LED with Push Button</Link>
+    </p>
+    <p className=" bg-white p-2 px-4 rounded-lg shadow-md text-sm font-medium text-blue-700 transition-all duration-200 hover:bg-gray-100 hover:shadow-lg">
+       <Link href={`/arduino/${'interfacing-oled-with-push-button'}`}>Interfacing Push Button with OLED</Link>
+    </p>
+        </div>
+    </div>
     
     </div>
     <div className="md:block hidden  p-4 shadow-md rounded-md md:fixed md:right-1 2xl:right-2 md:top-28 md:w-fit  max-w-xs mx-auto mt-4">
@@ -295,6 +345,7 @@ return(
         <Link href="#Conclusion" className="max-w-4xl bg-white p-2 rounded-2xl shadow hover:text-blue-600">Conclusion</Link>
         
       </div>
+      
     </div> 
   </>
 
