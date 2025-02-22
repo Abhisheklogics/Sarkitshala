@@ -11,8 +11,8 @@ export default function Header() {
       <Image 
           height={50} 
           width={120} 
-          className='md:ml-8  md:absolute md:rounded-full md:top-[-35px]  w-[150px] h-fit
-           ml-2  absolute rounded-full top-[-35px]' 
+          className='md:ml-8  md:absolute md:rounded-full md:top-[-25px] md:w-[120px] w-[100px] h-fit
+           ml-2  absolute rounded-full top-[-25px]' 
           src="/images/Logo.png" 
           alt="Logo" 
         />

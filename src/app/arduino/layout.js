@@ -55,6 +55,8 @@ export default function RootLayout({ children }) {
       key: "toggle1",
       links: [
         { href: `/arduino/${'interfacing-led'}`, text: "Interfacing LED" },
+        { href: `/arduino/${'interfacing-rgb-led'}`, text: "Interfacing an RGB LED " },
+    
         { href: `/arduino/${'interfacing-7-segment-display'}`, text: "Interfacing Seven Segement Display" },
         { href: `/arduino/${'interfacing-oled'}`, text: "Interfacing OLED" },
         { href: `/arduino/${'interfacing-pir-sensor'}`, text: "Interfacing PIR Sensor" },
@@ -68,8 +70,7 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-oled-with-push-button'}`, text: "Interfacing Push Button with OLED" },
         { href: `/arduino/${'interfacing-dht22'}`, text: "Interfacing DHT22" },
         { href: `/arduino/${'interfacing-led-with-push-button'}`, text: "Interfacing LED with Push Button" },
-        { href: `/arduino/${'interfacing-rgb-led'}`, text: "Interfacing an RGB LED with Arduino" }
-       ],
+      ] 
     },
   ];
 

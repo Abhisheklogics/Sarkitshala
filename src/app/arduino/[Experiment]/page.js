@@ -3,6 +3,8 @@ import getData from "@/app/apiCall";
 import Image from "next/image";
 import dynamic from "next/dynamic";
 import Link from "next/link";
+let AllCom=dynamic(() => import('@/components/AllCom'))
+
 const CodeBox = dynamic(() => import('@/components/code/code'), {
   ssr: false
 });
@@ -101,58 +103,105 @@ export default async function Page({ params }) {
  
   const data = await getData(`https://sarkitshala.com/api/experiments/Arduino`, Experiment);
  
- if(data.ExperimentId == '15')
- {
-  return(
-    <>
+  if (data.ExperimentId === 15) {
+    return (
+      <div className="h-fit w-full p-5 bg-gray-100 bg-cover rounded-xl leading-8 text-justify break-words 
+      md:h-fit md:w-[790px] md:ml-[330px] md:mt-[-700px] 2xl:ml-[430px] md:p-auto md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap  md:bg-fixed">
+        {/* Title */}
+        <h1 className="text-center capitalize text-3xl font-bold text-gray-800 hover:text-blue-500">
+          {data.title}
+        </h1>
+  
+        {/* Introduction */}
+        <p className="mt-4 text-gray-700 hover:text-blue-500">
+          {data.introduction}
+        </p>
+  
+        {/* Color List */}
+        <ul className="mt-6 ml-10 list-disc text-gray-800 font-bold hover:text-blue-500">
+          <li>Red (R)</li>
+          <li>Green (G)</li>
+          <li>Blue (B)</li>
+        </ul>
+  
+        {/* Description */}
+        <p className="mt-4 text-gray-700 hover:text-blue-500">
+          By mixing these three colors in different proportions, we can create a wide range of colors,
+          including white, yellow, cyan, magenta, and many more. They have either four pins (common cathode
+          or common anode) or three pins in addressable types (like WS2812B). Here, we focus on a
+          four-pin RGB LED interfaced with an Arduino.
+        </p>
+  
+        {/* Type Section */}
+        <h2 className="mt-6 text-xl font-bold p-1 text-gray-800 hover:text-blue-500">
+          {data.type}
+        </h2>
+        <p className="mt-2 text-gray-700 hover:text-blue-500">
+          {data.typeval}
+        </p>
+        <ol className="mt-4 ml-6 list-decimal text-gray-700">
+          <li>{data.anodeVal1}</li>
+          <li>{data.anodeVal2}</li>
+          <li>{data.anodeVal3}</li>
+        </ol>
+  
+        {/* Cathode Section */}
+        <h2 className="mt-6 text-xl font-bold p-1 text-gray-800 hover:text-blue-500">
+          {data.cathode}
+        </h2>
+        <p className="mt-2 text-gray-700 hover:text-blue-500">
+          {data.cathvalue1}
+        </p>
+        <p className="mt-2 text-gray-700 hover:text-blue-500">
+          {data.cathvalue2}
+        </p>
+        <p className="mt-2 text-gray-700 hover:text-blue-500">
+          {data.cathvalue3}
+        </p>
+  
+        {/* Anode Section */}
+        <h2 className="mt-6 text-xl font-bold p-1 text-gray-800">
+          {data.anode}
+        </h2>
+        <p className="mt-2 text-gray-700">{data.anodeVal1}</p>
+        <p className="mt-2 text-gray-700">{data.anodeVal2}</p>
+        <p className="mt-2 text-gray-700">{data.anodeVal3}</p>
+  
+        {/* Pin Section */}
+        <h2 className="mt-6 text-xl font-bold p-1 text-gray-800">
+          {data.pin}
+        </h2>
+        <p className="mt-2 text-gray-700">{data.pinInfo}</p>
+  
+        {/* Identification Info Section */}
+        <h2 className="mt-6 text-xl font-bold p-1 text-gray-800">
+          {data.idenInfo}
+        </h2>
+        <p className="mt-2 text-gray-700">{data.ideninfo1}</p>
+        <p className="mt-2 text-gray-700">{data.ideninfo2}</p>
+  
+        {/* RGB Work Section */}
+        <h2 className="mt-6 text-xl font-bold p-1 text-gray-800 hover:text-blue-500">
+          {data.rgbWork}
+        </h2>
+        <p className="mt-2 text-gray-700">{data.rgbintro}</p>
+        <p className="mt-2 text-gray-700">{data.rgbintro1}</p>
+        <p className="mt-2 text-gray-700">{data.rgbintro2}</p>
+      </div>
+    );
+  }
+  
 
-<div className="h-fit w-full p-5 bg-white bg-cover rounded-xl leading-8 text-justify break-words 
-    md:h-fit md:w-[790px] md:ml-[330px] md:mt-[-720px] 2xl:ml-[430px] md:p-5 md:bg-white md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap  md:bg-fixed">
-      <h1  className="text-center capitalize md:text-3xl text-xl font-bold hover:text-blue-500">{data.title}</h1>
-      <p className="mt-2 hover:text-blue-500">{data.introduction}</p>
-      <ul className=" mt-6 font-bold ml-10 hover:text-blue-500">
-        <li>Red (R)</li>
-        <li>Green (G)</li>
-        <li>Blue (B)</li>
-      </ul>
-      <p className="mt-2 hover:text-blue-500">By mixing these three colors in different proportions, we can create a wide range of colors,
-including white, yellow, cyan, magenta, and many more. They have either four pins
-(common cathode or common anode) or three pins in addressable types (like WS2812B).
-Here, we focus on a four-pin RGB LED interfaced with an Arduino.</p>
-      <h2 className=" mt-6 font-bold p-1 hover:text-blue-500">{data.type}</h2>
-      <p className="mt-2 hover:text-blue-500">{data.typeval}</p>
-      <ol className="ml-4">
-        <li>{data.anodeVal1}</li>
-        <li>{data.anodeVal2}</li>
-        <li>{data.anodeVal3}</li>
-      </ol>
-      <h2 className=" mt-6 font-bold p-1 hover:text-blue-500">{data.cathode}</h2>
-      <p className="mt-2 hover:text-blue-500">{data.cathvalue1}</p>
-      <p className="mt-2 hover:text-blue-500">{data.cathvalue1}</p>
-      <p className="mt-2 hover:text-blue-500">{data.cathvalue3}</p>
-      
-      <h2 className=" mt-6 font-bold p-1 ">{data. anode}</h2>
-      <p className="mt-2 ">{data.anodeVal1}</p>
-      <p className="mt-2 ">{data.anodeVal2}</p>
-      <p className="mt-2 ">{data.anodeVal3}</p>
-      
-      <h2 className=" mt-6 font-bold p-1 ">{data.pin}</h2>
-      <p className="mt-2 ">{data.pinInfo}</p>
-      <h2 className=" mt-6 font-bold p-1 ">{data.idenInfo}</h2>
-      <p className="mt-2 ">{data.ideninfo1}</p>
-      <p className="mt-2 ">{data.ideninfo2}</p>
-      <h2 className=" mt-6 font-bold p-1 hover:text-blue-500">{data.rgbWork}</h2>
-      <p className="mt-2 ">{data.rgbintro}</p>
-      <p className="mt-2 ">{data.rgbintro1}</p>
-      <p className="mt-2 ">{data.rgbintro2}</p>
+if(data.ExperimentId==2 )
+{
+  
+return(
+  <>
 
-
-</div>
-    </>
-  )
- }
-
-
+  <AllCom data={data}/>
+  </>
+)
+}
 
   return (
     <>
