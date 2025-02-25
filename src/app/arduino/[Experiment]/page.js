@@ -66,7 +66,7 @@ export async function generateMetadata({ params }) {
       }
     },
 
-    author: "Sarkitshala Team (Amarjeet Singh Chauhan, Aman Raj)",
+    author: "Sarkitshala Team (Amarjeet Singh Chauhan, Abhishek Kumar, Aman Raj)",
 
    
 
