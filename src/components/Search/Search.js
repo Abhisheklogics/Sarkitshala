@@ -63,7 +63,7 @@ export default function Search() {
   };
 
   return (
-    <div className="max-w-md mx-auto md:mt-2 mt-2 md:w-full ml-40 md:ml-[500px] md:h-4">
+    <div className="max-w-md mx-auto md:mt-4  mt-2 md:w-[300px] ml-24 md:ml-[1170px] md:h-4">
       <label htmlFor="default-search" className="sr-only">Search</label>
       <div className="relative">
         <div className="absolute inset-y-0 left-0 flex items-center md:pl-2 pl-3 pointer-events-none">
@@ -76,7 +76,7 @@ export default function Search() {
         <input
           type="search"
           id="default-search"
-          className="block md:w-full w-[220px] h-[50px] md:p-6 p-2 pl-10 pr-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="block md:w-full w-[290px] md:h-[10px] md:p-6 p-2 pl-10 pr-10 text-sm text-gray-900 border border-gray-300 rounded-lg  focus:ring-blue-500 focus:border-blue-500 bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Search Experiments..."
           value={search}
           ref={inputRef}
