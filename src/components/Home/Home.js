@@ -5,16 +5,23 @@ import React, { useState,useEffect} from "react";
 
 import Aos from "aos";
 import 'aos/dist/aos.css';
-import dynamic from "next/dynamic";
+
 
 import getData from "@/app/apiCall";
 
-const SimpleSlider = dynamic(() => import('../slider/Slider'), { ssr: false });
-const RecentPosts = dynamic(() => import('../recentPost/Recent'), { ssr: false });
-const Carousel = dynamic(() => import('../Techslider/Techslider'), { ssr: false });
-const Footer = dynamic(() => import('../Footer/Footer'), { ssr: false });
+
+import Image from "next/image";
+import img1 from '../../../public/images/ArdTech.png'
+import img2 from '../../../public/images/ESPTech.png'
+import img3 from '../../../public/images/raspTech.png'
 
 
+import dynamic from "next/dynamic";
+const SimpleSlider =dynamic(()=>import('../slider/Slider'))
+const RecentPosts=dynamic(()=>import('../recentPost/Recent'))
+const Carousel =dynamic(()=>import('../Techslider/Techslider'))
+const Footer=dynamic(()=>import('../Footer/Footer'))
+import Loading from '@/components/loading/Loading';
 
   const Home1 =()=> {
     const [isMobile, setIsMobile] = useState(false); 
@@ -51,20 +58,34 @@ let [loading,setLoading]=useState(false)
       window.removeEventListener('resize', checkMobile);
     };
   }, []);
-
+ if(loading)
+ {
+  return(
+    <Loading/>
+    
+  )
+ }
   return (
-   
+    <>
      
-       
-        
-        <>
         <div className="xs:h-full
         xl:h-full">
        
-        <SimpleSlider />
+       {loading ? <Loading /> : <SimpleSlider />}
         
-            <RecentPosts  image={data.arduinodata}/>
+            {loading ? <Loading/> : <RecentPosts  image={data.arduinodata}/>} 
 
+<div className="grid grid-cols-3 gap-[-20px] ">
+<div className="md:ml-28  md:mt-32 md:h-[300px] md:w-[300px] border border-black shadow-xl hover:shadow-lg hover:shadow-[#000000] bg-[#FFF0E5]">
+<Image src={img1} height={300} width={300}/>
+</div>
+<div className="md:ml-28 md:mt-32 md:h-[300px] md:w-[300px] border border-black shadow-xl hover:shadow-lg hover:shadow-[#000000] bg-[#FFF0E5]">
+<Image src={img2} height={300} width={300}/>
+</div>
+<div className="md:ml-28 md:mt-32 md:h-[300px] md:w-[300px] border border-black shadow-xl hover:shadow-lg hover:shadow-[#000000] bg-[#FFF0E5]">
+<Image src={img3} height={300} width={300}/>
+</div>
+</div>
           <div data-aos={isMobile ? undefined :'fade-right'} className={` bg-gradient-to-r from-indigo-300 to-black rounded mt-24 col-span-3 w-[350px]  p-3 text-black ml-6  md:ml-[480px]  2xl:ml-[560px]
          
           xl:rounded xl:mt-20 bg-green-700 col-span-3 xl:w-[450px] justify-center mx-auto relative text-center xl:p-3 xl:text-black`} >
@@ -75,14 +96,13 @@ let [loading,setLoading]=useState(false)
             ">LATEST TECHNOLOGIES</h1></div>
           </div>
           
-        
- <Carousel/>
+         
+
+          {loading ? <Loading/> : <Carousel/>}
           
         </div>
-         <Footer/> 
-          </> 
-        
-   
+        {loading ?<Loading/> : <Footer/>}
+    </>
   );
 }
  export default Home1
