@@ -174,7 +174,7 @@ Here, we focus on a four-pin RGB LED interfaced with an Arduino.</p>
 />
         <h2 className="text-sm mt-6 font-bold p-1 hover:text-white">{data.madeBy}</h2>
         <p className="">{data.madeByinfo}</p>
-        <p className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg" id="introduction">{data.madeByinfo1}<br/>{data.madeByinfo2}</p>
+        <p className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black" id="introduction">{data.madeByinfo1}<br/>{data.madeByinfo2}</p>
 
         <p className="mt-4 max-w-4xl border border-black bg-white p-6 ] rounded shadow-lg ">
         <h2 className="md:text-2xl mt-8 font-bold text-lg md:mt-[-15px] hover:text-blue-500 mb-2 " id="Overview">{data.overview}</h2>{data.overviewinfo1}<br/>{data.overviewinfo2}</p>
