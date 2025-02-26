@@ -28,7 +28,7 @@
 //       <li key={index}>
 //         <Link
 //           href={link.href}
-//           className="max-w-4xl bg-white p-4 rounded-2xl shadow block px-4 p-2 rounded-md text-sm   hover:text-blue-600 "
+//           className="max-w-4xl  p-4 rounded-2xl shadow block px-4  text-sm   hover:text-blue-600 "
 //         >
 //           {link.text}
 //         </Link>
@@ -141,7 +141,7 @@ const ToggleLinks = ({ toggle, links }) => (
       <li key={index}>
         <Link
           href={link.href}
-          className="max-w-4xl font-bold bg-white p-4 rounded border border-black shadow block px-4 p-2 rounded-md text-sm   hover:text-orange-400"
+          className="max-w-4xl font-bold  p-4 rounded border border-black shadow block px-4  text-sm   hover:text-orange-400"
         >
           {link.text}
         </Link>
