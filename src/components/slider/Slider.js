@@ -51,7 +51,7 @@ const SimpleSlider = () => {
       >
         <div className="md:ml-[5px] md:fold-bold ml-[3px] mt-[-2px]  md:mt-[-1px]">
          
-          ←
+        
         </div>
       </div>
     );
@@ -81,16 +81,16 @@ const SimpleSlider = () => {
 
   return (
     <Slider
-      className="relative mt-40 w-[90vw] h-fit mx-auto md:w-[700px]  md:mt-36  2xl:ml-52  md:mx-auto md:ml-28"
+      className="relative mt-40 w-[90vw] h-fit mx-auto md:w-[900px]  md:mt-36  2xl:ml-18  md:mx-auto md:ml-28"
       {...settings}
     >
-      <div className=" shadow-lg md:h-fit h-[200px] rounded-lg overflow-hidden">
+      <div className=" shadow-lg md:h-fit h-[200px] rounded overflow-hidden">
         <Link href={`/arduino/`} passHref>
           <Image
             src={image1}
             alt="Arduino"
             layout="responsive"
-            width={800}
+            width={900}
             height={450}
             priority={true}
             quality={75}
@@ -100,22 +100,22 @@ const SimpleSlider = () => {
       </div>
      
       
-      <div className=" md:h-fit h-[200px]  shadow-lg rounded-lg overflow-hidden">
+      <div className=" md:h-fit h-[200px]  shadow-lg rounded overflow-hidden">
         <Link href={`/arduino/lcd`} passHref>
           <Image
             src={image4}
             alt="Pic 1"
             layout="responsive"
-            width={800}
+            width={1000}
 
-            height={450}
+            height={550}
             priority={true}
             quality={75}
             className=""
           />
         </Link>
       </div>
-      <div className="shadow-lg md:h-fit   h-[200px]  rounded-lg overflow-hidden">
+      <div className="shadow-lg md:h-fit   h-[200px]  rounded overflow-hidden">
         <Link href={`/esp`} passHref>
           <Image
             src={image5}
@@ -129,7 +129,7 @@ const SimpleSlider = () => {
           />
         </Link>
       </div>
-      <div className="shadow-lg rounded-lg  md:h-fit  h-[200px] overflow-hidden">
+      <div className="shadow-lg rounded md:h-fit  h-[200px] overflow-hidden">
         <Link href={`/raspberry/`} passHref>
           <Image
             src={image6}
