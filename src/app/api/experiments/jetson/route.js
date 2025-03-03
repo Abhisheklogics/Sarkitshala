@@ -1,6 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
-import dbConnect from '../../../../lib/databaseConnect';
-import { Jetson } from '../../../../models/jetsonmodels';
+import dbConnect from '@/lib/databaseConnect';
+import { Jetson } from '@/models/jetsonmodels';
 
 export async function GET(request) {
     try{
@@ -10,19 +10,10 @@ export async function GET(request) {
         
          const url = new URL(request.url);
          const exId = url.searchParams.get('exId'); 
-         console.log(exId);
+       
      
          
-         if (exId) {
-           const experiment = await Jetson.findOne({ slug: exId });
-     
-          
-           if (!experiment) {
-             return NextResponse.json({ message: 'Experiment not found' }, { status: 404 });
-           }
-     
-           return NextResponse.json(experiment, { status: 200 });
-         }
+         
      
         
          const experiments = await Jetson.find(); 
