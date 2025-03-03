@@ -1,6 +1,6 @@
 
 import getData from '../apiCall'
-import Image from 'next/image'
+
 export default async function page(){
 const data = await getData('http://localhost:3000/api/experiments/jetson')
 
