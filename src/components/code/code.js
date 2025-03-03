@@ -4,7 +4,7 @@
 import React, { useState, useRef } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
 import { prism as syntaxTheme } from 'react-syntax-highlighter/dist/esm/styles/prism';
-import { res, esp, ard, jetson } from '../../../code';
+import { res, esp, ard } from '../../../code';
 
 const CodeBox = ({ code, language, num, exNam }) => {
   const [buttonText, setButtonText] = useState('Copy');
@@ -19,8 +19,6 @@ const CodeBox = ({ code, language, num, exNam }) => {
     code = esp[num-1]; 
   } else if (exNam === 'ard') {
     code = ard[num-1];  
-  } else if (exNam === 'jetson'){
-    code = jetson[num-1];
   }
 
   const handleCopy = () => {
