@@ -303,7 +303,7 @@ export default function Page() {
     All about Arduino
     </h1>
 
-    <Image height={500} width={800}  loading="lazy" src={image1} className='mt-6 md:ml-[-2  ] rounded' alt='Arduino Image'/>
+    <Image height={500} width={800}   src={image1} className='mt-6 md:ml-[-2  ] rounded' alt='Arduino Image'/>
     
     <p className="mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
   Arduino was developed by a group of developers from Italy in 2005, led by Massimo Banzi.</p>

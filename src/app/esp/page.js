@@ -1,6 +1,6 @@
 
 
-import image1 from '../../../public/images/ESP.png'
+import image1 from '../../../public/images/esp.webp'
 import Image from 'next/image';
 
 export const metadata = {

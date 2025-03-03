@@ -1,5 +1,5 @@
 
-import image1 from '../../../public/images/D.png'
+import image1 from '../../../public/images/Drone.webp'
 import Image from 'next/image';
 const Drone = () => {
   return (

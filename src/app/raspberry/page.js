@@ -1,5 +1,5 @@
 
-import image1 from '../../../public/images/RP.png'
+import image1 from '../../../public/images/Pi_Sarkitshala.webp'
 import Image from 'next/image';
 export const metadata = {
   title: "Raspberry Pi Projects & Tutorials for IoT & Robotics - Sarkitshala",
