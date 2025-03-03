@@ -26,6 +26,7 @@ export default async function sitemap() {
       priority: 0.8,
       changeFrequency: 'weekly',
     }));
+   
 
     return [
      
@@ -49,6 +50,11 @@ export default async function sitemap() {
       ...espUrls,
       {
         url: `https://sarkitshala.com/about`,
+        changeFrequency: 'monthly',
+        priority: 0.7,
+      },
+      {
+        url: `https://sarkitshala.com/jetson`,
         changeFrequency: 'monthly',
         priority: 0.7,
       }
