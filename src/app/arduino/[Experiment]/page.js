@@ -9,7 +9,7 @@ const CodeBox = dynamic(() => import('@/components/code/code'), {
 import AllCom from "@/components/AllCom";
 
 export async function generateMetadata({ params }) {
-  const ExperimentData = await getData(`http://localhost:3000/api/experiments/ArduinoMeta`, params.Experiment);
+  const ExperimentData = await getData(`https://sarkitshala.com/api/experiments/ArduinoMeta`, params.Experiment);
 
   
 
@@ -79,7 +79,7 @@ export async function generateMetadata({ params }) {
 
 export async function generateStaticParams() {
   try {
-      const response = await getData('http://localhost:3000/api/experiments/Arduino');
+      const response = await getData('https://sarkitshala.com/api/experiments/Arduino');
       const posts = response?.experiments || [];
       
       return posts.map((post) => ({
@@ -100,7 +100,7 @@ export default async function Page({ params }) {
   const { Experiment } = await params; 
 
  
-  const data = await getData(`http://localhost:3000/api/experiments/Arduino`, Experiment);
+  const data = await getData(`https://sarkitshala.com/api/experiments/Arduino`, Experiment);
  
 if(data.ExperimentId == 2)
 {
