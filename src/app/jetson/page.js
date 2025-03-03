@@ -1,5 +1,6 @@
 
 import getData from '../apiCall'
+import Image1 from '../../../public/images/jetson_Sarkitshala.webp'
 import Image from 'next/image'
 export default async function page(){
 const data = await getData('https://sarkitshala.com/api/experiments/jetson')
@@ -14,9 +15,9 @@ return(
  md:bg-cover md:rounded md:leading-8 md:text-justify md:break-words md:text-wrap ">
     
     <h1 className="text-4xl mt-24 md:mb-[50px] text-center">{res.Tname}</h1>
-  <Image src={'images/jtson_Sarkitshala.webp'} height={500} width={800} />
-    <div className="max-w-4xl bg-white p-6 rounded shadow-lg border border-black"> 
-    <p className="text-lg   ">{res.Disc1} </p>
+  <Image src={Image1} height={500} width={730}  className='ml-2'/>
+    <div className="mt-16  max-w-4xl bg-white p-6 rounded shadow-lg border border-black"> 
+    <p className="text-lg    ">{res.Disc1} </p>
    <p className="text-lg mt-2  ">{res.Disc2}</p>
 
     </div>
