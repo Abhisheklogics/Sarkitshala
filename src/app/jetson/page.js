@@ -6,7 +6,7 @@ export default async function page(){
 const data = await getData('https://sarkitshala.com/api/experiments/jetson')
 
 let res=data[0]
-
+console.log(res)
 
 return(
 
