@@ -5,7 +5,7 @@ import Image from 'next/image'
 export default async function page(){
 const data = await getData('https://sarkitshala.com/api/experiments/jetson')
 
-let res=data[0].json()
+let res=data[0]
 
 
 return(
