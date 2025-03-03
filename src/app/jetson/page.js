@@ -2,11 +2,11 @@
 import getData from '../apiCall'
 import Image1 from '../../../public/images/jetson_Sarkitshala.webp'
 import Image from 'next/image'
-export default async function page(){
+export default async function Page(){
 const data = await getData('https://sarkitshala.com/api/experiments/jetson')
-console.log(data)
-let res=data[0]
-console.log(res)  
+
+let res =  data[0]
+console.log(res)
 
 return(
 

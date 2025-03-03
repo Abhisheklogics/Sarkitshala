@@ -7,8 +7,22 @@ export async function GET(request) {
      
          await dbConnect();
      
-     
         
+         const url = new URL(request.url);
+         const exId = url.searchParams.get('exId'); 
+         console.log(exId);
+     
+         
+         if (exId) {
+           const experiment = await Jetson.findOne({ slug: exId });
+     
+          
+           if (!experiment) {
+             return NextResponse.json({ message: 'Experiment not found' }, { status: 404 });
+           }
+     
+           return NextResponse.json(experiment, { status: 200 });
+         }
      
         
          const experiments = await Jetson.find(); 
