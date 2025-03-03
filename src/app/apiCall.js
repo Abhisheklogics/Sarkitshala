@@ -17,7 +17,7 @@ export default async function getData(url, exNum) {
 
    
 
-    return await response.json();
+   
     
   } catch (error) {
     console.error('Error fetching data:', error.message);
