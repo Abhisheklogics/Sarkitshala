@@ -3,12 +3,9 @@ import getData from '../apiCall'
 import Image1 from '../../../public/images/jetson_Sarkitshala.webp'
 import Image from 'next/image'
 export default async function Page(){
-  let res = [];
-  try {
-    res = await getData('https://sarkitshala.com/api/experiments/jetson');
-  } catch (error) {
-    console.error("Failed to fetch data:", error);
-  }
+  const data = await fetch('https://sarkitshala.com/api/experiments/jetson');
+  const res = await data.json();
+
 
 return(
 
