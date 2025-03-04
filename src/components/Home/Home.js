@@ -75,7 +75,7 @@ let [loading,setLoading]=useState(false)
         
             {loading ? <Loading/> : <RecentPosts  image={data.arduinodata}/>} 
 
-<div className="md:grid md:grid-cols-3 md:gap-[-20px] grid grid-cols-2  mt-12  md:mt-0">
+<div className="md:grid md:grid-cols-3 md:gap-[-20px] grid grid-cols-2  mt-32 ml:20 md:ml-0 md:mt-0">
 <div className="md:ml-20  md:mt-32 md:h-[300px] md:w-[300px] h-[100px] w-[150px] border border-black shadow-xl hover:shadow-lg hover:shadow-[#000000] bg-[#FFF0E5]">
 <Image src={img1} height={300} width={300}/> 
 </div>
