@@ -1,31 +1,15 @@
 
-
+import getData from '../apiCall'
 import Image1 from '../../../public/images/jetson_Sarkitshala.webp'
 import Image from 'next/image'
 export default async function Page(){
-  async function getData(url) {
-    try {
-        const response = await fetch(url);
-        const text = await response.text(); // Read response as text first
-        console.log('Raw API Response:', text); // Log raw response
+  let res = [];
+  try {
+    res = await getData('https://sarkitshala.com/api/experiments/jetson');
+  } catch (error) {
+    console.error("Failed to fetch data:", error);
+  }
 
-        if (!response.ok) {
-            throw new Error(`HTTP Error! Status: ${response.status}`);
-        }
-
-        // Ensure response is JSON before parsing
-        const contentType = response.headers.get('content-type');
-        if (!contentType || !contentType.includes('application/json')) {
-            throw new Error('Received non-JSON response');
-        }
-
-        return JSON.parse(text);
-    } catch (error) {
-        console.error('Error fetching data:', error);
-        return null;
-    }
-}
-let res=await getData('https://sarkitshala.com/api/experiments/jetson')
 return(
 
     <div className="h-fit w-full p-5  bg-cover rounded-xl leading-8 text-justify break-words 
