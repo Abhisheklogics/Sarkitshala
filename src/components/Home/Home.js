@@ -75,14 +75,14 @@ let [loading,setLoading]=useState(false)
         
             {loading ? <Loading/> : <RecentPosts  image={data.arduinodata}/>} 
 
-<div className="grid grid-cols-3 gap-[-20px] ">
-<div className="md:ml-28  md:mt-32 md:h-[300px] md:w-[300px] border border-black shadow-xl hover:shadow-lg hover:shadow-[#000000] bg-[#FFF0E5]">
-<Image src={img1} height={300} width={300}/>
+<div className="md:grid md:grid-cols-3 md:gap-[-20px] grid grid-cols-2  mt-12  md:mt-0">
+<div className="md:ml-20  md:mt-32 md:h-[300px] md:w-[300px] h-[100px] w-[150px] border border-black shadow-xl hover:shadow-lg hover:shadow-[#000000] bg-[#FFF0E5]">
+<Image src={img1} height={300} width={300}/> 
 </div>
-<div className="md:ml-28 md:mt-32 md:h-[300px] md:w-[300px] border border-black shadow-xl hover:shadow-lg hover:shadow-[#000000] bg-[#FFF0E5]">
+<div className="md:ml-20 md:mt-32 md:h-[300px] md:w-[300px] h-[100px] w-[150px] border border-black shadow-xl hover:shadow-lg hover:shadow-[#000000] bg-[#FFF0E5]">
 <Image src={img2} height={300} width={300}/>
 </div>
-<div className="md:ml-28 md:mt-32 md:h-[300px] md:w-[300px] border border-black shadow-xl hover:shadow-lg hover:shadow-[#000000] bg-[#FFF0E5]">
+<div className="md:ml-20 md:mt-32 md:h-[300px] md:w-[300px] h-[100px]  mt-20  w-[150px] border border-black shadow-xl hover:shadow-lg hover:shadow-[#000000] bg-[#FFF0E5]">
 <Image src={img3} height={300} width={300}/>
 </div>
 </div>
