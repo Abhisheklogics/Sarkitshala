@@ -3,8 +3,19 @@ import getData from '../apiCall'
 import Image1 from '../../../public/images/jetson_Sarkitshala.webp'
 import Image from 'next/image'
 export default async function Page(){
-  const data = await fetch('https://sarkitshala.com/api/experiments/jetson');
-  const res = await data.json();
+  let res=[]
+  const response = await fetch('https://sarkitshala.com/api/experiments/jetson');
+  const text = await response.text(); // Get raw response
+  console.log(text); // Check if it's valid JSON
+  
+  // Now try to parse it only if it's JSON
+  try {
+    res = JSON.parse(text);
+  
+  } catch (error) {
+    console.error("Error parsing JSON:", error);
+  }
+  
 
 
 return(
