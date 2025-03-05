@@ -80,6 +80,7 @@ export async function generateMetadata({ params }) {
 export async function generateStaticParams() {
   try {
       const response = await getData('https://sarkitshala.com/api/experiments/Arduino');
+      
       const posts = response?.experiments || [];
       
       return posts.map((post) => ({
@@ -96,16 +97,18 @@ export async function generateStaticParams() {
 
 
 export default async function Page({ params }) {
-  console.log(params)
+
   const { Experiment } = await params; 
 
  
   const data = await getData(`https://sarkitshala.com/api/experiments/Arduino`, Experiment);
  
-if(data.ExperimentId == 2)
+ 
+if(data[' ExperimentId'] == '2')
 {
-  
-<AllCom  data={data}/>
+console.log('hello')
+  return(<AllCom  data={data}/>)
+
 }
 
 
