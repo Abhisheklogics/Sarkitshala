@@ -33,17 +33,18 @@ const RecentPosts = (props) => {
     image:image2,
   },
   {
-    id:3,
-    slug:"arduino/interfacing-dc-motor",
-    title:"Interfacing DC Motor",
-     image:image3,
-  },
-  {
     id:4,
     slug:"arduino/interfacing-7-segment-display",
     title:"Interfacing 7-Segement Display",
     image:image13,
   },
+  {
+    id:3,
+    slug:"arduino/interfacing-dc-motor",
+    title:"Interfacing DC Motor",
+     image:image3,
+  },
+ 
   {
     id:5,
     slug:"arduino/Interfacing OLED",
