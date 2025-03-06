@@ -29,16 +29,7 @@ import Loading from '@/components/loading/Loading';
 let [loading,setLoading]=useState(false)
  
   useEffect(() => {
-    setLoading(true)
-    getData(`/api/experiments/Home`)
-      .then((res) => 
-        {
-        setData(res)
-        setLoading(false)
-        
-      }
-    )
-      .catch((err) => console.log(err));
+   
 
     
     Aos.init({ duration: 2000 });
