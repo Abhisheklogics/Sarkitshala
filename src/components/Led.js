@@ -7,7 +7,7 @@ const LEDArduino = ({data}) => {
     md:h-fit md:w-[790px] md:ml-[330px] md:mt-[-700px] 2xl:ml-[430px] md:p-auto md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap  md:bg-fixed">
       <h1 className="text-3xl font-bold mb-6 text-center">Interfacing of LED with Arduino</h1>
       <Image src={data.image1} height={400} width={500} className="md:ml-28" />
-      <section className="mb-6">
+      <section className="mb-6 mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
         <h2 className="text-2xl font-semibold">1. LED (Light Emitting Diode)</h2>
         <p>It is a semiconductor device that emits light when an electric current passes through it. It is a
 special type of diode that converts electrical energy directly into light energy through a
@@ -16,7 +16,7 @@ display panels, indicator lights, lighting systems, and communication devices du
 high efficiency, low power consumption, and long lifespan.</p>
       </section>
       
-      <section className="mb-6">
+      <section className="mb-6 mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
         <h2 className="text-2xl font-semibold">2. How Does an LED Work?</h2>
         <h3 className="text-xl font-medium">2.1. Structure of an LED</h3>
         <ul className="list-disc pl-6">
@@ -39,8 +39,10 @@ high efficiency, low power consumption, and long lifespan.</p>
         </ol>
       </section>
       
-      <section className="mb-6">
+      <section className="mb-6 mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
         <h2 className="text-2xl font-semibold">3. Semiconductor Materials and LED Colors</h2>
+        <p>The color of an LED depends on the bandgap energy of the semiconductor material used.
+        Different materials produce different wavelengths of light:</p>
         <table className="table-auto border-collapse border border-gray-500">
           <thead>
             <tr>
@@ -104,14 +106,20 @@ Phosphide)</td>
           </tbody>
         </table>
       </section>
+      <section className="mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
       <h2 className="text-2xl font-semibold">Characteristics of LEDs</h2>
       <ol className="list-decimal pl-6">
           <li>Low Power Consumption – LEDs consume very little energy, making them highly
           efficient.</li>
           <li>High Brightness – Modern LEDs provide bright illumination.</li>
           <li>Long Lifespan – Can last 50,000 hours or more.</li>
+          <li>Fast Switching – Turns on and off instantly without warm-up time.</li>
+          <li>Compact Size – Available in small sizes suitable for various applications.</li>
+          <li>Durability – Resistant to shock and vibration compared to traditional bulbs.</li>
+          <li>Eco-Friendly – LEDs do not contain harmful substances like mercury.</li>
         </ol>
-      <section className="mb-6">
+        </section>
+      <section className="mb-6 mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
         <h2 className="text-2xl font-semibold">8. Requirements</h2>
         <h3 className="text-xl font-medium">8.1 Hardware Components</h3>
         <ul className="list-disc pl-6">
@@ -131,10 +139,48 @@ Phosphide)</td>
       </section>
 
       <section className="mb-6">
-        <h2 className="text-2xl font-semibold">12. Arduino Code</h2>
+        
        
       </section>
-      
+      <section className="mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+      <h2 className="text-2xl font-semibold">Types of LEDs</h2>
+<p>There are different types of LEDs, categorized based on their applications and construction:</p>
+<h2 className="text-2xl font-semibold">Based on Construction:</h2>
+<ul className="list-disc pl-6">
+          <li>Through-Hole LEDs: Standard 3mm, 5mm, 10mm LEDs used in circuits.</li>
+          <li>Surface Mount Device (SMD) LEDs: Used in compact electronics (e.g., mobile
+            phones, TVs).</li>
+          <li>Chip-on-Board (COB) LEDs: High-power LEDs with multiple chips for bright light
+          output.</li>
+        </ul>
+        <h2 className="text-2xl font-semibold">Based on Color &amp; Functionality:</h2>
+        <ul className="list-disc pl-6">
+          <li>Single-color LEDs: Emit one specific color (red, blue, green, etc.).</li>
+          <li>RGB LEDs: Can produce multiple colors by mixing Red, Green, and Blue.</li>
+          <li>Infrared (IR) LEDs: Used in remote controls and night vision cameras.</li>
+          <li>Ultraviolet (UV) LEDs: Used in sterilization, counterfeit detection, and curing
+          applications.</li>
+        </ul>
+        <h2 className="text-2xl font-semibold">Based on Power Rating:</h2>
+        <ul className="list-disc pl-6">
+          <li>Low-power LEDs: Used in indicators and displays.</li>
+          <li>High-power LEDs: Used in lighting applications like streetlights and automotive
+          headlights.</li>
+        
+        </ul>
+        <h2 className="text-2xl font-semibold">Applications of LEDs</h2>
+        <ul className="list-disc pl-6">
+          <li>Indicator Lights: Used in electronic devices (power indicators, alarms).</li>
+          <li>Displays and Signage: Used in LED screens, billboards, and TVs.</li>
+          <li>Automotive Lighting: Used in headlights, tail-lights, and dashboard indicators.</li>
+          <li>Home and Office Lighting: Energy-efficient LED bulbs and tube lights.</li>
+          <li>Streetlights &amp; Industrial Lighting: Used for outdoor and commercial lighting.</li>
+          <li>Medical Applications: Used in phototherapy, pulse oximeters, and endoscopy.</li>
+          <li>Communication Systems: Used in optical fiber communication and remote controls.</li>
+        
+        </ul>
+      </section>
+      <Image src={data.image4} width={300} height={200} alt="LED" />
       <section className="mb-6">
         <h2 className="text-2xl font-semibold">16. Troubleshooting Common Issues</h2>
         <table className="table-auto border-collapse border border-gray-500">
