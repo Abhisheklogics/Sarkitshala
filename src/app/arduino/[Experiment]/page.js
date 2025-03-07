@@ -7,7 +7,7 @@ const CodeBox = dynamic(() => import('@/components/code/code'), {
   ssr: false
 });
 import AllCom from "@/components/AllCom";
-
+import LEDArduino from "@/components/Led";
 export async function generateMetadata({ params }) {
   const ExperimentData = await getData(`https://sarkitshala.com/api/experiments/ArduinoMeta`, params.Experiment);
 
@@ -103,10 +103,16 @@ export default async function Page({ params }) {
  
   const data = await getData(`https://sarkitshala.com/api/experiments/Arduino`, Experiment);
  
- 
-if(data[' ExperimentId'] == '2')
+  if(data.ExperimentId == 1)
+    {
+    
+      return(<LEDArduino data={data} />)
+    
+    }
+    
+if(data[' ExperimentId'] == '2' || data['ExperimentId']=='15')
 {
-console.log('hello')
+
   return(<AllCom  data={data}/>)
 
 }

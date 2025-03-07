@@ -13,7 +13,7 @@ import image7 from '../../../public/AllImages/image6.webp'
 
 
 import image10 from '../../../public/AllImages/image9.webp'
-import image11 from '../../../public/AllImages/image11.webp'
+import image11 from '../../../public/AllImages/RGBLED.webp'
 import image13 from '../../../public/AllImages/image13.webp'
 const RecentPosts = (props) => {
   const listRef = useRef(null);
@@ -31,6 +31,12 @@ const RecentPosts = (props) => {
     slug:"arduino/interfacing-led",
     title:"Control an LED with Arduino",
     image:image2,
+  },
+  {
+    id:3,
+    slug:"arduino/interfacing-rgb-led",
+    title:"Interfacing RGB LED with Arduino",
+    image:image11
   },
   {
     id:4,
