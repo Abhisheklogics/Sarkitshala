@@ -82,7 +82,7 @@ const SimpleSlider = () => {
 
   return (
     <Slider
-      className="relative mt-40 w-[90vw] h-fit mx-auto 2xl:w-[900px]  md:w-[800px] md:mt-36  2xl:ml-18  md:mx-auto md:ml-12"
+      className="relative mt-40 w-[90vw] h-fit mx-auto 2xl:w-[900px]  md:w-[800px] md:mt-36  2xl:ml-24  md:mx-auto md:ml-12"
       {...settings}
     >
       <div className=" shadow-lg md:h-fit h-[200px] rounded overflow-hidden">
