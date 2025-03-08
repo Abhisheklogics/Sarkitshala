@@ -1,6 +1,6 @@
 import Image from "next/image"
-import Link from "next/link"
 
+import Side from "./side";
 export default function AllCom({data})
 {
    
@@ -50,6 +50,7 @@ export default function AllCom({data})
 
       </h2>
         </div>
+        <Side/>
         </>
     )
 }

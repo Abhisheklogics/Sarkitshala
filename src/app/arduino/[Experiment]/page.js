@@ -2,12 +2,14 @@
 import getData from "@/app/apiCall";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-import Link from "next/link";
+
 const CodeBox = dynamic(() => import('@/components/code/code'), {
   ssr: false
 });
-import AllCom from "@/components/AllCom";
-import LEDArduino from "@/components/Led";
+const AllCom = dynamic(() => import('@/components/AllCom'), {ssr:false})
+const LEDArduino =dynamic(()=>import('@/components/Led'), {ssr:false})
+const Side=dynamic(()=>import('@/components/side'))
+
 export async function generateMetadata({ params }) {
   const ExperimentData = await getData(`https://sarkitshala.com/api/experiments/ArduinoMeta`, params.Experiment);
 
@@ -198,20 +200,7 @@ if(data[' ExperimentId'] == '2' || data['ExperimentId']=='15')
         {data.result}</p>
     
     </div>
-    <div className="md:block hidden  p-4 shadow-md rounded-md md:fixed md:right-1 2xl:right-2 md:top-28 md:w-fit  max-w-xs mx-auto mt-4">
-      <p className="font-semibold text-lg">In This Article</p>
-      <div className="flex flex-col gap-2 mt-3 text-center text-sm md:text-md ">
-        <Link href="#introduction" className=" max-w-4xl bg-white p-2 rounded shadow hover:text-blue-600">Introduction</Link>
-        <Link href="#Overview" className=" max-w-4xl bg-white p-2 rounded shadow hover:text-blue-600">Overview of Experiment</Link>
-        <Link href="#Pin-Diagram" className="max-w-4xl bg-white p-2 rounded shadow hover:text-blue-600">Pin Diagram</Link>
-        <Link href="#Circuit-Diagram" className="max-w-4xl bg-white p-2 rounded shadow hover:text-blue-600">Circuit Diagram</Link>
-        <Link href="#Steps" className="max-w-4xl bg-white p-2 rounded shadow hover:text-blue-600">Steps</Link>
-        <Link href="#Code" className="max-w-4xl bg-white p-2 rounded shadow hover:text-blue-600">Code</Link>
-
-        <Link href="#Conclusion" className="max-w-4xl bg-white p-2 rounded shadow hover:text-blue-600">Conclusion</Link>
-        
-      </div>
-    </div> 
+  <Side/>
   </>
 
   );
