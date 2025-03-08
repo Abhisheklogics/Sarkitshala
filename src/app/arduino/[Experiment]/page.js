@@ -112,7 +112,7 @@ export default async function Page({ params }) {
     
     }
     
-if(data[' ExperimentId'] == '2' || data['ExperimentId']=='15')
+if(data[' ExperimentId'] == '2' || data['ExperimentId']=='15' )
 {
 
   return(<AllCom  data={data}/>)
