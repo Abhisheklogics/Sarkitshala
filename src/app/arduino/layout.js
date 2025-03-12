@@ -70,6 +70,7 @@
 //         { href: `/arduino/${'interfacing-oled-with-push-button'}`, text: "Interfacing Push Button with OLED" },
 //         { href: `/arduino/${'interfacing-dht22'}`, text: "Interfacing DHT22" },
 //         { href: `/arduino/${'interfacing-led-with-push-button'}`, text: "Interfacing LED with Push Button" },
+//         { href: `/arduino/${'interfacing-IR-Sensor'}`, text: "Interfacing IR Sensor" },
 //       ] 
 //     },
 //   ];
@@ -186,10 +187,6 @@ export default function RootLayout({ children }) {
            { href: `/arduino/${'interfacing-keypad'}`, text: "Interfacing Keypad" },
         { href: `/arduino/${'interfacing-ldr'}`, text: "Interfacing LDR" },
            { href: `/arduino/${'interfacing-ir sensor'}`, text: "Interfacing IR Sensor" },
-        
- 
-          
-      
       ] 
     },
   ];
