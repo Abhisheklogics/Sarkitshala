@@ -14,6 +14,35 @@ export default function AllCom({data})
       <section className="mb-6 mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
         <h2 className="text-xl font-bold mb-6 ">{data.title2}</h2>
         <p>{data.para1}</p>
+      
+      </section>
+      <section className="mb-6 mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+        <h2 className="text-xl font-bold mb-6 ">{data.title3}</h2>
+        <p>{data.para2}</p>
+      
+      </section>
+      <section className="mb-6 mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+        <h2 className="text-xl font-bold mb-6 ">{data.title4}</h2>
+        {Object.values(data.CC).map((val)=>(
+          <p key={data.ExperimentId}>{val.name}</p>
+        ))}
+      
+      </section>
+      <section className="mb-6 mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+        <h2 className="text-xl font-bold mb-6 ">Common Anode RGB LED
+        </h2>
+        {Object.values(data.CA).map((val)=>(
+          <p key={data.ExperimentId}>{val.name}</p>
+        ))}
+      
+      </section>
+      <section className="mb-6 mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+        <h2 className="text-xl font-bold mb-6 ">{data.title5}
+        </h2>
+        {Object.values(data.CA).map((val)=>(
+          <p key={data.ExperimentId}>{val.name}</p>
+        ))}
+      
       </section>
         </div>
         <Side/>
