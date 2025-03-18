@@ -1,0 +1,207 @@
+
+import getData from "@/app/apiCall";
+import Image from "next/image";
+import dynamic from "next/dynamic";
+
+const CodeBox = dynamic(() => import('@/components/code/code'), {
+  ssr: false
+});
+const AllCom = dynamic(() => import('@/components/AllCom'), {ssr:false})
+const LEDArduino =dynamic(()=>import('@/components/Led'), {ssr:false})
+const Side=dynamic(()=>import('@/components/side'))
+
+export async function generateMetadata({ params }) {
+  const ExperimentData = await getData(`https://sarkitshala.com/api/experiments/ArduinoMeta`, params.Experiment);
+
+  
+
+  const experimentTitle = ExperimentData.title || "Arduino Experiment";
+  const experimentOverview = ExperimentData.metaDescription || "Learn Arduino interfacing step by step.";
+  const experimentImage = ExperimentData.image1 || 'https://sarkitshala.com/opengraph-image.jpg';
+  const experimentSlug = `https://sarkitshala.com/arduino/${params.Experiment}`;
+
+  return {
+    title: `${experimentTitle} `,
+    description: experimentOverview,
+    
+    robots: {
+      index: true,
+      follow: true,
+    },
+
+    url: experimentSlug,
+    siteName: "Sarkitshala",
+    
+    openGraph: {
+      title: `${experimentTitle} | Arduino Projects & Tutorials`,
+      description: experimentOverview,
+      url: experimentSlug,
+      images: [
+        {
+          url: experimentImage,
+          width: 1200,
+          height: 630,
+          alt: `${experimentTitle} Experiment preview`
+        }
+      ],
+      site_name: "Sarkitshala",
+      type: "article",
+    },
+
+    twitter: {
+      card: "summary_large_image",
+      title: `${experimentTitle} | Arduino Guide`,
+      description: experimentOverview,
+      images: [experimentImage]
+    },
+
+    keywords: `${experimentTitle}, Arduino circuits, IoT projects, microcontroller interfacing, beginner electronics, LED, Sensor, ESP32, DHT11`,
+    
+    canonical: experimentSlug,
+
+    alternates: {
+      canonical: experimentSlug,
+      languages: {
+        "en-US": `https://sarkitshala.com/en/arduino/${params.Experiment}`,
+        "hi-IN": `https://sarkitshala.com/hi/arduino/${params.Experiment}`
+      }
+    },
+
+    author: "Sarkitshala Team (Amarjeet Singh Chauhan, Abhishek Kumar, Aman Raj)",
+
+   
+
+
+  };
+}
+
+
+
+
+
+export async function generateStaticParams() {
+  try {
+      const response = await getData('https://sarkitshala.com/api/experiments/Arduino');
+      
+      const posts = response?.experiments || [];
+      
+      return posts.map((post) => ({
+          ExperimentId: String(post.Experiment),
+      }));
+  } catch (error) {
+      console.error('Error fetching data:', error);
+      return [];
+  }
+}
+
+  
+
+
+
+export default async function Page({ params }) {
+
+  const { Experiment } = await params; 
+
+ 
+  const data = await getData(`https://sarkitshala.com/api/experiments/Arduino`, Experiment);
+ 
+  if(data.ExperimentId == 1)
+    {
+    
+      return(<LEDArduino data={data} />)
+    
+    }
+    
+if(data[' ExperimentId'] == '2' || data['ExperimentId']=='15' || data['ExperimentId']=='18' )
+{
+
+  return(<AllCom  data={data}/>)
+
+}
+
+
+  return (
+    <>
+  
+    <div className="h-fit w-full p-5 bg-gray-100 md:bg-[#FFF0E5] bg-cover rounded-xl leading-8 text-justify break-words 
+    md:h-fit md:w-[790px] md:ml-[330px] md:mt-[-700px] 2xl:ml-[430px] md:p-auto md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap  md:bg-fixed">
+
+    
+        <h1  className="  text-center capitalize md:text-3xl text-xl font-bold ">{data.ExperimentName}</h1>
+
+        <Image
+
+  src={data.image1}
+  alt={`${data.ExperimentName} - Experiment Image`}
+  width={data.ExperimentId === '5' || data.ExperimentId === '4' ? 300 : 500}
+  height={data.ExperimentId === '5' || data.ExperimentId === '4' ? 200 : 400}
+   sizes="(max-width: 768px) 100vw, (max-width: 100px) 50vw, 500px "
+ className="   md:ml-28 mt-4 md:rounded "
+/>
+        <h2 className="text-sm mt-6 font-bold p-1 hover:text-white">{data.madeBy}</h2>
+        <p className="">{data.madeByinfo}</p>
+        <p className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black" id="introduction">{data.madeByinfo1}<br/>{data.madeByinfo2}</p>
+
+        <p className="mt-4 max-w-4xl border border-black bg-white p-6 ] rounded shadow-lg ">
+        <h2 className="md:text-2xl mt-8 font-bold text-lg md:mt-[-15px] hover:text-blue-500 mb-2 " id="Overview">{data.overview}</h2>{data.overviewinfo1}<br/>{data.overviewinfo2}</p>
+
+        <div className="mt-4 border border-black max-w-4xl bg-white p-6 rounded shadow-lg ">
+        <Image
+            width={500}
+            height={440}
+            
+             sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px "
+            className="   w-full h-full md:ml-4"
+            src={data.image2} 
+            alt={`${data.ExperimentName} - Specifications `}
+          />
+        
+        </div>
+
+          <div>
+          <div className="mt-4  max-w-4xl border border-black bg-white p-6 rounded shadow-lg">
+          <h2 className="hover:text-blue-500 md:mt-[-15px]  mt-12 capitalize text-lg md:text-2xl font-bold md:font-bold " id="Pin-Diagram">
+            {data.pinDiagramInfo}
+          </h2>
+            <Image height={300} width={450}  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px " src={data.image3} className="md:ml-28" alt={`${data.ExperimentName} -  Pin Diagram `}/>
+          </div>
+
+          
+          <div className="mt-4  max-w-4xl bg-white border border-black p-6 rounded shadow-lg">
+          <h2 className="hover:text-blue-500 md:mt-[-15px]  capitalize text-lg md:text-2xl font-bold " id="Circuit-Diagram">
+            {data.CircuitDiagramInfo}</h2>
+            <Image  height={400} width={500}  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px " className="md:ml-20" src={data.image4} alt={`${data.ExperimentName} - Circuit Diagram`} />
+          </div>
+        </div>
+
+       
+     
+  {data.ExperimentId !== '14' && (
+  <div className="mt-4 p-6 bg-white border border-black  rounded shadow-lg max-w-4xl">
+    <h3 className="md:text-2xl md:mt-[-15px] text-lg font-bold hover:text-blue-500" id="Steps">Steps</h3>
+    {data.step && <p className="mt-4">{data.step}</p>}
+    {data.step1 && <p className="mt-4">1. {data.step1}</p>}
+    {data.step2 && <p className="mt-4">2. {data.step2}</p>}
+    {data.step3 && <p className="mt-4">3. {data.step3}</p>}
+    {data.step4 && <p className="mt-4">4. {data.step4}</p>}
+    {data.step5 && <p className="mt-4">5. {data.step5}</p>}
+    {data.step6 && <p className="mt-4">6. {data.step6}</p>}
+  </div>
+)}
+
+        <p className=" mt-4 max-w-4xl bg-white p-6 border border-black rounded shadow-lg">
+        <h3 className="md:text-2xl text-lg md:mt-[-15px] mb-[-50px] font-bold hover:text-blue-500" id="Code">Code</h3>
+        <CodeBox num={data.ExperimentId} exNam="ard" language={'c'} /></p>
+
+      
+        
+        <p className=" mt-4 max-w-4xl bg-white p-6 border border-black rounded shadow-lg">
+        <h3 className="md:text-2xl md:mt-[-15px]  text-lg mb-2  font-bold hover:text-blue-500" id="Conclusion">Conclusion</h3>
+        {data.result}</p>
+    
+    </div>
+  <Side/>
+  </>
+
+  );
+}
