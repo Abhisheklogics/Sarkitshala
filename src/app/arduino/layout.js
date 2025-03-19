@@ -170,7 +170,7 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-led' }`, text: "Interfacing LED" },
         { href: `/arduino/${'interfacing-rgb-led'}`, text: "Interfacing an RGB LED " },
     
-        { href: `/arduino/${'interfacing-7-segment-display'}`, text: "Interfacing 7-Segement Display" },
+        { href: `/arduino/${'interfacing-seven-segment-display'}`, text: "Interfacing 7-Segement Display" },
         { href: `/arduino/${'interfacing-ir-sensor'}`, text: "Interfacing IR Sensor" },
         { href: `/arduino/${'interfacing-oled'}`, text: "Interfacing OLED" },
         { href: `/arduino/${'interfacing-pir-sensor'}`, text: "Interfacing PIR Sensor" },
