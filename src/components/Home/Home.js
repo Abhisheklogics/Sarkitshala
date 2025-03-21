@@ -24,7 +24,7 @@ const SimpleSlider =dynamic(()=>import('../slider/Slider'))
 const RecentPosts=dynamic(()=>import('../recentPost/Recent'))
 const Carousel =dynamic(()=>import('../Techslider/Techslider'))
 const Footer=dynamic(()=>import('../Footer/Footer'))
-import Loading from '@/components/loading/Loading';
+
 
   const Home1 =()=> {
     const [isMobile, setIsMobile] = useState(false); 
@@ -69,7 +69,7 @@ import Loading from '@/components/loading/Loading';
             md:text-3xl md:text-white md:font-light md:ml-0">LATEST TECHNOLOGIES</h1></div>
 
 {/* Arduino  */}
-<div className="md:ml-[-375px] 2xl:ml-[-428px] md:mt-40 md:h-[300px] md:w-[300px] h-[100px] w-[150px] border border-black shadow-xl hover:shadow-lg hover:shadow-[#000000] ">
+<div className="md:ml-[-375px] 2xl:ml-[-428px]  md:mt-40 md:h-[300px] md:w-[300px] h-[100px] w-[150px] border border-black shadow-xl hover:shadow-lg hover:shadow-[#000000] ">
 <Image src={img1} height={300} width={300}/>
 </div>
 
