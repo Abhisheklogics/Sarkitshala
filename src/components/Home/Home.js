@@ -7,7 +7,6 @@ import Aos from "aos";
 import 'aos/dist/aos.css';
 
 
-import getData from "@/app/apiCall";
 
 
 import Image from "next/image";
