@@ -24,7 +24,7 @@ const ExperimentLinks = ({ toggle, links }) => (
       <li key={index}>
         <Link
           href={link.href}
-          className="block py-2 p-2 rounded-md text-sm text-gray-900 hover:text-blue-600 "
+          className="block font-bold max-w-4xl bg-white text-sm p-3 rounded text-gray-900 hover:shadow-2xl hover:text-orange-400 border border-black"
         >
           {link.text}
         </Link>
@@ -45,7 +45,7 @@ export default function RootLayout({ children }) {
 
   const experiments = [
     {
-      label: "Esp Experiments",
+      label: "ESP Experiments",
       key: "toggle1",
       links: [
         { href: "/esp/dht11", text: "Interfacing DHT11 Sensor" },
@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
     <>
      <header>
      <button
-        className="md:hidden block bg-blue-500 text-white p-2 mt-36 rounded-md m-4"
+        className="md:hidden block bg-blue-500 text-white p-2 mt-36 rounded-md md:ml-8"
         onClick={() => handleToggle("toggle1")}
       >
         {toggles.toggle1 ? "Esp Experiments" : "Esp Experiments"}
@@ -75,9 +75,9 @@ export default function RootLayout({ children }) {
       <div
         className={`${
           toggles.toggle1 ? "block" : "hidden"
-        } md:block relative flex flex-col ml-1 2xl:ml-10 transition-transform bg-white`}
+        } md:block relative flex flex-col ml-1  transition-transform `}
       >
-        <div className="inset-0 md:w-[330px] md:bg-white md:absolute rounded-md p-4 mt-4 md:ml-4 md:mt-28 2xl:ml-10">
+        <div className="inset-0 md:w-72 md:absolute rounded-md p-4 mt-4 md:ml-4 md:mt-28 2xl:ml-10">
           {experiments.map((experiment) => (
             <div key={experiment.key}>
               <ToggleButton

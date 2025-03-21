@@ -47,7 +47,7 @@ export default function AllCom({ data }) {
           ))}
         </section>
 
-        {/* Pin Configuration */}
+     
         <section className="mb-6 mt-10 bg-white p-6 rounded shadow-lg border border-black">
           <h2 className="text-xl font-bold mb-6">{data.title4}</h2>
           <table className="w-full border-collapse border border-gray-400">

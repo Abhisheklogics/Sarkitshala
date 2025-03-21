@@ -116,15 +116,13 @@ export default async function Page({ params }) {
 
     return (
     <>
-      <div className="h-fit w-full p-2 text-wrap bg-white bg-cover rounded-xl leading-10 text-justify  
-
-      md:h-fit md:w-[790px] md:ml-[330px]  md:mt-28 2xl:ml-[400px] md:p-5 md:bg-white md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap ">
+      <div className="h-fit w-full p-2 text-wrap font-serif bg-cover rounded-xl leading-10 text-justify  
+      md:h-fit md:w-[790px] md:ml-[330px]  md:mt-28 2xl:ml-[400px] md:p-5  md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap ">
        
  
   
 
-          <h1 className="text-center capitalize md:text-2xl text-xl font-bold 
-          md:text-center md:text-2xl hover:text-blue-500">{data.ExperimentName}</h1>
+          <h1 className="text-center capitalize  text-xl font-bold md:text-center md:text-2xl hover:text-blue-500">{data.ExperimentName}</h1>
           
         
        
@@ -141,41 +139,39 @@ export default async function Page({ params }) {
          
          
 
-          <h2 className=" text-sm mt-4 md:text-sm md:mt-2 font-bold hover:text-blue-500">{data.madeBy}</h2>
-          <p className="md:mt-6 mt-6" id="introduction">{data.madeByinfo1}</p>
-          <p className="md:mt-6 mt-6">{data.madeByinfo2}</p>
-          <h2 className="md:text-2xl md:mt-10 text-lg  font-bold mt-10 hover:text-blue-500" id="Overview">{data.overview}</h2>
-          <p className="md:mt-10 md:leading-8 mt-10">{data.overviewinfo1}</p>
-          <p className="md:mt-10 md:leading-8 mt-10">{data.overviewinfo2}</p>
+          <h2 className=" text-sm md:mt-4 md:text-sm font-bold hover:text-blue-500">{data.madeBy}</h2>
+        
+          <p className="md:mt-4 p-4 bg-white border border-black mt-6" id="introduction">{data.madeByinfo1}<br/> {data.madeByinfo2}</p>
+          <p className="p-4 bg-white border border-black md:mt-10 text-lg" id="Overview"><h2 className="font-semibold text-2xl mb-2 hover:text-blue-500">{data.overview}</h2> {data.overviewinfo1} {data.overviewinfo2}</p>
 
-          <div className="md:leading-10 ">
-            <p className="md:mt-10 md:text-2xl mt-10 text-lg  font-bold hover:text-blue-500" id="Hardware-Components">{data.Material}</p>
-            {data.Material1 && <p className="md:ml-10 md:mt-4 mt-4">1: {data.Material1}</p>}
-            {data.Material2 && <p className="md:ml-10 md:mt-2 mt-4">2: {data.Material2}</p>}
-            {data.Material3 && <p className="md:ml-10 md:mt-2 mt-4">3: {data.Material3}</p>}
-            {data.Material4 && <p className="md:ml-10 md:mt-2 mt-4">4: {data.Material4}</p>}
-            {data.Material5 && <p className="md:ml-10 md:mt-2 mt-4">5: {data.Material5}</p>}
+
+          <div className="md:mt-4 p-4 border border-black bg-white mt-4 ">
+            <p className=" md:text-2xl text-lg  font-bold hover:text-blue-500" id="Hardware-Components">{data.Material}</p>
+            {data.Material1 && <p className="md:ml-10 md:mt-4 mt-4">1. {data.Material1}</p>}
+            {data.Material2 && <p className="md:ml-10 md:mt-2 mt-4">2. {data.Material2}</p>}
+            {data.Material3 && <p className="md:ml-10 md:mt-2 mt-4">3. {data.Material3}</p>}
+            {data.Material4 && <p className="md:ml-10 md:mt-2 mt-4">4. {data.Material4}</p>}
+            {data.Material5 && <p className="md:ml-10 md:mt-2 mt-4">5. {data.Material5}</p>}
           </div>
 
 
         
-            <div className="md:ml-20 mt-10 ">
+            <div className="p-4 md:ml-[-40] mt-4 border border-black bg-white ">
+              <h2 className="text-2xl font-semibold">Specifications</h2>
               <Image
                 src={data.image2}
                 alt={`${data.ExperimentName} - Specifications`} 
                 width={400}
                 height={300}
                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px"
-                className="md:ml-10 mt-4 md:w-fit h-fit"
+                className="md:ml-10 border border-black mt-4 md:w-fit h-fit"
                 objectFit="cover"
               />
             </div>
-         
-            <h2 className="md:text-2xl md:mt-20 text-lg  mt-8 hover:text-blue-500" id="Pin-Diagram">
-            {data.pinDiagramInfo}
-          </h2>
-         
-            <div className="md:ml-28 mt-4 md:mt-12">
+
+
+            <div className=" p-4  mt-4 border border-black bg-white md:mt-12">     
+            <p className="md:text-2xl font-semibold mb-4 text-lg hover:text-blue-500" id="Pin-Diagram">{data.pinDiagramInfo}</p>
               <Image
                 src={data.image3}
                 alt={`${data.ExperimentName} - Pin Diagram`}
@@ -185,48 +181,43 @@ export default async function Page({ params }) {
                 objectFit="cover"
               />
             </div>
-        
-
-         
-
-        
+  
           
            
-  
-          <h2 className="md:mt-10 md:text-2xl text-lg mt-8  hover:text-blue-500"  id="Circuit-Diagram">
-            {data.CircuitDiagramInfo}
-          </h2>
-
-         
-          <div className="md:ml-44 md:mt-12">
-              <Image
+            <div className="p-4  mt-4 border border-black bg-white md:mt-12">
+          <p className="md:text-2xl font-semibold mb-4 text-lg hover:text-blue-500"  id="Circuit-Diagram">{data.CircuitDiagramInfo}</p>
+            <div className="flex justify-center"><Image
                 src={data.image4}
                 alt={`${data.ExperimentName} - Circuit Diagram`}
                 width={402}
                 height={176}
                  
                 objectFit="cover"
-              />
+              /></div>
             </div>
       
-          <h3 className="md:text-2xl md:mt-6 font-bold text-lg  mt-8 hover:text-blue-500" id="Steps">Steps</h3>
-          <div className="md:leading-10">
-            <p className="md:mt-4">{data.step}</p>
-            {data.step1 && <p className="md:mt-2 mt-4">1: {data.step1}</p>}
-            {data.step2 && <p className="md:mt-2">2: {data.step2}</p>}
-            {data.step3 && <p className="md:mt-2">3: {data.step3}</p>}
-            {data.step4 && <p className="md:mt-2">4: {data.step4}</p>}
-            {data.step5 && <p className="md:mt-2">5: {data.step5}</p>}
-            {data.step6 && <p className="md:mt-2">6: {data.step6}</p>}
-            {data.step7 && <p className="md:mt-2">7: {data.step7}</p>}
-            {data.step8 && <p className="md:mt-2">8: {data.step8}</p>}
+
+          <div className="mt-4 p-4 border border-black bg-white">
+          <h3 className="md:text-2xl font-semibold text-lg hover:text-blue-500" id="Steps">Steps</h3>
+          <p className="md:mt-4">{data.step}</p>
+            {data.step1 && <p className="md:mt-2 mt-4">1. {data.step1}</p>}
+            {data.step2 && <p className="md:mt-2">2. {data.step2}</p>}
+            {data.step3 && <p className="md:mt-2">3. {data.step3}</p>}
+            {data.step4 && <p className="md:mt-2">4. {data.step4}</p>}
+            {data.step5 && <p className="md:mt-2">5. {data.step5}</p>}
+            {data.step6 && <p className="md:mt-2">6. {data.step6}</p>}
+            {data.step7 && <p className="md:mt-2">7. {data.step7}</p>}
+            {data.step8 && <p className="md:mt-2">8. {data.step8}</p>}
           </div>
 
-          <h3 className="md:mt-4 md:text-2xl text-lg font-bold mt-8 hover:text-blue-500" id="Code">Code</h3>
+          <div className="md:mt-4 p-4 border border-black">
+          <h3 className=" md:text-2xl font-semibold hover:text-blue-500" id="Code">Code</h3>
           <CodeBox num={data.ExperimentId} exNam='Raspberry' language={'c'} />
-          
-          <h3 className="md:text-2xl md:mt-4 text-lg  font-bold mt-8 hover:text-blue-500" id="Conclusion">Conclusion</h3>
-          <p className="md:mt-4">{data.result}</p>
+          </div>
+
+          <div className="md:mt-4 p-4 border bg-white border-black">
+          <h3 className="md:text-2xl  text-lg hover:text-blue-500" id="Conclusion">Conclusion</h3>
+          <p className="md:mt-4">{data.result}</p></div>
        
       </div>
       <div className="md:block hidden  p-4 shadow-md rounded-md md:fixed md:right-1 2xl:right-2 md:top-24 md:w-fit  max-w-xs mx-auto mt-4">

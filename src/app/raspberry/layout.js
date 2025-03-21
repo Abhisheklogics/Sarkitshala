@@ -6,7 +6,7 @@ import { useState } from "react";
 const ToggleButton = ({ label, onClick, isOpen }) => (
   <button
     onClick={onClick}
-    className="md:py-2 py-3 px-1 relative w-full md:w-[310px] h-fit  text-left mb-6"
+    className="md:py-2 py-3 px-1 relative w-full md:w-[310px] h-fit md:ml-2 text-left mb-4"
   >
     <div className="flex justify-between items-center">
       <h1 className="font-bold text-gray-800">{label}</h1>
@@ -26,7 +26,7 @@ const ExperimentLinks = ({ toggle, links }) => (
       <li key={index}>
         <Link
           href={link.href}
-          className="block px-3 p-2 rounded-md text-sm text-gray-900    ml-2  hover:text-blue-600"
+          className="max-w-4xl font-bold  bg-white p-4 rounded border border-black shadow block px-4  text-sm   hover:text-orange-400"
         >
           {link.text}
         </Link>
@@ -69,7 +69,7 @@ export default function RootLayout({ children }) {
     <>
       <header >
       <button
-        className="md:hidden block bg-blue-500  text-white p-2 mt-36 rounded-md m-4"
+        className="md:hidden block bg-blue-500 text-white p-2 rounded-md mt-36 ml-4"
         onClick={() => handleToggle("toggle1")}
       >
         {toggles.toggle1 ? "Raspberry Pi Experiments" : "Raspberry Pi Experiments"}
@@ -77,11 +77,8 @@ export default function RootLayout({ children }) {
 
       </header>
       <nav
-        className={`${
-          toggles.toggle1 ? "block" : "hidden"
-        } md:block relative flex flex-col ml-1 2xl:ml-10 transition-transform bg-white`}
-      >
-        <div className="inset-0 md:w-[330px] md:bg-white md:absolute ml-2 rounded-md p-4 mt-4 md:ml-4 md:mt-28 2xl:ml-10">
+        className={`${toggles.toggle1 ? "block" : "hidden"} md:block relative flex flex-col mt-2 ml-0 md:ml-4 2xl:ml-10 `}>
+        <div className="inset-0 md:w-[330px] md:absolute ml-2 rounded-md p-4 mt-4 md:ml-4 md:mt-28 2xl:ml-10">
           {experiments.map((experiment) => (
             <div key={experiment.key}>
               <ToggleButton

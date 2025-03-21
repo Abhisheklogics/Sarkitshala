@@ -11,7 +11,7 @@ export const metadata = {
     url: "https://sarkitshala.com/raspberry",
     images: [
       {
-        url: "https://sarkitshala.com/images/public/images/RP.png",
+        url: "https://sarkitshala.com/images/public/images/Pi_Sarkitshala.png",
         width: 1200,
         height: 630,
         alt: "Sarkitshala - Raspberry Pi Projects and Tutorials",
@@ -39,31 +39,30 @@ export default function Page() {
 
   return (
     <>
-        <div className="h-fit w-full p-4 mt-[-20px] bg-white bg-cover rounded-xl leading-10 text-justify break-words  
-          md:h-fit md:w-[730px] 2xl:md:w-[800px] md:ml-[330px] md:mt-24 2xl:ml-[400px]
-          md:p-5 md:bg-white md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap">
+        <div className="h-fit w-full p-4 mt-[-20px]  bg-cover rounded-xl leading-10 text-justify break-words  
+          md:h-fit md:w-[730px] 2xl:md:w-[800px] md:ml-[330px] md:mt-24 2xl:ml-[400px] 
+          md:p-5  md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap">
           
-          <h1 className="text-center capitalize md:text-3xl text-xl font-bold hover:text-blue-500 md:text-center md:text-2xl">
-            Raspberry Pi 
+          <h1 className="text-center capitalize text-xl font-bold hover:text-blue-500 md:text-center md:text-3xl">
+           All about Raspberry Pi 
           </h1>
           
         
-  <Image  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px" height={400} width={500} src={image1} className='mt-6 md:ml-24 rounded'/>
+  <Image  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px" height={900} width={800} src={image1} className='mt-6  rounded'/>
           <h2 className="text-sm mt-2 font-bold md:text-sm md:mt-2 hover:text-blue-500">Written by: Upendra Prawal</h2>
         
-
-          <h2 className="text-lg  mt-10 md:text-2xl md:mt-10 font-bold hover:text-blue-500">What is Raspberry Pi?</h2>
+          <div className='bg-white border border-black p-4 mt-4'>
+          <h2 className="text-lg text-justify md:text-2xl font-bold hover:text-blue-500">What is Raspberry Pi?</h2>
           <p className="mt-6 md:mt-6">
-            The Raspberry Pi is a small, affordable, single-board computer developed by the Raspberry Pi Foundation to promote the teaching of basic computer science in schools and in developing countries. It's designed to be a versatile and inexpensive tool for learning programming, robotics, and creating DIY electronics projects. The Raspberry Pi has grown into a global phenomenon used by hobbyists, educators, and engineers.
-          </p>
-          <p className="mt-6 md:mt-6">
-            The Raspberry Pi is equipped with a broadcom ARM-based CPU, RAM, GPIO pins for interfacing with hardware, and multiple connectivity options including HDMI, USB, and Ethernet. It is capable of running Linux and various other operating systems, with the default being Raspberry Pi OS (formerly known as Raspbian), a Debian-based Linux distribution.
-          </p>
-          <p className="mt-6 md:mt-6">
+            The Raspberry Pi is a small, affordable, single-board computer developed by the Raspberry Pi Foundation to promote the teaching of basic computer science in schools and in developing countries. It's designed to be a versatile and inexpensive tool for learning programming, robotics, and creating DIY electronics projects. The Raspberry Pi has grown into a global phenomenon used by hobbyists, educators, and engineers.<br/>
+            The Raspberry Pi is equipped with a broadcom ARM-based CPU, RAM, GPIO pins for interfacing with hardware, and multiple connectivity options including HDMI, USB, and Ethernet. It is capable of running Linux and various other operating systems, with the default being Raspberry Pi OS (formerly known as Raspbian), a Debian-based Linux distribution.<br/>
             A Raspberry Pi is small enough to fit into your pocket, yet powerful enough to serve as a base for a variety of projects. It supports peripherals such as cameras, sensors, motors, displays, and more. This flexibility has led to its widespread adoption in IoT (Internet of Things), robotics, home automation, media centers, and education.
           </p>
+          
+          </div>
 
-          <h2 className="text-lg mt-10 md:text-2xl md:mt-10 font-bold hover:text-blue-500">Key Features of Raspberry Pi:</h2>
+          <div className='border mt-4 p-4 bg-white border-black'>
+          <h2 className="text-lg md:text-2xl font-bold hover:text-blue-500">Key Features of Raspberry Pi:</h2>
           <ul className="mt-6 md:mt-6 list-disc list-inside">
             <li>Broadcom ARM-based processor (typically a quad-core ARM Cortex-A processor)</li>
             <li>RAM options from 1GB up to 8GB</li>
@@ -74,8 +73,11 @@ export default function Page() {
             <li>MicroSD card slot for storage and OS</li>
             <li>Multiple programming languages supported (Python, C, Java, etc.)</li>
           </ul>
+          </div>
 
-          <h2 className="text-lg mt-10 md:text-2xl md:mt-10 font-bold hover:text-blue-500">Common Uses of Raspberry Pi:</h2>
+
+          <div className='border mt-4 p-4 bg-white border-black'>
+          <h2 className="text-lg md:text-2xl font-bold hover:text-blue-500">Common Uses of Raspberry Pi:</h2>
           <ul className="mt-6 md:mt-6 list-disc list-inside">
             <li>Learning to code with Python, Scratch, and other programming languages</li>
             <li>Building a home automation system</li>
@@ -83,38 +85,31 @@ export default function Page() {
             <li>Building robots and IoT projects</li>
             <li>Setting up a security camera or home surveillance system</li>
             <li>Educational purposes: teaching students about computing, programming, and electronics</li>
-          </ul>
+          </ul></div>
 
+          <div className='border mt-4 p-4 bg-white border-black'>
           <h2 className="text-lg mt-10 md:text-2xl md:mt-10 font-bold hover:text-blue-500">How Raspberry Pi Changed Computing</h2>
           <p className="mt-6 md:mt-6">
-            One of the primary goals of the Raspberry Pi was to make computing more accessible, especially for those in underdeveloped areas or with limited resources. Its low price and versatility have made it a popular tool in schools, with countless educational initiatives designed to teach children and adults about computer science, engineering, and electronics.
-          </p>
-          <p className="mt-6 md:mt-6">
-            Raspberry Pi has also empowered hobbyists and makers to create innovative projects. The availability of numerous resources, tutorials, and community support has made it easy for anyone to start creating projects from scratch, leading to an explosion of **DIY electronics**, **home automation**, and **robotics** projects worldwide.
-          </p>
+            One of the primary goals of the Raspberry Pi was to make computing more accessible, especially for those in underdeveloped areas or with limited resources. Its low price and versatility have made it a popular tool in schools, with countless educational initiatives designed to teach children and adults about computer science, engineering, and electronics.<br/>
+            Raspberry Pi has also empowered hobbyists and makers to create innovative projects. The availability of numerous resources, tutorials, and community support has made it easy for anyone to start creating projects from scratch, leading to an explosion of DIY electronics, home automation, and robotics projects worldwide.</p>
+          </div>
 
-          <h2 className="text-lg mt-10 md:text-2xl md:mt-10 font-bold hover:text-blue-500">Raspberry Pi Models</h2>
-          <p className="mt-6 md:mt-6">
-            Since its launch in 2012, the Raspberry Pi has evolved through multiple models, each more powerful and capable than the last. Some of the popular versions include:
+          <div className='border mt-4 p-4 bg-white border-black'>
+          <h2 className="text-lg md:text-2xl font-bold hover:text-blue-500">Raspberry Pi Models</h2>
+          <p className="mt-6 md:mt-6">Since its launch in 2012, the Raspberry Pi has evolved through multiple models, each more powerful and capable than the last. Some of the popular versions include:
           </p>
           <ul className="mt-6 md:mt-6 list-disc list-inside">
             <li><strong>Raspberry Pi 1:</strong> The original model with a 700MHz single-core ARM CPU and 256MB of RAM.</li>
             <li><strong>Raspberry Pi 4:</strong> The latest and most powerful model, featuring up to 8GB of RAM, faster processing power, and support for dual 4K monitors.</li>
             <li><strong>Raspberry Pi Zero:</strong> A smaller, more affordable version designed for compact projects with limited resources.</li>
-          </ul>
-
-          <h2 className="text-lg mt-10 md:text-2xl md:mt-10 font-bold hover:text-blue-500">Conclusion</h2>
+          </ul></div>
+          
+          <div className='border mt-4 p-4 bg-white border-black'>
+          <h2 className="text-lg md:text-2xl font-bold hover:text-blue-500">Conclusion</h2>
           <p className="mt-6 md:mt-6">
-            The Raspberry Pi is a revolutionary tool in the world of computing, providing an affordable and flexible platform for a wide variety of applications. Whether you're an educator, a hobbyist, or a professional developer, the Raspberry Pi can serve as the foundation for countless projects, making it a valuable asset in the tech community.
-          </p>
-
-        
-        
-
-        
-          <p className="mt-4 md:mt-4">
+            The Raspberry Pi is a revolutionary tool in the world of computing, providing an affordable and flexible platform for a wide variety of applications. Whether you're an educator, a hobbyist, or a professional developer, the Raspberry Pi can serve as the foundation for countless projects, making it a valuable asset in the tech community.<br/>
             The Raspberry Pi has successfully empowered a global community of educators, students, makers, and engineers to explore the world of computing, electronics, and programming.
-          </p>
+          </p></div>
         </div>
     </>
   );

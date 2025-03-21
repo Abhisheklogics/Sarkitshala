@@ -1,23 +1,47 @@
-
 import Image1 from '../../../public/images/jetson_Sarkitshala.webp'
+import j1 from '../../../public/images/jetson/P1.webp'
+import j2 from '../../../public/images/jetson/12v.webp'
+import j3 from '../../../public/images/jetson/cardFormat.webp'
+import j4 from '../../../public/images/jetson/4.webp'
+import j5 from '../../../public/images/jetson/7.webp'
+import j6 from '../../../public/images/jetson/6.webp'
+import j7 from '../../../public/images/jetson/7.webp'
+import j8 from '../../../public/images/jetson/8.webp'
+import j9 from '../../../public/images/jetson/9.webp'
+import j10 from '../../../public/images/jetson/10.webp'
+import j11 from '../../../public/images/jetson/11.webp'
+import j12 from '../../../public/images/jetson/12.webp'
+import j13 from '../../../public/images/jetson/13.webp'
+import j14 from '../../../public/images/jetson/14.webp'
+import j15 from '../../../public/images/jetson/15.webp'
+import j16 from '../../../public/images/jetson/16.webp'
+import j17 from '../../../public/images/jetson/17.webp'
+import j18 from '../../../public/images/jetson/18.webp'
+import j19 from '../../../public/images/jetson/19.webp'
+import j20 from '../../../public/images/jetson/20.webp'
+import j21 from '../../../public/images/jetson/21.webp'
+import j22 from '../../../public/images/jetson/22.webp'
+import j23 from '../../../public/images/jetson/23.webp'
+import j24 from '../../../public/images/jetson/24.webp'
+import j25 from '../../../public/images/jetson/25.webp'
+import j26 from '../../../public/images/jetson/26.webp'
+
 import Image from 'next/image'
 export default async function Page(){
-
-  
 
 
 return(
 
     <div className="h-fit w-full p-5  bg-cover rounded-xl leading-8 text-justify break-words 
-    md:h-fit md:w-[790px] 2xl:w-[820px] font-serif md:ml-[330px]  2xl:ml-[430px] md:p-5 md:bg-[#FFF0E5]
+    md:h-fit md:w-[790px] 2xl:w-[820px] font-serif md:ml-[330px]  2xl:ml-[360px] md:p-5 md:bg-[#FFF0E5]
  md:bg-cover md:rounded md:leading-8 md:text-justify md:break-words md:text-wrap ">
     
-    <h1 className="text-4xl md:mt-24 md:mb-[50px]  mt-32 text-center">NVIDIA Jetson Nano Developer Kit</h1>
-  <Image src={Image1} height={500} width={730}  className='ml-2 md:mt-4 mt-4' alt='jetson Image'/>
+    <h1 className="text-4xl md:mt-24 md:mb-[50px] font-semibold mt-32 text-center">NVIDIA Jetson Nano Developer Kit</h1>
+  <Image src={Image1} height={500} width={730}  className='ml-6 md:mt-4 mt-4' alt='jetson Image'/>
     <div className="mt-16  max-w-4xl bg-white p-6 rounded shadow-lg border border-black"> 
     <p className="text-lg    ">The NVIDIA® Jetson Nano™ Developer Kit is a small AI computer for makers, learners, and developers. After following along with this brief guide, you'll be ready to start building practical AI applications, cool AI robots, and more. </p>
    <p className="text-lg mt-2  ">The NVIDIA Jetson Nano Developer Kit is a compact, yet powerful single-board computer (SBC) designed for AI, deep learning, and edge computing applications. It provides GPU acceleration at a low cost and power consumption, making it ideal for robotics, computer vision, IoT, and AI-based embedded systems.</p>
-
+   <Image src={j1} height={500} width={730}  className='ml-6 md:mt-4 mt-4' alt='jetson Image'/>
     </div>
   
    {/* Components Requirement */}
@@ -52,7 +76,69 @@ return(
 {/*"ST2": "Technical Specifications",*/}
 <div className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
   <h2 className="font-semibold text-2xl mb-2">Technical Specifications</h2>
-</div>
+
+  {/* Table */}
+  <div class="w-full mt-4 max-w-4xl bg-white shadow-lg rounded overflow-hidden">
+        <table class="w-full border border-gray-300">
+            <thead>
+                <tr class="bg-blue-600 text-white uppercase text-sm border border-gray-300">
+                    <th class="py-3 px-6 border border-gray-300 text-left">Category</th>
+                    <th class="py-3 px-6 border border-gray-300 text-left">Specification</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-700 text-sm">
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">CPU</td>
+                    <td class="py-3 px-6 border border-gray-300">Quad-core ARM Cortex-A57</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">GPU</td>
+                    <td class="py-3 px-6 border border-gray-300">NVIDIA Maxwell architecture, 128 CUDA cores</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">Memory</td>
+                    <td class="py-3 px-6 border border-gray-300">4GB LPDDR4</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">Storage</td>
+                    <td class="py-3 px-6 border border-gray-300">microSD card (not included)</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">Connectivity</td>
+                    <td class="py-3 px-6 border border-gray-300">1x Gigabit Ethernet, M.2 Key E for Wi-Fi/BT</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">USB Ports</td>
+                    <td class="py-3 px-6 border border-gray-300">4x USB 3.0, 1x Micro-USB (power and data)</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">Display</td>
+                    <td class="py-3 px-6 border border-gray-300">HDMI 2.0, DisplayPort</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">Camera</td>
+                    <td class="py-3 px-6 border border-gray-300">MIPI CSI-2 (supports Raspberry Pi Camera Module)</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">I/O Pins</td>
+                    <td class="py-3 px-6 border border-gray-300">40-pin GPIO header (compatible with Raspberry Pi HATs)</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">Power Input</td>
+                    <td class="py-3 px-6 border border-gray-300">5V/4A (barrel jack) or 5V/2.5A (micro-USB)</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">Power Modes</td>
+                    <td class="py-3 px-6 border border-gray-300">5W and 10W modes</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">OS Support</td>
+                    <td class="py-3 px-6 border border-gray-300">Ubuntu-based NVIDIA JetPack</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    </div>
 
 {/* "ST3": "Jetson Nano Developer Kit Components", */}
 <div className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
@@ -129,8 +215,36 @@ return(
   </div>
 
   {/* "ST8": "Performance & AI Capabilities", */}
- <div className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
-  <h2 className="font-semibold text-2xl mb-2">Performance & AI Capabilities</h2>
+ <div className="mt-4 max-w-4xl bg-white p-6 shadow-lg border border-black">
+  <h2 className="font-semibold text-2xl mb-4">Performance & AI Capabilities</h2>
+  <div class="w-full max-w-3xl bg-white shadow-lg overflow-hidden">
+        <table class="w-full border border-gray-300">
+            <thead>
+                <tr class="bg-blue-600 text-white uppercase text-sm border border-gray-300">
+                    <th class="py-3 px-6 border border-gray-300 text-left">Benchmark</th>
+                    <th class="py-3 px-6 border border-gray-300 text-left">Performance</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-700 text-sm">
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">ResNet-50 Inference</td>
+                    <td class="py-3 px-6 border border-gray-300">472 FPS</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">SSD-Mobilenet-v2</td>
+                    <td class="py-3 px-6 border border-gray-300">47 FPS</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">YOLOv4 Tiny Object Detection</td>
+                    <td class="py-3 px-6 border border-gray-300">24 FPS</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">Jetson Inference Library</td>
+                    <td class="py-3 px-6 border border-gray-300">Supports real-time AI vision</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
   </div>
 
   {/* "ST9": "Applications", */}
@@ -151,7 +265,51 @@ return(
   {/* "ST10": "Jetson Nano vs. Raspberry Pi 4", */}
   <div className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
   <h2 className="font-semibold text-2xl mb-2">Jetson Nano vs. Raspberry Pi 4</h2>
-  <p>Jetson Nano is AI-focused, while Raspberry Pi is better for general computing and hobbyist projects.</p></div>
+  
+  <div class="w-full max-w-4xl bg-white shadow-lg overflow-hidden">
+        <table class="w-full border border-gray-300">
+            <thead>
+                <tr class="bg-blue-600 text-white uppercase text-sm border border-gray-300">
+                    <th class="py-3 px-6 border border-gray-300 text-left">Feature</th>
+                    <th class="py-3 px-6 border border-gray-300 text-left">Jetson Nano</th>
+                    <th class="py-3 px-6 border border-gray-300 text-left">Raspberry Pi 4</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-700 text-sm">
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">GPU</td>
+                    <td class="py-3 px-6 border border-gray-300">128-core Maxwell</td>
+                    <td class="py-3 px-6 border border-gray-300">Broadcom VideoCore VI</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">CPU</td>
+                    <td class="py-3 px-6 border border-gray-300">Quad-core ARM Cortex-A57</td>
+                    <td class="py-3 px-6 border border-gray-300">Quad-core Cortex-A72</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">RAM</td>
+                    <td class="py-3 px-6 border border-gray-300">4GB LPDDR4</td>
+                    <td class="py-3 px-6 border border-gray-300">2GB/4GB/8GB LPDDR4</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">AI Support</td>
+                    <td class="py-3 px-6 border border-gray-300">TensorRT, CUDA</td>
+                    <td class="py-3 px-6 border border-gray-300">No AI acceleration</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">Performance</td>
+                    <td class="py-3 px-6 border border-gray-300">AI-optimized, better ML processing</td>
+                    <td class="py-3 px-6 border border-gray-300">Good for general computing</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">Power Consumption</td>
+                    <td class="py-3 px-6 border border-gray-300">5W - 10W</td>
+                    <td class="py-3 px-6 border border-gray-300">3W - 7W</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+  <p className='mt-4'>Jetson Nano is AI-focused, while Raspberry Pi is better for general computing and hobbyist projects.</p></div>
 
 
   {/* "ST11": "Getting Started", */}
@@ -184,41 +342,29 @@ return(
   {/* "ST12": "In Details", */}
   <div className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
   <h2 className="font-semibold text-2xl mb-2">In Details</h2>
-  </div>
-
   {/* "ST13": "microSD Card", */}
-  <div className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
-  <h2 className="font-semibold text-2xl mb-2">microSD Card</h2>
+  <h3 className="font-semibold text-lg mb-2">MicroSD Card</h3>
   <ol className="list-decimal pl-5">
- 
-      <li   className="marker:font-bold">The Jetson Nano Developer Kit uses a microSD card as a boot device and for main storage. It's important to have a card that's fast and large enough for your projects; the minimum recommended is a 32 GB UHS-1 card.</li>
-      <li   className="marker:font-bold">See the instructions below to flash your microSD card with operating system and software.</li>
+  <li   className="ml-4 marker:font-bold">The Jetson Nano Developer Kit uses a microSD card as a boot device and for main storage. It's important to have a card that's fast and large enough for your projects; the minimum recommended is a 32 GB UHS-1 card.</li>
+  <li   className="ml-4 marker:font-bold">See the instructions below to flash your microSD card with operating system and software.</li>
 </ol>
-
-
-  </div>
-
-  {/* "ST14": "Micro-USB Power Supply", */}
-  <div className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
-  <h2 className="font-semibold text-2xl mb-2">Micro-USB Power Supply</h2>
-  <ol className="list-decimal pl-5">
+{/* "ST14": "Micro-USB Power Supply", */}
+<h2 className="font-semibold text-lg mt-4 mb-2">Micro-USB Power Supply</h2>
+<ol className="list-decimal pl-5">
  
-      <li   className="marker:font-bold">You'll need to power the developer kit with a good quality power supply that can deliver 5V⎓2A at the developer kit's Micro-USB port. Not every power supply promising “5V⎓2A” will actually do this.</li>
-   <li   className="marker:font-bold">As an example of a good power supply, NVIDIA has validated Adafruit's 5V 2.5A Switching Power Supply with 20AWG MicroUSB Cable (GEO151UB-6025). It was specifically designed to overcome common problems with USB power supplies; see the linked product page for details.</li>
+      <li   className="ml-4 marker:font-bold">You'll need to power the developer kit with a good quality power supply that can deliver 5V⎓2A at the developer kit's Micro-USB port. Not every power supply promising “5V⎓2A” will actually do this.</li>
+   <li   className="ml-4 marker:font-bold">As an example of a good power supply, NVIDIA has validated Adafruit's 5V 2.5A Switching Power Supply with 20AWG MicroUSB Cable (GEO151UB-6025). It was specifically designed to overcome common problems with USB power supplies; see the linked product page for details.</li>
 </ol>
-  </div>
-
-
   {/* "ST15": "Note", */}
-  <div className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
-  <h2 className="font-semibold text-2xl mb-2">Note</h2>
-  <ol className="list-decimal pl-5">
+<h2 className="font-semibold mt-4 text-2xl mb-2">Note</h2>
+<ol className="list-decimal pl-5">
   
-      <li   className="marker:font-bold">The stated power output capability of a USB power supply can be seen on its label.</li>
-      <li   className="marker:font-bold">Actual power delivery capabilities of USB power supplies do vary. Please see the Jetson Nano Developer Kit User Guide for additional information.</li>
-  
+  <li   className="ml-4 marker:font-bold">The stated power output capability of a USB power supply can be seen on its label.</li>
+  <li   className="ml-4 marker:font-bold">Actual power delivery capabilities of USB power supplies do vary. Please see the Jetson Nano Developer Kit User Guide for additional information.</li>
+  <Image src={j2} height={500} width={730}  className='ml-6 md:mt-4 mt-4' alt='jetson Image'/>
 </ol>
   </div>
+
 
   {/* "ST16": "Write Image to the microSD Card", */}
   <div className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
@@ -237,6 +383,7 @@ return(
   <div className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
   <h2 className="font-semibold text-2xl mb-2">Instructions for Windows</h2>
   <p className="">Format and Write Image to microSD Card</p>
+  <Image src={j3} height={500} width={730}  className='ml-6 md:mt-4 md:mb-4' alt='jetson Image'/>
   <ol className="list-decimal pl-5">
   <p className="">Download, install, and launch SD Memory Card Formatter for Windows.</p>
       <li   className="marker:font-bold">Select card drive.</li>
@@ -249,11 +396,15 @@ return(
 <ol className="list-decimal pl-5">
   
       <li   className="marker:font-bold">Download, install, and launch Etcher.</li>
+      <Image src={j4} height={500} width={730}  className='md:mt-[-40px] md:mb-[-20px]' alt='jetson Image'/>
       <li   className="marker:font-bold">Click “Select image” and choose the zipped image file downloaded earlier.</li>
       <li   className="marker:font-bold">Insert your microSD card if not already inserted. Click Cancel (per this explanation) if Windows prompts you with a dialog like this:</li>
+      <Image src={j5} height={500} width={730}  className='md:mt-[-80px] md:mb-[-80px]' alt='jetson Image'/>
       <li   className="marker:font-bold">Click “Select drive” and choose the correct device.</li>
+      <Image src={j6} height={500} width={680}  className='md:mt-[-20px] md:mb-[-20px]' alt='jetson Image'/>
       <li   className="marker:font-bold">Click “Flash!” It will take Etcher about 10 minutes to write and validate the image if your microSD card is connected via USB3.</li>
       <li   className="marker:font-bold">"After Etcher finishes, Windows may let you know it doesn't know how to read the SD Card. Just click Cancel and remove the microSD card..</li>
+      <Image src={j7} height={400} width={530}  className='ml-20 md:mt-[-40px] md:mb-[-50px]' alt='jetson Image'/>
       <li   className="marker:font-bold">After your microSD card is ready, proceed to set up your developer kit.</li>
      
   
@@ -263,21 +414,24 @@ return(
 <div className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
 <h2 className="font-semibold text-2xl mb-2">Instructions for MacOS</h2>
 <p>You can either write the SD card image using a graphical program like Etcher, or via command line.</p>
-</div>
 
 {/* "Etcherinfo": */}
-<div className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
 <h2 className="font-semibold text-2xl mb-2">Etcher Instructions</h2>
 <ol className="list-decimal pl-5">
   
       <li  className="marker:font-bold">Do not insert your microSD card yet.</li>
       <li  className="marker:font-bold">Download, install, and launch Etcher.</li>
+      <Image src={j8} height={500} width={680}  className='md:mt-[-80px] md:mb-[-80px]' alt='jetson Image'/>
       <li   className="marker:font-bold">Click 'Select image' and choose the zipped image file downloaded earlier.</li>
+      <Image src={j9} height={500} width={680}  className='md:mt-[-110px] md:mb-[-110px]' alt='jetson Image'/>
       <li  className="marker:font-bold">Insert your microSD card. Click Ignore if your Mac shows this window.</li>
+      <Image src={j10} height={500} width={680}  className='md:mt-[-40px] md:mb-[-100px]' alt='jetson Image'/>
       <li  className="marker:font-bold">"If you have no other external drives attached, Etcher will automatically select the microSD card as target device. Otherwise, click 'Select drive' and choose the correct device.</li>
       <li  className="marker:font-bold">Click 'Flash!' Your Mac may prompt for your username and password before it allows Etcher to proceed.</li>
-      <li  className="marker:font-bold">It will take Etcher about 10 minutes to write and validate the image if your microSD card is connected via USB3.</li>
+      <p className='font-semibold text-blue-500'>It will take Etcher about 10 minutes to write and validate the image if your microSD card is connected via USB3.</p>
       <li  className="marker:font-bold">After Etcher finishes, your Mac may let you know it doesn't know how to read the SD Card. Just click Eject and remove the microSD card.</li>
+      <Image src={j11} height={500} width={730}  className='md:mt-[-120px] md:mb-[-110px]' alt='jetson Image'/>
+
 </ol>
 </div>
 
@@ -286,37 +440,49 @@ return(
 <h2 className="font-semibold text-2xl mb-2">Command Line Instructions</h2>
 <ol className="list-decimal pl-5">
   
+      <li className="marker:font-bold">Do not insert your microSD card yet. Waiting will help you discover correct disk device name in steps below.</li>
       <li className="marker:font-bold">Open the Terminal app.</li>
+      <Image src={j12} height={500} width={730}  className='md:mt-[-80px] md:mb-[-80px]' alt='jetson Image'/>
       <li className="marker:font-bold">Use this command to list any external disk devices already attached to your Mac: diskutil list external | fgrep '/dev/disk'.</li>
+      <Image src={j13} height={500} width={730}  className='md:mt-[-180px] md:mb-[-180px]' alt='jetson Image'/>
       <li className="marker:font-bold">For example, if you already have a USB drive attached to your Mac, the result will look similar to this.</li>
+      <Image src={j14} height={500} width={700}  className='md:mt-[-110px] md:mb-[-140px]' alt='jetson Image'/>
       <li className="marker:font-bold">Insert your microSD card. Click Ignore if your Mac shows this window.</li>
+      <Image src={j15} height={500} width={600}  className='md:ml-4 border border-black md:mt-[20px] md:mb-[20px]' alt='jetson Image'/>
       <li className="marker:font-bold">Use this command to remove any existing partitions from the microSD card, ensuring MacOS will let you write to it. BE VERY CAREFUL to specify the correct disk device: sudo diskutil partitionDisk /dev/disk{'<n>'} 1 GPT 'Free Space' '%noformat%' 100%.</li>
-      <li className="marker:font-bold">For example:</li>
-      <li className="marker:font-bold">Use this command to write the zipped SD card image to the microSD card. Note the use of /dev/rdisk instead of /dev/disk: /usr/bin/unzip -p ~/Downloads/jetson_nano_devkit_sd_card.zip | sudo /bin/dd of=/dev/rdisk{'<n>'} bs=1m.</li>
+      <Image src={j16} height={500} width={730}  className='md:mt-[-150px] md:mb-[-150px]' alt='jetson Image'/>
+      <li className="marker:font-bold">Use this command to write the zipped SD card image to the microSD card. Note the use of /dev/rdisk instead of /dev/disk: /usr/bin/unzip -p ~/Downloads/jetson_nano_devkit_sd_card.zip | sudo /bin/dd of=/dev/rdisk{'<n>'} bs=1m.<br/><span className='font-semibold'>For example:</span></li>
+      <Image src={j17} height={500} width={730}  className='md:mt-[-110px] md:mb-[-220px]' alt='jetson Image'/>
       <li className="marker:font-bold">There will be no indication of progress (unless you signal with CTRL-t). When the dd command finishes, your Mac will let you know it cannot read the microSD card. Just click Eject.</li>
+      <Image src={j18} height={500} width={730}  className='md:mt-[-140px]  md:mb-[-140px]' alt='jetson Image'/>
+      <p>After your microSD card is ready, proceed to set up your developer kit.</p>
+
 </ol></div>
 
-{/* "ST17C": "Instructions for Linux", */}
+
+
 <div className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+      {/* "ST17C": "Instructions for Linux", */}
 <h2 className="font-semibold text-2xl mb-2">Instructions for Linux</h2>
 <ul className="">
  
       <li  className="marker:font-bold">You can either write the SD card image using a graphical program like Etcher, or via command line.</li>
  
 </ul>
-</div>
-
 {/* "ELI": "Etcher Instructions" */}
-<div className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
-<h2 className="font-semibold text-2xl mb-2">Etcher Instructions</h2>
-<ol className="list-decimal pl-5">
+<h2 className="font-semibold text-xl mb-2">Etcher Instructions</h2>
+<ol className="list-decimal ml-2 pl-5">
   
       <li  className="marker:font-bold">Download, install, and launch Etcher.</li>
+      <Image src={j19} height={500} width={730}  className='md:mt-[-60px] md:mb-[-60px]' alt='jetson Image'/>
       <li  className="marker:font-bold">Click 'Select image' and choose the zipped image file downloaded earlier.</li>
       <li  className="marker:font-bold">Insert your microSD card. If you have no other external drives attached, Etcher will automatically select the microSD card as target device. Otherwise, click 'Change' and choose the correct device.</li>
+      <Image src={j20} height={500} width={730}  className='md:mt-[-40px] md:mb-[-40px]' alt='jetson Image'/>
       <li  className="marker:font-bold">Click 'Flash!' Your OS may prompt for your username and password before it allows Etcher to proceed.</li>
-      <li  className="marker:font-bold">It will take Etcher 10-15 minutes to write and validate the image if your microSD card is connected via USB3.</li>
+      <Image src={j21} height={500} width={730}  className='md:mt-[-40px] md:mb-[-40px]' alt='jetson Image'/>
+      <p className='font-semibold text-blue-500'>It will take Etcher 10-15 minutes to write and validate the image if your microSD card is connected via USB3.</p>
       <li  className="marker:font-bold">After Etcher finishes, eject the SD Card using Files application.</li>
+      <Image src={j22} height={500} width={730}  className='md:mt-[-40px] md:mb-[-40px]' alt='jetson Image'/>
       <li className="marker:font-bold">Physically remove microSD card from the computer.</li>
 
 </ol>
@@ -329,11 +495,13 @@ return(
   
       <li  className="marker:font-bold">Open the Terminal application by pressing Ctrl + Alt + T.</li>
       <li  className="marker:font-bold">Insert your microSD card, then use a command like this to show which disk device was assigned to it:</li>
-      <li  className="marker:font-bold">{`dmesg | tail | awk '$3 == \"sd\" {print}'`}</li>
-      <li  className="marker:font-bold">In this example, we can see the 16GB microSD card was assigned /dev/sda.</li>
+      <p>{`dmesg | tail | awk '$3 == \"sd\" {print}'`}</p>
+      <p>In this example, we can see the 16GB microSD card was assigned /dev/sda.</p>
+      <Image src={j23} height={500} width={730}  className='md:mt-[-150px] md:mb-[-150px]' alt='jetson Image'/>
       <li className="marker:font-bold">Use this command to write the zipped SD card image to the microSD card</li>
-      <li  className="marker:font-bold">/usr/bin/unzip -p ~/Downloads/jetson_nano_devkit_sd_card.zip | sudo /bin/dd of=/dev/sd{'<x>'} bs=1M status=progress</li>
-      <li  className="marker:font-bold">{`sudo eject /dev/sd'<x>'`}</li>
+      <p>/usr/bin/unzip -p ~/Downloads/jetson_nano_devkit_sd_card.zip | sudo /bin/dd of=/dev/sd{'<x>'} bs=1M status=progress<br/><b/>For Example:</p>
+      <p>When the dd command finishes, eject the disk device from the command line: <br/>{`sudo eject /dev/sd'<x>'`}</p>
+      <Image src={j24} height={500} width={730}  className='md:mt-[-170px] md:mb-[-170px]' alt='jetson Image'/>
       <li  className="marker:font-bold">Physically remove microSD card from the computer.</li>
       <li  className="marker:font-bold">After your microSD card is ready, proceed to Setup your developer kit.</li>
     
@@ -347,6 +515,36 @@ return(
 <p className="font-semibold">1 with display, keyboard and mouse attached, or</p>
 <p className="font-semibold">2 in 'headless mode' via connection from another computer.</p>
 <p>You can conduct the initial setup either way.</p>
+
+{/* Table */}
+<div class="w-full max-w-3xl mt-4 mb-2 bg-white shadow-lg overflow-hidden">
+        <table class="w-full border border-gray-300">
+            <thead>
+                <tr class="bg-green-600 text-white uppercase text-sm border border-gray-300">
+                    <th class="py-3 px-6 border border-gray-300 text-left">Feature</th>
+                    <th class="py-3 px-6 border border-gray-300 text-left">With Display</th>
+                    <th class="py-3 px-6 border border-gray-300 text-left">Headless Mode</th>
+                </tr>
+            </thead>
+            <tbody class="text-gray-700 text-sm">
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">Monitor, Keyboard & Mouse</td>
+                    <td class="py-3 px-6 border border-gray-300">Required</td>
+                    <td class="py-3 px-6 border border-gray-300">Not Required</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">Extra Computer</td>
+                    <td class="py-3 px-6 border border-gray-300">Not Required</td>
+                    <td class="py-3 px-6 border border-gray-300">Required</td>
+                </tr>
+                <tr class="border border-gray-300 hover:bg-gray-200 transition">
+                    <td class="py-3 px-6 border border-gray-300">Power Options</td>
+                    <td class="py-3 px-6 border border-gray-300">Either Micro-USB or DC Power Supply</td>
+                    <td class="py-3 px-6 border border-gray-300">DC Power Supply Needed</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 <p>Initial Setup with Display Attached</p>
 </div>
 
@@ -357,6 +555,7 @@ return(
   
       <li  className="marker:font-bold">Unfold the paper stand and place inside the developer kit box.</li>
       <li  className="marker:font-bold">Insert the microSD card (with system image already written to it) into the slot on the underside of the Jetson Nano module.</li>
+      <Image src={j25} height={500} width={730}  className='md:mt-[-40px] md:mb-[-20px]' alt='jetson Image'/>
       <li  className="marker:font-bold">Set the developer kit on top of the paper stand.</li>
    
       <li  className="marker:font-bold">Power on your computer display and connect it.</li>
@@ -388,6 +587,7 @@ return(
 <div className="mt-4 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
 <h2 className="font-semibold text-2xl ">After Logging In</h2>
 <p>You will see this Screen. Congratulations!</p>
+<Image src={j26} height={500} width={730}  className='md:mt-[-40px] md:mb-[-40px]' alt='jetson Image'/>
 <h2 className="mt-4 font-semibold text-2xl mb-2">Initial Setup Headless Mode!</h2>
 <ol className="list-decimal pl-5">
  
