@@ -231,4 +231,3 @@ const Footer=dynamic(()=>import('../Footer/Footer'))
   );
 }
  export default Home1
-
