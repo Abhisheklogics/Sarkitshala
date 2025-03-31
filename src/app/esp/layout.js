@@ -67,7 +67,7 @@ export default function RootLayout({ children }) {
     <>
      <header>
      <button
-        className="md:hidden block bg-blue-500 text-white p-2 mt-36 rounded-md md:ml-8"
+        className="md:hidden block bg-blue-500 text-white ml-4 p-2 mt-36 rounded-md md:ml-8"
         onClick={() => handleToggle("toggle1")}
       >
         {toggles.toggle1 ? "Esp Experiments" : "Esp Experiments"}
@@ -79,7 +79,7 @@ export default function RootLayout({ children }) {
           toggles.toggle1 ? "block" : "hidden"
         } md:block relative flex flex-col ml-1  transition-transform `}
       >
-        <div className="inset-0 md:w-72 md:absolute rounded-md p-4 mt-4 md:ml-4 md:mt-28 2xl:ml-10">
+        <div className="inset-0 md:w-72 md:absolute rounded-md p-4  md:ml-4 md:mt-28 2xl:ml-10">
           {experiments.map((experiment) => (
             <div key={experiment.key}>
               <ToggleButton
