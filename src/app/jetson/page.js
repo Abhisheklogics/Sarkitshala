@@ -41,7 +41,7 @@ return(
     <div className="mt-16  max-w-4xl bg-white p-6 rounded shadow-lg border border-black"> 
     <p className="text-lg    ">The NVIDIA® Jetson Nano™ Developer Kit is a small AI computer for makers, learners, and developers. After following along with this brief guide, you'll be ready to start building practical AI applications, cool AI robots, and more. </p>
    <p className="text-lg mt-2  ">The NVIDIA Jetson Nano Developer Kit is a compact, yet powerful single-board computer (SBC) designed for AI, deep learning, and edge computing applications. It provides GPU acceleration at a low cost and power consumption, making it ideal for robotics, computer vision, IoT, and AI-based embedded systems.</p>
-   <Image src={j1} height={500} width={730}  className='ml-6 md:mt-4 mt-4' alt='jetson Image'/>
+   <Image src={j1} height={500} width={730}  className=' md:mt-4 mt-4' alt='jetson Image'/>
     </div>
   
    {/* Components Requirement */}
