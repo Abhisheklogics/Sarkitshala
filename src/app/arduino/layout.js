@@ -79,7 +79,7 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-led-with-push-button'}`, text: "Interfacing LED & Push Button" },
         { href: `/arduino/${'interfacing-joystick-module'}`, text: "Interfacing Joystick Module" },
         { href: `/arduino/${'interfacing-laser-sensor'}`, text: "Interfacing Laser Sensor" },
-        { href: `/arduino/${'Obstacle Avoidance Sensor'}`, text: "Interfacing Obstacle Avoidance Sensor" },
+        { href: `/arduino/${'interfacing-obstacle-avoidance-sensor'}`, text: "Interfacing Obstacle Avoidance Sensor" },
         { href: `/arduino/${'interfacing-finger-detecting-heartbeat'}`, text: "Interfacing Finger Detecting Heartbeat" },
         { href: `/arduino/${'interfacing-sound-sensor'}`, text: "Interfacing Sound Sensor Module" },
         { href: `/arduino/${'interfacing-metal-touch-sensor'}`, text: "Interfacing Metal Touch Sensor Module" },
