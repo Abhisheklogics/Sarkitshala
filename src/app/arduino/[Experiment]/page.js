@@ -127,7 +127,7 @@ if(data['ExperimentId'] == '15' || data['ExperimentId']=='16' || data['Experimen
     <>
   
     <div className="h-fit w-full p-5 bg-gray-100 md:bg-[#FFF0E5] bg-cover rounded-xl leading-8 text-justify break-words 
-    md:h-fit md:w-[790px] md:ml-[330px] md:mt-[-700px] 2xl:ml-[430px] md:p-auto md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap  md:bg-fixed">
+    md:h-fit md:w-[790px] md:ml-[330px] md:mt-24 2xl:ml-[430px] md:p-auto md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap  md:bg-fixed">
 
     
         <h1  className="  text-center capitalize md:text-3xl text-xl font-bold ">{data.ExperimentName}</h1>
