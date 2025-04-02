@@ -92,6 +92,7 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-ir-temperature-sensor'}`, text: "Interfacing Non-contact IR Temperature Sensor Module" },
         { href: `/arduino/${'interfacing-analog-temperature-sensor'}`, text: "Interfacing Analog Temperature Sensor Module" },
         { href: `/arduino/${'interfacing-voice-recognition-module'}`, text: "Interfacing Voice Recognition Module" },
+        { href: `/arduino/${'interfacing-sound-detection-sensor'}`, text: "Interfacing Sound Detection Sensor Module" },
 
         
       
