@@ -94,6 +94,10 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-voice-recognition-module'}`, text: "Interfacing Voice Recognition Module" },
         { href: `/arduino/${'interfacing-sound-detection-sensor'}`, text: "Interfacing Sound Detection Sensor Module" },
         { href: `/arduino/${'interfacing-small-microphone-sound-sensor'}`, text: "Interfacing Small Microphone Sound Sensor Module" },
+        { href: `/arduino/${'interfacing-analog-sound-sensor'}`, text: "Interfacing Analog Sound Sensor Module" },
+        { href: `/arduino/${'interfacing-ambient-light-sensor'}`, text: "Interfacing Ambient Light Sensor Module" },
+        { href: `/arduino/${'interfacing-light-intensity-sensor'}`, text: "Interfacing Light Intensity Sensor Module" },
+        { href: `/arduino/${'interfacing-color-recognition-sensor'}`, text: "Interfacing Color Recognition Sensor Module" },
 
         
       
