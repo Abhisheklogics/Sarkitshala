@@ -114,7 +114,7 @@ export default async function Page({ params }) {
     
 if(data['ExperimentId'] == '15' || data['ExperimentId']=='16' || data['ExperimentId']=='17' || data['ExperimentId']=='18' || data['ExperimentId']=='19'  || data['ExperimentId']=='20' || data['ExperimentId']=='21' 
   || data['ExperimentId'] == '22' || data['ExperimentId'] == '23' || data['ExperimentId'] == '24' || data['ExperimentId'] == '25' || data['ExperimentId'] == '26' || data['ExperimentId'] == '27' || data['ExperimentId'] == '28'
-  || data['ExperimentId'] == '29' || data['ExperimentId'] == '30')
+  || data['ExperimentId'] == '29' || data['ExperimentId'] == '30'|| data['ExperimentId'] == '31'|| data['ExperimentId'] == '32'|| data['ExperimentId'] == '33'|| data['ExperimentId'] == '34'|| data['ExperimentId'] == '35')
 {
 
   return(<AllCom  data={data}/>)
