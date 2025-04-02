@@ -142,7 +142,7 @@ void loop() {
   return (
     <>
       <div className="h-fit w-full p-5 bg-cover rounded-xl leading-8 text-justify break-words 
-          md:w-[790px] md:ml-[330px] md:mt-[-700px] 2xl:ml-[430px] md:bg-fixed">
+          md:w-[790px] md:ml-[330px] md:mt-24 2xl:ml-[430px] md:bg-fixed">
 
        
         <title>{data.title}</title>
