@@ -5,7 +5,7 @@ const LEDArduino = ({data}) => {
 
   return (
     <>   <div className="h-fit w-full p-5  bg-cover rounded-xl leading-8 text-justify break-words 
-    md:h-fit md:w-[790px] md:ml-[330px] md:mt-[-700px] 2xl:ml-[430px] md:p-auto md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap  md:bg-fixed">
+    md:h-fit md:w-[790px] md:ml-[330px] md:mt-24 2xl:ml-[430px] md:p-auto md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap  md:bg-fixed">
       <h1 className="text-3xl font-bold mb-6 text-center">Interfacing of LED with Arduino</h1>
       <Image src={data.image1} height={400} width={500} className="md:ml-28" />
       <section className="mb-6 mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
