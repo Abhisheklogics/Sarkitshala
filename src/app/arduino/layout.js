@@ -87,6 +87,7 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-linear-magnetic-hall-sensor'}`, text: "Interfacing Liner Magnetic Hall Sensor Module" },
         { href: `/arduino/${'interfacing-thermostat-switch'}`, text: "Interfacing Digital Microcomputer Thermostat switch" },
         { href: `/arduino/${'interfacing-humidity-controller'}`, text: "Interfacing Humidity Controller Module" },
+        { href: `/arduino/${'interfacing-stainless-steel-probe-temperature-sensor'}`, text: "Interfacing Stainless Steel Probe Temperature Sensor" },
 
         
       
