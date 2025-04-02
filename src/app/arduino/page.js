@@ -295,8 +295,8 @@ export default function Page() {
         <Link href="#Conclusion" className="max-w-4xl bg-white p-1 border border-black rounded shadow hover:text-blue-600">Conclusion</Link>
       </div>
     </div>
-     <div className="h-fit w-full p-5 bg-white bg-cover rounded-xl leading-8 text-justify break-words 
-    md:h-fit md:w-[790px] 2xl:w-[820px] font-serif md:ml-[330px] md:mt-[-730px] 2xl:ml-[430px] md:p-5 md:bg-[#FFF0E5]
+     <div className="h-screen overflow-y-auto h-fit w-full p-5 bg-white bg-cover rounded-xl leading-8 text-justify break-words 
+    md:h-fit md:w-[790px] 2xl:w-[820px] font-serif md:ml-[330px] md:mt-20 2xl:ml-[430px] md:p-5 md:bg-[#FFF0E5]
  md:bg-cover md:rounded md:leading-8 md:text-justify md:break-words md:text-wrap ">
     
     <h1 id='Arduino' className=" hover:text-blue-500 text-2xl mb-11 text-center md:text-2xl  md:text-3xl text-xl font-bold">
