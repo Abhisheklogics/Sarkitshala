@@ -110,7 +110,12 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-rfid-sensor-module'}`, text: "Interfacing RFID Sensor Module" },
         { href: `/arduino/${'interfacing-nfc-module'}`, text: "Interfacing NFC Module" },
         { href: `/arduino/${'interfacing-proximity-sensor'}`, text: "Interfacing Proximity Sensor Module" },
-        { href: `/arduino/${'interfacing-speed-measuring-sensor'}`, text: "Interfacing Speed Measuring Sensor" },
+        { href: `/arduino/${'interfacing-speed-measuring-sensor'}`, text: "Interfacing Speed Measuring Sensor Module" },
+        { href: `/arduino/${'interfacing-count-slot-sensor'}`, text: "Interfacing Count Slot Sensor Module" },
+        { href: `/arduino/${'interfacing-rotation-sensor-module'}`, text: "Interfacing Rotation Sensor Module" },
+        { href: `/arduino/${'interfacing-mq135-gas-sensor'}`, text: "Interfacing MQ135 Gas Sensor Module" },
+        { href: `/arduino/${'interfacing-mq2-gas-sensor'}`, text: "Interfacing MQ2 Gas Sensor Module" },
+        { href: `/arduino/${'interfacing-mq7-carbon-monoxide-sensor'}`, text: "Interfacing MQ7 Carbon Monoxide Sensor Module" },
 
         
       
