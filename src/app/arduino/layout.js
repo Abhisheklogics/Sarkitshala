@@ -106,6 +106,11 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-barometric-sensor-module'}`, text: "Interfacing Barometric Sensor Module" },
         { href: `/arduino/${'interfacing-magnetometer-sensor'}`, text: "Interfacing Magnetometer Sensor Module" },
         { href: `/arduino/${'interfacing-compass-magnetic-field-sensor'}`, text: "Interfacing Compass Magnetic Field Sensor Module" },
+        { href: `/arduino/${'interfacing-imu-sensor-module'}`, text: "Interfacing IMU Sensor Module" },
+        { href: `/arduino/${'interfacing-rfid-sensor-module'}`, text: "Interfacing RFID Sensor Module" },
+        { href: `/arduino/${'interfacing-nfc-module'}`, text: "Interfacing NFC Module" },
+        { href: `/arduino/${'interfacing-proximity-sensor'}`, text: "Interfacing Proximity Sensor Module" },
+        { href: `/arduino/${'interfacing-speed-measuring-sensor'}`, text: "Interfacing Speed Measuring Sensor" },
 
         
       
