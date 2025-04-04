@@ -116,6 +116,11 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-mq135-gas-sensor'}`, text: "Interfacing MQ135 Gas Sensor Module" },
         { href: `/arduino/${'interfacing-mq2-gas-sensor'}`, text: "Interfacing MQ2 Gas Sensor Module" },
         { href: `/arduino/${'interfacing-mq7-carbon-monoxide-sensor'}`, text: "Interfacing MQ7 Carbon Monoxide Sensor Module" },
+        { href: `/arduino/${'interfacing-mq3-sensor-module'}`, text: "Interfacing MQ3 Sensor Module" },
+        { href: `/arduino/${'interfacing-dust-sensor-gp2y1010au0f'}`, text: "Interfacing Dust Sensor Module" },
+        { href: `/arduino/${'interfacing-mq5-gas-sensor-module'}`, text: "Interfacing MQ5 Gas Sensor Module" },
+        { href: `/arduino/${'interfacing-mq6-gas-sensor'}`, text: "interfacing MQ6 Gas Sensor Module" },
+        { href: `/arduino/${'interfacing-mq9-gas-sensor'}`, text: "Interfacing MQ9 Gas Sensor Module" },
 
         
       
