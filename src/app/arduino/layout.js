@@ -105,6 +105,7 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-broken-light-sensor'}`, text: "Interfacing Broken Light Sensor Module" },
         { href: `/arduino/${'interfacing-barometric-sensor-module'}`, text: "Interfacing Barometric Sensor Module" },
         { href: `/arduino/${'interfacing-magnetometer-sensor'}`, text: "Interfacing Magnetometer Sensor Module" },
+        { href: `/arduino/${'interfacing-compass-magnetic-field-sensor'}`, text: "Interfacing Compass Magnetic Field Sensor Module" },
 
         
       
