@@ -102,6 +102,7 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-rain-sensor'}`, text: "Interfacing Rain Sensor Module" },
         { href: `/arduino/${'interfacing-hall-sensor'}`, text: "Interfacing Hall Sensor Module" },
         { href: `/arduino/${'interfacing-accelerometer-sensor'}`, text: "Interfacing Accelerometer Sensor Module" },
+        { href: `/arduino/${'interfacing-broken-light-sensor'}`, text: "Interfacing Broken Light Sensor Module" },
 
         
       
