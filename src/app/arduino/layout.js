@@ -65,7 +65,7 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-ldr'}`, text: "Interfacing LDR Sensor" },
         { href: `/arduino/${'interfacing-dtmf-module'}`, text: "Interfacing DTMF MODULE" },
         { href: `/arduino/${'interfacing-keypad'}`, text: "Interfacing Keypad" },
-        { href: `/arduino/${'interfacing-oled'}`, text: "Interfacing OLED" },
+        { href: `/arduino/${'interfacing-oled-display-module'}`, text: "Interfacing OLED 0.96 inces Display Module" },
         { href: `/arduino/${'interfacing-pir-sensor'}`, text: "Interfacing PIR Sensor" },
         { href: `/arduino/${'interfacing-soil-moisture'}`, text: "Interfacing Soil Moisture Sensor" },
         { href: `/arduino/${'interfacing-dc-motor'}`, text: "Interfacing DC Motor" },
