@@ -112,7 +112,8 @@ export default async function Page({ params }) {
   const data = await getData(`https://sarkitshala.com/api/experiments/Esp`, Experiment)
     if(data['ExperimentId'] == '10')
     {
-       <div className="h-fit w-full p-4 font-serif  bg-cover rounded-xl leading-10 text-justify  
+      return (
+         <div className="h-fit w-full p-4 font-serif  bg-cover rounded-xl leading-10 text-justify  
         md:h-fit md:w-[770px] md:text-md  md:ml-[380px] md:mt-[100px]
         md:p-5  md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap">
       
@@ -241,7 +242,7 @@ export default async function Page({ params }) {
             <p>{data.conclusion}</p>
           </section>
         )}
-      </div>
+      </div>)
 
       
    
