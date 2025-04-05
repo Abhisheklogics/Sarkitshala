@@ -111,11 +111,9 @@ export default async function Page({ params }) {
   
   
   const data = await getData(`https://sarkitshala.com/api/experiments/Esp`, Experiment)
-   if(data['ExperimentId' == '10'])
+   if(data['ExperimentId'] == '10'])
    {
-     return(
-       <esp data={data}/>
-     )
+     return(<esp data={data}/>)
    }
 
   return (
