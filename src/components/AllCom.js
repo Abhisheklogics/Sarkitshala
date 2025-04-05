@@ -13,9 +13,10 @@ export default function AllCom({ data }) {
       <div className="h-fit w-full p-5 bg-cover rounded-xl leading-8 text-justify break-words 
           md:w-[790px] md:ml-[330px] md:mt-24 2xl:ml-[430px] md:bg-fixed">
        
-  {data.image1 && <Image src={data.image1} height={400} width={400}/>}
+  
 
         <h1 className="text-3xl font-bold mb-4 text-center">{data.mainTitle}</h1>
+  {data.image1 && <Image src={data.image1} height={400} width={500} className='md:ml-10'/>}
 
         {data.title1 && (
           <section className="mb-2 mt-2 bg-white p-6 rounded shadow-lg border border-black">
