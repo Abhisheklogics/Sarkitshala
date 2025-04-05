@@ -57,6 +57,7 @@ export default function RootLayout({ children }) {
         { href: "/esp/servo-motor", text: "Interfacing Servo Motor" },
          { href: "/esp/esp32-cam-wireless", text: "Interfacing Cam Wireless" },
         { href: "/esp/esp32-dc-motor", text: "Interfacing DC Motor" },
+        { href: "interfacing-shock-sensor", text: "Interfacing Shock Sensor" },
       ],
     },
    
