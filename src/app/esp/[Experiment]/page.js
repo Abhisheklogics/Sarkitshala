@@ -121,18 +121,18 @@ export default async function Page({ params }) {
         md:h-fit md:w-[770px] md:text-md  md:ml-[380px] md:mt-[100px]
      <h1 className=" font-semibold text-2xl text-center hover:text-blue-500">{data.mainTitle}</h1>
 
-            {data.title1 && (
+            
           <section className="mb-2 mt-2 bg-white p-6 rounded shadow-lg border border-black">
             <h2 className="text-xl font-bold mb-6">{data.title1}</h2>
             <p>{data.para1}</p>
           </section>
-        )}
-         {data.title2 && (
+        
+         
           <section className="mb-6 mt-4 bg-white p-6 rounded shadow-lg border border-black">
             <h2 className="text-xl font-bold mb-6">{data.title2}</h2>
             <p>{data.para2}</p>
           </section>
-        )}
+        
 
         {data.arrangement && (
           <section className="mb-6 mt-10 bg-white p-6 rounded shadow-lg border border-black">
@@ -238,12 +238,12 @@ export default async function Page({ params }) {
         )}
         
 
-        {data.conclusion && (
+        
           <section className="mb-6 mt-10 bg-white p-6 rounded shadow-lg border border-black">
             <h2 className="text-xl font-bold mb-6">Conclusion</h2>
             <p>{data.conclusion}</p>
           </section>
-        )}
+      
 </div>
   }
       <h1 className=" font-semibold text-2xl text-center hover:text-blue-500">{data.ExperimentName}</h1>
