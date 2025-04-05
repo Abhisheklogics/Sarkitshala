@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
     
         { href: `/arduino/${'interfacing-seven-segment-display'}`, text: "Interfacing 7-Segement Display" },
         { href: `/arduino/${'interfacing-ir-sensor'}`, text: "Interfacing IR Sensor" },
-        { href: `/arduino/${'interfacing-rfid'}`, text: "Interfacing RFID" },
+       
         { href: `/arduino/${'interfacing-ldr'}`, text: "Interfacing LDR Sensor" },
         { href: `/arduino/${'interfacing-dtmf-module'}`, text: "Interfacing DTMF MODULE" },
         { href: `/arduino/${'interfacing-keypad'}`, text: "Interfacing Keypad" },
@@ -93,7 +93,7 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-analog-temperature-sensor'}`, text: "Interfacing Analog Temperature Sensor Module" },
         { href: `/arduino/${'interfacing-voice-recognition-module'}`, text: "Interfacing Voice Recognition Module" },
         { href: `/arduino/${'interfacing-sound-detection-sensor'}`, text: "Interfacing Sound Detection Sensor Module" },
-        { href: `/arduino/${'interfacing-small-microphone-sound-sensor'}`, text: "Interfacing Small Microphone Sound Sensor Module" },
+     
         { href: `/arduino/${'interfacing-analog-sound-sensor'}`, text: "Interfacing Analog Sound Sensor Module" },
         { href: `/arduino/${'interfacing-ambient-light-sensor'}`, text: "Interfacing Ambient Light Sensor Module" },
         { href: `/arduino/${'interfacing-light-intensity-sensor'}`, text: "Interfacing Light Intensity Sensor Module" },
