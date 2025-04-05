@@ -7,6 +7,7 @@ import getData from "@/app/apiCall";
 const CodeBox=dynamic(()=>import('@/components/code/code'),{
   ssr:false
 })
+const esp = dynamic(() => import('@/components/esp'), {ssr:false})
 export async function generateMetadata({ params }) {
   let ExperimentName;
   try {
@@ -110,142 +111,19 @@ export default async function Page({ params }) {
   
   
   const data = await getData(`https://sarkitshala.com/api/experiments/Esp`, Experiment)
-   
+   if(data['ExperimentId' == '10'])
+   {
+     return(
+       <esp data={data}/>
+     )
+   }
 
   return (
     <>
     <div className="h-fit w-full p-4 font-serif  bg-cover rounded-xl leading-10 text-justify  
         md:h-fit md:w-[770px] md:text-md  md:ml-[380px] md:mt-[100px]
         md:p-5  md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap">
-          { data.mainTitle && <div className="h-fit w-full p-4 font-serif  bg-cover rounded-xl leading-10 text-justify  
-        md:h-fit md:w-[770px] md:text-md  md:ml-[380px] md:mt-[100px]
-     <h1 className=" font-semibold text-2xl text-center hover:text-blue-500">{data.mainTitle}</h1>
-
-            
-          <section className="mb-2 mt-2 bg-white p-6 rounded shadow-lg border border-black">
-            <h2 className="text-xl font-bold mb-6">{data.title1}</h2>
-            <p>{data.para1}</p>
-          </section>
-        
          
-          <section className="mb-6 mt-4 bg-white p-6 rounded shadow-lg border border-black">
-            <h2 className="text-xl font-bold mb-6">{data.title2}</h2>
-            <p>{data.para2}</p>
-          </section>
-        
-
-        {data.arrangement && (
-          <section className="mb-6 mt-10 bg-white p-6 rounded shadow-lg border border-black">
-            <h2 className="text-xl font-bold mb-6">Arrangement</h2>
-            <pre className="whitespace-pre-wrap">{data.arrangement}</pre>
-          </section>
-        )}
-
-        {data.title3 && data.types && data.types.length > 0 && (
-          <section className="mb-6 mt-10 bg-white p-6 rounded shadow-lg border border-black">
-            <h2 className="text-xl font-bold mb-6">{data.title3}</h2>
-            {data.types.map((type, index) => (
-              <div key={index} className="mb-6">
-                <h3 className="text-lg font-semibold">{type.name}</h3>
-                <ul className="list-disc pl-6">
-                  {type.operation.map((item, idx) => (
-                    <li key={idx}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </section>
-        )}
-
-         {data.title10 && (
-          <section className="mb-6 mt-10 bg-white p-6 rounded shadow-lg border border-black">
-            <p className="text-xl font-bold mb-6">{data.title10}</p>
-            <p className=" ml-4  mb-2">{data.para5}</p>
-            <p className="ml-4 mb-2">{data.para6}</p>
-            <p className=" ml-4 mb-2">{data.para7}</p>
-            <p className=" ml-4 mb-2">{data.para8}</p>
-            
-          </section>
-        )}
-
-        {data.title4 && data.configurations && data.configurations.length > 0 && (
-          <section className="mb-6 mt-10 bg-white p-6 rounded shadow-lg border border-black">
-            <h2 className="text-xl font-bold mb-6">{data.title4}</h2>
-            {data.configurations.map((config, index) => (
-              <div key={index} className="mb-6">
-                {config.name && <h3 className="text-lg font-semibold">{config.name}</h3>}
-                {Array.isArray(config.operation) && config.operation.length > 0 && (
-                  <ul className="list-disc pl-6">
-                    {config.operation.map((op, idx) => (
-                      <li key={idx}>{op}</li>
-                    ))}
-                  </ul>
-                )}
-              </div>
-            ))}
-          </section>
-        )}
-
-        {data.title5 && data.para2 && (
-          <section className="mb-6 mt-10 bg-white p-6 rounded shadow-lg border border-black">
-            <h2 className="text-xl font-bold mb-6">{data.title5}</h2>
-            <p>{data.para2}</p>
-          </section>
-        )}
-         {data.title8 && (
-          <section className="mb-6 mt-10 bg-white p-6 rounded shadow-lg border border-black">
-            <h2 className="text-xl font-bold mb-6">{data.title8}</h2>
-            <p>{data.para4}</p>
-          </section>
-        )}
-
-        {data.algorithms && data.algorithms.length > 0 && (
-          <section className="mb-6 mt-10 bg-white p-6 rounded shadow-lg border border-black">
-            <h2 className="text-xl font-bold mb-6">Algorithm</h2>
-            <ol className="list-decimal pl-6">
-              {data.algorithms.map((algo, index) => (
-                <li key={index} className="mb-4">
-                  <h3 className="text-lg font-semibold">{algo[`step${index + 1}`]}</h3>
-                  <ul className="list-disc pl-6">
-                    {algo.operation.map((op, i) => (
-                      <li key={i}>{op}</li>
-                    ))}
-                  </ul>
-                </li>
-              ))}
-            </ol>
-          </section>
-        )}
-
-        
-        {data.title11 && data.para9 && (
-          <section className="mb-6 mt-10 bg-white p-6 rounded shadow-lg border border-black">
-            <h2 className="text-xl font-bold mb-6">{data.title11}</h2>
-            <p>{data.para9}</p>
-          </section>
-        )}
- 
-      
-        {data.title9 && data.applications && data.applications.length > 0 && (
-          <section className="mb-6 mt-10 bg-white p-6 rounded shadow-lg border border-black">
-            <h2 className="text-xl font-bold mb-6">{data.title9}</h2>
-            <ul className="list-disc pl-6">
-              {data.applications.map((app, index) => (
-                <li key={index}>{app}</li>
-              ))}
-            </ul>
-          </section>
-        )}
-        
-
-        
-          <section className="mb-6 mt-10 bg-white p-6 rounded shadow-lg border border-black">
-            <h2 className="text-xl font-bold mb-6">Conclusion</h2>
-            <p>{data.conclusion}</p>
-          </section>
-      
-</div>
-  }
       <h1 className=" font-semibold text-2xl text-center hover:text-blue-500">{data.ExperimentName}</h1>
       
       <div className=" md:mt-6 mt-4">
