@@ -110,14 +110,16 @@ export default async function Page({ params }) {
   
   
   const data = await getData(`https://sarkitshala.com/api/experiments/Esp`, Experiment)
-    if(data['ExperimentId'] == '10')
-    {
-      return (
-         <div className="h-fit w-full p-4 font-serif  bg-cover rounded-xl leading-10 text-justify  
+   
+
+  return (
+    <>
+    <div className="h-fit w-full p-4 font-serif  bg-cover rounded-xl leading-10 text-justify  
         md:h-fit md:w-[770px] md:text-md  md:ml-[380px] md:mt-[100px]
         md:p-5  md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap">
-      
-      <h1 className=" font-semibold text-2xl text-center hover:text-blue-500">{data.mainTitle}</h1>
+          { data.mainTitle && <div className="h-fit w-full p-4 font-serif  bg-cover rounded-xl leading-10 text-justify  
+        md:h-fit md:w-[770px] md:text-md  md:ml-[380px] md:mt-[100px]
+     <h1 className=" font-semibold text-2xl text-center hover:text-blue-500">{data.mainTitle}</h1>
 
             {data.title1 && (
           <section className="mb-2 mt-2 bg-white p-6 rounded shadow-lg border border-black">
@@ -242,18 +244,8 @@ export default async function Page({ params }) {
             <p>{data.conclusion}</p>
           </section>
         )}
-      </div>)
-
-      
-   
-    }
-
-  return (
-    <>
-    <div className="h-fit w-full p-4 font-serif  bg-cover rounded-xl leading-10 text-justify  
-        md:h-fit md:w-[770px] md:text-md  md:ml-[380px] md:mt-[100px]
-        md:p-5  md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap">
-      
+</div>
+  }
       <h1 className=" font-semibold text-2xl text-center hover:text-blue-500">{data.ExperimentName}</h1>
       
       <div className=" md:mt-6 mt-4">
