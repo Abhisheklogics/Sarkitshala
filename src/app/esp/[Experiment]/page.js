@@ -7,7 +7,7 @@ import getData from "@/app/apiCall";
 const CodeBox=dynamic(()=>import('@/components/code/code'),{
   ssr:false
 })
-const esp = dynamic(() => import('@/components/esp'), {ssr:false})
+const Esp = dynamic(() => import('@/components/Esp'), {ssr:false})
 export async function generateMetadata({ params }) {
   let ExperimentName;
   try {
@@ -113,7 +113,7 @@ export default async function Page({ params }) {
   const data = await getData(`https://sarkitshala.com/api/experiments/Esp`, Experiment)
    if(data.ExperimentId == '10')
    {
-     return(<esp data={data}/>)
+     return(<Esp data={data}/>)
    }
 
   return (
