@@ -1,12 +1,6 @@
-import Image from "next/image";
 
-import dynamic from "next/dynamic";
 
-const CodeBox = dynamic(() => import('@/components/code/code'), {
-  ssr: false
-});
-
-export default function esp({ data }) {
+export default function Esp({ data }) {
   
   return (
     <>
