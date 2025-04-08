@@ -76,7 +76,7 @@ export default function Search() {
         <input
           type="search"
           id="default-search"
-          className="block md:w-full w-[230px] md:h-[10px] md:p-6 p-2 pl-10 pr-10 text-sm text-gray-900 border border-gray-300 rounded-lg  focus:ring-blue-500 focus:border-blue-500 bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          className="block md:w-full w-[200px] md:h-[10px] md:p-6 p-2 pl-10 pr-10 text-sm text-gray-900 border border-gray-300 rounded-lg  focus:ring-blue-500 focus:border-blue-500 bg-gray-100 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           placeholder="Search Experiments..."
           value={search}
           ref={inputRef}
