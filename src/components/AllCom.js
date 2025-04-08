@@ -16,7 +16,7 @@ export default function AllCom({ data }) {
   
 
         <h1 className="text-3xl font-bold mb-4 text-center">{data.mainTitle}</h1>
-  {data.image1 && <Image src={data.image1} height={500} width={550} className='md:ml-20 md:mt-4'/>}
+  {data.image1 && <Image src={data.image1} height={800} width={740} className='md:ml-1 md:mt-4'/>}
 
         {data.title1 && (
           <section className="mb-2 mt-2 bg-white p-6 rounded shadow-lg border border-black">
