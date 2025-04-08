@@ -115,7 +115,7 @@ const RecentPosts = (props) => {
   };
 
   return (
-    <div className="h-[450px] w-fit md:w-[400px] bg-white overflow-hidden md:h-[500px] 2xl:h-[520px] md:shadow-lg md:rounded-md mt-6 mx-auto md:absolute md:top-[110px] md:right-[60px]">
+    <div className="h-fit md:h-[450px] w-fit md:w-[400px] bg-white overflow-hidden md:h-[500px] 2xl:h-[520px] md:shadow-lg md:rounded-md mt-6 mx-auto md:absolute md:top-[110px] md:right-[60px]">
     <div className="text-start font-bold text-2xl text-white bg-gradient-to-r from-indigo-400 to-gray-900 rounded-t-md p-4">
       <h1>RECENT POST</h1>
     </div>
