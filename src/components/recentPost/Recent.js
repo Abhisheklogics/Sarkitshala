@@ -115,35 +115,44 @@ const RecentPosts = (props) => {
   };
 
   return (
-    <div className="h-[450px] w-[360px] bg-white  md:overflow-hidden ml-6 mt-6
-     md:h-[500px]   2xl:h-[520px]  md:shadow-lg md:w-[400px] md:bg-white md:mt-[-470px]  2xl:mt-[-510px] md:ml-[870px]   2xl:ml-[1050px] md:rounded-md">
-      
-    
-      <div className="text-start font-bold text-2xl text-white bg-gradient-to-r from-indigo-400 to-gray-900 md:rounded-md rounded-lg p-4">
-        <h1>RECENT POST</h1>
-      </div>
+    <div className="h-[450px] w-full max-w-[400px] bg-white overflow-hidden md:h-[500px] 2xl:h-[520px] md:shadow-lg md:rounded-md mt-6 mx-auto md:absolute md:top-[110px] md:right-[60px]">
+    <div className="text-start font-bold text-2xl text-white bg-gradient-to-r from-indigo-400 to-gray-900 rounded-t-md p-4">
+      <h1>RECENT POST</h1>
+    </div>
+   
+ 
+  
       
       
       <ul
-        className="h-full md:overflow-hidden  overflow-scroll text-sm"
-        ref={listRef}
-        onMouseEnter={handleUserInteractionStart}
-        onMouseLeave={handleUserInteractionEnd}
-        onTouchStart={handleUserInteractionStart}
-        onTouchEnd={handleUserInteractionEnd}
+  className="h-full overflow-y-auto md:overflow-hidden text-sm"
+  ref={listRef}
+  onMouseEnter={handleUserInteractionStart}
+  onMouseLeave={handleUserInteractionEnd}
+  onTouchStart={handleUserInteractionStart}
+  onTouchEnd={handleUserInteractionEnd}
+>
+  {arr.map((image, index) => (
+    <Link key={image.id} href={`${image.slug}`}>
+      <li
+        className={`hover:bg-gray-200 p-3 flex items-center gap-4 ${
+          index === 0 ? 'md:mt-8 mt-4' : 'mt-4'
+        }`}
       >
-        {arr.map((image, index) => (
-          <Link key={image.id} href={`${image.slug}`}>
-            <li className={`hover:bg-gray-200 mt-10 p-2 ml-2 ${index === 0 ? 'md:mt-8' : ''}`}>
-              <Image src={image.image} height='fit -content' width='fit-content' className='rounded' />
-              <p className="mt-[-40px] word-break text-wrap capitalize h-10 p-1 ml-[120px] rounded text-blue-600">
-             {image.title}
-              </p>
-              <hr className="mt-2" />
-            </li>
-          </Link>
-        ))}
-      </ul>
+        <Image
+          src={image.image}
+          alt={image.title}
+          width={70}
+          height={70}
+          className="rounded-md object-cover w-[70px] h-[70px]"
+        />
+        <p className="text-blue-600 font-medium text-sm">
+          {image.title}
+        </p>
+      </li>
+    </Link>
+  ))}
+</ul>
     </div>
   );
 };
