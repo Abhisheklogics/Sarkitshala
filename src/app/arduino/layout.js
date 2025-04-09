@@ -126,6 +126,9 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-mq5-lpg-sensor'}`, text: "Interfacing MQ5 LPG Sensor Module" },
         { href: `/arduino/${'interfacing-mh-z19-co2-sensor'}`, text: "Interfacing MHZ19 CO2 Sensor Module" },
         { href: `/arduino/${'interfacing-shock-sensor-module'}`, text: "Interfacing Shock Sensor Module" },
+        { href: `/arduino/${'interfacing-flame-sensor'}`, text: "Interfacing Flame Sensor Module" },
+        { href: `/arduino/${'interfacing-light-cup-sensor'}`, text: "Interfacing Light Cup Sensor Module" },
+        { href: `/arduino/${'interfacing-1-channel-relay'}`, text: "Interfacing 1 Channel Relay Module" },
 
         
       
