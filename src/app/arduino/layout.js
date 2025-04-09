@@ -133,9 +133,27 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-4-channel-relay'}`, text: "Interfacing 4 Channel Relay Module" },
         { href: `/arduino/${'interfacing-8-channel-relay'}`, text: "Interfacing 8 Channel Relay Module" },
         { href: `/arduino/${'interfacing-solid-state-relay'}`, text: "Interfacing Solid State Relay Module" },
-
+        { href: `/arduino/${'interfacing-smd-rgb-with-arduino'}`, text: "Interfacing SMD RGB Module" },
+        { href: `/arduino/${'interfacing-two-color-led-arduino'}`, text: "Interfacing two color LED Module" },
+        { href: `/arduino/${'interfacing-seven-color-flash'}`, text: "Interfacing seven color flash Module" },
+        { href: `/arduino/${'interfacing-tilt-switch'}`, text: "Interfacing Tilt Switch Module" },
+        { href: `/arduino/${'interfacing-toggle-switch-arduino'}`, text: "Interfacing Toggle Switch Module" },
+        { href: `/arduino/${'interfacing-rotary-switch'}`, text: "Interfacing Rotary Switch Module" },
+        { href: `/arduino/${'interfacing-rotary-encoder-switch'}`, text: "Interfacing Rotary Encoder Switch Module" },
+        { href: `/arduino/${'interfacing-slide-switch'}`, text: "Interfacing Slide Switch Module" },
+        { href: `/arduino/${'interfacing-reed-switch'}`, text: "Interfacing Reed Switch Module" },
+        { href: `/arduino/${'interfacing-momentary-switch'}`, text: "Interfacing Momentary Switch Module" },
+        { href: `/arduino/${'interfacing-mercury-switch'}`, text: "Interfacing Mercury Switch Module" },
+        { href: `/arduino/${'interfacing-membrane-switch'}`, text: "Interfacing Membrane Switch Module" },
+        { href: `/arduino/${'interfacing-matrix-switch'}`, text: "Interfacing Matrix Switch Module" },
+        { href: `/arduino/${'interfacing-linear-hall-sensor'}`, text: "Interfacing Linear Hall Sensor Module" },
+        { href: `/arduino/${'interfacing-limit-switch'}`, text: "Interfacing Limit Switch Module" },
+        { href: `/arduino/${'interfacing-hall-effect-switch'}`, text: "Interfacing Hall Effect Switch Module" },
+        { href: `/arduino/${'interfacing-foot-switch-arduino'}`, text: "Interfacing Foot Switch Module" },
+        { href: `/arduino/${'interfacing-dip-switch-arduino'}`, text: "Interfacing DIP Switch Module" },
+        { href: `/arduino/${'interfacing-ball-switch'}`, text: "Interfacing Ball Switch Module" },
+        { href: `/arduino/${'interfacing-capacitive-touch-switch'}`, text: "Interfacing Capacitive Touch Switch Module" },
         
-      
       ] 
     },
   ];
