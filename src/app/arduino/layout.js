@@ -129,6 +129,10 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-flame-sensor'}`, text: "Interfacing Flame Sensor Module" },
         { href: `/arduino/${'interfacing-light-cup-sensor'}`, text: "Interfacing Light Cup Sensor Module" },
         { href: `/arduino/${'interfacing-1-channel-relay'}`, text: "Interfacing 1 Channel Relay Module" },
+        { href: `/arduino/${'interfacing-2-channel-relay'}`, text: "Interfacing 2 Channel Relay Module" },
+        { href: `/arduino/${'interfacing-4-channel-relay'}`, text: "Interfacing 4 Channel Relay Module" },
+        { href: `/arduino/${'interfacing-8-channel-relay'}`, text: "Interfacing 8 Channel Relay Module" },
+        { href: `/arduino/${'interfacing-solid-state-relay'}`, text: "Interfacing Solid State Relay Module" },
 
         
       
