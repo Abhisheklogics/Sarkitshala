@@ -121,9 +121,9 @@ export default function AllCom({ data }) {
             <p>{data.para9}</p>
           </section>
         )}
-  {data.code && <pre className="bg-gray-100 p-4 rounded-md overflow-auto text-sm md:text-base mb-6">
-        {data.code}
-      </pre>}
+  {data.code && 
+        <CodeBox code={data.code.replace(/\\n/g, '\n')} language={'cpp'}/>
+     }
       
         {data.title9 && data.applications && data.applications.length > 0 && (
           <section className="mb-6 mt-10 bg-white p-6 rounded shadow-lg border border-black">
