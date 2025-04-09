@@ -5,13 +5,15 @@ import Aos from "aos";
 import 'aos/dist/aos.css';
 import Image from "next/image";
 import dynamic from "next/dynamic";
-
+import Link from "next/link";
 import img1 from '../../../public/images/ArdTech.webp';
 import img2 from '../../../public/images/ESPTech.webp';
 import img3 from '../../../public/images/raspTech.webp';
 import img4 from '../../../public/images/jetsonTech.webp';
 import img5 from '../../../public/images/droneTech.webp';
 import img6 from '../../../public/images/STM32.webp';
+
+import MyBook from "../ArdBook";
 
 const SimpleSlider = dynamic(() => import('../slider/Slider'));
 const RecentPosts = dynamic(() => import('../recentPost/Recent'));
@@ -30,30 +32,109 @@ const Home1 = () => {
         <RecentPosts />
 
         {/* LATEST TECHNOLOGIES HEADER */}
-        <div className="bg-[#e91e63] py-10 mt-20 px-4 sm:px-6 md:px-12 lg:px-16">
-          <h1 className="p-2 sm:p-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light bg-white w-fit mx-auto border-r-2 border-white overflow-hidden whitespace-nowrap relative">
-            <span className="inline-block animate-typing overflow-hidden whitespace-nowrap border-r-2 border-white pr-2">
-              LATEST TECH 
+        <div className="bg-[#ec407a] py-10 mt-20 px-4 sm:px-6 md:px-12 lg:px-16">
+          <h1 className="p-0 sm:p-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light bg-white w-fit mx-auto border-r-2 border-white overflow-hidden whitespace-nowrap relative">
+            <span className="inline-block animate-typing overflow-hidden whitespace-nowrap border-r-2 border-white pr-8">
+              LATEST TECH
             </span>
           </h1>
+{/* TECHNOLOGY IMAGE GRID */}
+<div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mt-8 justify-center">
+  {/* Arduino */}
+  <div className="">
+    <Link href="/arduino">
+      <div className="h-[120px] w-[140px] sm:h-[180px] sm:w-[220px] md:h-[220px] md:w-[260px] lg:h-[260px] lg:w-[280px] border border-black shadow-xl hover:shadow-2xl transition-shadow bg-[#FFF0E5] rounded-md">
+        <Image
+          src={img1}
+          height={300}
+          width={300}
+          className="object-cover h-full w-full rounded-md"
+          alt="Arduino"
+        />
+      </div>
+    </Link>
+  </div>
 
-          {/* TECHNOLOGY IMAGE GRID */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 mt-8 justify-center">
-            {[img1, img2, img3, img4, img5, img6].map((img, index) => (
-              <div key={index} className="flex justify-center">
-                <div className="h-[120px] w-[140px] sm:h-[180px] sm:w-[220px] md:h-[220px] md:w-[260px] lg:h-[260px] lg:w-[280px] border border-black shadow-xl hover:shadow-2xl transition-shadow bg-[#FFF0E5] rounded-md">
-                  <Image
-                    src={img}
-                    height={300}
-                    width={300}
-                    className="object-cover h-full w-full rounded-md"
-                    alt="Technology Image"
-                  />
-                </div>
-              </div>
-            ))}
+  {/* Raspberry Pi */}
+  <div className="">
+    <Link href="/esp">
+      <div className="h-[120px] w-[140px] sm:h-[180px] sm:w-[220px] md:h-[220px] md:w-[260px] lg:h-[260px] lg:w-[280px] border border-black shadow-xl hover:shadow-2xl transition-shadow bg-[#FFF0E5] rounded-md">
+        <Image
+          src={img2}
+          height={300}
+          width={300}
+          className="object-cover h-full w-full rounded-md"
+          alt="esp"
+        />
+      </div>
+    </Link>
+  </div>
+
+  {/* ESP */}
+  <div className="">
+    <Link href="/raspberry">
+      <div className="h-[120px] w-[140px] sm:h-[180px] sm:w-[220px] md:h-[220px] md:w-[260px] lg:h-[260px] lg:w-[280px] border border-black shadow-xl hover:shadow-2xl transition-shadow bg-[#FFF0E5] rounded-md">
+        <Image
+          src={img3}
+          height={300}
+          width={300}
+          className="object-cover h-full w-full rounded-md"
+          alt="raspberry"
+        />
+      </div>
+    </Link>
+  </div>
+
+  {/* Jetson */}
+  <div className="">
+    <Link href="/jetson">
+      <div className="h-[120px] w-[140px] sm:h-[180px] sm:w-[220px] md:h-[220px] md:w-[260px] lg:h-[260px] lg:w-[280px] border border-black shadow-xl hover:shadow-2xl transition-shadow bg-[#FFF0E5] rounded-md">
+        <Image
+          src={img4}
+          height={300}
+          width={300}
+          className="object-cover h-full w-full rounded-md"
+          alt="Jetson"
+        />
+      </div>
+    </Link>
+  </div>
+
+  {/* Arduino again */}
+  <div className="">
+    <Link href="/drone">
+      <div className="h-[120px] w-[140px] sm:h-[180px] sm:w-[220px] md:h-[220px] md:w-[260px] lg:h-[260px] lg:w-[280px] border border-black shadow-xl hover:shadow-2xl transition-shadow bg-[#FFF0E5] rounded-md">
+        <Image
+          src={img5}
+          height={300}
+          width={300}
+          className="object-cover h-full w-full rounded-md"
+          alt="Drone"
+        />
+      </div>
+    </Link>
+  </div>
+
+  {/* Jetson again */}
+  <div className="">
+    <Link href="/stm32">
+      <div className="h-[120px] w-[140px] sm:h-[180px] sm:w-[220px] md:h-[220px] md:w-[260px] lg:h-[260px] lg:w-[280px] border border-black shadow-xl hover:shadow-2xl transition-shadow bg-[#FFF0E5] rounded-md">
+        <Image
+          src={img6}
+          height={300}
+          width={300}
+          className="object-cover h-full w-full rounded-md"
+          alt="Jetson 2"
+        />
+      </div>
+    </Link>
+  </div>
+  
+
+            
           </div>
         </div>
+        <MyBook/>
 
         {/* ABOUT SECTIONS (ACCORDIONS) */}
         <div className="px-4 sm:px-6 md:px-12 lg:px-16 mt-10 space-y-6">
@@ -107,8 +188,8 @@ const Home1 = () => {
                   ▼
                 </span>
               </label>
-              <div className="hidden peer-checked:block mt-4 p-2 sm:p-4 text-sm sm:text-base bg-white text-black rounded-lg transition-all duration-500">
-                <p className="text-justify font-mono hover:text-gray-700 font-medium leading-relaxed">
+              <div className="hidden peer-checked:block mt-4 p-2 sm:p-4 text-sm md:text-lg sm:text-base  text-white rounded-lg transition-all duration-500">
+                <p className="text-justify font-mono hover:text-gray-100 font-medium leading-relaxed">
                   {item.content}
                 </p>
               </div>

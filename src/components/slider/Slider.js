@@ -50,7 +50,7 @@ const SimpleSlider = () => {
         style={{ zIndex: 1 }}
         onClick={onClick}
       >
-        <div className="md:ml-[5px] scale-x-[-1] md:fold-bold ml-[3px] mt-[-2px]  md:mt-[-1px]">
+        <div className="md:ml-[15px] scale-x-[-1] md:fold-bold ml-[3px] mt-[-2px]  md:mt-[-1px]">
         →
         
         </div>
