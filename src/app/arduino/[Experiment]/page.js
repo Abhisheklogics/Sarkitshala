@@ -125,7 +125,10 @@ if(data['ExperimentId'] == '9' || data['ExperimentId'] == '11' || data['Experime
    || data['ExperimentId'] == '76' || data['ExperimentId'] == '77' || data['ExperimentId'] == '78' || data['ExperimentId'] == '79' || data['ExperimentId'] == '80' || data['ExperimentId'] == '81'
   || data['ExperimentId'] == '82'|| data['ExperimentId'] == '83'|| data['ExperimentId'] == '84'|| data['ExperimentId'] == '85'|| data['ExperimentId'] == '86'|| data['ExperimentId'] == '87'|| data['ExperimentId'] == '88'
   || data['ExperimentId'] == '89'|| data['ExperimentId'] == '90'|| data['ExperimentId'] == '91'|| data['ExperimentId'] == '92'|| data['ExperimentId'] == '93'|| data['ExperimentId'] == '94'
-  || data['ExperimentId'] == '95'|| data['ExperimentId'] == '96'|| data['ExperimentId'] == '97'|| data['ExperimentId'] == '98'|| data['ExperimentId'] == '99'|| data['ExperimentId'] == '100')
+  || data['ExperimentId'] == '95'|| data['ExperimentId'] == '96'|| data['ExperimentId'] == '97'|| data['ExperimentId'] == '98'|| data['ExperimentId'] == '99'|| data['ExperimentId'] == '100'
+  || data['ExperimentId'] == '101'|| data['ExperimentId'] == '102'|| data['ExperimentId'] == '103'|| data['ExperimentId'] == '104'|| data['ExperimentId'] == '105'|| data['ExperimentId'] == '106'
+  || data['ExperimentId'] == '107'|| data['ExperimentId'] == '108'|| data['ExperimentId'] == '109'|| data['ExperimentId'] == '110'|| data['ExperimentId'] == '111'|| data['ExperimentId'] == '112'
+  || data['ExperimentId'] == '113'|| data['ExperimentId'] == '114'|| data['ExperimentId'] == '115'|| data['ExperimentId'] == '116'|| data['ExperimentId'] == '117'|| data['ExperimentId'] == '118')
 {
 
   return(<AllCom  data={data}/>)
