@@ -3,7 +3,7 @@
 
 import React, { useState, useRef } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { prism as syntaxTheme } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { darcula as syntaxTheme } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { res, esp, ard } from '../../../code';
 
 const CodeBox = ({ code, language, num, exNam }) => {
