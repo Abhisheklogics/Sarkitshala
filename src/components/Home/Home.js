@@ -33,7 +33,7 @@ const Home1 = () => {
         <div className="bg-[#e91e63] py-10 mt-20 px-4 sm:px-6 md:px-12 lg:px-16">
           <h1 className="p-2 sm:p-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light bg-white w-fit mx-auto border-r-2 border-white overflow-hidden whitespace-nowrap relative">
             <span className="inline-block animate-typing overflow-hidden whitespace-nowrap border-r-2 border-white pr-2">
-              LATEST TECHNOLOGIES
+              LATEST TECH 
             </span>
           </h1>
 
