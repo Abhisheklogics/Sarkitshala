@@ -3,6 +3,7 @@
 
 import React, { useState, useRef } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+// esme darcula ko hata kar  Prism ye kar denna agar sahi nahi lage to  
 import { darcula as syntaxTheme } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import { res, esp, ard } from '../../../code';
 
