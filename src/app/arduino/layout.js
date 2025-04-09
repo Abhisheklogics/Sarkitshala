@@ -153,6 +153,16 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-dip-switch-arduino'}`, text: "Interfacing DIP Switch Module" },
         { href: `/arduino/${'interfacing-ball-switch'}`, text: "Interfacing Ball Switch Module" },
         { href: `/arduino/${'interfacing-capacitive-touch-switch'}`, text: "Interfacing Capacitive Touch Switch Module" },
+        { href: `/arduino/${'interfacing-16x2-lcd-hd44780'}`, text: "Interfacing 16x2 LCD hd44780 Module" },
+        { href: `/arduino/${'interfacing-20x4-lcd-arduino'}`, text: "Interfacing 20x4 LCD Module" },
+        { href: `/arduino/${'interfacing-tft-display-arduino'}`, text: "Interfacing TFT Display Module" },
+        { href: `/arduino/${'interfacing-led-matrix-with-arduino'}`, text: "Interfacing LED Matrix Module" },
+        { href: `/arduino/${'interfacing-nokia-5110-lcd'}`, text: "Interfacing NOKIA 5110 LCD Module" },
+        { href: `/arduino/${'interfacing-nextion-display'}`, text: "Interfacing Nextion Display Module" },
+        { href: `/arduino/${'interfacing-e-ink-display'}`, text: "Interfacing e-ink Display Module" },
+        { href: `/arduino/${'interfacing-128x64-graphic-lcd'}`, text: "Interfacing 128x64 Graphic LCD" },
+        { href: `/arduino/${'interfacing-rgb-led-matrix-panel'}`, text: "Interfacing RGB LED Matrix Panel" },
+        { href: `/arduino/${'interfacing-touch-screen-tft'}`, text: "Interfacing Touch Screen TFT Module" },
         
       ] 
     },
