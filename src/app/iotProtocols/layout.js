@@ -10,12 +10,10 @@ export default function RootLayout({ children }) {
   };
 
   const protocols = [
-    { href: "/protocols/AMQP", text: "MQTT" },
-    { href: "/protocols/coap", text: "CoAP" },
-    { href: "/Iot/AMQP", text: "AMQP" },
-    { href: "/protocols/https", text: "HTTPS" },
-    { href: "/protocols/websockets", text: "WebSockets" },
-    { href: "/protocols/lwm2m", text: "LwM2M" },
+    { href: "/iotProtocols/AMQP", text: "AMQP" },
+    { href: "/iotProtocols/Bluetooth", text: "Bluetooth" },
+    { href: "/iotProtocols/lorawan ", text: "LoRaWAN Communication " },
+    
   ];
 
   return (
