@@ -163,6 +163,7 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-128x64-graphic-lcd'}`, text: "Interfacing 128x64 Graphic LCD" },
         { href: `/arduino/${'interfacing-rgb-led-matrix-panel'}`, text: "Interfacing RGB LED Matrix Panel" },
         { href: `/arduino/${'interfacing-touch-screen-tft'}`, text: "Interfacing Touch Screen TFT Module" },
+        { href: `/arduino/${'interfacing-neopixel-arduino'}`, text: "Interfacing Neopixel" },
         
       ] 
     },
