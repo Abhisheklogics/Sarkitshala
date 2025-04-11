@@ -116,19 +116,21 @@ if(data['ExperimentId'] == '9' || data['ExperimentId'] == '11' || data['Experime
   || data['ExperimentId'] == '22' || data['ExperimentId'] == '23' || data['ExperimentId'] == '24' || data['ExperimentId'] == '25' || data['ExperimentId'] == '26' || data['ExperimentId'] == '27' || data['ExperimentId'] == '28'
   || data['ExperimentId'] == '29' || data['ExperimentId'] == '30' || data['ExperimentId'] == '31' || data['ExperimentId'] == '32' || data['ExperimentId'] == '33' ||
   data['ExperimentId'] == '34' || data['ExperimentId'] == '35' || data['ExperimentId'] == '36' || data['ExperimentId'] == '37' || data['ExperimentId'] == '38' || data['ExperimentId'] == '39'
-   || data['ExperimentId'] == '40'|| data['ExperimentId'] == '41'|| data['ExperimentId'] == '42'|| data['ExperimentId'] == '43'|| data['ExperimentId'] == '44'|| data['ExperimentId'] == '45'
-   || data['ExperimentId'] == '46'|| data['ExperimentId'] == '47'|| data['ExperimentId'] == '48'|| data['ExperimentId'] == '49'|| data['ExperimentId'] == '50'|| data['ExperimentId'] == '51'
-   || data['ExperimentId'] == '52'|| data['ExperimentId'] == '53'|| data['ExperimentId'] == '54'|| data['ExperimentId'] == '55'|| data['ExperimentId'] == '56'|| data['ExperimentId'] == '57'
-   || data['ExperimentId'] == '58'|| data['ExperimentId'] == '59'|| data['ExperimentId'] == '60'|| data['ExperimentId'] == '61'|| data['ExperimentId'] == '62'|| data['ExperimentId'] == '63'
-   || data['ExperimentId'] == '64'|| data['ExperimentId'] == '65'|| data['ExperimentId'] == '66'|| data['ExperimentId'] == '67'|| data['ExperimentId'] == '68'|| data['ExperimentId'] == '69'
-   || data['ExperimentId'] == '70'|| data['ExperimentId'] == '71'|| data['ExperimentId'] == '72'|| data['ExperimentId'] == '73'|| data['ExperimentId'] == '74'|| data['ExperimentId'] == '75'
-   || data['ExperimentId'] == '76' || data['ExperimentId'] == '77' || data['ExperimentId'] == '78' || data['ExperimentId'] == '79' || data['ExperimentId'] == '80' || data['ExperimentId'] == '81'
+  || data['ExperimentId'] == '40'|| data['ExperimentId'] == '41'|| data['ExperimentId'] == '42'|| data['ExperimentId'] == '43'|| data['ExperimentId'] == '44'|| data['ExperimentId'] == '45'
+  || data['ExperimentId'] == '46'|| data['ExperimentId'] == '47'|| data['ExperimentId'] == '48'|| data['ExperimentId'] == '49'|| data['ExperimentId'] == '50'|| data['ExperimentId'] == '51'
+  || data['ExperimentId'] == '52'|| data['ExperimentId'] == '53'|| data['ExperimentId'] == '54'|| data['ExperimentId'] == '55'|| data['ExperimentId'] == '56'|| data['ExperimentId'] == '57'
+  || data['ExperimentId'] == '58'|| data['ExperimentId'] == '59'|| data['ExperimentId'] == '60'|| data['ExperimentId'] == '61'|| data['ExperimentId'] == '62'|| data['ExperimentId'] == '63'
+  || data['ExperimentId'] == '64'|| data['ExperimentId'] == '65'|| data['ExperimentId'] == '66'|| data['ExperimentId'] == '67'|| data['ExperimentId'] == '68'|| data['ExperimentId'] == '69'
+  || data['ExperimentId'] == '70'|| data['ExperimentId'] == '71'|| data['ExperimentId'] == '72'|| data['ExperimentId'] == '73'|| data['ExperimentId'] == '74'|| data['ExperimentId'] == '75'
+  || data['ExperimentId'] == '76' || data['ExperimentId'] == '77' || data['ExperimentId'] == '78' || data['ExperimentId'] == '79' || data['ExperimentId'] == '80' || data['ExperimentId'] == '81'
   || data['ExperimentId'] == '82'|| data['ExperimentId'] == '83'|| data['ExperimentId'] == '84'|| data['ExperimentId'] == '85'|| data['ExperimentId'] == '86'|| data['ExperimentId'] == '87'|| data['ExperimentId'] == '88'
   || data['ExperimentId'] == '89'|| data['ExperimentId'] == '90'|| data['ExperimentId'] == '91'|| data['ExperimentId'] == '92'|| data['ExperimentId'] == '93'|| data['ExperimentId'] == '94'
   || data['ExperimentId'] == '95'|| data['ExperimentId'] == '96'|| data['ExperimentId'] == '97'|| data['ExperimentId'] == '98'|| data['ExperimentId'] == '99'|| data['ExperimentId'] == '100'
   || data['ExperimentId'] == '101'|| data['ExperimentId'] == '102'|| data['ExperimentId'] == '103'|| data['ExperimentId'] == '104'|| data['ExperimentId'] == '105'|| data['ExperimentId'] == '106'
   || data['ExperimentId'] == '107'|| data['ExperimentId'] == '108'|| data['ExperimentId'] == '109'|| data['ExperimentId'] == '110'|| data['ExperimentId'] == '111'|| data['ExperimentId'] == '112'
-  || data['ExperimentId'] == '113'|| data['ExperimentId'] == '114'|| data['ExperimentId'] == '115'|| data['ExperimentId'] == '116'|| data['ExperimentId'] == '117'|| data['ExperimentId'] == '118')
+  || data['ExperimentId'] == '113'|| data['ExperimentId'] == '114'|| data['ExperimentId'] == '115'|| data['ExperimentId'] == '116'|| data['ExperimentId'] == '117'|| data['ExperimentId'] == '118'
+  || data['ExperimentId'] == '119'|| data['ExperimentId'] == '120'|| data['ExperimentId'] == '121'|| data['ExperimentId'] == '122'|| data['ExperimentId'] == '123'|| data['ExperimentId'] == '124'
+  || data['ExperimentId'] == '125')
 {
 
   return(<AllCom  data={data}/>)
