@@ -167,6 +167,12 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-dotstar-leds'}`, text: "Interfacing Dotstar LEDs" },
         { href: `/arduino/${'interfacing-smd-leds-arduino'}`, text: "Interfacing SMD LEDs" },
         { href: `/arduino/${'interfacing-infrared-led-arduino'}`, text: "Interfacing Infrared LED" },
+        { href: `/arduino/${'interfacing-bi-color-led'}`, text: "Interfacing Bi-color LED" },
+        { href: `/arduino/${'interfacing-tri-color-led'}`, text: "Interfacing Tri-color LED" },
+        { href: `/arduino/${'interfacing-led-strip-analog'}`, text: "Interfacing LED Strip (Analog)" },
+        { href: `/arduino/${'interfacing-led-strip-digital-addressable'}`, text: "Interfacing LED Strip (Digital/Addressable)" },
+        { href: `/arduino/${'interfacing-high-power-led-arduino'}`, text: "Interfacing High Power LED (1W, 3W, etc.)" },
+        { href: `/arduino/${'interfacing-indicator-led-modules'}`, text: "Interfacing Indicator LED Modules" },
         
       ] 
     },
