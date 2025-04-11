@@ -792,10 +792,7 @@ let allData= [
         "content": "#include <WiFi.h>\n#include <PubSubClient.h>\n\nconst char* ssid = \"your_wifi_ssid\";\nconst char* password = \"your_wifi_password\";\nconst char* mqtt_server = \"mqtt.eclipse.org\";\nconst char* mqtt_username = \"your_username\";\nconst char* mqtt_password = \"your_password\";\nconst int mqtt_port = 1883;\n\nWiFiClient espClient;\nPubSubClient client(espClient);\n\nvoid setup_wifi() {\n  delay(10);\n  Serial.println();\n  Serial.print(\"Connecting to WiFi...\");\n\n  WiFi.begin(ssid, password);\n  while (WiFi.status() != WL_CONNECTED) {\n    delay(1000);\n    Serial.print(\".\");\n  }\n\n  Serial.println(\"Connected to WiFi\");\n}\n\nvoid mqtt_callback(char* topic, byte* payload, unsigned int length) {\n  Serial.print(\"Message arrived on topic: \");\n  Serial.println(topic);\n  String message = \"\";\n  for (int i = 0; i < length; i++) {\n    message += (char)payload[i];\n  }\n  Serial.println(\"Message: \" + message);\n}\n\nvoid reconnect() {\n  while (!client.connected()) {\n    Serial.print(\"Attempting MQTT connection...\");\n    if (client.connect(\"ESP32Client\", mqtt_username, mqtt_password)) {\n      Serial.println(\"connected\");\n      client.subscribe(\"esp32/topic\");\n    } else {\n      Serial.print(\"failed, rc=\");\n      Serial.print(client.state());\n      Serial.println(\" try again in 5 seconds\");\n      delay(5000);\n    }\n  }\n}\n\nvoid setup() {\n  Serial.begin(115200);\n  setup_wifi();\n  client.setServer(mqtt_server, mqtt_port);\n  client.setCallback(mqtt_callback);\n}\n\nvoid loop() {\n  if (!client.connected()) {\n    reconnect();\n  }\n  client.loop();\n  String sensorData = \"Temperature: 25.5°C\";\n  client.publish(\"esp32/sensorData\", sensorData.c_str());\n  delay(10000);\n}"
       }
     ],
-    "image": "/images/experiments/mqtt-esp32-pubsubclient.webp",
-    "videoLink": "https://www.youtube.com/watch?v=wE5G3esjzEo",
-    "category": "iot",
-    "type": "experiment"
+    
   },
   {
     title: "MQTT Implementation: ESP32 with PubSubClient Library",
