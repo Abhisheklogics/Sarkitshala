@@ -172,7 +172,11 @@ export default function RootLayout({ children }) {
         { href: `/arduino/${'interfacing-led-strip-analog'}`, text: "Interfacing LED Strip (Analog)" },
         { href: `/arduino/${'interfacing-led-strip-digital-addressable'}`, text: "Interfacing LED Strip (Digital/Addressable)" },
         { href: `/arduino/${'interfacing-high-power-led-arduino'}`, text: "Interfacing High Power LED (1W, 3W, etc.)" },
-        { href: `/arduino/${'interfacing-indicator-led-modules'}`, text: "Interfacing Indicator LED Modules" },
+        { href: `/arduino/${'interfacing-indicator-led-modules'}`, text: "Interfacing Indicator LED Module" },
+        { href: `/arduino/${'interfacing-pulse-sensor-arduino'}`, text: "Interfacing Pulse Sensor Module" },
+        { href: `/arduino/${'interfacing-fingerprint-sensor-module'}`, text: "Interfacing Fingerprint Sensor Module" },
+        { href: `/arduino/${'interfacing-gas-flow-sensor-arduino'}`, text: "Interfacing Gas Flow Sensor Module" },
+        { href: `/arduino/${'interfacing-water-flow-sensor-yf-s201'}`, text: "Interfacing Water Flow Sensor Module" },
         
       ] 
     },
