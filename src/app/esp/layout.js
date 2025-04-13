@@ -61,7 +61,7 @@ export default function RootLayout({ children }) {
         { href: "/esp/interfacing-color-recognition-sensor", text: "Interfacing Color Recognition Sensor" },
           { href: "/esp/interfacing-ultrasonic-sensor", text: "Interfacing Ultrasonic Sensor" },
 
-        { href: "/esp/rfid-access-control", text: "Interfacing RFID Moduler" },
+        { href: "/esp/rfid-access-control", text: "Interfacing RFID Module" },
         { href: "/esp/lora32-sx1276-oled", text: "TTGO LoRa32 SX1276 OLED" },
          { href: "/esp/keypad-access-control", text: "Interfacing Keypad" },
         { href: "/esp/solenoid-lock", text: "Interfacing Solenoid Lock" },
