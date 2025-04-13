@@ -1,3 +1,8 @@
+const CodeBox = dynamic(() => import('@/components/code/code'), {
+  ssr: false
+});
+
+
 export default function Esp({ data }) {
   return (
     <div className="h-fit w-full p-5 bg-cover rounded-xl leading-8 text-justify break-words 
@@ -5,7 +10,7 @@ export default function Esp({ data }) {
       
       <h1 className="text-3xl font-bold mb-4 text-center">{data.mainTitle}</h1>
 
-      {/* Title 1 - What is an Ultrasonic Sensor? */}
+      {/* Title 1 - Introduction */}
       {data.title1 && (
         <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
           <h2 className="text-xl font-bold mb-4">{data.title1}</h2>
@@ -20,7 +25,7 @@ export default function Esp({ data }) {
           <p>{data.para2}</p>
 
           {/* Working Steps */}
-          {data.workingSteps && data.workingSteps.length > 0 && (
+          {data.workingSteps?.length > 0 && (
             <ul className="list-decimal pl-6 mt-4">
               {data.workingSteps.map((step, idx) => (
                 <li key={idx}>{step}</li>
@@ -36,7 +41,7 @@ export default function Esp({ data }) {
       )}
 
       {/* Title 3 - Components Required */}
-      {data.title3 && data.components && data.components.length > 0 && (
+      {data.title3 && data.components?.length > 0 && (
         <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
           <h2 className="text-xl font-bold mb-4">{data.title3}</h2>
           <ul className="list-disc pl-6">
@@ -48,12 +53,14 @@ export default function Esp({ data }) {
       )}
 
       {/* Title 4 - Pin Configuration */}
-      {data.title4 && data.pinConfig && data.pinConfig.length > 0 && (
+      {data.title4 && data.pinConfig?.length > 0 && (
         <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
           <h2 className="text-xl font-bold mb-4">{data.title4}</h2>
           <ul className="list-disc pl-6">
             {data.pinConfig.map((item, idx) => (
-              <li key={idx}>{item}</li>
+              <li key={idx}>
+                <span className="font-semibold">{item.pin}</span>: {item.description}
+              </li>
             ))}
           </ul>
           {data.note && <p className="mt-4 italic text-sm text-gray-700">{data.note}</p>}
@@ -61,7 +68,7 @@ export default function Esp({ data }) {
       )}
 
       {/* Title 5 - Wiring */}
-      {data.title5 && data.wiring && data.wiring.length > 0 && (
+      {data.title5 && data.wiring?.length > 0 && (
         <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
           <h2 className="text-xl font-bold mb-4">{data.title5}</h2>
           <ul className="list-disc pl-6">
@@ -76,14 +83,14 @@ export default function Esp({ data }) {
       {data.title6 && data.code && (
         <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
           <h2 className="text-xl font-bold mb-4">{data.title6}</h2>
-          <pre className="bg-gray-100 p-4 rounded-md overflow-auto text-sm md:text-base">
-            {data.code}
-          </pre>
+          {data.code && 
+        <CodeBox code={data.code.replace(/\\n/g, '\n')} language={'cpp'}/>
+     }
         </section>
       )}
 
       {/* Title 7 - Code Explanation */}
-      {data.title7 && data.codeExplanation && data.codeExplanation.length > 0 && (
+      {data.title7 && data.codeExplanation?.length > 0 && (
         <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
           <h2 className="text-xl font-bold mb-4">{data.title7}</h2>
           <ul className="list-disc pl-6">
@@ -97,7 +104,7 @@ export default function Esp({ data }) {
       )}
 
       {/* Title 8 - Applications */}
-      {data.title8 && data.applications && data.applications.length > 0 && (
+      {data.title8 && data.applications?.length > 0 && (
         <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
           <h2 className="text-xl font-bold mb-4">{data.title8}</h2>
           <ul className="list-disc pl-6">
