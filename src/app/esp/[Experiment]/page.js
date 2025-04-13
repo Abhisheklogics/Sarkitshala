@@ -113,6 +113,8 @@ export default async function Page({ params }) {
   const data = await getData(`https://sarkitshala.com/api/experiments/Esp`, Experiment)
    if(data['ExperimentId']=='8' || data['ExperimentId']=='9' || data['ExperimentId']=='10' || data['ExperimentId']=='11' || data['ExperimentId']=='12'
      || data['ExperimentId']=='13' || data['ExperimentId']=='14' || data['ExperimentId']=='15' || data['ExperimentId']=='16' || data['ExperimentId']=='17' || data['ExperimentId']=='18'
+      || data['ExperimentId']=='19' || data['ExperimentId']=='20' || data['ExperimentId']=='21' || data['ExperimentId']=='22' || data['ExperimentId']=='23' || data['ExperimentId']=='24'
+      || data['ExperimentId']=='25' || data['ExperimentId']=='26' || data['ExperimentId']=='27' || data['ExperimentId']=='28' || data['ExperimentId']=='29' || data['ExperimentId']=='30'
      )
    {
      return(<Esp data={data}/>)
