@@ -60,6 +60,14 @@ export default function RootLayout({ children }) {
         { href: "/esp/interfacing-shock-sensor", text: "Interfacing Shock Sensor" },
         { href: "/esp/interfacing-color-recognition-sensor", text: "Interfacing Color Recognition Sensor" },
           { href: "/esp/interfacing-ultrasonic-sensor", text: "Interfacing Ultrasonic Sensor" },
+
+        { href: "/esp/rfid-access-control", text: "Interfacing RFID Moduler" },
+        { href: "/esp/lora32-sx1276-oled", text: "TTGO LoRa32 SX1276 OLED" },
+         { href: "/esp/keypad-access-control", text: "Interfacing Keypad" },
+        { href: "/esp/solenoid-lock", text: "Interfacing Solenoid Lock" },
+        { href: "/esp/16x2-lcd-i2c", text: "Interfacing 16x2 LCD" },
+        { href: "/esp/soil-moisture-sensor", text: "Interfacing Soil Moisture" },
+          { href: "/esp/mq7-gas-sensor", text: "Interfacing MQ-7 Gas Sensor" },
         
       ],
     },
