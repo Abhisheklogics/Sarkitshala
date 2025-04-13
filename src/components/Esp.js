@@ -4,7 +4,6 @@ const CodeBox = dynamic(() => import('@/components/code/code'), {
   ssr: false
 });
 
-
 export default function Esp({ data }) {
   return (
     <div className="h-fit w-full p-5 bg-cover rounded-xl leading-8 text-justify break-words 
@@ -54,7 +53,6 @@ export default function Esp({ data }) {
         </section>
       )}
 
-      {/* Title 4 - Pin Configuration */}
       {data.title4 && data.pinConfig?.length > 0 && (
         <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
           <h2 className="text-xl font-bold mb-4">{data.title4}</h2>
@@ -73,9 +71,11 @@ export default function Esp({ data }) {
       {data.title5 && data.wiring?.length > 0 && (
         <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
           <h2 className="text-xl font-bold mb-4">{data.title5}</h2>
-          <ul className="list-disc pl-6">
+          <ul className="list-decimal pl-6">
             {data.wiring.map((item, idx) => (
-              <li key={idx}>{item}</li>
+              <li key={idx}>
+                <span className="font-semibold">{item.sensorPin}</span> {'->'} {item.esp32Pin}
+              </li>
             ))}
           </ul>
         </section>
@@ -86,8 +86,8 @@ export default function Esp({ data }) {
         <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
           <h2 className="text-xl font-bold mb-4">{data.title6}</h2>
           {data.code && 
-        <CodeBox code={data.code.replace(/\\n/g, '\n')} language={'cpp'}/>
-     }
+            <CodeBox code={data.code.replace(/\\n/g, '\n')} language={'cpp'} />
+          }
         </section>
       )}
 
@@ -95,7 +95,7 @@ export default function Esp({ data }) {
       {data.title7 && data.codeExplanation?.length > 0 && (
         <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
           <h2 className="text-xl font-bold mb-4">{data.title7}</h2>
-          <ul className="list-disc pl-6">
+          <ul className="list-decimal pl-6">
             {data.codeExplanation.map((item, idx) => (
               <li key={idx}>
                 <span className="font-semibold">{item.line}</span>: {item.explanation}
