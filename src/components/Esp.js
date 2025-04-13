@@ -1,3 +1,5 @@
+import dynamic from "next/dynamic";
+
 const CodeBox = dynamic(() => import('@/components/code/code'), {
   ssr: false
 });
