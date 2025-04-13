@@ -68,6 +68,11 @@ export default function RootLayout({ children }) {
         { href: "/esp/16x2-lcd-i2c", text: "Interfacing 16x2 LCD" },
         { href: "/esp/soil-moisture-sensor", text: "Interfacing Soil Moisture" },
           { href: "/esp/mq7-gas-sensor", text: "Interfacing MQ-7 Gas Sensor" },
+         { href: "/esp/light-sleep-mode", text: "Interfacing Light Sleep Mode" },
+        { href: "/esp/smart-light-control-bluetooth", text: "Interfacing Smart Light Control" },
+        { href: "/esp/iot-weather-station", text: "Interfacing (IoT) Weather Station" },
+        { href: "/esp/web-server-temperature-display", text: "Interfacing Web Server for Temperature Data Display" },
+          { href: "/esp/home-automation-relay-control", text: "Interfacing Home Automation System with Relay Control" },
         
       ],
     },
@@ -91,7 +96,7 @@ export default function RootLayout({ children }) {
           toggles.toggle1 ? "block" : "hidden"
         } md:block relative flex flex-col ml-1  transition-transform `}
       >
-        <div className="inset-0 md:w-72 md:absolute rounded-md p-4  md:ml-4 md:mt-28 2xl:ml-10">
+        <div className="inset-0 md:w-72 h-fit md:h-[500px]  2xl:h-[600px] md:fixed md:overflow-scroll rounded-md p-4  md:ml-4 md:mt-28 2xl:ml-10">
           {experiments.map((experiment) => (
             <div key={experiment.key}>
               <ToggleButton
