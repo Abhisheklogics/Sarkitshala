@@ -68,11 +68,18 @@ export default function RootLayout({ children }) {
         { href: "/esp/16x2-lcd-i2c", text: "Interfacing 16x2 LCD" },
         { href: "/esp/soil-moisture-sensor", text: "Interfacing Soil Moisture" },
           { href: "/esp/mq7-gas-sensor", text: "Interfacing MQ-7 Gas Sensor" },
+        
          { href: "/esp/light-sleep-mode", text: "Interfacing Light Sleep Mode" },
         { href: "/esp/smart-light-control-bluetooth", text: "Interfacing Smart Light Control" },
         { href: "/esp/iot-weather-station", text: "Interfacing (IoT) Weather Station" },
         { href: "/esp/web-server-temperature-display", text: "Interfacing Web Server for Temperature Data Display" },
           { href: "/esp/home-automation-relay-control", text: "Interfacing Home Automation System with Relay Control" },
+
+         { href: "/esp/iot-smart-garden-esp32", text: "Interfacing  IoT Smart Garden" },
+        { href: "/esp/face-recognition-door-unlock", text: "Face Recognition-Based Door Unlock System" },
+        { href: "/esp/wifi-jammer", text: "Interfacing Wi-Fi Jammer Detector },
+        { href: "/esp/health-band-with-pulse", text: "Interfacing Health Band with Pulse" },
+          { href: "/esp/sound-level-logger-classrooms", text: "Interfacing Sound Level Logger for Classrooms" },
         
       ],
     },
