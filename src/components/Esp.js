@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-
+import Image from "next/image"
 const CodeBox = dynamic(() => import('@/components/code/code'), {
   ssr: false
 });
@@ -10,7 +10,9 @@ export default function Esp({ data }) {
         md:w-[790px] md:ml-[330px] md:mt-24 2xl:ml-[430px] md:bg-fixed">
       
       <h1 className="text-3xl font-bold mb-4 text-center">{data.mainTitle}</h1>
-
+   <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
+  {data.image1 && <Image height={400} width={700} className="md:ml-4 md:mt-2"  src={data.image1} alt={`${data.ExperimentName}`} />}
+ </section>
       {/* Title 1 - Introduction */}
       {data.title1 && (
         <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
@@ -40,6 +42,9 @@ export default function Esp({ data }) {
           )}
         </section>
       )}
+<section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
+        {data.image2 &&  <Image height={400} width={700} className="md:ml-4 md:mt-2"  src={data.image1} alt={`${data.ExperimentName}`} /> }
+         </section>
 
       {/* Title 3 - Components Required */}
       {data.title3 && data.components?.length > 0 && (
@@ -66,7 +71,9 @@ export default function Esp({ data }) {
           {data.note && <p className="mt-4 italic text-sm text-gray-700">{data.note}</p>}
         </section>
       )}
-
+  <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
+  {data.image3 && <Image height={600} width={400} className="md:mt-20 md:ml-40 mt-8 rounded"  src={data.image3} alt={`${data.ExperimentName} - Pin Diagram`}/>}
+     </section>
       {/* Title 5 - Wiring */}
       {data.title5 && data.wiring?.length > 0 && (
         <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
@@ -80,7 +87,9 @@ export default function Esp({ data }) {
           </ul>
         </section>
       )}
-
+ <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
+{data.image4 && <Image height={400} width={500} className="md:ml-24    mt-10"  src={data.image4} alt={`${data.ExperimentName} - Circuit Diagram`} />}
+ </section>
       {/* Title 6 - Arduino Code */}
       {data.title6 && data.code && (
         <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
