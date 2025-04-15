@@ -48,6 +48,11 @@ export default function RootLayout({ children }) {
       label: "ESP Experiments",
       key: "toggle1",
       links: [
+          { href: "/esp/led-blink-button-control", text: "LED Blink with Button " },
+        { href: "/esp/motion-detection-alarm-system", text: "Motion Detection Alarm System" },
+        { href: "/esp/simple-rgb-led-controller", text: "Simple RGB LED Controller" },
+        { href: "/esp/blinking-led-websocket-control", text: "Blinking LED with WebSocket Control" },
+
         { href: "/esp/dht11", text: "Interfacing DHT11 Sensor" },
         { href: "/esp/ultrasonic-sensor", text:" Interfacing Ultrasonic Sensor" },
         { href: "/esp/flame-sensor", text: "Interfacing Flame Sensor" },
@@ -80,6 +85,13 @@ export default function RootLayout({ children }) {
         { href: "/esp/wifi-jammer", text: "Interfacing Wi-Fi Jammer Detector" },
         { href: "/esp/health-band-with-pulse", text: "Interfacing Health Band with Pulse" },
           { href: "/esp/sound-level-logger-classrooms", text: "Interfacing Sound Level Logger for Classrooms" },
+
+         { href: "/esp/night-vision-surveillance-camera", text: "Night Vision Surveillance Camera" },
+        { href: "/esp/solar-panel-monitoring", text: "Solar Panel Monitoring System" },
+        { href: "/esp/smart-farming-robot-crop-surveillance", text: "Smart Farming Robot for Crop Surveillance" },
+        { href: "/esp/smart-water-quality-monitoring", text: "Smart Water Quality Monitoring System" },
+          { href: "/esp/industrial-iot-gateway-real-time-monitoring", text: "Industrial IoT Gateway for Real-Time Monitoring" },
+        { href: "/esp/smart-agriculture-system-drone-control", text: "Agriculture System with Automated Drone Control" },
         
       ],
     },
