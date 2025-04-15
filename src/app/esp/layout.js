@@ -77,7 +77,7 @@ export default function RootLayout({ children }) {
 
          { href: "/esp/iot-smart-garden-esp32", text: "Interfacing  IoT Smart Garden" },
         { href: "/esp/face-recognition-door-unlock", text: "Face Recognition-Based Door Unlock System" },
-        { href: "/esp/wifi-jammer", text: "Interfacing Wi-Fi Jammer Detector },
+        { href: "/esp/wifi-jammer", text: "Interfacing Wi-Fi Jammer Detector" },
         { href: "/esp/health-band-with-pulse", text: "Interfacing Health Band with Pulse" },
           { href: "/esp/sound-level-logger-classrooms", text: "Interfacing Sound Level Logger for Classrooms" },
         
