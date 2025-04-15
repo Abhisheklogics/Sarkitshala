@@ -11,7 +11,7 @@ export default function Esp({ data }) {
       
       <h1 className="text-3xl font-bold mb-4 text-center">{data.mainTitle}</h1>
    <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
-  {data.image1 && <Image height={400} width={700} className="md:ml-4 md:mt-2"  src={data.image1} alt={`${data.ExperimentName}`} />}
+  {data.image1 && <Image height={400} width={700} className="md:ml-2 md:mt-2"  src={data.image1} alt={`${data.ExperimentName}`} />}
  </section>
       {/* Title 1 - Introduction */}
       {data.title1 && (
@@ -43,7 +43,7 @@ export default function Esp({ data }) {
         </section>
       )}
 <section className="mb-6 bg-white p-6 rounded shadow-lg border border-black">
-        {data.image2 &&  <Image height={400} width={700} className="md:ml-4 md:mt-2"  src={data.image1} alt={`${data.ExperimentName}`} /> }
+        {data.image2 &&  <Image height={400} width={700} className="md:ml-4 md:mt-2"  src={data.image2} alt={`${data.ExperimentName}`} /> }
          </section>
 
       {/* Title 3 - Components Required */}
