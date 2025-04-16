@@ -52,7 +52,12 @@ export default function RootLayout({ children }) {
         { href: "/esp/motion-detection-alarm-system", text: "Motion Detection Alarm System" },
         { href: "/esp/simple-rgb-led-controller", text: "Simple RGB LED Controller" },
         { href: "/esp/blinking-led-websocket-control", text: "Blinking LED with WebSocket Control" },
-
+        { href: "/esp/pwm-led-brightness", text: "Control LED Brightness using PWM" },
+        { href: "/esp/html-css-web-page", text: " Web Page with HTML and CSS on ESP32" },
+        { href: "/esp/multiple-leds-web-control", text: "Control Multiple LEDs" },
+        { href: "/esp/bluetooth-serial-communication", text: "ESP32 with Bluetooth Serial Communication" },
+          { href: "/esp/eeprom-storage", text: "EEPROM with ESP32" },
+        { href: "/esp/push-button", text: "ESP32 Push Button Input: Reading Digital States" },
         { href: "/esp/dht11", text: "Interfacing DHT11 Sensor" },
         { href: "/esp/ultrasonic-sensor", text:" Interfacing Ultrasonic Sensor" },
         { href: "/esp/flame-sensor", text: "Interfacing Flame Sensor" },
@@ -91,8 +96,8 @@ export default function RootLayout({ children }) {
         { href: "/esp/smart-farming-robot-crop-surveillance", text: "Smart Farming Robot for Crop Surveillance" },
         { href: "/esp/smart-water-quality-monitoring", text: "Smart Water Quality Monitoring System" },
           { href: "/esp/industrial-iot-gateway-real-time-monitoring", text: "Industrial IoT Gateway for Real-Time Monitoring" },
-        { href: "/esp/smart-agriculture-system-drone-control", text: "Agriculture System with Automated Drone Control" },
-        
+        { href: "/esp/smart-agriculture-system-drone-control", text: "Agriculture System with Automated Drone Control" }
+
       ],
     },
    
@@ -115,7 +120,7 @@ export default function RootLayout({ children }) {
           toggles.toggle1 ? "block" : "hidden"
         } md:block relative flex flex-col ml-1  transition-transform `}
       >
-        <div className="inset-0 md:w-72 h-fit md:h-[500px]  2xl:h-[600px] md:fixed md:overflow-scroll rounded-md p-4  md:ml-4 md:mt-28 2xl:ml-10">
+        <div className="inset-0 md:w-80 h-fit md:h-[500px]  2xl:h-[600px] md:fixed md:overflow-scroll rounded-md p-4  md:ml-4 md:mt-28 2xl:ml-10">
           {experiments.map((experiment) => (
             <div key={experiment.key}>
               <ToggleButton
