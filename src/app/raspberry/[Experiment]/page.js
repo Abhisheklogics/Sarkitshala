@@ -4,89 +4,11 @@ import dynamic from "next/dynamic";
 import Link from "next/link";
 import getData from "@/app/apiCall";
 
-
+import Res from "@/components/Res";
 const Loading = dynamic(() => import('@/components/loading/Loading'), { ssr: false });
 
 const CodeBox = dynamic(() => import('@/components/code/code'), { ssr: false });
-export async function generateMetadata({ params }) {
- 
-  try {
-    const ExperimentName = await getData(`https://sarkitshala.com/api/experiments/ResMeta`, params.Experiment);
-  
-    const generateSeoDescription = (text, maxLength = 160) => {
-      return text.length > maxLength 
-        ? `${text.substring(0, maxLength).trim()}...` 
-        : text.trim();
-    };
-    
-   
-    return {
-      title: ` ${ExperimentName.ExperimentName} – Sarkitshala `,
-      description:  generateSeoDescription(ExperimentName.overviewinfo1),
-      url: `https://sarkitshala.com/raspberry/${params.Experiment}`,
-      siteName: "sarkitshala.com",
-      openGraph: {
-        title: `${ExperimentName.ExperimentName} - Raspberry Pi Project`,
-        description:  generateSeoDescription(ExperimentName.overviewinfo1),
-        url: `https://sarkitshala.com/raspberry/${params.Experiment}`,
-        images: [
-          {
-            url: ExperimentName.image1 || 'https://sarkitshala.com/opengraph-image.jpg',
-            width: 1200,
-            height: 630,
-            alt: `${ExperimentName.ExperimentName} Experiment Image`,
-          }
-        ]
-      },
-      keywords: [
-        `${ExperimentName.ExperimentName}`, 
-        "Raspberry Pi Projects", 
-        "DHT11 Sensor",
-        "GPIO Pins",
-        'DHT11',
-        "LED",
-        
-      ],
-      
 
-      canonical: `https://sarkitshala.com/raspberry/${params.Experiment}`,
-      author: 'Sarkitshala Team',
-      twitter: {
-        card: 'summary_large_image',
-        site: '@sarkitshala',
-        title: `${ExperimentName.ExperimentName} - Raspberry Pi Project`,
-        description:  generateSeoDescription(ExperimentName.overviewinfo1),
-        image: ExperimentName.image1 || 'https://sarkitshala.com/opengraph-image.jpg',
-      }
-    };
-  } catch (error) {
-    console.error('Error fetching experiment data:', error.message);
-    return {
-      title: 'Explore Raspberry Pi Projects & Tutorials - Sarkitshala',
-      description: 'Discover a range of Raspberry Pi tutorials and projects with detailed guides.',
-      url: 'https://sarkitshala.com',
-      siteName: "sarkitshala.com",
-      openGraph: {
-        title: 'Explore Raspberry Pi Projects & Tutorials - Sarkitshala',
-        description: 'Discover a range of Raspberry Pi tutorials and projects with detailed guides.',
-        images: [{ url:'https://sarkitshala.com/opengraph-image.jpg', 
-         width: 1200,
-         height: 630,
-          alt: `Experiment Image`,
-         }],
-      },
-      canonical: 'https://sarkitshala.com/raspberry',
-      twitter: {
-        card: 'summary_large_image',
-        site: '@sarkitshala',
-        title: 'Explore Raspberry Pi Projects & Tutorials - Sarkitshala',
-        description: 'Explore various Raspberry Pi experiments and projects.',
-         image: ExperimentName.image1 || 'https://sarkitshala.com/opengraph-image.jpg'
-      }
-    };
-  }
-  
-}
 
 export async function generateStaticParams() {
   try {
@@ -106,7 +28,12 @@ export default async function Page({ params }) {
     const { Experiment } = await params; 
     
     const data = await getData(`https://sarkitshala.com/api/experiments/Res`, Experiment)
-      
+    
+      if(data)
+      {
+        return(<Res data={data}/>)
+        
+      }
     if (!data) {
      
         return <p><Loading/></p>;
