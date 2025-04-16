@@ -73,7 +73,7 @@ export default function RootLayout({ children }) {
         { href: "/raspberry/home-automation-system-raspberry-pi", text: "Interfacing Home Automation System" },
 
         { href: "/raspberry/weather-station-raspberry-pi", text: "Interfacing Weather Station" },
-        { href: "/raspberry/obstacle-avoidance-sensor", text: "Interfacing security-camera-system" },
+        { href: "/raspberry/obstacle-avoidance-sensor", text: "Interfacing Obstacle Avoidance Sensor" },
         { href: "/raspberry/security-camera-system", text: "Interfacing Security Camera System" },
         { href: "/raspberry/controlled-drone", text: "Interfacing Raspberry Pi-Controlled Drone" },
         { href: "/raspberry/drone-delivery-system-raspberry-pi", text: "Interfacing Drone Delivery System " },
@@ -81,7 +81,33 @@ export default function RootLayout({ children }) {
         { href: "/raspberry/automated-lighting-system", text: "Interfacing Automated Lighting System" },
         { href: "/raspberry/health-monitoring-system", text: "Interfacing Health Monitoring System" },
         { href: "/raspberry/plant-care-monitoring-system", text: "Interfacing Plant Care and Monitoring System" },
-        { href: "/raspberry/buzzer-activation-using-gpio", text: "Interfacing Buzzer Activation using GPIO " }
+        { href: "/raspberry/buzzer-activation-using-gpio", text: "Interfacing Buzzer Activation using GPIO " },
+
+         { href: "/raspberry/voice-assistant-python", text: "Interfacing Voice Assistant using Python" },
+        { href: "/raspberry/gpio-button", text: "Interfacing GPIO Button Control" },
+        { href: "/raspberry/barcode-scanner", text: "Interfacing Barcode Scanner System" },
+        { href: "/raspberry/rfid-attendance-system-raspberry-pi", text: "Interfacing RFID-based Attendance System " },
+
+        { href: "/raspberry/smart-dustbin-ultrasonic-sensor-raspberry-pi", text: "Interfacing Smart Dustbin " },
+        { href: "/raspberry/telegram-bot-controlled-raspberry-pi", text: "Interfacing Telegram Bot Controlled" },
+        { href: "/raspberry/python-based-object-detection-with-pi-camera", text: "Interfacing Object Detection " },
+        { href: "/raspberry/controlled-robot-car", text: "Interfacing  Controlled Robot Car" },
+
+         { href: "/raspberry/gesture-controlled-media-player", text: "Interfacing Gesture Controlled Media Player " },
+        { href: "/raspberry/smart-energy-meter-using-pi-and-current-sensor", text: "Interfacing Smart Energy Meter " },
+        { href: "/raspberry/smart-mirror-with-raspberry-pi", text: "Interfacing Smart Mirror" },
+        { href: "/raspberry/machine-learning-model-deployment-on-raspberry-pi", text: "Interfacing  Machine Learning Model Deployment" },
+
+         { href: "/raspberry/build-your-own-vpn-server-on-raspberry-pi", text: "Interfacing Build Your Own VPN Server" },
+        { href: "/raspberry/smart-traffic-light-system-using-image-processing", text: "Interfacing Smart Traffic Light System using Image Processing " },
+        { href: "/raspberry/lora-communication-with-raspberry-pi", text: "Interfacing LoRa Communication" },
+        { href: "/raspberry/license-plate-recognition-system", text: "Interfacing License Plate Recognition System" },
+
+         { href: "/raspberry/smart-agriculture-system-raspberry-pi", text: "Interfacing Smart Agriculture System" },
+        { href: "/raspberry/industrial-iot-monitoring-system", text: "Interfacing Industrial IoT Monitoring System " },
+        { href: "/raspberry/blockchain-node-deployment-on-raspberry-pi", text: "Interfacing Blockchain Node Deployment " }
+
+        
       
       ],
     },
