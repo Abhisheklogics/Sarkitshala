@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
       key: "toggle1",
       links: [
         
-        { href: "/raspberry/interfacing-led-raspberrypi", text: "Interfacing LED" },
+       { href: "/raspberry/interfacing-led-raspberrypi", text: "Interfacing LED" },
         { href: "/raspberry/interfacing-laser-sensor-raspberrypi", text: "Interfacing Laser Sensor" },
         { href: "/raspberry/interfacing-joystick-module-raspberrypi", text: "Interfacing Joystick Module" },
         { href: "/raspberry/interfacing-4x4-keypad-raspberrypi", text: "Interfacing 4x4 Keypad" },
@@ -64,7 +64,25 @@ export default function RootLayout({ children }) {
         { href: "/raspberry/ultrasonic-sensor-raspberrypir", text: "Interfacing Ultrasonic Sensor" },
         { href: "/raspberry/dht11-raspberrypi", text: "Interfacing DHT11 Sensor" },
         { href: "/raspberry/pulse-rate-sensor-raspberrypi", text: "Interfacing Pulse Rate Sensor" },
-        { href: "/raspberry/pir-sensor-raspberrypi", text: "Interfacing  PIR  Sensor" }
+        { href: "/raspberry/pir-sensor-raspberrypi", text: "Interfacing  PIR  Sensor" },
+
+        { href: "/raspberry/gear-motor", text: "Interfacing Gear Motor" },
+        { href: "/raspberry/obstacle-avoidance-sensor", text: "Interfacing Obstacle Avoidance Sensor" },
+        { href: "/raspberry/servo-motor", text: "Interfacing Sound Sensor" },
+        { href: "/raspberry/oled-display", text: "Interfacing  OLED Display" },
+        { href: "/raspberry/home-automation-system-raspberry-pi", text: "Interfacing Home Automation System" },
+
+        { href: "/raspberry/weather-station-raspberry-pi", text: "Interfacing Weather Station" },
+        { href: "/raspberry/obstacle-avoidance-sensor", text: "Interfacing security-camera-system" },
+        { href: "/raspberry/security-camera-system", text: "Interfacing Security Camera System" },
+        { href: "/raspberry/controlled-drone", text: "Interfacing Raspberry Pi-Controlled Drone" },
+        { href: "/raspberry/drone-delivery-system-raspberry-pi", text: "Interfacing Drone Delivery System " },
+
+        { href: "/raspberry/automated-lighting-system", text: "Interfacing Automated Lighting System" },
+        { href: "/raspberry/health-monitoring-system", text: "Interfacing Health Monitoring System" },
+        { href: "/raspberry/plant-care-monitoring-system", text: "Interfacing Plant Care and Monitoring System" },
+        { href: "/raspberry/buzzer-activation-using-gpio", text: "Interfacing Buzzer Activation using GPIO " }
+      
       ],
     },
    
