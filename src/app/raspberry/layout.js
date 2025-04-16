@@ -101,8 +101,8 @@ export default function RootLayout({ children }) {
 
       </header>
       <nav
-        className={`${toggles.toggle1 ? "block" : "hidden"} md:block relative flex flex-col mt-2 ml-0 md:ml-4 2xl:ml-10 `}>
-        <div className="inset-0 md:w-[330px] md:absolute ml-2 rounded-md p-4  md:ml-4 md:mt-28 2xl:ml-10">
+        className={`${toggles.toggle1 ? "block" : "hidden"}  flex flex-col mt-2 ml-0 md:ml-4 2xl:ml-10 `}>
+        <div className="inset-0 md:w-80  md:block md:h-[500px]  2xl:h-[600px]  md:overflow-y-scroll md:overflow-x-hidden ml-2 rounded-md p-4  md:ml-4 md:mt-28 2xl:ml-10">
           {experiments.map((experiment) => (
             <div key={experiment.key}>
               <ToggleButton
