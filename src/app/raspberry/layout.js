@@ -47,18 +47,24 @@ export default function RootLayout({ children }) {
   };
 
 
+  
   const experiments = [
     {
       label: "Raspberry Pi Experiments",
       key: "toggle1",
       links: [
-        { href: "/raspberry/led", text: "Interfacing LED" },
-        { href: "/raspberry/lcd", text: "Interfacing LCD" },
-        { href: "/raspberry/dc-motor", text: "Interfacing DC Motor" },
-        { href: "/raspberry/ultrasonic-sensor", text: "Interfacing Ultrasonic Sensor" },
-        { href: "/raspberry/dht11", text: "Interfacing DHT11 Sensor" },
-        { href: "/raspberry/pulse-rate-sensor", text: "Interfacing Pulse Rate Sensor" },
-        { href: "/raspberry/pir-sensor", text: "Interfacing  PIR  Sensor" }
+        
+        { href: "/raspberry/interfacing-led-raspberrypi", text: "Interfacing LED" },
+        { href: "/raspberry/interfacing-laser-sensor-raspberrypi", text: "Interfacing Laser Sensor" },
+        { href: "/raspberry/interfacing-joystick-module-raspberrypi", text: "Interfacing Joystick Module" },
+        { href: "/raspberry/interfacing-4x4-keypad-raspberrypi", text: "Interfacing 4x4 Keypad" },
+        { href: "/raspberry/interfacing-ldr-raspberrypi", text: "Interfacing  LDR (Light Sensor)" },
+        { href: "/raspberry/lcd-i2c", text: "Interfacing LCD" },
+        { href: "/raspberry/dc-motor-control-l298n", text: "Interfacing DC Motor" },
+        { href: "/raspberry/ultrasonic-sensor-raspberrypir", text: "Interfacing Ultrasonic Sensor" },
+        { href: "/raspberry/dht11-raspberrypi", text: "Interfacing DHT11 Sensor" },
+        { href: "/raspberry/pulse-rate-sensor-raspberrypi", text: "Interfacing Pulse Rate Sensor" },
+        { href: "/raspberry/pir-sensor-raspberrypi", text: "Interfacing  PIR  Sensor" }
       ],
     },
    
