@@ -102,7 +102,6 @@ export default function RootLayout({ children }) {
         { href: "/raspberry/smart-traffic-light-system-using-image-processing", text: "Interfacing Smart Traffic Light System using Image Processing " },
         { href: "/raspberry/lora-communication-with-raspberry-pi", text: "Interfacing LoRa Communication" },
         { href: "/raspberry/license-plate-recognition-system", text: "Interfacing License Plate Recognition System" },
-
          { href: "/raspberry/smart-agriculture-system-raspberry-pi", text: "Interfacing Smart Agriculture System" },
         { href: "/raspberry/industrial-iot-monitoring-system", text: "Interfacing Industrial IoT Monitoring System " },
         { href: "/raspberry/blockchain-node-deployment-on-raspberry-pi", text: "Interfacing Blockchain Node Deployment " }
