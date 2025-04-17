@@ -106,6 +106,7 @@ export default function RootLayout({ children }) {
          { href: "/raspberry/smart-agriculture-system-raspberry-pi", text: "Interfacing Smart Agriculture System" },
         { href: "/raspberry/industrial-iot-monitoring-system", text: "Interfacing Industrial IoT Monitoring System " },
         { href: "/raspberry/blockchain-node-deployment-on-raspberry-pi", text: "Interfacing Blockchain Node Deployment " }
+        { href: "/raspberry/interfacing-servo-raspberrypi", text: "Interfacing Servo Motor with Raspberrypi" }
 
         
       
