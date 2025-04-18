@@ -108,6 +108,10 @@ export default function RootLayout({ children }) {
         { href: "/raspberry/interfacing-servo-raspberrypi", text: "Interfacing Servo Motor with Raspberrypi" },
         { href: "/raspberry/interfacing-dht11-dht22-raspberrypi", text: "Interfacing DHT11/DHT22 with Raspberrypi" },
         { href: "/raspberry/interfacing-gpsmodule-raspberrypi", text: "Interfacing GPS Module with Raspberrypi" },
+        { href: "/raspberry/interfacing-soil-moisture-sensor-raspberrypi", text: "Interfacing Soil Moisture Sensor with Raspberrypi" },
+        { href: "/raspberry/interfacing-relay-module-raspberrypi", text: "Interfacing Relay Module with Raspberrypi" },
+        { href: "/raspberry/interfacing-npk-sensor-raspberrypi", text: "Interfacing NPK Sensor Module with Raspberrypi" },
+        { href: "/raspberry/interfacing-soil-humidity-sensor-raspberrypi", text: "Interfacing Soil Humidity Sensor with Raspberrypi" },
 
         
       
