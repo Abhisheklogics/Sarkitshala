@@ -1,5 +1,5 @@
 'use client';
-import { useRef } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import HTMLFlipBook from 'react-pageflip';
 import Image from 'next/image';
 
@@ -25,67 +25,68 @@ const pages = [
 
 export default function MyBook() {
   const bookRef = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
 
-  const nextPage = () => {
-    bookRef.current.pageFlip().flipNext();
-  };
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize(); 
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
-  const prevPage = () => {
-    bookRef.current.pageFlip().flipPrev();
-  };
+  const nextPage = () => bookRef.current.pageFlip().flipNext();
+  const prevPage = () => bookRef.current.pageFlip().flipPrev();
 
   return (
-    <div className="flex justify-center items-center mt-5 mb-5 min-h-screen bg-gradient-to-br from-[#FFF0E5] to-[#e0e7ff] relative">
+    <div className="flex justify-center items-center min-h-screen bg-gradient-to-br from-[#FFF0E5] to-[#e0e7ff] relative px-2 py-6">
       
-      {/* Left Arrow */}
       <button
         onClick={prevPage}
-        className="absolute left-4 z-20 hover:bg-white/90 bg-white rounded-full p-3 shadow-md text-2xl text-gray-600"
+        className="absolute left-2 md:left-4 z-20 hover:bg-white/90 bg-white rounded-full p-3 shadow-md text-xl md:text-2xl text-gray-600"
         aria-label="Previous Page"
       >
         ◀
       </button>
 
-      {/* Flipbook */}
-      <div className="relative drop-shadow-2xl">
+      <div className="relative drop-shadow-2xl w-full max-w-[1000px]">
         <HTMLFlipBook
           ref={bookRef}
-          width={500}
-          height={680}
-          size="fixed"
-          minWidth={315}
+          width={isMobile ? 300 : 500}
+          height={isMobile ? 420 : 680}
+          size="stretch"
+          minWidth={280}
           maxWidth={1000}
-          minHeight={400}
-          maxHeight={650}
+          minHeight={350}
+          maxHeight={680}
           showCover={true}
           mobileScrollSupport={true}
           drawShadow={true}
           useMouseEvents={true}
-          usePortrait={false}
+          usePortrait={isMobile}
           className="book rounded-xl shadow-xl"
         >
-          {/* Cover Page */}
-          <div className="flex flex-col justify-center items-center h-full bg-gradient-to-tr from-[#24C6DC] to-[#514A9D] text-white p-10">
-            <h1 className="text-5xl font-extrabold font-serif drop-shadow-md mb-6">Arduino Book</h1>
-            <p className="text-lg max-w-sm text-center font-light">
+          <div className="flex flex-col justify-center items-center h-full bg-gradient-to-tr from-[#24C6DC] to-[#514A9D] text-white p-6">
+            <h1 className="text-3xl md:text-5xl font-extrabold font-serif drop-shadow-md mb-4 md:mb-6">Arduino Book</h1>
+            <p className="text-sm md:text-lg max-w-xs md:max-w-sm text-center font-light">
               Arduino E-Book designed guide to electronics, automation & open-source projects.
             </p>
-            <p className="absolute bottom-6 right-6 text-sm text-white/60">IoT Students</p>
+            <p className="absolute bottom-4 right-4 text-xs md:text-sm text-white/60">IoT Students</p>
           </div>
 
-          {/* Inner Pages */}
           {pages.map((img, index) => (
             <div
               key={index}
-              className="bg-white flex flex-col justify-center items-center p-4"
+              className="bg-white flex flex-col justify-center items-center p-2 md:p-4"
             >
               <Image
                 src={img}
                 alt={`Page ${index + 1}`}
                 width={460}
                 height={680}
-                className="rounded-md object-contain shadow-lg border"
-                priority
+                className="rounded-md object-contain shadow-md border"
+                priority={index < 3}
               />
               <span className="text-xs text-gray-400 mt-1">Page {index + 1}</span>
             </div>
@@ -93,10 +94,9 @@ export default function MyBook() {
         </HTMLFlipBook>
       </div>
 
-      {/* Right Arrow */}
       <button
         onClick={nextPage}
-        className="absolute right-4 z-20 hover:bg-white/90 bg-white rounded-full p-3 shadow-md text-2xl text-gray-600"
+        className="absolute right-2 md:right-4 z-20 hover:bg-white/90 bg-white rounded-full p-3 shadow-md text-xl md:text-2xl text-gray-600"
         aria-label="Next Page"
       >
         ▶
@@ -104,3 +104,4 @@ export default function MyBook() {
     </div>
   );
 }
+v
