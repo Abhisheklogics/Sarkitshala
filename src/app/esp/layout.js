@@ -120,7 +120,7 @@ export default function RootLayout({ children }) {
           toggles.toggle1 ? "block" : "hidden"
         } md:block relative flex flex-col ml-1  transition-transform `}
       >
-        <div className="inset-0 md:w-80 h-fit md:h-[500px]  2xl:h-[600px] md:fixed md:overflow-scroll rounded-md p-4  md:ml-4 md:mt-28 2xl:ml-10">
+        <div className="inset-0 md:w-80 h-fit md:h-[500px]  2xl:h-[600px] md:fixed  md:overflow-y-scroll md:overflow-x-hidden  rounded-md p-4  md:ml-4 md:mt-28 2xl:ml-10">
           {experiments.map((experiment) => (
             <div key={experiment.key}>
               <ToggleButton
