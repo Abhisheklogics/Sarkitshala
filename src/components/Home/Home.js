@@ -34,7 +34,7 @@ const Home1 = () => {
         {/* LATEST TECHNOLOGIES HEADER */}
         <div className="bg-[#ec407a] py-10 mt-20 px-4 sm:px-6 md:px-12 lg:px-16">
           <h1 className="p-0 sm:p-4 text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl font-light bg-white w-fit mx-auto border-r-2 border-white overflow-hidden whitespace-nowrap relative">
-            <span className="inline-block animate-typing overflow-hidden whitespace-nowrap border-r-2 border-white pr-8">
+            <span className="inline-block animate-typing overflow-hidden whitespace-nowrap border-r-2 border-white ml-3 md:ml-0 pr-8">
               LATEST TECH
             </span>
           </h1>
