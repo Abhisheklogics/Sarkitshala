@@ -1,18 +1,15 @@
-
-
 import image1 from '../../../public/images/esp.webp'
 import Image from 'next/image';
 
 export const metadata = {
   title: {
-    default: 'Learn ESP32 Projects & Tutorials – Sarkitshala '
+    default: 'Learn ESP32 Projects & Tutorials – Sarkitshala'
   },
-  description:
-    'Learn ESP32 and ESP8266 projects with free tutorials on IoT, Arduino, and Embedded Systems. Expert guidance by Amarjeet Singh Chauhan and team.',
+  description: 'Learn ESP32 and ESP8266 projects with free tutorials on IoT, Arduino, and Embedded Systems. Explore step-by-step guides and expert tips.',
   robots: 'index, follow',
   openGraph: {
-    title: 'Learn ESP32 & ESP8266 Projects – IoT & Arduino Tutorials',
-    description: 'Master ESP32 and ESP8266 microcontroller projects with step-by-step tutorials on IoT and Arduino programming. Expert guidance included.',
+    title: 'Master ESP32 & ESP8266 Projects – Sarkitshala',
+    description: 'Explore detailed ESP32 and ESP8266 microcontroller tutorials for IoT, Arduino, and embedded systems. Start building amazing projects today.',
     url: 'https://sarkitshala.com/esp',
     images: [
       {
@@ -36,64 +33,95 @@ export const metadata = {
   keywords: [
     "ESP32 Projects", 
     "ESP8266 Projects", 
-    "MicroPython Projects"
+    "MicroPython Projects",
+    "IoT Projects", 
+    "Arduino Projects",
+    "ESP32 Tutorials", 
+    "Embedded Systems"
   ],
-  esp: {
-    summary: 'The ESP8266 and ESP32 are popular microcontrollers with built-in Wi-Fi (and Bluetooth for the ESP32) capabilities, widely used in IoT projects for their affordability and versatility.',
-    details: 'The ESP8266 is a Wi-Fi microchip with a full TCP/IP stack, ideal for basic IoT projects requiring Wi-Fi connectivity. The ESP32, with added Bluetooth support, dual-core CPU, and more GPIO pins, is suitable for complex applications like robotics and real-time data processing.',
-    usage: 'Both ESP8266 and ESP32 can be programmed using the Arduino IDE, MicroPython, and PlatformIO, making them accessible for users of all skill levels.'
-  },
   canonical: "https://sarkitshala.com/esp",
-  author: 'Sarkitshala Team (Amarjeet Singh Chauhan, Abhishek Kumar, Aman Raj)'
+  author: 'Sarkitshala Team (Amarjeet Singh Chauhan, Aman Raj)'
 };
 
 export default function Page() {
   const data = {
-    ExperimentName: ' ESP32 ',
-
-    madeByinfo: 'This page explains the details of the ESP8266 and ESP32 microcontrollers.',
-    overview: 'The ESP8266 and ESP32 are very affordable compared to other Wi-Fi or Bluetooth solutions, making them attractive for hobbyists and developers working on small projects or prototypes.',
+    ExperimentName: 'ESP32 Projects and Tutorials',
+    madeByinfo: 'This page provides a comprehensive guide to the ESP32 microcontroller, offering step-by-step tutorials, projects, and coding examples.',
+    overview: 'The ESP32 is an affordable and powerful microcontroller used in a wide range of IoT projects. It supports Wi-Fi, Bluetooth, and more, making it a great choice for both beginners and experts.',
     espExplanation: `
-      The ESP8266 and ESP32 are popular microcontrollers with built-in Wi-Fi (and Bluetooth for the ESP32) capabilities. These chips have become a staple in the Internet of Things (IoT) community due to their low cost, ease of use, and ability to connect to the internet and control other devices.
-
+      The ESP32 is a dual-core microcontroller with integrated Wi-Fi and Bluetooth capabilities. It is designed to support a wide range of applications, including robotics, home automation, and IoT systems. Here’s why ESP32 is a popular choice:
       
-      The ESP8266 is a Wi-Fi microchip with a full TCP/IP stack, which allows it to connect to a Wi-Fi network and communicate with other devices over the internet. It's commonly used in home automation, IoT, and smart home projects. Despite being more affordable and having fewer features compared to the ESP32, the ESP8266 is still highly efficient for basic IoT applications like connecting sensors, lights, and switches to the internet.
+      - Wi-Fi and Bluetooth: The ESP32 is equipped with both Wi-Fi and Bluetooth (Classic + BLE), allowing it to communicate with other devices wirelessly.
+      - Dual-Core Processor: The microcontroller has two cores, providing enhanced processing power for complex tasks.
+      - Low Power Consumption: ESP32 is energy-efficient, making it suitable for battery-operated devices.
+      - Large GPIO Pin Count: With numerous GPIO pins, the ESP32 can easily interface with a variety of sensors, actuators, and other peripherals.
+      
+      ### Key Features:
+      - Dual-core CPU with a clock speed of up to 240 MHz.
+      - Support for both Wi-Fi and Bluetooth (classic and BLE).
+      - 34 GPIO pins for versatile applications.
+      - Integrated ADCs, DACs, and touch sensors.
+      - Can be programmed using Arduino IDE,MicroPython, and PlatformIO.
 
-       ESP32:
-      The ESP32 is a more advanced microcontroller compared to the ESP8266. It offers a range of additional features, including:
-      - Bluetooth (Classic and BLE)
-      - More GPIO pins for interfacing with sensors, motors, etc.
-      - Higher processing power with a dual-core CPU
-      - More memory for handling larger applications
-      These additional capabilities make the ESP32 ideal for more complex IoT applications, such as robotics, wearable devices, industrial automation, and real-time data processing.
+      ESP32 vs ESP8266:
+      The ESP8266 is another popular Wi-Fi microcontroller, but it lacks Bluetooth support and has a single-core processor. The ESP32, on the other hand, offers more features and is better suited for more complex tasks.
 
-      Both the ESP8266 and ESP32 can be programmed using the Arduino IDE or other platforms like MicroPython and PlatformIO, making them accessible to a wide range of users from beginners to experts. They can be easily integrated into projects that require wireless communication, and with their affordable price, they provide a lot of value for anyone looking to develop IoT applications.
-
-      In summary:
-      - ESP8266: Great for basic IoT projects that require Wi-Fi connectivity.
-      - ESP32: Offers more features and power for advanced IoT applications with both Wi-Fi and Bluetooth connectivity.
+      In summary, ESP32 is perfect for a wide range of projects, including:
+      - Home automation systems
+      - IoT sensor networks
+      - Bluetooth communication projects
+      - Real-time data processing
     `,
+    projectIdeas: [
+      "Home automation with ESP32 and Firebase",
+      "IoT weather station using ESP32",
+      "Bluetooth-enabled devices with ESP32",
+      "Smart lighting systems using ESP32",
+      "Remote control systems with ESP32 and Bluetooth"
+    ],
+    stepByStepTutorials: [
+      { title: "ESP32 Wi-Fi Connection", description: "Learn how to connect the ESP32 to Wi-Fi and use it for remote control applications." },
+      { title: "ESP32 with Bluetooth Low Energy", description: "Set up Bluetooth communication on ESP32 and build a Bluetooth-enabled app." },
+      { title: "Real-time Data with ESP32", description: "Learn how to send and receive real-time data using ESP32 and cloud platforms like ThingSpeak." }
+    ]
   };
 
   return (
     <>
-      <div className="h-fit w-full p-4 bg-cover rounded-xl leading-8 md:h-fit md:w-[770px] md:text-md md:ml-[350px] md:mt-[100px]  mt-[-20px]        md:p-5 md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap
-      ">
-        <h1 className="text-2xl text-center capitalize font-bold  md:text-center md:text-2xl  hover:text-blue-500 
-        ">{data.ExperimentName}</h1>
-       
-       <Image alt="ESP8266 and ESP32 Projects" height={500} width={600} src={image1} loading="lazy" className='mt-6 md:ml-14 rounded'/>
+      <div className="h-fit w-full p-4 bg-cover rounded-xl leading-8 md:h-fit md:w-[770px] md:text-md md:ml-[300px] md:mt-[100px]  mt-[-20px] md:p-5 md:bg-cover md:rounded-xl md:leading-8 md:text-justify md:break-words md:text-wrap">
+        <h1 className="text-2xl text-center capitalize font-bold md:text-center md:text-2xl hover:text-blue-500">
+          {data.ExperimentName}
+        </h1>
 
-        <h2 className="mt-4 text-sm ml-2 md:mt-4 md:text-sm md:ml-2 font-bold hover:text-blue-500">Written By : Aman Raj</h2>
-        <h2 className="text-sm mt-2 md:text-sm md:mt-2">{data.madeBy}</h2>
-        <p className="mt-2 border p-4 bg-white font-semibold border-black md:mt-2">{data.madeByinfo}, {data.overview}</p>
+        <Image alt="ESP32 and ESP8266 Projects" height={500} width={600} src={image1} loading="lazy" className='mt-6 md:ml-14 rounded' />
 
-        <h2 className="mt-4 md:mt-10 "></h2>
+        <h2 className="mt-4 text-sm ml-2 md:mt-4 md:text-sm md:ml-2 font-bold hover:text-blue-500">Written By: Aman Raj</h2>
+        
+        <p className="mt-2 border p-4 bg-white  border-black md:mt-2">{data.madeByinfo}</p>
 
-       
-        <div className="mt-2 border bg-white p-4 font-serif border-black">
-          <h2 className="text-lg md:text-2xl   font-semibold">What is  ESP32?</h2>
+        <div className="mt-4 border bg-white p-4 font-serif border-black">
+          <h2 className="text-lg md:text-2xl font-semibold">What is ESP32?</h2>
           <p className="mt-4">{data.espExplanation}</p>
+        </div>
+
+        <div className="mt-6 border bg-white p-4 font-serif border-black">
+          <h2 className="text-lg md:text-2xl font-semibold">Project Ideas</h2>
+          <ul className="list-disc ml-6 mt-4">
+            {data.projectIdeas.map((idea, index) => (
+              <li key={index}>{idea}</li>
+            ))}
+          </ul>
+        </div>
+
+        <div className="mt-6 border bg-white p-4 font-serif border-black">
+          <h2 className="text-lg md:text-2xl font-semibold">Step-by-Step Tutorials</h2>
+          <ul className="list-disc ml-6 mt-4">
+            {data.stepByStepTutorials.map((tutorial, index) => (
+              <li key={index}>
+                <strong>{tutorial.title}:</strong> {tutorial.description}
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </>
