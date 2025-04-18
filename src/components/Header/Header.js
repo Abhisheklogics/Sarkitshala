@@ -25,7 +25,7 @@ export default function Header() {
 
        
         <div className="w-full md:w-auto mt-3 md:mt-0 overflow-x-auto scrollbar-hide">
-          <ul className="flex gap-2 md:gap-4 items-center text-white font-semibold text-sm md:text-base px-2">
+          <ul className="flex gap-2 md:gap-4 items-center text-white font-semibold text-md md:text-base px-2">
             {[
               { href: '/', label: 'Home' },
               { href: '/arduino', label: 'Arduino' },
