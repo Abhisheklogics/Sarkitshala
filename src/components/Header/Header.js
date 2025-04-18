@@ -14,7 +14,7 @@ export default function Header() {
             alt="Logo"
             width={100}
             height={100}
-            className="rounded-full h-[60px] w-[60px] md:h-[70px] md:w-[70px] object-cover"
+            className="rounded-full  object-cover"
           />
         </Link>
 
@@ -24,8 +24,8 @@ export default function Header() {
         </div>
 
        
-        <div className="w-full md:w-auto mt-3 md:mt-0">
-          <ul className="flex gap-4  ml-60 md:ml-0 justify-center md:justify-end items-center text-white font-semibold text-sm md:text-base overflow-x whitespace-nowrap">
+        <div className="w-full md:w-auto mt-3 md:mt-0 overflow-x-auto scrollbar-hide">
+          <ul className="flex gap-2 md:gap-4 items-center text-white font-semibold text-sm md:text-base px-2">
             {[
               { href: '/', label: 'Home' },
               { href: '/arduino', label: 'Arduino' },
@@ -36,7 +36,7 @@ export default function Header() {
               { href: 'https://codeeditor-five.vercel.app/', label: 'Compiler' },
             ].map((link) => (
               <li key={link.label} className="hover:bg-orange-400 px-3 py-1 rounded transition">
-                <Link href={link.href} className="block">
+                <Link href={link.href} className="block whitespace-nowrap">
                   {link.label}
                 </Link>
               </li>
