@@ -107,6 +107,7 @@ export default function RootLayout({ children }) {
         { href: "/raspberry/blockchain-node-deployment-on-raspberry-pi", text: "Interfacing Blockchain Node Deployment " },
         { href: "/raspberry/interfacing-servo-raspberrypi", text: "Interfacing Servo Motor with Raspberrypi" },
         { href: "/raspberry/interfacing-dht11-dht22-raspberrypi", text: "Interfacing DHT11/DHT22 with Raspberrypi" },
+        { href: "/raspberry/interfacing-gpsmodule-raspberrypi", text: "Interfacing GPS Module with Raspberrypi" },
 
         
       
