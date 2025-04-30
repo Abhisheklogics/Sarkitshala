@@ -194,7 +194,7 @@ export default function RootLayout({ children }) {
       </header>
 
       <nav
-        className={`${toggles.toggle1 ? "block" : "hidden"} md:block md:h-[500px]  2xl:h-[600px] md:fixed  md:overflow-y-scroll md:overflow-x-hidden flex flex-col mt-2 md:mt-28 ml-0 md:ml-4 2xl:ml-10`}
+        className={`${toggles.toggle1 ? "block" : "hidden"} md:block md:h-[500px]  2xl:h-[600px] md:fixed  md:overflow-y-scroll md:overflow-x-hidden flex flex-col mt-2 md:mt-24 ml-0  2xl:ml-10`}
         aria-label="Sidebar Navigation"
       >
         <div className="md:w-[330px] h-fit md:h-[700px]  rounded p-4">

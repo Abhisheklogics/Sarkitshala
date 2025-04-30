@@ -93,7 +93,7 @@ export default function Page() {
       </div>
 
      
-      <div className="w-full p-5 bg-white bg-cover rounded-xl leading-8 text-justify break-words font-serif h-fit overflow-y-auto md:w-[790px] md:ml-[330px] md:mt-20 md:p-5 md:bg-[#FFF0E5] 2xl:w-[820px] 2xl:ml-[430px]">
+      <div className="w-full p-5 bg-white bg-cover rounded-xl leading-8 text-justify break-words font-serif h-fit overflow-y-auto md:w-[700px] md:ml-[320px] md:mt-20 md:p-5 md:bg-[#FFF0E5] 2xl:w-[820px] 2xl:ml-[430px]">
         <h1 id="Arduino" className="hover:text-blue-500 text-2xl mb-11 text-center md:text-3xl font-bold">
           Top Arduino Projects & Beginner Tutorials – Learn, Build & Innovate
         </h1>

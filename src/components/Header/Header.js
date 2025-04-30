@@ -20,7 +20,7 @@ export default function Header() {
 
   return (
     <nav className="bg-[#0047AB] fixed top-0 left-0 w-full z-50 shadow-lg">
-      <div className="max-w-[1300px] mx-auto px-4 py-4 flex items-center justify-between">
+      <div className="max-w-[1300px] mx-auto px-4 md:py-4 py-6 flex items-center justify-between">
         {/* Logo */}
         <Link href="https://sarkitshala.com/">
           <Image
@@ -59,7 +59,7 @@ export default function Header() {
         </ul>
       </div>
 
-      {/* 🎯 Small screen horizontal scroll nav pills (collapsed menu look rich) */}
+      {/* Small screen horizontal scroll nav pills (collapsed menu look rich) */}
       {!isMenuOpen && (
         <div className="md:hidden overflow-x-auto scrollbar-hide bg-[#0047AB] pb-2 px-2">
           <ul className="flex gap-2 text-white font-medium text-sm whitespace-nowrap">
