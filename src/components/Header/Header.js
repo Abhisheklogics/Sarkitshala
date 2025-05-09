@@ -14,6 +14,7 @@ export default function Header() {
     { href: '/esp', label: 'ESP32' },
     { href: '/jetson', label: 'Jetson' },
     { href: '/iotProtocols', label: 'IoT' },
+    { href: 'https://iotsimulation-tool.vercel.app/', label: 'Simulation' },
     { href: '/hindicompiler', label: 'हिंदी में कोड' },
     { href: 'https://codeeditor-five.vercel.app/', label: 'Compiler' },
   ];
