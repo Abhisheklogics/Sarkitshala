@@ -2,14 +2,14 @@ export default function robots() {
   return {
     rules: {
       userAgent: '*',
-      allow: '/',
+      allow: '/', 
       disallow: [
-        '/*?_rsc=',
-        '/admin',
-        '/dashboard',
-        '/login'
+        '/*?_rsc=', 
+        '/admin',    
+        '/dashboard', 
+        '/login'      
       ],
     },
-    sitemap: 'https://sarkitshala.com/sitemap.xml',
+    sitemap: 'https://sarkitshala.com/sitemap.xml', 
   };
 }

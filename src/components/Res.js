@@ -6,7 +6,7 @@ const CodeBox=dynamic(()=>import('@/components/code/code'))
 export default function Res({ data }) {
     return (
        <div className="h-screen overflow-y-auto  w-full p-5 bg-white bg-cover rounded-xl leading-8 text-justify break-words 
-      md:h-fit md:w-[790px] 2xl:w-[820px] font-serif md:ml-[330px] md:mt-20 2xl:ml-[430px] md:p-5 md:bg-[#FFF0E5]
+      md:h-fit md:w-[790px] 2xl:w-[820px] font-serif md:ml-[330px] md:mt-20 2xl:ml-[430px] md:p-5 bg-[#FFF0E5]
    md:bg-cover md:rounded md:leading-8 md:text-justify md:break-words md:text-wrap ">
    
         <h1 className="text-3xl font-bold mb-4 text-center">{data.title}</h1>
