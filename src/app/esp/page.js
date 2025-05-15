@@ -109,7 +109,7 @@ export default function Page() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.structuredData) }}
       />
-    <div className="h-fit w-full p-4 bg-cover rounded-xl leading-8 md:w-[770px] md:ml-[300px] md:mt-[100px] mt-[-20px] md:p-5 md:text-justify md:break-words">
+    <div className="h-fit w-full p-4 bg-cover rounded-xl leading-8 md:w-[770px] md:ml-[330px] md:mt-[100px] mt-[-20px] md:p-5 md:text-justify md:break-words">
       <h1 className="text-2xl text-center font-bold capitalize hover:text-blue-500">
         {data.ExperimentName}
       </h1>
