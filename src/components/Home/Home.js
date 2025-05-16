@@ -86,17 +86,17 @@ const Home1 = () => {
 
   return (
     <>
-      <div className="w-full font-sans bg-white text-gray-900 overflow-x-hidden">
+      <div className="w-full font-sans md:bg-[#FFF0E5] text-gray-900 overflow-x-hidden">
         {/* Hero Slider */}
         <SimpleSlider />
 
         {/* Recent Posts */}
-        <section className="py-14 px-4 sm:px-6 md:px-12 lg:px-20 bg-gradient-to-b from-white to-gray-50">
+        <section className=" px-4 sm:px-6 md:px-12 lg:px-20 md:bg-[#FFF0E5]">
           <RecentPosts />
         </section>
 
         {/* Latest Tech */}
-        <section className="py-16 px-4 sm:px-6 md:px-12 lg:px-20 bg-[#fdf6f9] text-center">
+        <section className="py-16  px-4 sm:px-6 md:px-12 lg:px-20 md:bg-[#FFF0E5] text-center">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-12 tracking-tight animate-pulse">
             LATEST TECH
           </h2>
@@ -108,12 +108,12 @@ const Home1 = () => {
         </section>
 
         {/* MyBook */}
-        <section className="py-16 px-4 sm:px-6 md:px-12 lg:px-20 bg-white">
+        <section className="py-16 px-4 sm:px-6 md:px-12 lg:px-20 md:bg-[#FFF0E5]">
           <MyBook />
         </section>
 
         {/* About Tech Section */}
-        <section className="py-20 px-4 sm:px-6 md:px-12 lg:px-20 bg-gray-50">
+        <section className="py-12 px-4 sm:px-6 md:px-12 lg:px-20 md:bg-[#FFF0E5]">
           <h2 className="text-4xl sm:text-5xl font-bold text-center text-gray-800 mb-12">
             About Our Tech
           </h2>
@@ -141,7 +141,7 @@ const Home1 = () => {
         </section>
 
         {/* Tech Carousel */}
-        <section className="py-16 px-4 sm:px-6 md:px-12 lg:px-20 bg-white">
+        <section className="px-4 sm:px-6 md:px-12 lg:px-20 md:bg-[#FFF0E5]">
           <Carousel />
         </section>
       </div>
