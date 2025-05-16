@@ -5,7 +5,7 @@ import { useState } from "react";
 const ToggleButton = ({ label, onClick, isOpen }) => (
   <button
     onClick={onClick}
-    className="md:py-2 py-3 px-1 relative w-full md:w-[310px] h-fit  text-left mb-6"
+    className="w-full md:w-[310px] text-left mb-4 py-3 px-2 md:py-2 relative rounded hover:bg-gray-100 transition"
   >
     <div className="flex justify-between items-center">
       <h1 className="font-bold text-gray-800">{label}</h1>
@@ -24,7 +24,7 @@ const ExperimentLinks = ({ toggle, links }) => (
       <li key={index}>
         <Link
           href={link.href}
-          className="block font-bold max-w-4xl bg-white text-sm p-3 rounded text-gray-900 hover:shadow-2xl hover:text-orange-400 border border-black"
+          className="block text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded px-4 py-2 hover:text-orange-500 hover:border-orange-400 transition"
         >
           {link.text}
         </Link>
@@ -120,7 +120,7 @@ export default function RootLayout({ children }) {
           toggles.toggle1 ? "block" : "hidden"
         } md:block relative flex flex-col ml-1  transition-transform `}
       >
-        <div className="inset-0 md:w-80 h-fit md:h-[500px]  2xl:h-[600px] md:fixed  md:overflow-y-scroll md:overflow-x-hidden  rounded-md p-4  md:ml-4 md:mt-28 2xl:ml-10">
+        <div className="md:fixed md:w-80 2xl:h-[600px] md:h-[500px] overflow-y-auto p-4 mt-6 md:mt-28 md:ml-4 2xl:ml-10 bg-white rounded shadow-sm">
           {experiments.map((experiment) => (
             <div key={experiment.key}>
               <ToggleButton

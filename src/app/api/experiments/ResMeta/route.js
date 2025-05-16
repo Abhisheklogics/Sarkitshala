@@ -15,7 +15,7 @@ export async function GET(request) {
     if (exId) {
       const experiment = await Respberry.findOne(
         { slug: exId }, 
-        { ExperimentName: 1, overviewinfo1: 1, image1: 1, _id: 0 }  
+        { title: 1, description: 1,  _id: 0 }  
       );
 
       if (!experiment) {
@@ -27,7 +27,7 @@ export async function GET(request) {
    
     const experiments = await Respberry.find(
       {}, 
-      { ExperimentName: 1, overview: 1, image1: 1, _id: 0 } 
+      { title: 1, description: 1,  _id: 0 } 
     );
 
     if (experiments.length === 0) {

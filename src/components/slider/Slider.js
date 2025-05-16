@@ -82,7 +82,7 @@ const SimpleSlider = () => {
 
   return (
     <Slider
-      className="relative mt-40 w-[90vw] h-fit mx-auto 2xl:w-[900px]  md:w-[800px] md:mt-28 2xl:ml-24  md:mx-auto md:ml-8"
+      className="relative mt-40 w-[90vw] h-fit mx-auto 2xl:w-[900px]  md:w-[800px] md:mt-28 2xl:ml-24  md:mx-auto md:ml-2"
       {...settings}
     >
       <div className=" shadow-lg md:h-fit h-[200px] rounded overflow-hidden">
@@ -93,8 +93,7 @@ const SimpleSlider = () => {
             layout="responsive"
             width={900}
             height={450}
-            priority={true}
-            quality={75}
+           
             className="object-cover"
           />
         </Link>
@@ -110,9 +109,8 @@ const SimpleSlider = () => {
             width={1000}
 
             height={550}
-            priority={true}
-            quality={75}
-            className=""
+           
+            
           />
         </Link>
       </div>
@@ -124,8 +122,7 @@ const SimpleSlider = () => {
             layout="responsive"
             width={800}
             height={450}
-            priority={true}
-            quality={75}
+           
             className="object-cover"
           />
         </Link>
@@ -138,8 +135,7 @@ const SimpleSlider = () => {
             layout="responsive"
             width={800}
             height={450}
-            priority={true}
-            quality={75}
+           
             className="object-cover"
           />
         </Link>
@@ -154,8 +150,7 @@ const SimpleSlider = () => {
             layout="responsive"
             width={800}
             height={450}
-            priority={true}
-            quality={75}
+            
             className="object-cover"
           />
         </Link>
@@ -169,8 +164,7 @@ const SimpleSlider = () => {
             layout="responsive"
             width={800}
             priority={true}
-            quality={75}
-            height={450}
+          
             className="object-cover"
           />
         </Link>
@@ -183,8 +177,7 @@ const SimpleSlider = () => {
             layout="responsive"
             width={800}
             height={450}
-            priority={true}
-            quality={75}
+           
             className="object-cover"
           />
         </Link>

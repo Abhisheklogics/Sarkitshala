@@ -15,7 +15,7 @@ export async function GET(request) {
     if (exId) {
       const experiment = await Esp.findOne(
         { slug: exId }, 
-        { ExperimentName: 1, overview: 1, image1: 1, _id: 0 }  // Return only the specified fields
+        { title: 1, metaDescription: 1,  _id: 0 }  // Return only the specified fields
       );
 console.log(experiment)
       if (!experiment) {
@@ -26,8 +26,8 @@ console.log(experiment)
 
    
     const experiments = await Esp.find(
-      {}, 
-      { ExperimentName: 1, overview: 1, image1: 1, _id: 0 } 
+     
+      { title: 1, metaDescription: 1,  _id: 0 }  
     );
 
     if (experiments.length === 0) {

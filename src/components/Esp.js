@@ -8,7 +8,7 @@ export default function Esp({ data }) {
   return (
     <div className="w-full p-4 md:p-5 bg-white md:bg-[#FFF0E5] rounded-xl leading-8 text-justify break-words font-serif h-fit overflow-y-auto 
                 md:w-[790px] md:ml-[330px] md:mt-20 
-                2xl:w-[820px] 2xl:ml-[430px]">
+                2xl:w-[820px] ">
       
       <h1 className="text-3xl font-bold mb-4 text-center">{data.mainTitle}</h1>
 

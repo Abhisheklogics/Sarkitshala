@@ -7,29 +7,40 @@ export default function Search() {
   const [applyData, setApplyData] = useState([]);
   const [showApplyData, setShowApplyData] = useState(false);
   const inputRef = useRef(null);
+  const debounceTimeout = useRef(null);
 
   useEffect(() => {
+    // Clear previous timeout
+    if (debounceTimeout.current) clearTimeout(debounceTimeout.current);
+
     if (!search) {
       setApplyData([]);
       setShowApplyData(false);
       return;
     }
 
-    const fetchData = async () => {
-      try {
-        const response = await fetch(`/api/experiments/Search?Search=${encodeURIComponent(search)}`);
-        if (!response.ok) throw new Error('Error fetching data');
-        const data = await response.json();
-        setApplyData(data);
-        setShowApplyData(true);
-      } catch (err) {
-        console.error(err);
-        setApplyData([]);
-        setShowApplyData(false);
-      }
-    };
+    // Set new debounce timeout
+    debounceTimeout.current = setTimeout(() => {
+      const fetchData = async () => {
+        try {
+          const response = await fetch(`/api/experiments/Search?Search=${encodeURIComponent(search)}`);
+          if (!response.ok) throw new Error('Error fetching data');
+          const data = await response.json();
+          setApplyData(data);
+          setShowApplyData(true);
+        } catch (err) {
+          console.error(err);
+          setApplyData([]);
+          setShowApplyData(false);
+        }
+      };
 
-    fetchData();
+      fetchData();
+    }, 500); // 500ms debounce delay
+
+    // Cleanup on unmount or search change
+    return () => clearTimeout(debounceTimeout.current);
+
   }, [search]);
 
   useEffect(() => {
