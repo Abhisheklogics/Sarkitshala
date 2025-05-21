@@ -64,7 +64,7 @@ export default function ESPSetupPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.structuredData) }}
       />
 
-      <main className="max-w-2xl mx-auto p-5   rounded-lg mt-24 ml-[400px]  leading-relaxed">
+      <main className="max-w-2xl mx-auto p-5   rounded-lg md:mt-24 md:ml-[400px]  leading-relaxed">
         <h1 className='text-center text-lg md:text-2xl  font-bold mb-3'>
           Complete ESP32 Setup & Projects Guide
         </h1>
