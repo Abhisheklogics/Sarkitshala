@@ -1,21 +1,27 @@
-// File: app/raspberry/page.tsx or pages/raspberry.tsx (depending on Next version)
-import Image from 'next/image';
-import image1 from '../../../public/images/Pi_Sarkitshala.webp';
+// File: app/raspberry/page.tsx
+import Image from "next/image";
+import image1 from "../../../public/images/Pi_Sarkitshala.webp";
 
 export const metadata = {
-  title: "Raspberry Pi Projects & Tutorials for IoT & Robotics - Sarkitshala",
-  description: "Explore 50+ Raspberry Pi Projects for IoT, Robotics, and Home Automation. Learn step-by-step with tutorials, programming guides, and expert insights from Sarkitshala.",
+  title:
+    "Raspberry Pi Setup Guide & Projects for IoT, Robotics & Automation - Sarkitshala",
+  description:
+    "Step-by-step Raspberry Pi setup tutorial: Installation, OS setup, peripherals, GPIO usage & first project. Perfect for beginners & makers. Learn Raspberry Pi for IoT & Robotics.",
+  keywords:
+    "Raspberry Pi setup, Raspberry Pi installation, Raspberry Pi projects, IoT Raspberry Pi, Raspberry Pi tutorials, Raspberry Pi GPIO setup, Raspberry Pi OS install",
   robots: "index, follow",
   openGraph: {
-    title: "Best Raspberry Pi Projects, Tutorials & IoT for Beginners - Sarkitshala",
-    description: "Explore 50+ hands-on Raspberry Pi tutorials for IoT, Robotics, and DIY Electronics. Get step-by-step guidance from expert instructors.",
+    title:
+      "Complete Raspberry Pi Setup & Projects for Beginners | Sarkitshala",
+    description:
+      "Learn how to setup Raspberry Pi, install OS, connect sensors, and start your first IoT or robotics project with our comprehensive tutorial.",
     url: "https://sarkitshala.com/raspberry",
     images: [
       {
         url: "https://sarkitshala.com/images/public/images/Pi_Sarkitshala.png",
         width: 1200,
         height: 630,
-        alt: "Sarkitshala - Raspberry Pi Projects and Tutorials",
+        alt: "Sarkitshala Raspberry Pi Setup Tutorial",
       },
     ],
     site_name: "Sarkitshala",
@@ -25,105 +31,197 @@ export const metadata = {
   twitter: {
     card: "summary_large_image",
     site: "@sarkitshala",
-    title: "Explore Raspberry Pi Projects | Sarkitshala",
-    description: "Discover hands-on Raspberry Pi projects and tutorials for IoT, Robotics, and DIY Electronics. Expert guidance for all levels.",
+    title: "Raspberry Pi Setup & Projects | Sarkitshala",
+    description:
+      "Step-by-step Raspberry Pi setup, OS installation & beginner projects for IoT and robotics enthusiasts.",
     image: "https://sarkitshala.com/images/public/images/RP.png",
   },
   canonical: "https://sarkitshala.com/raspberry",
-  keywords: "Raspberry Pi Projects, IoT with Raspberry Pi, Robotics, Raspberry Pi tutorials for beginners, Home Automation",
   author: "Sarkitshala Team (Amarjeet Singh Chauhan, Aman Raj)",
 };
-
+const sameClass = `mt-4 max-w-4xl bg-white border border-black p-6 rounded shadow-lg`;
 export default function RaspberryPiPage() {
   return (
-    <main className="max-w-3xl mx-auto p-4 mt-6 md:mt-24 bg-white rounded-xl shadow-md text-justify">
+    <main className="max-w-3xl mx-auto p-4 mt-6 md:mt-24 rounded-xl  text-justify">
       <header className="text-center">
-        <h1 className="text-2xl md:text-4xl font-bold text-blue-700 mb-4">
-          All About Raspberry Pi
+        <h1 className="text-center text-lg md:text-2xl  font-bold mb-3">
+          Complete Raspberry Pi Setup & Projects Guide
         </h1>
         <Image
           src={image1}
-          alt="Raspberry Pi Sarkitshala"
+          alt="Raspberry Pi Setup and Projects at Sarkitshala"
           width={800}
           height={900}
           className="mx-auto rounded"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
         />
-        <p className="text-sm mt-2 font-medium">Written by: Upendra Prawal</p>
+       
       </header>
 
-      {/* Sections */}
+      {/* Intro Section */}
       <ArticleSection
         title="What is Raspberry Pi?"
         content={
           <>
             <p>
-              The Raspberry Pi is a small, affordable, single-board computer developed by the Raspberry Pi Foundation to promote the teaching of basic computer science in schools and developing countries. It is used for programming, robotics, and DIY electronics.
+              Raspberry Pi is a pocket-sized, affordable computer designed to
+              teach programming and computing skills. It is widely used in IoT,
+              robotics, home automation, and educational projects.
             </p>
             <p>
-              It features a Broadcom ARM-based CPU, RAM, GPIO pins, HDMI, USB, and Ethernet. It runs Linux-based OSs, primarily Raspberry Pi OS.
+              It features an ARM processor, memory, GPIO pins for hardware
+              interfacing, USB, HDMI ports, Wi-Fi, Bluetooth, and runs Linux
+              based operating systems like Raspberry Pi OS.
             </p>
             <p>
-              Small yet powerful, it supports peripherals like cameras, sensors, displays, making it ideal for IoT, robotics, and home automation.
+              This guide covers everything you need to start with Raspberry Pi —
+              from unboxing and setup to coding your first projects.
+            </p>
+          </>
+        }
+      />
+
+      {/* Step-by-step Setup */}
+      <ArticleSection
+        title="Step 1: What You Need to Get Started"
+        content={
+          <ul className="list-disc list-inside space-y-2">
+            <li>Raspberry Pi board (Model 3, 4, or Zero W recommended)</li>
+            <li>MicroSD card (16GB or higher, Class 10 recommended)</li>
+            <li>Power supply (5V 3A for Pi 4)</li>
+            <li>HDMI cable and monitor (or use headless setup)</li>
+            <li>USB Keyboard and mouse</li>
+            <li>Internet connection (Wi-Fi or Ethernet)</li>
+            <li>Optional: Case, heatsinks, camera module, sensors</li>
+          </ul>
+        }
+      />
+
+      <ArticleSection
+        title="Step 2: Installing Raspberry Pi OS on MicroSD Card"
+        content={
+          <>
+            <p>
+              Download the Raspberry Pi Imager tool from the official website:
+              <a
+                href="https://www.raspberrypi.com/software/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 underline ml-1"
+              >
+                https://www.raspberrypi.com/software/
+              </a>
+            </p>
+            <p>
+              Insert the MicroSD card into your computer, launch the Imager,
+              select Raspberry Pi OS (recommended), and write the image to the
+              card.
+            </p>
+            <p>
+              After flashing, safely eject the MicroSD card and insert it into
+              your Raspberry Pi.
             </p>
           </>
         }
       />
 
       <ArticleSection
-        title="Key Features of Raspberry Pi:"
-        content={
-          <ul className="list-disc list-inside space-y-2">
-            <li>Broadcom ARM-based quad-core processor</li>
-            <li>RAM options: 1GB to 8GB</li>
-            <li>Multiple USB ports</li>
-            <li>HDMI output</li>
-            <li>GPIO pins for sensors and motors</li>
-            <li>Wi-Fi and Bluetooth support</li>
-            <li>MicroSD for OS and storage</li>
-            <li>Supports Python, C, Java, and more</li>
-          </ul>
-        }
-      />
-
-      <ArticleSection
-        title="Common Uses of Raspberry Pi:"
-        content={
-          <ul className="list-disc list-inside space-y-2">
-            <li>Learning programming (Python, Scratch)</li>
-            <li>Home automation systems</li>
-            <li>Personal servers or media centers (Plex/Kodi)</li>
-            <li>Robotics and IoT development</li>
-            <li>DIY security camera systems</li>
-            <li>STEM education and training</li>
-          </ul>
-        }
-      />
-
-      <ArticleSection
-        title="How Raspberry Pi Changed Computing"
+        title="Step 3: First Boot & Basic Configuration"
         content={
           <>
+            <p>Power on your Raspberry Pi. The OS will boot up, and you will see the desktop.</p>
             <p>
-              Raspberry Pi democratized computing by providing low-cost hardware for education and hobbyists. It's used globally in schools and by makers to prototype and build real-world projects affordably.
+              Complete the initial setup wizard to set up:
             </p>
-            <p>
-              Its huge online community, tutorials, and ecosystem have fueled innovation in DIY electronics and robotics.
-            </p>
-          </>
-        }
-      />
-
-      <ArticleSection
-        title="Raspberry Pi Models"
-        content={
-          <>
-            <p>Popular Raspberry Pi versions include:</p>
-            <ul className="list-disc list-inside space-y-2 mt-2">
-              <li><strong>Raspberry Pi 1:</strong> 700MHz single-core, 256MB RAM</li>
-              <li><strong>Raspberry Pi 4:</strong> Up to 8GB RAM, dual 4K monitors</li>
-              <li><strong>Raspberry Pi Zero:</strong> Ultra-compact and cost-effective model</li>
+            <ul className="list-disc list-inside space-y-2">
+              <li>Locale, language, and timezone</li>
+              <li>Wi-Fi network connection</li>
+              <li>Username and password</li>
+              <li>Software updates</li>
             </ul>
+            <p>
+              Enable SSH or VNC if you want to control the Pi remotely.
+            </p>
+          </>
+        }
+      />
+
+      <ArticleSection
+        title="Step 4: Using GPIO Pins for Hardware Projects"
+        content={
+          <>
+            <p>
+              Raspberry Pi's 40 GPIO pins allow connection with sensors, LEDs,
+              motors, and other devices.
+            </p>
+            <p>
+              You can program the pins using Python libraries like RPi.GPIO or
+              gpiozero to read sensor data or control actuators.
+            </p>
+            <p>
+              Always check the pinout diagram to avoid damaging your Raspberry
+              Pi.
+            </p>
+          </>
+        }
+      />
+
+      <ArticleSection
+        title="Step 5: Your First Project - Blinking LED"
+        content={
+          <>
+            <p>
+              Connect an LED with a suitable resistor to GPIO pin 17 and ground.
+              Then, run this simple Python code:
+            </p>
+            <pre className="bg-gray-100 p-3 rounded text-sm overflow-auto">
+              <code>
+                {`import RPi.GPIO as GPIO
+import time
+
+GPIO.setmode(GPIO.BCM)
+GPIO.setup(17, GPIO.OUT)
+
+while True:
+    GPIO.output(17, GPIO.HIGH)
+    time.sleep(1)
+    GPIO.output(17, GPIO.LOW)
+    time.sleep(1)
+`}
+              </code>
+            </pre>
+            <p>This will make the LED blink every second. Congratulations, your Raspberry Pi is controlling hardware!</p>
+          </>
+        }
+      />
+
+      <ArticleSection
+        title="Popular Raspberry Pi Models"
+        content={
+          <>
+            <ul className="list-disc list-inside space-y-2">
+              <li><strong>Raspberry Pi 4 Model B:</strong> Latest powerful model with up to 8GB RAM</li>
+              <li><strong>Raspberry Pi 3 Model B+:</strong> Older but widely used, great for beginners</li>
+              <li><strong>Raspberry Pi Zero W:</strong> Ultra-compact and low-cost</li>
+            </ul>
+          </>
+        }
+      />
+
+      <ArticleSection
+        title="Additional Resources & Tutorials"
+        content={
+          <>
+            <p>
+              Explore more projects and tutorials on our main
+              <a
+                href="/projects"
+                className="text-blue-600 underline ml-1"
+              >
+                Projects Page
+              </a>
+              , or learn about advanced IoT integration and robotics.
+            </p>
           </>
         }
       />
@@ -133,11 +231,15 @@ export default function RaspberryPiPage() {
         content={
           <>
             <p>
-              Raspberry Pi is a transformative tool that enables affordable computing and hands-on learning. From classrooms to industry labs, it empowers users to innovate in electronics, programming, and IoT.
+              Raspberry Pi is a versatile and powerful tool for learning and
+              building electronics, IoT devices, and robots.
             </p>
             <p>
-              Whether you are a student, hobbyist, or engineer — Raspberry Pi opens the door to endless project opportunities.
+              With this step-by-step setup and your first project, you are
+              ready to explore countless possibilities in technology and
+              programming.
             </p>
+            <p>Happy making!</p>
           </>
         }
       />
@@ -145,12 +247,11 @@ export default function RaspberryPiPage() {
   );
 }
 
-
 function ArticleSection({ title, content }) {
   return (
-    <section className="mt-8 border border-gray-300 p-4 rounded-md">
-      <h2 className="text-xl md:text-2xl font-bold text-blue-600 mb-4">{title}</h2>
-      <div className="space-y-4 text-gray-800">{content}</div>
+    <section className={sameClass}>
+      <h2 className="text-2xl font-semibold text-blue-700 mb-4">{title}</h2>
+      <div className="space-y-4 text-gray-900">{content}</div>
     </section>
   );
 }
