@@ -1,4 +1,4 @@
-// File: app/raspberry/page.tsx
+
 import Image from "next/image";
 import image1 from "../../../public/images/Pi_Sarkitshala.webp";
 
@@ -7,34 +7,12 @@ export const metadata = {
     "Raspberry Pi Setup Guide & Projects for IoT, Robotics & Automation - Sarkitshala",
   description:
     "Step-by-step Raspberry Pi setup tutorial: Installation, OS setup, peripherals, GPIO usage & first project. Perfect for beginners & makers. Learn Raspberry Pi for IoT & Robotics.",
-  keywords:
-    "Raspberry Pi setup, Raspberry Pi installation, Raspberry Pi projects, IoT Raspberry Pi, Raspberry Pi tutorials, Raspberry Pi GPIO setup, Raspberry Pi OS install",
+ 
   robots: "index, follow",
-  openGraph: {
-    title:
-      "Complete Raspberry Pi Setup & Projects for Beginners | Sarkitshala",
-    description:
-      "Learn how to setup Raspberry Pi, install OS, connect sensors, and start your first IoT or robotics project with our comprehensive tutorial.",
-    url: "https://sarkitshala.com/raspberry",
-    images: [
-      {
-        url: "https://sarkitshala.com/images/public/images/Pi_Sarkitshala.png",
-        width: 1200,
-        height: 630,
-        alt: "Sarkitshala Raspberry Pi Setup Tutorial",
-      },
-    ],
-    site_name: "Sarkitshala",
-    type: "website",
-    locale: "en_US",
-  },
+ 
   twitter: {
     card: "summary_large_image",
-    site: "@sarkitshala",
-    title: "Raspberry Pi Setup & Projects | Sarkitshala",
-    description:
-      "Step-by-step Raspberry Pi setup, OS installation & beginner projects for IoT and robotics enthusiasts.",
-    image: "https://sarkitshala.com/images/public/images/RP.png",
+  
   },
   canonical: "https://sarkitshala.com/raspberry",
   author: "Sarkitshala Team (Amarjeet Singh Chauhan, Aman Raj)",
@@ -103,14 +81,15 @@ export default function RaspberryPiPage() {
           <>
             <p>
               Download the Raspberry Pi Imager tool from the official website:
-              <a
-                href="https://www.raspberrypi.com/software/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="text-blue-600 underline ml-1"
-              >
-                https://www.raspberrypi.com/software/
-              </a>
+             <a
+  href="https://www.raspberrypi.com/software/"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="text-blue-600 underline ml-1"
+>
+  raspberrypi.com/software
+</a>
+
             </p>
             <p>
               Insert the MicroSD card into your computer, launch the Imager,

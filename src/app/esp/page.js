@@ -5,30 +5,11 @@ export const metadata = {
   title: 'Complete ESP32 Setup & Projects Guide – Sarkitshala',
   description: 'Step-by-step ESP32 setup tutorials, projects, and coding examples. Master ESP32 Wi-Fi, Bluetooth, and IoT projects with Sarkitshala.',
   robots: 'index, follow',
-  canonical: 'https://sarkitshala.com/esp-setup',
-  openGraph: {
-    title: 'Complete ESP32 Setup & Projects Guide – Sarkitshala',
-    description: 'Step-by-step ESP32 setup tutorials, projects, and coding examples. Master ESP32 Wi-Fi, Bluetooth, and IoT projects with Sarkitshala.',
-    url: 'https://sarkitshala.com/esp-setup',
-    images: [
-      {
-        url: 'https://sarkitshala.com/images/esp.webp',
-        width: 1200,
-        height: 630,
-        alt: 'ESP32 Setup and Projects - Sarkitshala',
-      },
-    ],
-    site_name: 'Sarkitshala',
-    type: 'website',
-    locale: 'en_US',
-  },
+  canonical: 'https://sarkitshala.com/esp',
+ 
   twitter: {
     card: 'summary_large_image',
-    site: '@sarkitshala',
-    title: 'Complete ESP32 Setup & Projects Guide – Sarkitshala',
-    description: 'Master ESP32 setup and projects with detailed tutorials on IoT, Wi-Fi, and Bluetooth.',
-    image: 'https://sarkitshala.com/images/esp.webp',
-  },
+   },
   author: 'Aman Raj',
   structuredData: {
     "@context": "https://schema.org",
@@ -58,7 +39,7 @@ const headingClass = `text-lg md:text-2xl  font-bold mb-2`;
 export default function ESPSetupPage() {
   return (
     <>
-      {/* JSON-LD Structured Data for SEO */}
+     
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.structuredData) }}
@@ -106,14 +87,36 @@ export default function ESPSetupPage() {
             URL to the Board Manager.
           </p>
 
-          <h3 className={headingClass}>Steps:</h3>
-          <ol className="list-decimal list-inside text-gray-700 space-y-2">
-            <li>Download and install the latest Arduino IDE from <a href="https://www.arduino.cc/en/software" target="_blank" rel="noopener noreferrer" className="text-blue-600 underline">arduino.cc</a>.</li>
-            <li>Open Arduino IDE, go to <em>File &gt; Preferences</em> and paste this URL in <em>Additional Board Manager URLs</em>: <code>https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json</code></li>
-            <li>Go to <em>Tools &gt; Board &gt; Boards Manager</em>, search for "esp32" and install the ESP32 platform.</li>
-            <li>Select your ESP32 board and the correct COM port under <em>Tools</em>.</li>
-            <li>Upload your first example sketch like <em>Blink</em> to test the setup.</li>
-          </ol>
+          <h3 className={`${headingClass} text-lg sm:text-xl font-semibold mb-4`}>Steps:</h3>
+  <ol className="list-decimal list-inside text-gray-700 space-y-3 text-sm sm:text-base leading-relaxed">
+    <li>
+      Download and install the latest Arduino IDE from{' '}
+      <a
+        href="https://www.arduino.cc/en/software"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-blue-600 underline break-words"
+      >
+        arduino.cc
+      </a>.
+    </li>
+    <li>
+      Open Arduino IDE, go to <em>File &gt; Preferences</em> and paste this URL in{' '}
+      <em>Additional Board Manager URLs</em>:<br />
+      <code className="block bg-gray-100 p-2 rounded text-sm break-all mt-1">
+        https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+      </code>
+    </li>
+    <li>
+      Go to <em>Tools &gt; Board &gt; Boards Manager</em>, search for "esp32" and install the ESP32 platform.
+    </li>
+    <li>
+      Select your ESP32 board and the correct COM port under <em>Tools</em>.
+    </li>
+    <li>
+      Upload your first example sketch like <em>Blink</em> to test the setup.
+    </li>
+  </ol>
         </section>
 
         {/* Section: Basic ESP32 Wi-Fi Project */}

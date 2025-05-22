@@ -9,30 +9,9 @@ export const metadata = {
   alternates: {
     canonical: "https://sarkitshala.com/arduino",
   },
-  openGraph: {
-    title: "Best Arduino Projects & Tutorials for Beginners - Sarkitshala",
-    description:
-      "Discover top Arduino projects & tutorials for beginners. Learn digital, analog & PWM pins, IoT applications, sensor projects & more with step-by-step guides!",
-    url: "https://sarkitshala.com/arduino",
-    images: [
-      {
-        url: "https://sarkitshala.com/opengraph-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "Arduino Projects, Tutorials & Pin Functions",
-      },
-    ],
-    locale: "en_US",
-    type: "article",
-  },
   twitter: {
-    card: "summary_large_image",
-    site: "@sarkitshala",
-    title: "Best Arduino Projects & Tutorials for Beginners - Sarkitshala",
-    description:
-      "Discover top Arduino projects & tutorials for beginners. Learn digital, analog & PWM pins, IoT applications, sensor projects & more with step-by-step guides!",
-    image: "https://sarkitshala.com/opengraph-image.jpg",
-  },
+    card: "summary_large_image"
+    },
   jsonLd: {
     "@context": "https://schema.org",
     "@type": "WebPage",
@@ -49,12 +28,7 @@ export const metadata = {
       },
     },
     mainEntityOfPage: "https://sarkitshala.com/arduino",
-    image: {
-      "@type": "ImageObject",
-      url: "https://sarkitshala.com/opengraph-image.jpg",
-      width: 1200,
-      height: 630,
-    },
+   
     mainEntity: [
   {
     "@type": "Question",
@@ -236,7 +210,7 @@ export default function Page() {
             ].map((item, idx) => (
               <Link
                 key={idx}
-                href={`/experiments/arduino/${item.slug}`}
+                href={`arduino/${item.slug}`}
                 className="block bg-white border border-gray-400 hover:border-blue-500 rounded p-3 shadow hover:shadow-md transition"
               >
                 {item.text}
