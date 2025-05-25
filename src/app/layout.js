@@ -27,12 +27,13 @@ export default function RootLayout({ children }) {
         <main>{children}</main>
 
         {/* Google AdSense Script */}
-     <Script
+    <Script
   strategy="afterInteractive"
   async
   src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2053631970024775"
   crossOrigin="anonymous"
 />
+
       </body>
     </html>
   );
