@@ -8,6 +8,25 @@ const CodeBox=dynamic(()=>import('@/components/code/code'),{
   ssr:false
 })
 const Esp = dynamic(() => import('@/components/Esp'), {ssr:false})
+export async function generateStaticParams() {
+  try {
+      const response = await getData('https://sarkitshala.com/api/experiments/Esp');
+      
+     
+      const posts = response?.experiments || [];
+
+      if (!Array.isArray(posts)) {
+          throw new Error('Expected "experiments" to be an array.');
+      }
+
+      return posts.map((post) => ({
+          ExperimentId: String(post.ExperimentId),
+      }));
+  } catch (error) {
+      console.error('Error fetching or processing data:', error);
+      return [];
+  }
+}
 export async function generateMetadata({ params }) {
   console.log(params)
   try {
@@ -83,25 +102,7 @@ export async function generateMetadata({ params }) {
   }
 }
 
-export async function generateStaticParams() {
-  try {
-      const response = await getData('https://sarkitshala.com/api/experiments/Esp');
-      
-     
-      const posts = response?.experiments || [];
 
-      if (!Array.isArray(posts)) {
-          throw new Error('Expected "experiments" to be an array.');
-      }
-
-      return posts.map((post) => ({
-          ExperimentId: String(post.ExperimentId),
-      }));
-  } catch (error) {
-      console.error('Error fetching or processing data:', error);
-      return [];
-  }
-}
 
 
 export default async function Page({ params }) {

@@ -7,7 +7,19 @@ import getData from "@/app/apiCall";
 const Loading = dynamic(() => import('@/components/loading/Loading'), { ssr: false });
 
 const CodeBox = dynamic(() => import('@/components/code/code'), { ssr: false });
-
+export async function generateStaticParams() {
+  try {
+      const response = await getData('https://sarkitshala.com/api/experiments/Res');
+      const posts = response?.experiments || [];
+      
+      return posts.map((post) => ({
+          ExperimentId: String(post.ExperimentId),
+      }));
+  } catch (error) {
+      console.error('Error fetching data:', error);
+      return [];
+  }
+}
 export async function generateMetadata({ params }) {
   let ExperimentData = {};
   try {
@@ -58,26 +70,9 @@ export async function generateMetadata({ params }) {
     },
     url: experimentSlug,
     siteName: "Sarkitshala",
-    openGraph: {
-      title: `${experimentTitle} | Raspberry Pi Projects & Tutorials`,
-      description: experimentOverview,
-      url: experimentSlug,
-      images: [
-        {
-          url: experimentImage,
-          width: 1200,
-          height: 630,
-          alt: `${experimentTitle} Experiment preview`,
-        },
-      ],
-      site_name: "Sarkitshala",
-      type: "article",
-    },
     twitter: {
       card: "summary_large_image",
-      title: `${experimentTitle} | Raspberry Pi Guide`,
-      description: experimentOverview,
-      images: [experimentImage],
+     
     },
     canonical: experimentSlug,
     alternates: {
@@ -92,19 +87,7 @@ export async function generateMetadata({ params }) {
   };
 }
 
-export async function generateStaticParams() {
-  try {
-      const response = await getData('https://sarkitshala.com/api/experiments/Res');
-      const posts = response?.experiments || [];
-      
-      return posts.map((post) => ({
-          ExperimentId: String(post.ExperimentId),
-      }));
-  } catch (error) {
-      console.error('Error fetching data:', error);
-      return [];
-  }
-}
+
 
 export default async function Page({ params }) {
     const { Experiment } = await params; 

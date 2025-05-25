@@ -51,10 +51,10 @@ const RecentPosts = () => {
     <div
       className="
         w-full max-w-[400px]
-        h-[400px]
+        h-[430px]
         bg-white dark:bg-gray-900  rounded-xl
         mt-6 mx-auto md:mx-0
-        relative md:absolute md:top-[85px] xl:right-[100px] md:right-[40px]
+        relative md:absolute md:top-[85px] xl:right-[100px] md:right-[20px]
       "
     >
       {/* Header */}

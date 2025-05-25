@@ -9,6 +9,20 @@ const CodeBox = dynamic(() => import('@/components/code/code'), {
 const AllCom = dynamic(() => import('@/components/AllCom'), {ssr:false})
 const LEDArduino =dynamic(()=>import('@/components/Led'), {ssr:false})
 const Side=dynamic(()=>import('@/components/side'))
+export async function generateStaticParams() {
+  try {
+      const response = await getData('https://sarkitshala.com/api/experiments/Arduino');
+      
+      const posts = response?.experiments || [];
+      
+      return posts.map((post) => ({
+          ExperimentId: String(post.Experiment),
+      }));
+  } catch (error) {
+      console.error('Error fetching data:', error);
+      return [];
+  }
+}
 export async function generateMetadata({ params }) {
   const ExperimentData = await getData(`https://sarkitshala.com/api/experiments/ArduinoMeta`, params.Experiment);
 
@@ -94,20 +108,7 @@ export async function generateMetadata({ params }) {
 
 
 
-export async function generateStaticParams() {
-  try {
-      const response = await getData('https://sarkitshala.com/api/experiments/Arduino');
-      
-      const posts = response?.experiments || [];
-      
-      return posts.map((post) => ({
-          ExperimentId: String(post.Experiment),
-      }));
-  } catch (error) {
-      console.error('Error fetching data:', error);
-      return [];
-  }
-}
+
 
   
 
