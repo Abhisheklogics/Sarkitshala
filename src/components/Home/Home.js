@@ -107,7 +107,7 @@ const Home1 = () => {
             ))}
           </div>
         </section>
- <AdBanner/>
+
         {/* MyBook */}
         <section className="py-16 px-4 sm:px-6 md:px-12 lg:px-20 md:bg-[#FFF0E5]">
           <MyBook />
@@ -140,7 +140,7 @@ const Home1 = () => {
             ))}
           </div>
         </section>
-
+ <AdBanner/>
         {/* Tech Carousel */}
         <section className="px-4 sm:px-6 md:px-12 lg:px-20 md:bg-[#FFF0E5]">
           <Carousel />
