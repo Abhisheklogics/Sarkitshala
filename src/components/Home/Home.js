@@ -6,7 +6,7 @@ import 'aos/dist/aos.css';
 import Image from 'next/image';
 import dynamic from 'next/dynamic';
 import Link from 'next/link';
-import AdBanner from '@/components/Banner/AdBanner';
+
 import img1 from '../../../public/images/ArdTech.webp';
 import img2 from '../../../public/images/ESPTech.webp';
 import img3 from '../../../public/images/raspTech.webp';
@@ -15,6 +15,7 @@ import img5 from '../../../public/images/droneTech.webp';
 import img6 from '../../../public/images/STM32.webp';
 
 import MyBook from '../ArdBook';
+import AdBanner from '../Banner/AdBanner';
 
 const SimpleSlider = dynamic(() => import('../slider/Slider'));
 const RecentPosts = dynamic(() => import('../recentPost/Recent'));
@@ -94,7 +95,7 @@ const Home1 = () => {
         <section className=" px-4 sm:px-6 md:px-12 lg:px-20 md:bg-[#FFF0E5]">
           <RecentPosts />
         </section>
- <AdBanner />
+
         {/* Latest Tech */}
         <section className="py-16  px-4 sm:px-6 md:px-12 lg:px-20 md:bg-[#FFF0E5] text-center">
           <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-12 tracking-tight animate-pulse">
@@ -106,7 +107,7 @@ const Home1 = () => {
             ))}
           </div>
         </section>
-
+ <AdBanner />
         {/* MyBook */}
         <section className="py-16 px-4 sm:px-6 md:px-12 lg:px-20 md:bg-[#FFF0E5]">
           <MyBook />
