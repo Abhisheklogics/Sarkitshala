@@ -1,4 +1,4 @@
-'use client'
+'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
 import Link from 'next/link';
@@ -17,20 +17,20 @@ const RecentPosts = () => {
   const listRef = useRef(null);
   const [isUserInteracting, setIsUserInteracting] = useState(false);
 
-  let arr = [
+  const posts = [
     { id: 1, slug: "/jetson", title: "NVIDIA Jetson Nano Developer Kit", image: image1 },
     { id: 2, slug: "arduino/interfacing-led", title: "Control an LED with Arduino", image: image2 },
     { id: 3, slug: "arduino/interfacing-rgb-led", title: "Interfacing RGB LED with Arduino", image: image11 },
     { id: 4, slug: "arduino/interfacing-7-segment-display", title: "Interfacing 7-Segement Display", image: image13 },
     { id: 5, slug: "arduino/interfacing-dc-motor", title: "Interfacing DC Motor", image: image3 },
-    { id: 6, slug: "arduino/Interfacing OLED", title: "Interfacing OLED", image: image4 },
+    { id: 6, slug: "arduino/interfacing-oled-display-module", title: "Interfacing OLED", image: image4 },
     { id: 7, slug: "arduino/interfacing-pir-sensor", title: "Interfacing PIR Sensor", image: image6 },
-    { id: 8, slug: "arduino/interfacing-dht11-sensor", title: "Interfacing DHT11 Sensor", image: image7 },
+    { id: 8, slug: "arduino/interfacing-dht22", title: "Interfacing DHT11 Sensor", image: image7 },
   ];
 
   useEffect(() => {
     const list = listRef.current;
-    if (!list || window.innerWidth < 768) return; // disable auto-scroll on small screens
+    if (!list || window.innerWidth < 768) return;
 
     let scrollAmount = 0;
     const maxScroll = list.scrollHeight - list.clientHeight;
@@ -50,47 +50,52 @@ const RecentPosts = () => {
   return (
     <div
       className="
-        w-full max-w-md 
-        md:w-[360px] lg:w-[400px] 
-        h-[400px] sm:h-[450px]  lg:h-[450px] 
-        bg-white overflow-hidden shadow-md md:shadow-lg rounded-md 
+        w-full max-w-[400px]
+        h-[400px]
+        bg-white dark:bg-gray-900  rounded-xl
         mt-6 mx-auto md:mx-0
-        relative md:absolute md:top-[85px] xl:right-[100px] md:right-[10px]"
+        relative md:absolute md:top-[85px] xl:right-[100px] md:right-[40px]
+      "
     >
-      <div className="sticky top-0 z-10 px-4 py-3 bg-gradient-to-r from-indigo-500 to-gray-900 rounded-t-md text-white font-bold text-lg md:text-2xl text-start">
-        <h1>RECENT POST</h1>
+      {/* Header */}
+      <div className="sticky top-0 z-10 px-4 py-3 bg-gradient-to-r from-indigo-600 to-blue-800 text-white font-semibold text-lg md:text-xl rounded-t-xl">
+        Recent Posts
       </div>
 
+      {/* List */}
       <ul
         ref={listRef}
         className="
-          h-[calc(100%-56px)]  /* Subtract header height */
+          h-[calc(100%-56px)]
           overflow-y-auto md:overflow-hidden
+          px-3 py-2
+          space-y-3
           scrollbar-hide
-          text-sm
-          px-2 py-1
-          "
+        "
         onMouseEnter={() => setIsUserInteracting(true)}
         onMouseLeave={() => setIsUserInteracting(false)}
         onTouchStart={() => setIsUserInteracting(true)}
         onTouchEnd={() => setIsUserInteracting(false)}
       >
-        {arr.map(({ id, slug, title, image }, index) => (
+        {posts.map(({ id, slug, title, image }) => (
           <Link key={id} href={`/${slug}`}>
             <li
               className="
-                bg-gray-50 rounded-md shadow-sm active:scale-[0.98] transition-transform duration-150 hover:bg-gray-200
-                p-3 flex items-center gap-3 mt-3
+                flex items-center gap-3 dark:bg-gray-800 rounded-lg p-3
+                dark:hover:bg-gray-700 transition duration-200
+                cursor-pointer active:scale-[0.98]
               "
             >
               <Image
                 src={image}
                 alt={title}
-                width={70}
-                height={70}
-                className="rounded-md object-cover w-[60px] h-[60px] md:w-[70px] md:h-[70px]"
+                width={60}
+                height={60}
+                className="rounded-md object-cover w-[60px] h-[60px]"
               />
-              <p className="text-blue-700 font-medium text-sm md:text-base leading-snug">{title}</p>
+              <p className="text-sm md:text-base font-medium text-gray-800 dark:text-gray-100">
+                {title}
+              </p>
             </li>
           </Link>
         ))}

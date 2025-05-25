@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Side from "./side";
+
 import dynamic from "next/dynamic";
 import   '../app/globals.css'
 const CodeBox = dynamic(() => import('@/components/code/code'), {
@@ -11,8 +11,8 @@ export default function AllCom({ data }) {
   return (
     <>
     <div className="w-full p-4 md:p-5 bg-white md:bg-[#FFF0E5] rounded-xl leading-8 text-justify break-words font-serif h-fit overflow-y-auto 
-                md:w-[685px] md:ml-[320px] md:mt-20 
-                2xl:w-[820px] 2xl:ml-[430px]">
+                md:w-[780px] md:ml-[340px] md:mt-20 
+                 xl:ml-[430px]">
   
 
        
@@ -125,11 +125,13 @@ export default function AllCom({ data }) {
           </section>
         )}
 
-        
+    <section className="mb-6 mt-10 bg-white p-6 rounded shadow-lg border border-black"> 
+              <h3 className="md:text-2xl text-lg md:mt-[-15px] mb-[-50px] font-bold hover:text-blue-500" id="Code"> Arduino Code</h3>    
   {data.code && 
+  
         <CodeBox code={data.code.replace(/\\n/g, '\n')} language={'cpp'}/>
      }
-      
+      </section> 
         {data.title9 && data.applications && data.applications.length > 0 && (
           <section className="mb-6 mt-10 bg-white p-6 rounded shadow-lg border border-black">
             <h2 className="headingClass">{data.title9}</h2>
@@ -150,7 +152,7 @@ export default function AllCom({ data }) {
         )}
       </div>
 
-      <Side />
+  
     </>
   );
 }

@@ -7,13 +7,11 @@ const ToggleButton = ({ label, onClick, isOpen }) => (
   <button
     onClick={onClick}
     aria-expanded={isOpen}
-    className="w-full md:w-[310px] text-left mb-4 py-3 px-2 md:py-2 relative rounded hover:bg-gray-100 transition"
+    className="w-full md:w-[310px] text-left mb-4 py-3 px-2 md:py-2 relative rounded transition"
   >
     <div className="flex justify-between items-center">
       <h2 className="font-semibold text-gray-800 text-base md:text-lg">{label}</h2>
-      <span className={`transition-transform transform ${isOpen ? 'rotate-180' : ''}`}>
-        ▼
-      </span>
+     
     </div>
   </button>
 );
@@ -112,7 +110,7 @@ export default function RootLayout({ children }) {
       </header>
 
       <nav className={`mt-2 ${toggles.toggle1 ? 'block' : 'hidden'} md:flex`}>
-        <aside className="md:fixed md:w-80 2xl:h-[600px] md:h-[500px] overflow-y-auto p-4 mt-6 md:mt-28 md:ml-4 2xl:ml-10 bg-white rounded shadow-sm">
+        <aside className="md:fixed md:w-80 2xl:h-[600px] md:h-[500px] overflow-y-auto p-4 mt-6 md:mt-28 md:ml-4 2xl:ml-10  rounded shadow-sm">
           {experiments.map((exp) => (
             <section key={exp.key} className="mb-6">
               <ToggleButton

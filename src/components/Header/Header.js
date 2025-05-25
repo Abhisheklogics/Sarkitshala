@@ -20,86 +20,78 @@ export default function Header() {
   ];
 
   return (
-    <nav className="bg-[#0047AB] fixed top-0 left-0 w-full z-50 shadow-lg">
-      <div className="max-w-[1300px] mx-auto px-4 md:py-4 py-6 flex items-center justify-between">
+    <header className="bg-[#0047AB] fixed top-0 left-0 w-full z-50 shadow-lg">
+      <div className="max-w-screen-xl mx-auto px-4 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="https://sarkitshala.com/">
+        <Link href="/" className="flex items-center gap-2">
           <Image
             src="/images/Logo.webp"
             alt="Logo"
-            width={45}
-            height={45}
+            width={40}
+            height={40}
             className="rounded-full object-cover"
           />
         </Link>
 
-        {/* Hamburger Icon */}
-        <div className="md:hidden">
-          <button
-            className="text-white focus:outline-none"
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-          >
-            <div className="w-6 h-1 bg-white mb-1 rounded"></div>
-            <div className="w-6 h-1 bg-white mb-1 rounded"></div>
-            <div className="w-6 h-1 bg-white rounded"></div>
-          </button>
-        </div>
+        {/* Hamburger */}
+        <button
+          className="md:hidden text-white flex flex-col gap-1"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Toggle navigation"
+        >
+          <span className="w-6 h-0.5 bg-white rounded"></span>
+          <span className="w-6 h-0.5 bg-white rounded"></span>
+          <span className="w-6 h-0.5 bg-white rounded"></span>
+        </button>
 
-        {/* Search - Desktop */}
-        <div className="hidden md:block md:flex-1 md:mx-8">
+        {/* Desktop Search */}
+        <div className="hidden md:block flex-1 mx-6">
           <Search />
         </div>
 
-        {/* Nav Links - Desktop */}
-        <ul className="hidden md:flex gap-4 text-white font-medium text-sm md:text-base">
+        {/* Desktop Nav */}
+        <nav className="hidden md:flex gap-4 text-white font-medium text-sm lg:text-base">
           {navLinks.map((link) => (
-            <li key={link.label} className="hover:bg-orange-400 px-3 py-1 rounded transition">
-              <Link href={link.href}>{link.label}</Link>
-            </li>
+            <Link key={link.label} href={link.href} className="px-3 py-1 rounded hover:bg-orange-500 transition">
+              {link.label}
+            </Link>
           ))}
-        </ul>
+        </nav>
       </div>
 
-      {/* Small screen horizontal scroll nav pills (collapsed menu look rich) */}
+      {/* Horizontal Scroll Pills (Mobile only) */}
       {!isMenuOpen && (
-        <div className="md:hidden overflow-x-auto scrollbar-hide bg-[#0047AB] pb-2 px-2">
-          <ul className="flex gap-2 text-white font-medium text-sm whitespace-nowrap">
-            {navLinks.slice(0, 5).map((link) => (
-              <li key={link.label}>
-                <Link
-                  href={link.href}
-                  className="px-3 py-1 bg-white/10 rounded-full hover:bg-orange-400 transition block"
-                >
-                  {link.label}
-                </Link>
-              </li>
+        <div className="md:hidden overflow-x-auto px-3 pb-2 scrollbar-hide">
+          <div className="flex gap-2 text-white text-sm font-medium whitespace-nowrap">
+            {navLinks.slice(0, 6).map((link) => (
+              <Link key={link.label} href={link.href} className="bg-white/10 px-4 py-1 rounded-full hover:bg-orange-400 transition">
+                {link.label}
+              </Link>
             ))}
-          </ul>
+          </div>
         </div>
       )}
 
-      {/* Mobile Full Menu */}
+      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden px-4 pb-4 bg-[#0047AB] border-t border-white/10 mt-1">
-          <div className="mb-3 bg-white rounded-full p-1">
+        <div className="md:hidden px-4 py-4 bg-[#0047AB] border-t border-white/20">
+          <div className="mb-3">
             <Search />
           </div>
-
-          <ul className="flex flex-col gap-1 text-white font-medium text-sm">
+          <nav className="flex flex-col gap-2">
             {navLinks.map((link) => (
-              <li key={link.label}>
-                <Link
-                  href={link.href}
-                  className="block px-4 py-2 rounded hover:bg-orange-400 transition text-left"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  {link.label}
-                </Link>
-              </li>
+              <Link
+                key={link.label}
+                href={link.href}
+                onClick={() => setIsMenuOpen(false)}
+                className="text-white py-2 px-4 rounded hover:bg-orange-400 transition"
+              >
+                {link.label}
+              </Link>
             ))}
-          </ul>
+          </nav>
         </div>
       )}
-    </nav>
+    </header>
   );
 }

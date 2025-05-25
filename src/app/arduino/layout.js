@@ -11,11 +11,7 @@ const ToggleButton = ({ label, onClick, isOpen }) => (
   >
     <div className="flex justify-between items-center">
       <h2 className="font-bold text-gray-800">{label}</h2>
-      <span
-        className={`transform transition-transform ${isOpen ? 'rotate-180' : ''} md:absolute md:right-4 top-2`}
-      >
-        ▼
-      </span>
+    
     </div>
   </button>
 );

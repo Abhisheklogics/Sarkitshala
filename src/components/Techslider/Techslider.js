@@ -1,97 +1,105 @@
-import React from 'react';
-import Slider from 'react-slick';
-import Link from 'next/link';
-import image1 from '../../../public/images/esp.webp';
-import image2 from '../../../public/images/Arduino_SKT.webp'
-import image3 from '../../../public/images/Pi_Sarkitshala.webp'
-import image4 from '../../../public/images/Drone.webp'
-import Image from 'next/image';
+import React from "react";
+import Slider from "react-slick";
+import Link from "next/link";
+import Image from "next/image";
+
+import image1 from "../../../public/images/esp.webp";
+import image2 from "../../../public/images/Arduino_SKT.webp";
+import image3 from "../../../public/images/Pi_Sarkitshala.webp";
+import image4 from "../../../public/images/Drone.webp";
+
 export default function SimpleSlider() {
-  var settings = {
+  const settings = {
     infinite: true,
-    speed: 500,
-    slidesToShow: 4, 
+    speed: 600,
+    slidesToShow: 4,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 1000,
+    autoplaySpeed: 2800,
     arrows: false,
+    dots: true,
+    appendDots: (dots) => (
+      <div className="pt-4">
+        <ul className="flex justify-center space-x-3">{dots}</ul>
+      </div>
+    ),
+    customPaging: (i) => (
+      <button className="w-3 h-3 rounded-full bg-gray-300 dark:bg-gray-600 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+    ),
     responsive: [
       {
-        breakpoint: 768, 
-        settings: {
-          slidesToShow: 2, 
-        },
+        breakpoint: 1280,
+        settings: { slidesToShow: 3 },
       },
       {
-        breakpoint: 290, 
-        settings: {
-          slidesToShow: 2, 
-        },
+        breakpoint: 1024,
+        settings: { slidesToShow: 2 },
+      },
+      {
+        breakpoint: 640,
+        settings: { slidesToShow: 1 },
       },
     ],
   };
 
+  const cards = [
+    {
+      href: "/esp",
+      image: image1,
+      alt: "ESP32 Microcontroller",
+      title: "ESP32",
+    },
+    {
+      href: "/arduino",
+      image: image2,
+      alt: "Arduino Board",
+      title: "Arduino",
+    },
+    {
+      href: "/drone",
+      image: image4,
+      alt: "Drone Technology",
+      title: "Drone",
+    },
+    {
+      href: "/raspberry",
+      image: image3,
+      alt: "Raspberry Pi Computer",
+      title: "Raspberry Pi",
+    },
+  ];
+
   return (
-    <Slider className='mt-10   bg-gray-800 h-[270px] 
-      md:mt-10 md:bg-white md:h-[300px]' {...settings}>
-      
-     
-      <div className='md:mt-8 mt-14 '>
-        <div className="h-[170px] w-[150px] bg-gray-100 rounded  p-2 shadow-lg
-        md:h-[240px] md:w-72 md:bg-gray-100 md:shadow-lg md:rounded md:flex md:flex-col md:justify-center md:items-center md:p-4 md:mx-4">
-          <Link href={'/esp'}>
-            <Image height={200} width={300} className="w-fit h-fit  mt-4
-              md:w-60 md:h-fit rounded" src={image1} alt="ESP" />
-            <p className='text-center mt-6 bg-gray-200 p-1 hover:bg-blue-700 hover:text-white active:bg-gray-900
-              md:text-center md:mt-4 md:bg-gray-200 md:p-1 md:hover:bg-blue-700 md:hover:text-white md:active:bg-gray-900'>
-              ESP32
-            </p>
-          </Link>
-        </div>
-      </div>
-      
-     
-      <div className='md:mt-8  mt-14'>
-        <div className="h-[170px] w-[160px] bg-gray-100 p-2 
-        md:h-[240px] md:w-72 md:bg-gray-100 shadow-lg rounded flex flex-col justify-center items-center p-4 mx-4">
-          <Link href="/arduino">
-            <Image   height={200} width={300}  className="w-fit h-fit md:w-fit md:h-fit mt-2 rounded" src={image2} alt="Arduino" />
-            <p className='text-center mt-8 bg-gray-200 p-1 hover:bg-blue-700 hover:text-white active:bg-gray-900
-              md:text-center md:mt-4 md:bg-gray-200 md:p-1 md:hover:bg-blue-700 md:hover:text-white md:active:bg-gray-900'>
-              Arduino
-            </p>
-          </Link>
-        </div>
-      </div>
-      
-      
-      <div className='md:mt-8   mt-14'>
-        <div className="h-[170px] w-[160px] bg-gray-100 p-2 
-        md:h-[240px] md:w-72 bg-gray-100 shadow-lg rounded flex flex-col justify-center items-center p-4 mx-4">
-          <Link href={'/drone'}>
-            <Image   height={200} width={300}  className="w-fit h-fit md:w-fit md:h-fit mt-[10px] rounded  " src={image4} alt="Drone" />
-            <p className='text-center  bg-gray-200 p-1 hover:bg-blue-700 hover:text-white active:bg-gray-900
-              md:text-center md:mt-4 mt-8 md:bg-gray-200 md:p-1 md:hover:bg-blue-700 md:hover:text-white md:active:bg-gray-900'>
-              Drone
-            </p>
-          </Link>
-        </div>
-      </div>
-      
-      
-      <div className='md:mt-8  mt-14'>
-        <div className="h-[170px] w-[160px] md:w-72 bg-gray-100 p-2 
-        md:h-[240px]  bg-gray-100 shadow-lg rounded flex flex-col justify-center items-center p-4 mx-4">
-          <Link href={'/raspberry'}>
-            <Image height={100} width={300}  className="w-60 h-fit mt-2  rounded " src={image3} alt="Raspberry Pi" />
-            <p className='text-center mt-8 bg-gray-200 p-1 hover:bg-blue-700 hover:text-white active:bg-gray-900
-              md:text-center md:mt-4 md:bg-gray-200 md:p-1 md:hover:bg-blue-700 md:hover:text-white md:active:bg-gray-900'>
-              Raspberry Pi
-            </p>
-          </Link>
-        </div>
-      </div>
-      
-    </Slider>
+    <section className="my-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <Slider {...settings}>
+        {cards.map(({ href, image, alt, title }, index) => (
+          <div
+            key={index}
+            className="px-3 focus-within:ring-2 focus-within:ring-blue-500 focus-within:outline-none rounded-lg"
+            tabIndex={-1}
+          >
+            <Link
+              href={href}
+              className="group relative block rounded-lg overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 transition-transform transform hover:scale-105 hover:shadow-2xl duration-300 focus-visible:outline-none focus-visible:ring-4 focus-visible:ring-blue-500"
+            >
+           <div className="relative w-full h-52 sm:h-64 md:h-56 lg:h-80 xl:h-96">
+  <Image
+    src={image}
+    alt={alt}
+    fill
+    sizes="(max-width: 640px) 100vw, 300px"
+    className="object-contain p-6 transition-transform duration-300 group-hover:scale-110"
+    priority={index === 0}
+  />
+</div>
+
+              <div className="absolute bottom-0 left-0 w-full bg-gradient-to-t from-black/70 to-transparent p-3">
+                <h3 className="text-white text-lg font-semibold truncate">{title}</h3>
+              </div>
+            </Link>
+          </div>
+        ))}
+      </Slider>
+    </section>
   );
 }

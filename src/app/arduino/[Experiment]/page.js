@@ -233,7 +233,7 @@ if(data['ExperimentId'] == '9' || data['ExperimentId'] == '11' || data['Experime
         {data.result}</p>
     
     </div>
-  <Side/>
+
   </>
 
   );

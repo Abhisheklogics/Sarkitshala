@@ -5,15 +5,11 @@ import { useState } from "react";
 const ToggleButton = ({ label, onClick, isOpen }) => (
   <button
     onClick={onClick}
-    className="w-full md:w-[310px] text-left mb-4 py-3 px-2 md:py-2 relative rounded hover:bg-gray-100 transition"
+    className="w-full md:w-[310px] text-left mb-4 py-3 px-2 md:py-2 relative rounded  transition"
   >
     <div className="flex justify-between items-center">
       <h1 className="font-bold text-gray-800">{label}</h1>
-      <span
-        className={`transform transition-transform ${isOpen ? 'rotate-180' : ''} md:absolute md:right-4 top-2`}
-      >
-        ▼
-      </span>
+     
     </div>
   </button>
 );
@@ -120,7 +116,7 @@ export default function RootLayout({ children }) {
           toggles.toggle1 ? "block" : "hidden"
         } md:block relative flex flex-col ml-1  transition-transform `}
       >
-        <div className="md:fixed md:w-80 2xl:h-[600px] md:h-[500px] overflow-y-auto p-4 mt-6 md:mt-28 md:ml-4 2xl:ml-10 bg-white rounded shadow-sm">
+        <div className="md:fixed md:w-80 2xl:h-[600px] md:h-[500px] overflow-y-auto p-4 mt-6 md:mt-28 md:ml-4 2xl:ml-10  rounded shadow-sm">
           {experiments.map((experiment) => (
             <div key={experiment.key}>
               <ToggleButton
