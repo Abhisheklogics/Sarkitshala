@@ -54,7 +54,7 @@ const RecentPosts = () => {
         h-[430px]
         bg-white dark:bg-gray-900  rounded-xl
         mt-6 mx-auto md:mx-0
-        relative md:absolute md:top-[85px] xl:right-[100px] md:right-[20px]
+        relative md:absolute md:top-[85px] xl:right-[100px] md:right-[10px]
       "
     >
       {/* Header */}
