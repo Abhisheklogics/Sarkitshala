@@ -21,7 +21,7 @@ const RecentPosts = () => {
     { id: 1, slug: "/jetson", title: "NVIDIA Jetson Nano Developer Kit", image: image1 },
     { id: 2, slug: "arduino/interfacing-led", title: "Control an LED with Arduino", image: image2 },
     { id: 3, slug: "arduino/interfacing-rgb-led", title: "Interfacing RGB LED with Arduino", image: image11 },
-    { id: 4, slug: "arduino/interfacing-7-segment-display", title: "Interfacing 7-Segement Display", image: image13 },
+    { id: 4, slug: "arduino/interfacing-seven-segment-display", title: "Interfacing 7-Segement Display", image: image13 },
     { id: 5, slug: "arduino/interfacing-dc-motor", title: "Interfacing DC Motor", image: image3 },
     { id: 6, slug: "arduino/interfacing-oled-display-module", title: "Interfacing OLED", image: image4 },
     { id: 7, slug: "arduino/interfacing-pir-sensor", title: "Interfacing PIR Sensor", image: image6 },
