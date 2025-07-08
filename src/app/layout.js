@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.className}>
       <Head>
-        <meta name="google-site-verification" content="Mt7iRB_iff5dtyKWL3AH1Isf0HycfwBBgnRMpobxba4" />
+        <meta name="google-site-verification" content="q74cqb8_1rbbIDl01X6TFZBxOvbAxBpn9_6ueKfCfPM" />
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <body className="font-serif md:bg-[#FFF0E5]">
