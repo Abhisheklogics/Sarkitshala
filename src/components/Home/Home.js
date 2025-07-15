@@ -15,7 +15,7 @@ import img5 from '../../../public/images/droneTech.webp';
 import img6 from '../../../public/images/STM32.webp';
 
 import MyBook from '../ArdBook';
-import AdBanner from '../Banner/AdBanner';
+
 
 const SimpleSlider = dynamic(() => import('../slider/Slider'));
 const RecentPosts = dynamic(() => import('../recentPost/Recent'));
@@ -140,7 +140,7 @@ const Home1 = () => {
             ))}
           </div>
         </section>
- <AdBanner/>
+
         {/* Tech Carousel */}
         <section className="px-4 sm:px-6 md:px-12 lg:px-20 md:bg-[#FFF0E5]">
           <Carousel />
