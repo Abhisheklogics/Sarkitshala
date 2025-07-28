@@ -27,6 +27,11 @@ import j25 from '../../../public/images/jetson/25.webp'
 import j26 from '../../../public/images/jetson/26.webp'
 
 import Image from 'next/image'
+export const metadata = {
+  title: "NVIDIA Jetson Nano Developer Kit: AI & Robotics Guide | Sarkitshala",
+  description: "Explore the NVIDIA Jetson Nano Developer Kit with Sarkitshala. Learn about components, features, specifications, and setup steps for building AI-powered projects in robotics, IoT, and edge computing.",
+};
+
 export default async function Page(){
 
 
