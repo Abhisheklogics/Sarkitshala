@@ -12,8 +12,15 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  title: "Sarkitshala New Version",
-  description: "Sarkitshala ka new look",
+  titleTemplate: '%s – Sarkitshala',
+  description: "Explore tutorials on IoT, Arduino, ESP32, Raspberry Pi, Jetson & more.",
+  verification: {
+    google: "9rETS0M62diUrVcnRPMv2Ro7G95p7O9p4-SW6F4jZQI",
+  },
+  icons: {
+    icon: "/favicon.ico",
+    shortcut: "/favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
