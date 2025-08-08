@@ -4,98 +4,123 @@ import { useState } from 'react';
 
 
 
-let protocols=[
-  
-  {
-    slug: "amqp",
+const experiments = [
+{
+   
+  label: "IOT Protocols",
+    key: "basic",
+   
+  links:[
+    {
+    href: "iotProtocols/amqp",
     text: "AMQP Communication",
   },
   {
-    slug: "bluetooth",
+    href: "iotProtocols/bluetooth",
     text: "Bluetooth Communication",
   },
   {
-    slug: "gsm",
+    href: "iotProtocols/gsm",
     text: "GSM Communication",
   },
   {
-    slug: "coap",
+    href: "iotProtocols/coap",
     text: "CoAP Communication",
   },
   {
-    slug:"dds",
+    href:"iotProtocols/dds",
     text:"Data Distribution Service Communication"
   },
   {
-    slug: "lorawan",
+    href: "iotProtocols/lorawan",
     text: "LoRaWAN Communication",
   },
   {
-    slug:"lwm2m",
+    href:"iotProtocols/lwm2m",
     text:"LWM2M communication"
   },
   {
-    slug: "mqtt",
+    href: "iotProtocols/mqtt",
     text: "MQTT Communication",
   },
 {
-  slug:"wifi",
+  href:"iotProtocols/wifi",
   text:"Wi-Fi Implementation"
 },
 
 
   {
-    slug: "xmpp",
+   href: "iotProtocols/xmpp",
     text: "XMPP Communication",
   },
 
+  ]
+}
 ];
 
+const ToggleButton = ({ label, onClick, isOpen }) => (
+  <button onClick={onClick} aria-expanded={isOpen} className='toggle-btn'>
+    <span className='toggle-btn-text'>{label}</span>
+   
+  </button>
+);
+
+const ToggleLinks = ({ toggle, links }) => (
+  <ul className={`toggle-links-list ${toggle ? "block" : "hidden"}`} aria-hidden={!toggle}>
+    {links.map((link, index) => (
+      <li key={index}>
+        <Link href={link.href} className='toggle-link-item'>
+          {link.text}
+        </Link>
+      </li>
+    ))}
+  </ul>
+);
+
 export default function RootLayout({ children }) {
-  const [isOpen, setIsOpen] = useState(true);
-  const handleToggle = () => setIsOpen(!isOpen);
+  const [toggles, setToggles] = useState({
+    basic: true,
+    intermediate: false,
+    advanced: false,
+  });
+
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const handleToggle = (toggleKey) => {
+    setToggles((prevState) => ({
+      ...prevState,
+      [toggleKey]: !prevState[toggleKey],
+    }));
+  };
 
   return (
-    <div className="flex flex-col md:flex-row min-h-screen bg-white">
-      {/* Mobile Toggle Button */}
-      <header className="md:hidden p-4 bg-white shadow-md z-10">
-        <button
-          onClick={handleToggle}
-          className="bg-blue-600 text-white px-4 py-2 rounded-md w-full"
-        >
-          {isOpen ? 'Hide IoT Protocols' : 'Show IoT Protocols'}
-        </button>
-      </header>
+    <div className='layout-wrapper'>
+      {/* Mobile Menu Button */}
+      <button  onClick={() => setSidebarOpen((prev)=>!prev)}>
+       {isSidebarOpen == true ? <p className='mobile-menu-btn'>✖ Close</p> :<p className='mobile-menu-btn'> ☰ More Experiments</p>}
+      </button>
 
       {/* Sidebar */}
-      <aside
-        className={`${
-          isOpen ? 'block' : 'hidden'
-        } md:block md:w-72 bg-gray-50 p-4 md:border-r`}
-      >
-        <div className="mb-4 mt-20">
-          <div className="w-full py-3 px-4 bg-gray-100 rounded-md shadow-sm">
-            <h1 className="font-semibold text-gray-800">IoT Protocols</h1>
-          </div>
-        </div>
+      <aside className={`sidebar-wrapper ${isSidebarOpen ? "open" : ""}`}>
+       
 
-        {/* Sidebar Links */}
-        <ul className="space-y-3">
-          {protocols.map((link, index) => (
-            <li key={index}>
-              <Link
-                href={`/iotProtocols/${link.slug}`}
-                className="block bg-white border border-gray-300 rounded-md px-4 py-2 text-gray-800 hover:text-orange-500 hover:shadow-lg transition-all duration-200"
-              >
-                {link.text}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        {experiments.map((experiment, index) => (
+          <div key={index} className="mb-6">
+            <ToggleButton
+              label={experiment.label}
+              onClick={() => handleToggle(experiment.key)}
+              isOpen={toggles[experiment.key]}
+            />
+            <ToggleLinks toggle={toggles[experiment.key]} links={experiment.links} />
+          </div>
+        ))}
       </aside>
 
       {/* Main Content */}
-      <main className="flex-1 p-6">{children}</main>
+      <main className='main-content'>{children}</main>
     </div>
   );
 }
+
+
+

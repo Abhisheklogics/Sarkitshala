@@ -94,18 +94,16 @@ export default async function Page({ params }) {
       if(data)
       {
         return (
-    <div className="w-full h-screen overflow-y-auto p-5 md:bg-[#FFF0E5] rounded-xl font-serif 
-                    md:w-[790px] md:h-fit md:ml-[30px] md:mt-20 md:p-5 
-                    2xl:w-[820px] 2xl:ml-[40px]">
+    <div className="articleContainer">
       
-      <h1 className="text-3xl font-bold mb-4 text-center">{data.title}</h1>
+      <h1 >{data.title}</h1>
 
-      <section className="bg-white p-6 rounded shadow-lg border border-black mb-6 mt-10">
+      <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
         <p>{data.description}</p>
       </section>
 
       {data.sections.map((section, index) => (
-        <section key={index} className="bg-white p-6 rounded shadow-lg border border-black mb-6 mt-10">
+        <section key={index}  className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
           {section.heading && (
             <h2 className="text-xl font-bold mb-4">{section.heading}</h2>
           )}

@@ -17,12 +17,12 @@ export const metadata = {
   canonical: "https://sarkitshala.com/raspberry",
   author: "Sarkitshala Team (Amarjeet Singh Chauhan, Aman Raj)",
 };
-const sameClass = `mt-4 max-w-4xl bg-white border border-black p-6 rounded shadow-lg`;
+
 export default function RaspberryPiPage() {
   return (
-    <main className="max-w-3xl mx-auto p-4 mt-6 md:mt-24 rounded-xl  text-justify">
+    <main  className="articleContainer">
       <header className="text-center">
-        <h1 className="text-center text-lg md:text-2xl  font-bold mb-3">
+        <h1>
           Complete Raspberry Pi Setup & Projects Guide
         </h1>
         <Image
@@ -228,9 +228,9 @@ while True:
 
 function ArticleSection({ title, content }) {
   return (
-    <section className={sameClass}>
-      <h2 className="text-2xl font-semibold text-blue-700 mb-4">{title}</h2>
-      <div className="space-y-4 text-gray-900">{content}</div>
+    <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
+      <h2 >{title}</h2>
+      <div>{content}</div>
     </section>
   );
 }

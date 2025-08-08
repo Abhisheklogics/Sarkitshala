@@ -7,18 +7,18 @@ const LEDArduino = ({data}) => {
     <>  
     
      <div className="articleContainer">
-      <h1 className="headingClass">Interfacing of LED with Arduino</h1>
+      <h1>Interfacing of LED with Arduino</h1>
       <Image src={data.image1} height={400} width={500} className="md:ml-28" />
-      <section className="sectionHeading">
-        <h2 className="text-2xl font-semibold">1. LED (Light Emitting Diode)</h2>
-        <p className="paragraphClass">It is a semiconductor device that emits light when an electric current passes through it. It is a
+      <section className="">
+        <h2>1. LED (Light Emitting Diode)</h2>
+        <p className="">It is a semiconductor device that emits light when an electric current passes through it. It is a
 special type of diode that converts electrical energy directly into light energy through a
 process called electroluminescence. LEDs are widely used in various applications, including
 display panels, indicator lights, lighting systems, and communication devices due to their
 high efficiency, low power consumption, and long lifespan.</p>
       </section>
       
-      <section className="mb-6  mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+      <section className="mb-6  mt-10 max-w-4xl  p-6 rounded shadow-lg border border-black">
         <h2 className="text-2xl font-semibold">2. How Does an LED Work?</h2>
         <h3 className="text-xl font-medium">2.1. Structure of an LED</h3>
         <ul className="list-disc pl-6">
@@ -41,7 +41,7 @@ high efficiency, low power consumption, and long lifespan.</p>
         </ol>
       </section>
       
-      <section className="mb-6 w-fit mt-10 max-w-4xl bg-white p-4 rounded shadow-lg border border-black">
+      <section className="mb-6 w-fit mt-10 max-w-4xl  p-4 rounded shadow-lg border border-black">
         <h2 className="text-2xl font-semibold">Semiconductor Materials and LED Colors</h2>
         <p>The color of an LED depends on the bandgap energy of the semiconductor material used.
         Different materials produce different wavelengths of light:</p>
@@ -108,7 +108,7 @@ Phosphide)</td>
           </tbody>
         </table>
       </section>
-      <section className="mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+      <section className="mt-10 max-w-4xl  p-6 rounded shadow-lg border border-black">
       <h2 className="text-2xl font-semibold">Characteristics of LEDs</h2>
       <ol className="list-decimal pl-6">
           <li>Low Power Consumption – LEDs consume very little energy, making them highly
@@ -121,7 +121,7 @@ Phosphide)</td>
           <li>Eco-Friendly – LEDs do not contain harmful substances like mercury.</li>
         </ol>
         </section>
-      <section className="mb-6 mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+      <section className="mb-6 mt-10 max-w-4xl  p-6 rounded shadow-lg border border-black">
         <h2 className="text-2xl font-semibold">8. Requirements</h2>
         <h3 className="text-xl font-medium">8.1 Hardware Components</h3>
         <ul className="list-disc pl-6">
@@ -144,7 +144,7 @@ Phosphide)</td>
         
        
       </section>
-      <section className="mt-10 max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+      <section className="mt-10 max-w-4xl  p-6 rounded shadow-lg border border-black">
       <h2 className="text-2xl font-semibold">Types of LEDs</h2>
 <p>There are different types of LEDs, categorized based on their applications and construction:</p>
 <h2 className="text-2xl font-semibold">Based on Construction:</h2>
@@ -183,7 +183,7 @@ Phosphide)</td>
         </ul>
       </section>
 
-      <section className="mt-10 md:w-full w-[350px] max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+      <section className="mt-10 md:w-full w-[350px] max-w-4xl  p-6 rounded shadow-lg border border-black">
       <h2 className="text-2xl font-semibold"> Advantages of LEDs Over Traditional Lighting</h2>
       <table className="mt-4 table-auto w-fit border-collapse border border-gray-500  text-sm md:text-base">
         <thead>
@@ -202,7 +202,7 @@ Phosphide)</td>
             { feature: "Eco-Friendly", led: "Yes (no toxic materials)", incandescent: "No (filament waste)", cfl: "No (contains mercury)" },
             { feature: "Switching Time", led: "Instant", incandescent: "Slow", cfl: "Moderate" }
           ].map((item, index) => (
-            <tr key={index} className="odd:bg-white even:bg-gray-100">
+            <tr key={index} className="odd: even:bg-gray-100">
               <td className="border border-gray-500 px-4 py-2">{item.feature}</td>
               <td className="border border-gray-500 px-4 py-2">{item.led}</td>
               <td className="border border-gray-500 px-4 py-2">{item.incandescent}</td>
@@ -212,7 +212,7 @@ Phosphide)</td>
         </tbody>
       </table>
       </section>
-      <section className="mt-10 md:w-full w-[350px] max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+      <section className="mt-10 md:w-full w-[350px] max-w-4xl  p-6 rounded shadow-lg border border-black">
         <h2 className="text-2xl font-semibold"> Hardware Components</h2>
       <table className=" mt-4 table-auto w-fit border-collapse border border-gray-500  text-sm md:text-base">
         <thead>
@@ -233,7 +233,7 @@ Phosphide)</td>
             { Component: "USB Cable", Quantity: "1", Description: "To connect Arduino to a PC" },
           
           ].map((item, index) => (
-            <tr key={index} className="odd:bg-white even:bg-gray-100">
+            <tr key={index} className="odd: even:bg-gray-100">
               <td className="border border-gray-500 px-4 py-2">{item.Component}</td>
               <td className="border border-gray-500 px-4 py-2">{item.Quantity}</td>
               <td className="border border-gray-500 px-4 py-2">{item.Description}</td>
@@ -243,7 +243,7 @@ Phosphide)</td>
         </tbody>
       </table>
       </section>
-      <section className="mt-10 md:w-full w-[350px] max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+      <section className="mt-10 md:w-full w-[350px] max-w-4xl  p-6 rounded shadow-lg border border-black">
         <h2 className="text-2xl font-semibold"> Software Requirements</h2>
       <table className=" mt-4 table-auto w-fit border-collapse border border-gray-500  text-sm md:text-base">
         <thead>
@@ -262,7 +262,7 @@ Phosphide)</td>
          
           
           ].map((item, index) => (
-            <tr key={index} className="odd:bg-white even:bg-gray-100">
+            <tr key={index} className="odd: even:bg-gray-100">
               <td className="border border-gray-500 px-4 py-2">{item.Software}</td>
               <td className="border border-gray-500 px-4 py-2">{item.Purpose}</td>
               
@@ -271,12 +271,12 @@ Phosphide)</td>
         </tbody>
       </table>
       </section>
-      <section className="mt-10 md:w-full w-[350px] max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+      <section className="mt-10 md:w-full w-[350px] max-w-4xl  p-6 rounded shadow-lg border border-black">
       <h2 className="text-2xl font-semibold mt-0"> Circuit Diagram</h2>
       <h2 className="text-2xl font-semibold ml-4"> LED Connection with Arduino</h2>
       <Image src={data.image4} width={600} height={400} alt="Arduino LED" className="ml-10" />
       </section>
-      <section className="mt-10 md:w-full w-[350px] max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+      <section className="mt-10 md:w-full w-[350px] max-w-4xl  p-6 rounded shadow-lg border border-black">
       <h2 className="text-2xl font-semibold mt-0"> Connection Details</h2>
       
       <table className=" mt-4 table-auto w-fit border-collapse border border-gray-500  text-sm md:text-base">
@@ -296,7 +296,7 @@ Phosphide)</td>
            
           
           ].map((item, index) => (
-            <tr key={index} className="odd:bg-white even:bg-gray-100">
+            <tr key={index} className="odd: even:bg-gray-100">
               <td className="border border-gray-500 px-4 py-2">{item.Component}</td>
               <td className="border border-gray-500 px-4 py-2">{item.ArduinoPin}</td>
               <td className="border border-gray-500 px-4 py-2">{item.Description}</td>
@@ -306,7 +306,7 @@ Phosphide)</td>
         </tbody>
       </table>
       </section> 
-      <section className="mt-10 md:w-full w-[350px] max-w-4xl bg-white p-6 rounded shadow-lg border border-black">    
+      <section className="mt-10 md:w-full w-[350px] max-w-4xl  p-6 rounded shadow-lg border border-black">    
           <h2 className="text-xl font-bold mb-4">Algorithm</h2>
       <ol className="list-decimal list-inside mb-6">
         <li>Start</li>
@@ -379,7 +379,7 @@ void loop() {
    
       </section>
 
-      <section className="mt-10 md:w-full w-[350px] max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+      <section className="mt-10 md:w-full w-[350px] max-w-4xl  p-6 rounded shadow-lg border border-black">
         <h2 className="text-2xl font-semibold">16. Troubleshooting Common Issues</h2>
         <table className="mt-4 table-auto border-collapse border border-gray-500">
           <thead>
@@ -396,7 +396,7 @@ void loop() {
             { Issue: "LED is not blinking", PossibleCauses: "Code issue, wrong pin",Solution:"Check code and ensure correct pin is assigned" },
             { Issue: "LED turns ON but doesn’t turn OFF", PossibleCauses: "Pin not set as OUTPUT",Solution:"Ensure pinMode(ledPin, OUTPUT); is present in setup()" },
           ].map((item, index) => (
-            <tr key={index} className="odd:bg-white even:bg-gray-100">
+            <tr key={index} className="odd: even:bg-gray-100">
               <td className="border border-gray-500 px-4 py-2">{item.Issue}</td>
               <td className="border border-gray-500 px-4 py-2">{item.PossibleCauses}</td>
               <td className="border border-gray-500 px-4 py-2">{item.Solution}</td>
@@ -406,7 +406,7 @@ void loop() {
         </tbody>
         </table>
       </section>
-      <section className="mt-10 md:w-full w-[350px] max-w-4xl bg-white p-6 rounded shadow-lg border border-black">
+      <section className="mt-10 md:w-full w-[350px] max-w-4xl  p-6 rounded shadow-lg border border-black">
         <h2 className="text-2xl font-semibold ">Conclusion</h2>
         <p>Interfacing an LED with Arduino is a great way to learn digital output control. By
 controlling the LED using digitalWrite() and analogWrite(), we can create blinking effects,

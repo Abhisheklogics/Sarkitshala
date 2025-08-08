@@ -3,8 +3,8 @@ import Link from "next/link";
 import { useState } from "react";
  const experiments = [
     {
-      label: "ESP Experiments",
-      key: "toggle1",
+       label: "Basic Experiments",
+    key: "basic",
       links: [
           { href: "/esp/led-blink-button-control", text: "LED Blink with Button " },
         { href: "/esp/motion-detection-alarm-system", text: "Motion Detection Alarm System" },
@@ -20,7 +20,13 @@ import { useState } from "react";
         { href: "/esp/ultrasonic-sensor", text:" Interfacing Ultrasonic Sensor" },
         { href: "/esp/flame-sensor", text: "Interfacing Flame Sensor" },
         { href: "/esp/sound-sensor", text: "Interfacing Sound Sensor" },
-        { href: "/esp/potentiometer", text: "Interfacing Potentiometer" },
+      ]
+      },
+      {
+          label: "Intermediate Experiments",
+    key: "intermediate",
+        links: [
+{ href: "/esp/potentiometer", text: "Interfacing Potentiometer" },
         { href: "/esp/ir-sensor", text: "Interfacing IR Sensor" },
         { href: "/esp/servo-motor", text: "Interfacing Servo Motor" },
          { href: "/esp/cam-wireless-camera", text: "Interfacing Cam Wireless" },
@@ -56,9 +62,10 @@ import { useState } from "react";
           { href: "/esp/industrial-iot-gateway-real-time-monitoring", text: "Industrial IoT Gateway for Real-Time Monitoring" },
         { href: "/esp/smart-agriculture-system-drone-control", text: "Agriculture System with Automated Drone Control" }
 
-      ],
-    },
-   
+         ]
+        }
+        
+       
   ];
   
 
@@ -82,7 +89,11 @@ const ToggleLinks = ({ toggle, links }) => (
   </ul>
 );
 export default function RootLayout({ children }) {
-  const [toggles, setToggles] = useState(true);
+    const [toggles, setToggles] = useState({
+      basic: true,
+      intermediate: false,
+      advanced: false,
+    });
 
   const [isSidebarOpen, setSidebarOpen] = useState(false);
 
@@ -109,7 +120,7 @@ export default function RootLayout({ children }) {
             <ToggleButton
               label={experiment.label}
               onClick={() => handleToggle(experiment.key)}
-              isOpen={toggles[experiment.key]}
+             
             />
             <ToggleLinks toggle={toggles[experiment.key]} links={experiment.links} />
           </div>

@@ -2,47 +2,11 @@
 import Link from "next/link";
 import { useState } from "react";
 
-// Toggle Button Component
-const ToggleButton = ({ label, onClick, isOpen }) => (
-  <button
-    onClick={onClick}
-    aria-expanded={isOpen}
-    className="w-full md:w-[310px] text-left mb-4 py-3 px-2 md:py-2 relative rounded transition"
-  >
-    <div className="flex justify-between items-center">
-      <h2 className="font-semibold text-gray-800 text-base md:text-lg">{label}</h2>
-     
-    </div>
-  </button>
-);
-
-// List of Experiment Links
-const ExperimentLinks = ({ toggle, links }) => (
-  <ul className={`space-y-3 ${toggle ? 'block' : 'hidden'}`}>
-    {links.map((link, index) => (
-      <li key={index}>
-        <Link
-          href={link.href}
-          className="block text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded px-4 py-2 hover:text-orange-500 hover:border-orange-400 transition"
-        >
-          {link.text}
-        </Link>
-      </li>
-    ))}
-  </ul>
-);
-
-export default function RootLayout({ children }) {
-  const [toggles, setToggles] = useState({ toggle1: true });
-
-  const handleToggle = (key) => {
-    setToggles(prev => ({ ...prev, [key]: !prev[key] }));
-  };
 
   const experiments = [
     {
-      label: "Raspberry Pi Experiments",
-      key: "toggle1",
+       label: "Basic Experiments",
+    key: "basic",
       links: [
         { href: "/raspberry/interfacing-led-raspberrypi", text: "Interfacing LED" },
         { href: "/raspberry/interfacing-laser-sensor-raspberrypi", text: "Interfacing Laser Sensor" },
@@ -63,6 +27,14 @@ export default function RootLayout({ children }) {
         { href: "/raspberry/weather-station-raspberry-pi", text: "Weather Station" },
         { href: "/raspberry/security-camera-system", text: "Security Camera System" },
         { href: "/raspberry/controlled-drone", text: "Raspberry Pi-Controlled Drone" },
+        
+      ]
+    },
+
+        { 
+          label: "Intermediate Experiments",
+    key: "intermediate",
+      links: [
         { href: "/raspberry/drone-delivery-system-raspberry-pi", text: "Drone Delivery System" },
         { href: "/raspberry/automated-lighting-system", text: "Automated Lighting System" },
         { href: "/raspberry/health-monitoring-system", text: "Health Monitoring System" },
@@ -96,37 +68,72 @@ export default function RootLayout({ children }) {
         { href: "/raspberry/interfacing-soil-humidity-sensor-raspberrypi", text: "Soil Humidity Sensor" },
       ]
     }
+    
   ];
 
+
+const ToggleButton = ({ label, onClick, isOpen }) => (
+  <button onClick={onClick} aria-expanded={isOpen} className='toggle-btn'>
+    <span className='toggle-btn-text'>{label}</span>
+   
+  </button>
+);
+
+const ToggleLinks = ({ toggle, links }) => (
+  <ul className={`toggle-links-list ${toggle ? "block" : "hidden"}`} aria-hidden={!toggle}>
+    {links.map((link, index) => (
+      <li key={index}>
+        <Link href={link.href} className='toggle-link-item'>
+          {link.text}
+        </Link>
+      </li>
+    ))}
+  </ul>
+);
+
+export default function RootLayout({ children }) {
+  const [toggles, setToggles] = useState({
+    basic: true,
+    intermediate: false,
+    advanced: false,
+  });
+
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
+
+  const handleToggle = (toggleKey) => {
+    setToggles((prevState) => ({
+      ...prevState,
+      [toggleKey]: !prevState[toggleKey],
+    }));
+  };
+
   return (
-    <>
-      <header className="md:hidden mt-36 px-4">
-        <button
-          className="bg-blue-600 text-white px-4 py-2 rounded"
-          onClick={() => handleToggle("toggle1")}
-        >
-          Raspberry Pi Experiments
-        </button>
-      </header>
+    <div className='layout-wrapper'>
+      {/* Mobile Menu Button */}
+      <button  onClick={() => setSidebarOpen((prev)=>!prev)}>
+       {isSidebarOpen == true ? <p className='mobile-menu-btn'>✖ Close</p> :<p className='mobile-menu-btn'> ☰ More Experiments</p>}
+      </button>
 
-      <nav className={`mt-2 ${toggles.toggle1 ? 'block' : 'hidden'} md:flex`}>
-        <aside className="md:fixed md:w-80 2xl:h-[600px] md:h-[500px] overflow-y-auto p-4 mt-6 md:mt-28 md:ml-4 2xl:ml-10  rounded shadow-sm">
-          {experiments.map((exp) => (
-            <section key={exp.key} className="mb-6">
-              <ToggleButton
-                label={exp.label}
-                onClick={() => handleToggle(exp.key)}
-                isOpen={toggles[exp.key]}
-              />
-              <ExperimentLinks toggle={toggles[exp.key]} links={exp.links} />
-            </section>
-          ))}
-        </aside>
-      </nav>
+      {/* Sidebar */}
+      <aside className={`sidebar-wrapper ${isSidebarOpen ? "open" : ""}`}>
+       
 
-      <main className="flex-1 p-4 ml-0 md:ml-80">
-        {children}
-      </main>
-    </>
+        {experiments.map((experiment, index) => (
+          <div key={index} className="mb-6">
+            <ToggleButton
+              label={experiment.label}
+              onClick={() => handleToggle(experiment.key)}
+              isOpen={toggles[experiment.key]}
+            />
+            <ToggleLinks toggle={toggles[experiment.key]} links={experiment.links} />
+          </div>
+        ))}
+      </aside>
+
+      {/* Main Content */}
+      <main className='main-content'>{children}</main>
+    </div>
   );
 }
+
+

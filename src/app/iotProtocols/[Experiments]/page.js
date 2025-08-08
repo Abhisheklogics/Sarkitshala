@@ -6,65 +6,65 @@ const CodeBox = dynamic(() => import('@/components/code.jsx'));
 
 function LoRaExperimentCom({ data }) {
   return (
-    <div className="md:w-[700px] md:mt-20 mt-4 md:ml-20 py-2 max-w-5xl mx-auto">
-      <h1 className="text-3xl font-bold text-center mb-6 text-center">LoRa/LoRaWAN Communication</h1>
+    <div  className="articleContainer">
+      <h1 >LoRa/LoRaWAN Communication</h1>
 
-      <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-2">Objective</h2>
-        <p className="text-gray-700">{data.objective}</p>
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
+        <h2 >Objective</h2>
+        <p className="">{data.objective}</p>
       </section>
 
-      <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-2">Hardware Requirements</h2>
-        <ul className="list-disc list-inside text-gray-700">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
+        <h2 >Hardware Requirements</h2>
+        <ul className="list-disc list-inside ">
           {data.hardwareRequirements.map((item, idx) => (
             <li key={idx}>{item}</li>
           ))}
         </ul>
       </section>
 
-      <section className="mb-6">
-        <h2 className="text-xl font-semibold mb-2">Wiring</h2>
-        <ul className="list-disc list-inside text-gray-700">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
+        <h2 >Wiring</h2>
+        <ul className="list-disc list-inside ">
           {Object.entries(data.wiring).map(([key, value]) => (
             key !== 'note' ? <li key={key}>{key} → {value}</li> : null
           ))}
         </ul>
-        <p className="text-sm mt-2 text-gray-600 italic">{data.wiring.note}</p>
+        <p className="text-sm mt-2 italic">{data.wiring.note}</p>
       </section>
 
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">Libraries</h2>
-        <ul className="list-disc list-inside text-gray-700">
+        <ul className="list-disc list-inside ">
           {Object.entries(data.libraries).map(([lib, note]) => (
             <li key={lib}><strong>{lib}</strong>: {note}</li>
           ))}
         </ul>
       </section>
 
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">Transmitter Code</h2>
         <CodeBox code={data.transmitterCode.trim()} language="cpp" />
       </section>
 
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">Receiver Code</h2>
         <CodeBox code={data.receiverCode.trim()} language="cpp" />
       </section>
 
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">TTN Integration</h2>
-        <ul className="list-decimal list-inside text-gray-700 mb-4">
+        <ul className="list-decimal list-inside p mb-4">
           {data.ttnIntegration.steps.map((step, idx) => (
             <li key={idx}>{step}</li>
           ))}
         </ul>
         <h3 className="text-lg font-semibold mb-2">LMIC Code</h3>
         <CodeBox code={data.ttnIntegration.lmicCode.trim()} language="cpp" />
-        <p className="mt-2 text-gray-600">View data on: <strong>{data.ttnIntegration.viewData}</strong></p>
+        <p className="mt-2 -600">View data on: <strong>{data.ttnIntegration.viewData}</strong></p>
       </section>
 
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">LoRa vs LoRaWAN</h2>
         <div className="overflow-x-auto">
           <table className="table-auto w-full border border-collapse border-gray-300 text-sm text-left">
@@ -95,19 +95,19 @@ function LoRaExperimentCom({ data }) {
 }
 function Lwm2mExperimentCom({ data }) {
   return (
-    <div className="md:w-[700px] md:mt-20 mt-4 md:ml-20 py-2 max-w-5xl mx-auto">
+    <div className="articleContainer">
       <h1 className="text-3xl font-bold text-center mb-6">LWM2M with ESP32 using Eclipse Leshan</h1>
 
       
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">Objective</h2>
-        <p className="text-gray-700">{data.objective}</p>
+        <p className="p">{data.objective}</p>
       </section>
 
       {/* Hardware Requirements */}
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">Hardware Requirements</h2>
-        <ul className="list-disc list-inside text-gray-700">
+        <ul className="list-disc list-inside ">
           {data.hardwareRequirements.map((item, idx) => (
             <li key={idx}>{item}</li>
           ))}
@@ -115,9 +115,9 @@ function Lwm2mExperimentCom({ data }) {
       </section>
 
       {/* Step 1: Server Setup */}
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">Step 1: Leshan Server Setup</h2>
-        <ul className="list-decimal list-inside text-gray-700">
+        <ul className="list-decimal list-inside ">
           {data.step1_serverSetup.map((step, idx) => (
             <li key={idx}>{step}</li>
           ))}
@@ -125,11 +125,11 @@ function Lwm2mExperimentCom({ data }) {
       </section>
 
       {/* Step 2: Client Setup */}
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">Step 2: ESP32 Client Setup</h2>
         <p><strong>Environment:</strong> {data.step2_clientSetup.environment}</p>
         <h3 className="font-semibold mt-2">Required Libraries</h3>
-        <ul className="list-disc list-inside text-gray-700">
+        <ul className="list-disc list-inside ">
           {data.step2_clientSetup.libraries.map((lib, idx) => (
             <li key={idx}>{lib}</li>
           ))}
@@ -139,7 +139,7 @@ function Lwm2mExperimentCom({ data }) {
       </section>
 
       {/* Step 3: LWM2M Client Code */}
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">Step 3: LWM2M Client Code</h2>
         <h3 className="font-semibold mt-2">WiFi Setup</h3>
         <CodeBox code={data.step3_lwm2mClientCode.wifiSetup.trim()} language="cpp" />
@@ -150,7 +150,7 @@ function Lwm2mExperimentCom({ data }) {
       </section>
 
       {/* Step 4: Communication Setup */}
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">Step 4: LWM2M Communication Functions</h2>
         <h3 className="font-semibold mt-2">Client Init</h3>
         <CodeBox code={data.step4_communication.clientSetup.trim()} language="cpp" />
@@ -159,21 +159,21 @@ function Lwm2mExperimentCom({ data }) {
       </section>
 
       {/* Step 5: Monitoring */}
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">Step 5: Monitoring</h2>
-        <p className="text-gray-700">{data.step5_monitoring}</p>
+        <p className="">{data.step5_monitoring}</p>
       </section>
 
       {/* Step 6: Testing */}
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">Step 6: Testing</h2>
-        <p className="text-gray-700">{data.step6_testing}</p>
+        <p className="">{data.step6_testing}</p>
       </section>
 
       {/* Step 7: Security */}
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">Step 7: Security Configuration</h2>
-        <p className="text-gray-700"><strong>Objective:</strong> {data.step7_security.objective}</p>
+        <p className=""><strong>Objective:</strong> {data.step7_security.objective}</p>
         <CodeBox code={data.step7_security.code.trim()} language="cpp" />
       </section>
     </div>
@@ -181,17 +181,17 @@ function Lwm2mExperimentCom({ data }) {
 }
 function ProtocolsCom({ data }) {
   return (
-    <div className="md:w-[700px] md:mt-20 md:ml-20  px-4 py-8 max-w-5xl mx-auto">
+    <div className="articleContainer">
       <h1 className="text-3xl font-bold text-center mb-6 ">{data.title}</h1>
 
-      <section className="mb-6">
+      <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">Objective</h2>
-        <p className="text-gray-700">{data.objective}</p>
+        <p className="">{data.objective}</p>
       </section>
 
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">Methodology</h2>
-        <ul className="list-disc list-inside text-gray-700">
+        <ul className="list-disc list-inside ">
           {data.methodology.map((item, idx) => (
             <li key={idx}>{item}</li>
           ))}
@@ -207,7 +207,7 @@ function ProtocolsCom({ data }) {
           >
             <h3 className="text-lg font-bold mb-2">{step.title}</h3>
             {step.description && (
-              <p className="mb-3 text-gray-700">{step.description}</p>
+              <p className="mb-3 ">{step.description}</p>
             )}
             {step.commands && (
               <CodeBox code={step.commands.join('\n')} language="bash" />
@@ -217,18 +217,18 @@ function ProtocolsCom({ data }) {
         ))}
       </section>
 
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">Applications</h2>
-        <ul className="list-disc list-inside text-gray-700">
+        <ul className="list-disc list-inside ">
           {data.applications.map((app, idx) => (
             <li key={idx}>{app}</li>
           ))}
         </ul>
       </section>
 
-      <section className="mb-6">
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
         <h2 className="text-xl font-semibold mb-2">Future Research Concepts</h2>
-        <ul className="list-disc list-inside text-gray-700">
+        <ul className="list-disc list-inside ">
           {data.futureResearchConcepts.map((item, idx) => (
             <li key={idx}>{item}</li>
           ))}
@@ -239,24 +239,28 @@ function ProtocolsCom({ data }) {
 }
 function WifiEsp32RestApi({ data }) {
   return (
-    <div className="md:w-[700px] md:mt-20 mt-4 md:ml-20 py-2 max-w-5xl mx-auto">
+    <div className="articleContainer">
       <h1 className="text-3xl font-bold mb-2 text-center">{data.title}</h1>
-      <p className="text-gray-600 mb-6">{data.objective}</p>
-
+      <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
+      <p className="-600 mb-6">{data.objective}</p>
+</section>
+ <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
       <h2 className="text-xl font-semibold mb-2">Benefits</h2>
       <ul className="list-disc list-inside mb-6">
         {data.benefits.map((benefit, index) => (
           <li key={index} className="mb-1">{benefit}</li>
         ))}
       </ul>
-
+      </section>
+ <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
       <h2 className="text-xl font-semibold mb-2">Required Hardware</h2>
       <ul className="list-disc list-inside mb-6">
         {data.hardware.map((item, index) => (
           <li key={index} className="mb-1">{item}</li>
         ))}
       </ul>
-
+      </section>
+ <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
       <h2 className="text-xl font-semibold mb-2">Steps</h2>
       <ol className="list-decimal list-inside mb-6 space-y-6">
         {data.steps.map((step, index) => (
@@ -271,6 +275,7 @@ function WifiEsp32RestApi({ data }) {
           </li>
         ))}
       </ol>
+      </section>
     </div>
   );
 }
@@ -280,9 +285,9 @@ function WifiEsp32RestApi({ data }) {
 
 function MqttEsp32PubSubClient  ({data}) {
   return (
-    <div className="md:w-[700px] md:mt-20 mt-4 md:ml-20 py-2 max-w-5xl mx-auto">
+    <div className="articleContainer">
       <h1 className="text-3xl font-bold mb-2 text-center">{data.title}</h1>
-      <p className="text-gray-600 mb-6">{data.shortDesc}</p>
+      <p className="-600 mb-6">{data.shortDesc}</p>
 
       <h2 className="text-xl font-semibold mb-2">Description</h2>
       <p className="mb-6">{data.longDesc}</p>
@@ -317,11 +322,11 @@ function MqttEsp32PubSubClient  ({data}) {
 
 function XmppRaspberryPiSleekxmpp() {
   return (
-    <div className="md:w-[700px] md:mt-20 mt-4 md:ml-20 py-2 max-w-5xl mx-auto">
+    <div  className="articleContainer">
       <h1 className="text-3xl font-bold mb-2 text-center">
         XMPP Implementation: Raspberry Pi using SleekXMPP Library for IoT Communication
       </h1>
-      <p className="text-gray-600 mb-6">
+      <p className="-600 mb-6">
         To implement XMPP communication on a Raspberry Pi using the SleekXMPP library for real-time instant messaging, allowing IoT devices to exchange data instantly.
       </p>
 

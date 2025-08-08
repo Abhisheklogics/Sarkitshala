@@ -162,7 +162,7 @@ export function HomePage() {
                       key={index}
                       href={img.href}
                       className="absolute inset-0 block w-full h-full"
-                      aria-label={`Navigate to ${img.href}`}
+                      
                     />
                   ))}
                 </div>

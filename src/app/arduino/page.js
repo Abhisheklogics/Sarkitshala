@@ -1,7 +1,7 @@
 import image1 from '../../../public/images/Arduino_SKT.webp';
-
+import Image from 'next/image';
 import Link from 'next/link';
-import { LensCard } from '@/components/LensCard';
+
 export const metadata = {
   title: "Best Arduino Projects & Tutorials for Beginners - Sarkitshala",
   description:
@@ -64,36 +64,40 @@ export const metadata = {
 
 export default function Page() {
  
-  const headingClass = "headingClass";
-  const paragraphClass = "paragraphText";
-   const sectionClass = "sectionHeading";
+
 
   return (
     <div className="articleContainer mt-20  md:ml-[200px]">
       <main className='' >
         <div>
-          <h1 id="Arduino" className="headingClass">
+          <h1 id="Arduino" >
             Best Arduino Projects, Pin Guides & Step-by-Step Tutorials for Beginners
           </h1>
+ <Image
+          src={image1}
+          alt="Arduino Microcontroller Setup and Projects"
+          width={700}
+          height={400}
+          className="rounded-lg mx-auto"
+          
+        />
 
-          <LensCard image={image1} />
-
-          <section className={sectionClass}>
-            <h2 id="Overview-of-Arduino" className={headingClass}>
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
+            <h2 id="Overview-of-Arduino" >
               What is Arduino? Understand its Features, Boards & Benefits
             </h2>
-            <p className={paragraphClass}>
+            <p>
               Arduino is an open-source electronics platform based on easy-to-use hardware and software.
               It allows users to read data from sensors and control actuators like motors, LEDs, and displays.
               It is widely used in DIY projects, IoT systems, robotics, and educational kits.
             </p>
           </section>
 
-          <section className={sectionClass}>
-            <h2 id="Arduino-Pins" className={headingClass}>
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
+            <h2 id="Arduino-Pins" >
               How to Use Digital, Analog, and PWM Pins
             </h2>
-            <p className={paragraphClass}>
+            <p >
               Understanding the types of pins is crucial to building Arduino projects:
             </p>
           </section>
@@ -130,19 +134,19 @@ export default function Page() {
                 "For communication between boards or modules:\n- TX/RX: Serial\n- SDA/SCL: I2C\n- MOSI/MISO/SCK: SPI",
             },
           ].map((item) => (
-            <section key={item.id} className={sectionClass}>
-              <h3 id={item.id} className={headingClass}>{item.title}</h3>
-              <p className={paragraphClass} style={{ whiteSpace: "pre-line" }}>
+            <section key={item.id} className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
+              <h3 id={item.id} >{item.title}</h3>
+              <p  style={{ whiteSpace: "pre-line" }}>
                 {item.desc}
               </p>
             </section>
           ))}
 
-          <section className={sectionClass}>
-            <h2 id="Steps-to-Get-Started-with-Arduino" className={headingClass}>
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
+            <h2 id="Steps-to-Get-Started-with-Arduino" >
               Steps to Get Started with Arduino
             </h2>
-            <ol className={`list-decimal list-inside ${paragraphClass}`}>
+            <ol className={`list-decimal list-inside `}>
               <li>Download and install Arduino IDE.</li>
               <li>Connect your Arduino board using USB cable.</li>
               <li>Select your board and COM port from Tools menu.</li>
@@ -152,40 +156,40 @@ export default function Page() {
             </ol>
           </section>
 
-          <section className={sectionClass}>
-            <h3 id="Conclusion" className={headingClass}>Conclusion</h3>
-            <p className={paragraphClass}>
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
+            <h3 id="Conclusion" >Conclusion</h3>
+            <p>
               Arduino makes learning electronics fun and accessible. With just a few components and a USB cable,
               you can start building real-world projects and gain valuable hardware and programming skills.
             </p>
           </section>
 
-          <section className={sectionClass}>
-            <h2 className={headingClass}>Frequently Asked Questions about Arduino</h2>
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
+            <h2 >Frequently Asked Questions about Arduino</h2>
             <div className="mt-4 space-y-4">
               <div>
                 <h3 className="font-semibold">1. What is Arduino used for?</h3>
-                <p className={paragraphClass}>
+                <p >
                   Arduino is widely used for DIY electronics, IoT projects, robotics, and STEM education. It helps you interact with the physical world using sensors and actuators.
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold">2. Is Arduino good for beginners?</h3>
-                <p className={paragraphClass}>
+                <p >
                   Yes! Arduino has a simple interface, a large supportive community, and plenty of tutorials. It's ideal for beginners who want to learn electronics and coding.
                 </p>
               </div>
               <div>
                 <h3 className="font-semibold">3. Which Arduino board is best to start with?</h3>
-                <p className={paragraphClass}>
+                <p >
                   The Arduino Uno is the most recommended board for beginners due to its reliability, community support, and simplicity.
                 </p>
               </div>
             </div>
           </section>
 
-          <div className={sectionClass}>
-            <h3 className={headingClass}>
+          <div className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
+            <h3 >
               More Arduino Experiments 
             </h3>
             <div >

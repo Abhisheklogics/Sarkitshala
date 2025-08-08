@@ -4,14 +4,14 @@ const CodeBox = dynamic(() => import('@/components/code.jsx'));
 
 export default function Esp({ data }) {
   return (
-    <div className="containerClass">
+    <div className="articleContainer">
       
-      <h1 className="headingClass">{data.mainTitle}</h1>
+      <h1 >{data.mainTitle}</h1>
 
       {/* Title 1 - Introduction */}
       {data.title1 && (
-        <section className="containerClass">
-          <h2 className="text-xl font-bold mb-4">{data.title1}</h2>
+        <section className="">
+          <h2 >{data.title1}</h2>
           <p>{data.para1}</p>
         </section>
       )}
@@ -19,7 +19,7 @@ export default function Esp({ data }) {
       {/* Title 2 - Working Principle */}
       {data.title2 && (
         <section className="containerClass">
-          <h2 className="text-xl font-bold mb-4">{data.title2}</h2>
+          <h2 >{data.title2}</h2>
           <p>{data.para2}</p>
 
           {/* Working Steps */}
@@ -33,15 +33,15 @@ export default function Esp({ data }) {
 
           {/* Formula */}
           {data.formula && (
-            <p className="mt-4 font-semibold">Formula: {data.formula}</p>
+            <p >Formula: {data.formula}</p>
           )}
         </section>
       )}
 
       {/* Title 3 - Components Required */}
       {data.title3 && data.components?.length > 0 && (
-        <section className="containerClass">
-          <h2 className="text-xl font-bold mb-4">{data.title3}</h2>
+        <section className="">
+          <h2 >{data.title3}</h2>
           <ul className="list-disc pl-6">
             {data.components.map((item, idx) => (
               <li key={idx}>{item}</li>
@@ -52,7 +52,7 @@ export default function Esp({ data }) {
 
       {data.title4 && data.pinConfig?.length > 0 && (
         <section className="containerClass">
-          <h2 className="text-xl font-bold mb-4">{data.title4}</h2>
+          <h2 >{data.title4}</h2>
           <ul className="list-disc pl-6">
             {data.pinConfig.map((item, idx) => (
               <li key={idx}>
@@ -66,8 +66,8 @@ export default function Esp({ data }) {
 
       {/* Title 5 - Wiring */}
       {data.title5 && data.wiring?.length > 0 && (
-        <section className="containerClass">
-          <h2 className="text-xl font-bold mb-4">{data.title5}</h2>
+        <section className="">
+          <h2 >{data.title5}</h2>
           <ul className="list-decimal pl-6">
             {data.wiring.map((item, idx) => (
               <li key={idx}>
@@ -81,7 +81,7 @@ export default function Esp({ data }) {
       {/* Title 6 - Arduino Code */}
       {data.title6 && data.code && (
         <section className="containerClass">
-          <h2 className="text-xl font-bold mb-4">{data.title6}</h2>
+          <h2>{data.title6}</h2>
           {data.code && 
             <CodeBox code={data.code.replace(/\\n/g, '\n')} language={'cpp'} />
           }
@@ -90,8 +90,8 @@ export default function Esp({ data }) {
 
       {/* Title 7 - Code Explanation */}
       {data.title7 && data.codeExplanation?.length > 0 && (
-        <section className="containerClass">
-          <h2 className="text-xl font-bold mb-4">{data.title7}</h2>
+        <section className="">
+          <h2 >{data.title7}</h2>
           <ul className="list-decimal pl-6">
             {data.codeExplanation.map((item, idx) => (
               <li key={idx}>
@@ -104,8 +104,8 @@ export default function Esp({ data }) {
 
       {/* Title 8 - Applications */}
       {data.title8 && data.applications?.length > 0 && (
-        <section className="containerClass">
-          <h2 className="text-xl font-bold mb-4">{data.title8}</h2>
+        <section className="">
+          <h2 >{data.title8}</h2>
           <ul className="list-disc pl-6">
             {data.applications.map((item, idx) => (
               <li key={idx}>{item}</li>
@@ -116,8 +116,8 @@ export default function Esp({ data }) {
 
       {/* Title 9 - Conclusion */}
       {data.title9 && data.conclusion && (
-        <section className="containerClass">
-          <h2 className="text-xl font-bold mb-4">{data.title9}</h2>
+        <section className="">
+          <h2 >{data.title9}</h2>
           <p>{data.conclusion}</p>
         </section>
       )}
