@@ -12,45 +12,45 @@ const experiments = [
    
   links:[
     {
-    href: "iotProtocols/amqp",
+    href: "/amqp",
     text: "AMQP Communication",
   },
   {
-    href: "iotProtocols/bluetooth",
+    href: "bluetooth",
     text: "Bluetooth Communication",
   },
   {
-    href: "iotProtocols/gsm",
+    href: "gsm",
     text: "GSM Communication",
   },
   {
-    href: "iotProtocols/coap",
+    href: "coap",
     text: "CoAP Communication",
   },
   {
-    href:"iotProtocols/dds",
+    href:"dds",
     text:"Data Distribution Service Communication"
   },
   {
-    href: "iotProtocols/lorawan",
+    href: "lorawan",
     text: "LoRaWAN Communication",
   },
   {
-    href:"iotProtocols/lwm2m",
+    href:"lwm2m",
     text:"LWM2M communication"
   },
   {
-    href: "iotProtocols/mqtt",
+    href: "mqtt",
     text: "MQTT Communication",
   },
 {
-  href:"iotProtocols/wifi",
+  href:"wifi",
   text:"Wi-Fi Implementation"
 },
 
 
   {
-   href: "iotProtocols/xmpp",
+   href: "xmpp",
     text: "XMPP Communication",
   },
 
