@@ -9,7 +9,7 @@ const Drone = () => {
       
         <h1 className="text-3xl font-bold   mb-4">Drone Technology</h1>
         <Image height={400} width={600} src={image1} className='ml-10'/>
-        <div className="text-lg  ">
+        <div className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
           <p className="mb-4">
             A drone typically consists of several key components that allow it to fly and operate effectively.
           </p>

@@ -4,13 +4,13 @@ const CodeBox = dynamic(() => import('@/components/code.jsx'));
 
 export default function Esp({ data }) {
   return (
-    <div className="articleContainer">
+    <div className="articleContainer  mt-10 md:mt-0 ml-[-55px] w-[60%] md:w-[95%] md:ml-0">
       
       <h1 >{data.mainTitle}</h1>
 
       {/* Title 1 - Introduction */}
       {data.title1 && (
-        <section className="">
+        <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
           <h2 >{data.title1}</h2>
           <p>{data.para1}</p>
         </section>
@@ -18,7 +18,7 @@ export default function Esp({ data }) {
 
       {/* Title 2 - Working Principle */}
       {data.title2 && (
-        <section className="containerClass">
+        <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
           <h2 >{data.title2}</h2>
           <p>{data.para2}</p>
 
@@ -40,7 +40,7 @@ export default function Esp({ data }) {
 
       {/* Title 3 - Components Required */}
       {data.title3 && data.components?.length > 0 && (
-        <section className="">
+        <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
           <h2 >{data.title3}</h2>
           <ul className="list-disc pl-6">
             {data.components.map((item, idx) => (
@@ -51,7 +51,7 @@ export default function Esp({ data }) {
       )}
 
       {data.title4 && data.pinConfig?.length > 0 && (
-        <section className="containerClass">
+        <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
           <h2 >{data.title4}</h2>
           <ul className="list-disc pl-6">
             {data.pinConfig.map((item, idx) => (
@@ -66,7 +66,7 @@ export default function Esp({ data }) {
 
       {/* Title 5 - Wiring */}
       {data.title5 && data.wiring?.length > 0 && (
-        <section className="">
+        <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
           <h2 >{data.title5}</h2>
           <ul className="list-decimal pl-6">
             {data.wiring.map((item, idx) => (
@@ -80,7 +80,7 @@ export default function Esp({ data }) {
 
       {/* Title 6 - Arduino Code */}
       {data.title6 && data.code && (
-        <section className="containerClass">
+        <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
           <h2>{data.title6}</h2>
           {data.code && 
             <CodeBox code={data.code.replace(/\\n/g, '\n')} language={'cpp'} />
@@ -90,7 +90,7 @@ export default function Esp({ data }) {
 
       {/* Title 7 - Code Explanation */}
       {data.title7 && data.codeExplanation?.length > 0 && (
-        <section className="">
+        <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
           <h2 >{data.title7}</h2>
           <ul className="list-decimal pl-6">
             {data.codeExplanation.map((item, idx) => (
@@ -104,7 +104,7 @@ export default function Esp({ data }) {
 
       {/* Title 8 - Applications */}
       {data.title8 && data.applications?.length > 0 && (
-        <section className="">
+        <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
           <h2 >{data.title8}</h2>
           <ul className="list-disc pl-6">
             {data.applications.map((item, idx) => (
@@ -116,7 +116,7 @@ export default function Esp({ data }) {
 
       {/* Title 9 - Conclusion */}
       {data.title9 && data.conclusion && (
-        <section className="">
+        <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
           <h2 >{data.title9}</h2>
           <p>{data.conclusion}</p>
         </section>

@@ -108,7 +108,7 @@ export default function RootLayout({ children }) {
     <div className='layout-wrapper'>
       {/* Mobile Menu Button */}
       <button  onClick={() => setSidebarOpen((prev)=>!prev)}>
-       {isSidebarOpen == true ? <p className='mobile-menu-btn'>✖ Close</p> :<p className='mobile-menu-btn'> ☰ Menu</p>}
+       {isSidebarOpen == true ? <p className='mobile-menu-btn'>✖ Close</p> :<p className='mobile-menu-btn'> ☰ More Experiments</p>}
       </button>
 
       {/* Sidebar */}

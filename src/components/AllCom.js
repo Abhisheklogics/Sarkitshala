@@ -13,27 +13,27 @@ export default function AllCom({ data }) {
   {data.image1 && <Image src={data.image1} height={800} width={740} className='md:ml-1 md:mt-4'/>}
 
         {data.title1 && (
-          <section >
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
             <h2 >{data.title1}</h2>
             <p>{data.para1}</p>
           </section>
         )}
          {data.title2 && (
-          <section >
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
             <h2 >{data.title2}</h2>
             <p>{data.para2}</p>
           </section>
         )}
 
         {data.arrangement && (
-          <section >
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
             <h2 >Arrangement</h2>
             <pre >{data.arrangement}</pre>
           </section>
         )}
 
         {data.title3 && data.types && data.types.length > 0 && (
-          <section >
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
             <h2 >{data.title3}</h2>
             {data.types.map((type, index) => (
               <div key={index} className="mb-6">
@@ -49,7 +49,7 @@ export default function AllCom({ data }) {
         )}
 
          {data.title10 && (
-          <section >
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
             <p className="headingClass">{data.title10}</p>
             <p className=" ml-4  mb-2">{data.para5}</p>
             <p className="ml-4 mb-2">{data.para6}</p>
@@ -60,7 +60,7 @@ export default function AllCom({ data }) {
         )}
 
         {data.title4 && data.configurations && data.configurations.length > 0 && (
-          <section>
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
             <h2 >{data.title4}</h2>
             {data.configurations.map((config, index) => (
               <div key={index} className="mb-6">
@@ -78,20 +78,20 @@ export default function AllCom({ data }) {
         )}
 
         {data.title5 && data.para2 && (
-          <section >
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
             <h2 >{data.title5}</h2>
             <p>{data.para2}</p>
           </section>
         )}
          {data.title8 && (
-          <section >
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
             <h2 >{data.title8}</h2>
             <p>{data.para4}</p>
           </section>
         )}
 
         {data.algorithms && data.algorithms.length > 0 && (
-          <section >
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
             <h2 >Algorithm</h2>
             <ol className="list-decimal pl-6">
               {data.algorithms.map((algo, index) => (
@@ -110,13 +110,13 @@ export default function AllCom({ data }) {
 
         
         {data.title11 && data.para9 && (
-          <section >
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
             <h2 >{data.title11}</h2>
             <p>{data.para9}</p>
           </section>
         )}
 
-    <section > 
+    <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm"> 
               <h3  id="Code"> Arduino Code</h3>    
   {data.code && 
   <CodeBlock
@@ -128,7 +128,7 @@ export default function AllCom({ data }) {
      }
       </section> 
         {data.title9 && data.applications && data.applications.length > 0 && (
-          <section >
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
             <h2 >{data.title9}</h2>
             <ul className="list-disc pl-6">
               {data.applications.map((app, index) => (
@@ -140,7 +140,7 @@ export default function AllCom({ data }) {
         
 
         {data.conclusion && (
-          <section >
+          <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
             <h2 >Conclusion</h2>
             <p>{data.conclusion}</p>
           </section>

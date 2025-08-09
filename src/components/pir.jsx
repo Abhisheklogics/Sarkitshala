@@ -1,11 +1,17 @@
 import pir from '../../public/images/pir.webp'
 import Image from 'next/image';
-import { LensCard } from './LensCard';
+
 export default function PIRSensorTutorial() {
   return (
     <div className="articleContainer md:ml-0 ml-[-30px]">
       <h1 className="headingClass">Interfacing Arduino with PIR Sensor</h1>
-      <LensCard image={pir}/>
+      <Image src={pir} 
+        alt="Pir sensor Projects at Sarkitshala"
+          width={800}
+          height={900}
+          className="mx-auto rounded"
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
+      />
   <section className="sectionHeading ">
       <p className="paragraphText">
         Ever wished your Arduino could act like a tiny security guard who never blinks? Meet the PIR sensor—a clever little gadget that detects motion faster than your cat spots a snack. In this DIY electronics experiment, you’ll learn how to interface an Arduino with a PIR (Passive Infrared) sensor to create your very own motion detection system. Whether you’re a curious kid or a seasoned tinkerer, this project will show you how a humble sensor can transform ordinary circuits into smart guardians. From spotting sneaky intruders to automating lights, this tutorial makes motion sensing both fun and surprisingly easy. Ready to give your Arduino a sixth sense? Let’s get moving!

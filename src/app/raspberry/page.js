@@ -20,7 +20,7 @@ export const metadata = {
 
 export default function RaspberryPiPage() {
   return (
-    <main  className="articleContainer">
+    <main  className="articleContainer  mt-10 md:mt-0   w-full md:ml-0">
       <header className="text-center">
         <h1>
           Complete Raspberry Pi Setup & Projects Guide

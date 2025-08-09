@@ -32,18 +32,18 @@ export default async function Page(){
 
 return(
 
-    <div className="articleContainer mt-20 md:ml-[230px] w-[800px]  ">
+    <div className="articleContainer  mt-20 md:mt-20  w-[90%] md:w-[70%] md:ml-40  ">
     
     <h1 className="text-4xl md:mt-24 md:mb-[50px] font-semibold mt-32 text-center">NVIDIA Jetson Nano Developer Kit</h1>
   <Image src={Image1} height={500} width={730}  className=' md:mt-4 mt-4' alt='jetson Image'/>
-    <div className="  max-w-4xl  p-6 rounded  "> 
+    <div className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm"> 
     <p className="text-lg    ">The NVIDIA® Jetson Nano™ Developer Kit is a small AI computer for makers, learners, and developers. After following along with this brief guide, you'll be ready to start building practical AI applications, cool AI robots, and more. </p>
    <p className="text-lg mt-2  ">The NVIDIA Jetson Nano Developer Kit is a compact, yet powerful single-board computer (SBC) designed for AI, deep learning, and edge computing applications. It provides GPU acceleration at a low cost and power consumption, making it ideal for robotics, computer vision, IoT, and AI-based embedded systems.</p>
    <Image src={j1} height={500} width={730}  className=' md:mt-4 mt-4' alt='jetson Image'/>
     </div>
   
    {/* Components Requirement */}
-    <div className=" max-w-4xl">
+    <div className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
     <h2 className="font-semibold text-2xl mb-2">Components Required</h2>
     <ol className="list-decimal pl-5">
     
@@ -60,7 +60,7 @@ return(
 </div>
 
 {/* KeyFeatures[0] */}
-<div className="">
+<div className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
 <h2 className="font-semibold text-2xl mb-2">Key Features</h2>
 <p className=""><span className='font-semibold'>1.</span> CUDA-X AI Acceleration: Powered by a 128-core Maxwell GPU, enabling real-time AI inference.</p>
 <p><span className='font-semibold'>2.</span> Quad-Core CPU: ARM Cortex-A57 processor for efficient multi-threaded computing.</p>
@@ -76,7 +76,7 @@ return(
   <h2 className="font-semibold text-2xl mb-2">Technical Specifications</h2>
 
   {/* Table */}
-  <div className="">
+  <div className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
         <table className="w-full border border-gray-300">
             <thead>
                 <tr >
@@ -139,7 +139,7 @@ return(
     </div>
 
 {/* "ST3": "Jetson Nano Developer Kit Components", */}
-<div className="">
+<div className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
   <h2 className="">Technical Specifications  </h2>
   <h3>Jetson Nano Developer Kit Components</h3>
   <ol className="list-decimal pl-5">
@@ -155,7 +155,7 @@ return(
 
 
 {/* "ST4": "JetPack SDK - The Software Powerhouse" */}
-<div className="">
+<div className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
   <h2 className="">JetPack SDK - The Software Powerhouse</h2>
   <ol className="list-decimal pl-5">
   
@@ -170,7 +170,7 @@ return(
 
 
   {/* "ST5": "Power Supply Options", */}
-  <div className="">
+  <div className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
   <h2 className="">Power Supply Options</h2>
   <ol className="list-decimal pl-5">
  
@@ -188,7 +188,7 @@ return(
   </div>
  
   {/* "ST6": "Camera Support", */}
-  <div className="">
+  <div className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
   <h2 className="">Camera Support</h2>
   <ol className="list-decimal pl-5">
   
@@ -201,7 +201,7 @@ return(
   </div>
 
  
-  <div className="">
+  <div className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
   <h2 className="">Connectivity & Expansion</h2>
   <ol className="list-decimal pl-5">
  
@@ -213,7 +213,7 @@ return(
   </div>
 
   {/* "ST8": "Performance & AI Capabilities", */}
- <div className="">
+ <div className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
   <h2 className="">Performance & AI Capabilities</h2>
   <div class="w-full max-w-3xl bg-white shadow-lg overflow-hidden">
         <table class="w-full border border-gray-300">

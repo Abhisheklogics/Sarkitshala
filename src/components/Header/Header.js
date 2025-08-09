@@ -14,7 +14,7 @@ export default function Header() {
     { href: "/", label: "Home" },
     { href: "/ai-tools", label: "AI-Tools" },
     { href: "/jetson", label: "Jetson" },
-    { href: "/stm32-microcontroller", label: "STM32" },
+    { href: "/stm32-microcontroller-setup-guide", label: "STM32" },
     { href: "https://iotsimulation-tool.vercel.app/", label: "Simulation", external: true },
     { href: "/hindicompiler", label: "हिंदी में कोड" },
     { href: "https://codeeditor-five.vercel.app/", label: "Compilers", external: true },
@@ -74,7 +74,7 @@ export default function Header() {
 
             <ul className="absolute left-0 mt-3 w-56 rounded-lg bg-zinc-900/95 border border-gray-700 shadow-xl opacity-0 scale-95 invisible group-hover:visible group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 divide-y divide-gray-700 z-50">
               {iotLinks.map(link => (
-                <li key={link.href} className="px-4 py-2 ">
+                <li key={link.href} className="px-4 py-4 ">
                   <NavLink {...link} />
                 </li>
               ))}

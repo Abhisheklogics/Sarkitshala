@@ -57,15 +57,16 @@ export default function ESPSetupPage() {
           className="rounded-lg mx-auto"
           loading="lazy"
         />
-
+<section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
         <p className=''>
           ESP32 is one of the most popular microcontrollers for IoT and embedded projects. This guide covers
           everything you need to get started — from hardware setup to Wi-Fi and Bluetooth programming.
           Whether you’re a beginner or an expert, this page will help you build powerful IoT projects with ESP32.
         </p>
+        </section>
 
         {/* Section: Why ESP32? */}
-        <section className=''>
+        <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
           <h2 className=''>Why Choose ESP32 for Your Projects?</h2>
           <ul className="list-disc list-inside  space-y-2">
             <li>Dual-core 240MHz processor for efficient multitasking</li>
@@ -78,7 +79,7 @@ export default function ESPSetupPage() {
         </section>
 
         {/* Section: Hardware Setup */}
-        <section className=''>
+        <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
           <h2 className=''>ESP32 Hardware Setup</h2>
           <p className=" mb-4">
             To start your ESP32 journey, connect your ESP32 development board to your PC using a USB cable.
@@ -119,7 +120,7 @@ export default function ESPSetupPage() {
         </section>
 
         {/* Section: Basic ESP32 Wi-Fi Project */}
-        <section className=''>
+        <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
           <h2 className=''>Basic ESP32 Wi-Fi Connection Example</h2>
           <pre className="bg-gray-100 p-4 rounded overflow-auto text-sm font-mono ">
             {`
@@ -155,7 +156,7 @@ void loop() {
         </section>
 
         {/* Section: Project Ideas */}
-        <section className=''>
+        <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
           <h2 className=''>Top ESP32 Project Ideas</h2>
           <ul className="list-disc list-inside  space-y-2">
             <li>Home Automation System using ESP32 & MQTT</li>
@@ -167,7 +168,7 @@ void loop() {
         </section>
 
         {/* Section: FAQs (for SEO Rich Snippet) */}
-        <section className=''>
+        <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
           <h2 className=''>Frequently Asked Questions (FAQs)</h2>
           <dl className="space-y-4 ">
             <dt className="font-semibold">What is ESP32?</dt>
