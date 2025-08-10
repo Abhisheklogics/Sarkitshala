@@ -8,7 +8,7 @@ export default function AllCom({ data }) {
   
   return (
     <>
-    <div className="articleContainer mt-12 md:mt-0 ml-[-43px] md:ml-0">
+    <div className="articleContainer  mt-10 md:mt-0 ml-[-30px]   md:ml-0">
   <h1 className="">{data.mainTitle}</h1>
   {data.image1 && <Image src={data.image1} height={800} width={740} className='md:ml-1 md:mt-4'/>}
 

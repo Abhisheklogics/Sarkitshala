@@ -51,8 +51,7 @@ body {
 }
 
 
- /* === Container for Blog/Experiment Pages === */
-/* === Global Layout === */
+
 .layout-wrapper {
   display: grid;
   grid-template-columns: 1fr;
@@ -205,7 +204,7 @@ body {
 
 .main-content {
   max-width: 85rem;
-  width: 85%;
+ 
   margin: auto;
  
   border-radius: 1rem;
@@ -248,16 +247,8 @@ body {
   --transition-fast: 0.3s ease-in-out;
 }
 
-/* === Light Mode (via class) === */
-.light {
-  --clr-bg: #f8fafc;
-  --clr-bg-section: #f1f5f9;
-  --clr-card: #ffffff;
-  --clr-card-glare: #d1d5db;
 
-  --clr-text-primary: #1e293b;
-  --clr-text-secondary: #4b5563;
-}
+
 
 html {
   scroll-behavior: smooth;
@@ -270,15 +261,7 @@ html {
   --font-body: 'Inter', sans-serif;
   --font-mono: 'Fira Code', 'JetBrains Mono', monospace;
 
-  /* Light Mode Colors */
-  --light-bg: #fefefe;
-  --light-text: #1e293b;
-  --light-secondary: #64748b;
-  --light-card: #ffffff;
-  --light-border: #e2e8f0;
-  --light-accent: #3b82f6;
-  --light-accent-light: #60a5fa;
-  --light-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
+
 
   /* Dark Mode Colors */
   --dark-bg: #0f172a;
@@ -291,19 +274,7 @@ html {
   --dark-shadow: 0 8px 20px rgba(0, 0, 0, 0.45);
 }
 
-/* Default Theme Variables */
 
-
-html[data-theme="dark"] {
-  --clr-bg: var(--dark-bg);
-  --clr-text: var(--dark-text);
-  --clr-secondary: var(--dark-secondary);
-  --clr-card: var(--dark-card);
-  --clr-border: var(--dark-border);
-  --clr-accent: var(--dark-accent);
-  --clr-accent-light: var(--dark-accent-light);
-  --clr-shadow: var(--dark-shadow);
-}
 
 body {
   background-color: var(--clr-bg);
@@ -322,7 +293,7 @@ body {
   border-radius: 1.25rem;
   box-shadow: var(--clr-shadow);
   transition: background 0.3s, color 0.3s;
-  max-width: 960px;
+  
  
 }
 

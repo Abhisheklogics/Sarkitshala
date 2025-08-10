@@ -36,20 +36,11 @@ const Footer = () => {
                 Privacy Policy
               </Link>
             </li>
-            <li>
-              <Link href="/terms-conditions" className="hover:text-blue-600 transition">
-                Terms & Conditions
-              </Link>
-            </li>
-            <li>
-              <Link href="/disclaimer" className="hover:text-blue-600 transition">
-                Disclaimer
-              </Link>
-            </li>
+          
           </ul>
         </div>
 
-        {/* Tagline or Newsletter Placeholder */}
+       
         <div>
           <h2 className="text-lg font-semibold mb-4 text-white">Sarkitshala Updates</h2>
           <p className="text-sm text-white">
