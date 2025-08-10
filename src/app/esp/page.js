@@ -44,7 +44,7 @@ export default function ESPSetupPage() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(metadata.structuredData) }}
       />
 
-      <main className="articleContainer  mt-10 md:mt-0  md:ml-0 ">
+      <main className="articleContainer  mt-10 md:mt-8 md:w-[90%] md:ml-0 ">
         <h1 className='text-center text-lg md:text-2xl  font-bold mb-3'>
           Complete ESP32 Setup & Projects Guide
         </h1>

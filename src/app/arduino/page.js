@@ -67,7 +67,7 @@ export default function Page() {
 
 
   return (
-    <div className="articleContainer mt-20  md:ml-[200px]">
+    <div className="articleContainer mt-20 md:w-[70%] md:ml-[200px]">
       <main className='' >
         <div>
           <h1 id="Arduino" >

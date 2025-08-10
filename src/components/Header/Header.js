@@ -74,7 +74,7 @@ export default function Header() {
 
             <ul className="absolute left-0 mt-3 w-56 rounded-lg bg-zinc-900/95 border border-gray-700 shadow-xl opacity-0 scale-95 invisible group-hover:visible group-hover:opacity-100 group-hover:scale-100 transition-all duration-300 divide-y divide-gray-700 z-50">
               {iotLinks.map(link => (
-                <li key={link.href} className="px-4 py-4 ">
+                <li key={link.href} className="px-4 py-2 ">
                   <NavLink {...link} />
                 </li>
               ))}

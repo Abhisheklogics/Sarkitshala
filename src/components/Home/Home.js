@@ -139,36 +139,36 @@ const testimonials = [
 
 export function HomePage() {
   return (
-    <main className=" text-gray-100">
+    <main className="  bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 text-gray-100">
       
      
       <section className="relative mt-28 px-4 sm:px-6 max-w-7xl mx-auto">
         <TextGenerateEffect words={words} />
         <div className="grid grid-cols-1 sm:mt-6 mt-10 md:grid-cols-2 gap-10 md:gap-45">
-          <div className="sm:w-[47rem] rounded-xl overflow-hidden shadow-md">
-            <ImagesSlider
-              className="h-[13rem] md:h-[26rem] rounded-xl"
-              images={images.map((img) => img.src)}
-            >
-              <motion.div
-                initial={{ opacity: 0, y: -80 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6 }}
-                className="z-50 flex justify-center items-center h-full w-full"
-              >
-                <div className="absolute inset-0 z-40">
-                  {images.map((img, index) => (
-                    <Link
-                      key={index}
-                      href={img.href}
-                      className="absolute inset-0 block w-full h-full"
-                      
-                    />
-                  ))}
-                </div>
-              </motion.div>
-            </ImagesSlider>
-          </div>
+         <div className="sm:w-[47rem] rounded-xl overflow-hidden shadow-md">
+  <ImagesSlider
+    className="h-[13rem] md:h-[26rem] rounded-xl"
+    images={images.map((img) => img.src)}
+  >
+    {images.map((img, index) => (
+      <motion.div
+        key={index}
+        initial={{ opacity: 0, y: -80 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="z-50 flex justify-center items-center h-full w-full"
+      >
+        <Link
+          href={img.href}
+          className="block w-full h-full"
+        >
+          {/* Optional: agar tum image dikhana chahte ho yahaan */}
+        </Link>
+      </motion.div>
+    ))}
+  </ImagesSlider>
+</div>
+
           <div className="w-full rounded-xl overflow-hidden">
             <RecentPosts />
           </div>
