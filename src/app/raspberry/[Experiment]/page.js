@@ -94,7 +94,7 @@ export default async function Page({ params }) {
       if(data)
       {
         return (
-    <div className="articleContainer  mt-10 md:mt-0 ml-[-30px] md:ml-0">
+    <div className="articleContainer  mt-10 md:mt-8  w-[90%]  md:ml-0">
       
       <h1 >{data.title}</h1>
 

@@ -6,7 +6,7 @@ const LEDArduino = ({data}) => {
   return (
     <>  
     
-     <div className="articleContainer">
+     <div className="articleContainer mt-12 md:mt-8  w-[90%]  ml-[10px]">
       <h1>Interfacing of LED with Arduino</h1>
       <Image src={data.image1} height={400} width={500} className="md:ml-28" />
       <section className="">
