@@ -32,7 +32,7 @@ export default async function Page(){
 
 return(
 
-    <div className="articleContainer  mt-20 md:mt-20  w-[90%] md:w-[70%] md:ml-40  ">
+    <div className="articleContainer  mt-20 md:mt-20   md:w-[70%] md:ml-52 ">
     
     <h1 className="text-4xl md:mt-24 md:mb-[50px] font-semibold mt-32 text-center">NVIDIA Jetson Nano Developer Kit</h1>
   <Image src={Image1} height={500} width={730}  className=' md:mt-4 mt-4' alt='jetson Image'/>
@@ -42,7 +42,7 @@ return(
    <Image src={j1} height={500} width={730}  className=' md:mt-4 mt-4' alt='jetson Image'/>
     </div>
   
-   {/* Components Requirement */}
+  
     <div className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
     <h2 className="font-semibold text-2xl mb-2">Components Required</h2>
     <ol className="list-decimal pl-5">
