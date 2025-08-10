@@ -136,7 +136,7 @@ export default function Header() {
               </svg>
             </button>
             <ul
-              className={`mt-2 pl-4 border-l border-gray-600 text-sm space-y-2 transition-all ${
+              className={`mt-2 pl-4 border-l border-gray-600 text-sm space-y-4 transition-all ${
                 mobileIotOpen ? "max-h-96" : "max-h-0 overflow-hidden"
               }`}
             >

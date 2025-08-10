@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <div className="articleContainer">
+    <div className="articleContainer mt-20  ">
       <h1 className="text-3xl font-bold mb-4 text-blue-700 text-center">Welcome to IoT Protocols</h1>
 
       <p >
