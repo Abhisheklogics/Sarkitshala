@@ -32,7 +32,7 @@ const words = 'Welcome To IOT best platform Sarkitshala';
 const images = [
   { src: image1.src, href: '/arduino' },
   { src: image2.src, href: '/jetson' },
-  { src: image4.src, href: '/arduino/lcd' },
+  { src: image4.src, href: '/arduino' },
   { src: image5.src, href: '/esp' },
   { src: image6.src, href: '/raspberry' },
   { src: image7.src, href: '/esp/dht11' },
@@ -139,7 +139,7 @@ const testimonials = [
 
 export function HomePage() {
   return (
-    <main className="  bg-linear-to-r from-indigo-500 via-purple-500 to-pink-500 text-gray-100">
+    <main className="   text-gray-100">
       
      
       <section className="relative mt-28 px-4 sm:px-6 max-w-7xl mx-auto">
