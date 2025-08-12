@@ -39,8 +39,8 @@ export default function ContactPage() {
 
 
   return (
-    <div className="max-w-xl mx-auto mt-28 p-6 bg-white shadow-md rounded-lg border border-gray-200">
-      <h2 className="text-2xl font-bold mb-4 text-blue-700">Send Us a Suggestion</h2>
+    <div className="articleContainer mt-20 md:ml-[400px] xl:ml-[500px]">
+      <h2 className="text-2xl font-bold mb-4 ">Send Us a Suggestion</h2>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">
         <input
@@ -50,7 +50,7 @@ export default function ContactPage() {
           onChange={(e) => setEmail(e.target.value)}
           required
           placeholder="Your email"
-          className="p-3 border text-black rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="p-3 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         />
 
         <textarea
@@ -60,7 +60,7 @@ export default function ContactPage() {
           required
           placeholder="Your message"
           rows={6}
-          className="p-3 text-black border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+          className="p-3  border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
         ></textarea>
 
         <button
