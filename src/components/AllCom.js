@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import { CodeBlock } from "./ui/code-block";
+const CodeBox = dynamic(() => import('@/components/code.jsx'));
 import   '../app/globals.css'
 
 
@@ -119,12 +119,7 @@ export default function AllCom({ data }) {
     <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm"> 
               <h3  id="Code"> Arduino Code</h3>    
   {data.code && 
-  <CodeBlock
-         language="c"     
-           filename=""
-         highlightLines={[9, 13, 14, 18]}
-          code={data.code.replace(/\\n/g, '\n')} 
-       />
+ <CodeBox code={data.code.replace(/\\n/g, '\n')} language={'cpp'} />
      }
       </section> 
         {data.title9 && data.applications && data.applications.length > 0 && (

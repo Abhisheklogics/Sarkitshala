@@ -183,7 +183,7 @@ export function HomePage() {
             <Link
               key={index}
               href={tech.href}
-              className="group bg-[#1e293b] rounded-2xl p-4 border border-gray-700 shadow-md hover:shadow-xl transition-all"
+              className="group bg-[#141a33] rounded-2xl p-4 border border-gray-700 shadow-md hover:shadow-xl transition-all"
             >
               <div className="overflow-hidden rounded-xl mb-3">
                 <Image
@@ -195,7 +195,7 @@ export function HomePage() {
                 />
               </div>
               <h3 className="text-lg font-semibold">{tech.title}</h3>
-              <p className="text-sm text-gray-400 mt-1">{tech.desc}</p>
+              <p className="text-sm text-gray-300 mt-1">{tech.desc}</p>
             </Link>
           ))}
         </div>
