@@ -1,7 +1,6 @@
 import Image from "next/image";
 
-const CodeBox = dynamic(() => import('@/components/code.jsx'));
-import   '../app/globals.css'
+import CodeBox from './code.jsx'
 
 
 export default function AllCom({ data }) {
