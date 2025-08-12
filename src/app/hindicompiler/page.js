@@ -25,7 +25,7 @@ export default function Page() {
 
       <div className="w-full h-[80vh]">
         <iframe
-          src="https://hindilanguage.vercel.app/"
+          src="https://hindicoding.netlify.app/"
           className="w-full h-full border-0 rounded"
           allowFullScreen
         ></iframe>
