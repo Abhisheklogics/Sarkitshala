@@ -201,16 +201,6 @@ export function HomePage() {
         </div>
       </section>
 
- <div className="relative w-full pb-[56.25%] overflow-hidden">
-  <iframe
-    className="absolute top-10 w-full ml-1 h-full"
-    src="https://www.youtube.com/embed/dsrhZw5_fs0?autoplay=1&mute=1&loop=1&playlist=dsrhZw5_fs0"
-    title="YouTube video player"
-    frameBorder="0"
-    allow="autoplay; encrypted-media"
-    allowFullScreen
-  ></iframe>
-</div>
 
 
 
