@@ -6,7 +6,7 @@ const CodeBox = dynamic(() => import('@/components/code.jsx'));
 
 function LoRaExperimentCom({ data }) {
   return (
-    <div  className="articleContainer">
+    <div  className="articleContainer w-[90%]">
       <h1 >LoRa/LoRaWAN Communication</h1>
 
       <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
@@ -95,7 +95,7 @@ function LoRaExperimentCom({ data }) {
 }
 function Lwm2mExperimentCom({ data }) {
   return (
-    <div className="articleContainer">
+    <div className="articleContainer w-[90%]">
       <h1 className="text-3xl font-bold text-center mb-6">LWM2M with ESP32 using Eclipse Leshan</h1>
 
       
@@ -181,7 +181,7 @@ function Lwm2mExperimentCom({ data }) {
 }
 function ProtocolsCom({ data }) {
   return (
-    <div className="articleContainer mt-14 ml-[-50px] md:mt-10 md:ml-0">
+    <div className="articleContainer mt-14 w-[90%] md:mt-10 md:ml-0">
       <h1 className="text-3xl font-bold text-center mb-6 ">{data.title}</h1>
 
       <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
@@ -239,7 +239,7 @@ function ProtocolsCom({ data }) {
 }
 function WifiEsp32RestApi({ data }) {
   return (
-    <div className="articleContainer">
+    <div className="articleContainer w-[90%]">
       <h1 className="text-3xl font-bold mb-2 text-center">{data.title}</h1>
       <section className="mb-6 p-4 rounded-lg border border-gray-300 shadow-sm">
       <p className="-600 mb-6">{data.objective}</p>
@@ -285,7 +285,7 @@ function WifiEsp32RestApi({ data }) {
 
 function MqttEsp32PubSubClient  ({data}) {
   return (
-    <div className="articleContainer">
+    <div className="articleContainer w-[90%]">
       <h1 className="text-3xl font-bold mb-2 text-center">{data.title}</h1>
       <p className="-600 mb-6">{data.shortDesc}</p>
 
@@ -322,7 +322,7 @@ function MqttEsp32PubSubClient  ({data}) {
 
 function XmppRaspberryPiSleekxmpp() {
   return (
-    <div  className="articleContainer">
+    <div  className="articleContainer w-[90%]">
       <h1 className="text-3xl font-bold mb-2 text-center">
         XMPP Implementation: Raspberry Pi using SleekXMPP Library for IoT Communication
       </h1>
