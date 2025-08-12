@@ -15,9 +15,9 @@ export default function Header() {
     { href: "/ai-tools", label: "AI-Tools" },
     { href: "/jetson", label: "Jetson" },
     { href: "/stm32-microcontroller-setup-guide", label: "STM32" },
-    { href: "https://iotsimulation-tool.vercel.app/", label: "Simulation", external: true },
+    { href: "https://iotsimulation-tool.netlify.app/", label: "Simulation", external: true },
     { href: "/hindicompiler", label: "हिंदी में कोड" },
-    { href: "https://codeeditor-five.vercel.app/", label: "Compilers", external: true },
+    { href: "https://likhocode.netlify.app/", label: "Compilers", external: true },
   ];
 
   const iotLinks = [
