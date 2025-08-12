@@ -1,14 +1,14 @@
 import pir from '../../public/images/pir.webp'
 import Image from 'next/image';
-
+import CodeBox from './code';
 export default function PIRSensorTutorial() {
   return (
-    <div className="articleContainer md:ml-0 ml-[-30px]">
+    <div className="articleContainer md:ml-0 mt-20 ml-[-30px] w-[90%]">
       <h1 className="headingClass">Interfacing Arduino with PIR Sensor</h1>
       <Image src={pir} 
         alt="Pir sensor Projects at Sarkitshala"
-          width={800}
-          height={900}
+          width={700}
+          height={600}
           className="mx-auto rounded"
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 800px"
       />
@@ -66,8 +66,8 @@ export default function PIRSensorTutorial() {
 
       <section  className="sectionHeading ">
         <h2 className="text-2xl font-semibold text-indigo-600 mb-4">Arduino Code</h2>
-        <pre className="bg-gray-900 text-white p-4 rounded-lg overflow-auto text-sm">
-{`int pirPin = 2;    // PIR sensor output pin
+  
+        <CodeBox code={`int pirPin = 2;    // PIR sensor output pin
 int ledPin = 13;   // Onboard LED
 
 void setup() {
@@ -87,8 +87,7 @@ void loop() {
     digitalWrite(ledPin, LOW);
   }
   delay(500);
-}`}
-        </pre>
+}`} language={'cpp'} />
       </section>
 {/* Code Explanation Section */}
 <section  className="sectionHeading ">
@@ -106,14 +105,13 @@ void loop() {
   {/* Setup Function */}
   <div >
     <h3 className="text-xl font-semibold text-blue-600 mb-2">2. setup() Function</h3>
-    <pre className="codeBox">
-{`void setup() {
+
+            <CodeBox code={`void setup() {
   pinMode(pirPin, INPUT);
   pinMode(ledPin, OUTPUT);
   Serial.begin(9600);
   Serial.println("PIR Motion Sensor Test");
-}`}
-    </pre>
+}`} language={'cpp'} />
     <ul className="list-disc pl-5 text-sm space-y-1  paragraphText">
       <li><strong>pinMode(pirPin, INPUT):</strong> Sets pin 2 as input for the PIR sensor.</li>
       <li><strong>pinMode(ledPin, OUTPUT):</strong> Sets pin 13 as output for the LED.</li>
@@ -125,8 +123,8 @@ void loop() {
   {/* Loop Function */}
   <div  >
     <h3 className="text-xl font-semibold text-blue-600 mb-2">3. loop() Function</h3>
-    <pre className="codeBox">
-{`void loop() {
+
+    <CodeBox code={`void loop() {
   int motionState = digitalRead(pirPin);
   if (motionState == HIGH) {
     Serial.println("Motion Detected!");
@@ -136,8 +134,7 @@ void loop() {
     digitalWrite(ledPin, LOW);
   }
   delay(500);
-}`}
-    </pre>
+}`} language={'cpp'} />
     <ul className="list-disc pl-5 text-sm space-y-1  paragraphText">
       <li><strong>digitalRead(pirPin):</strong> Reads the state of the PIR sensor.</li>
       <li><strong>if (motionState == HIGH):</strong> Checks if motion is detected.</li>

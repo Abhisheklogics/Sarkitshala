@@ -2,7 +2,7 @@
 import getData from "@/app/apiCall";
 import Image from "next/image";
 import dynamic from "next/dynamic";
-
+import PIRSensorTutorial from "@/components/pir";
 const CodeBox = dynamic(() => import('@/components/code.jsx'));
 const AllCom = dynamic(() => import('@/components/AllCom'))
 const LEDArduino =dynamic(()=>import('@/components/Led'))
@@ -22,6 +22,7 @@ export async function generateStaticParams() {
   }
 }
 export async function generateMetadata({ params }) {
+ await params
   const ExperimentData = await getData(`https://sarkitshala.com/api/experiments/ArduinoMeta`, params.Experiment);
 
   const experimentTitle = ExperimentData.title || "Arduino Experiment";
@@ -115,7 +116,7 @@ export async function generateMetadata({ params }) {
 export default async function Page({ params }) {
 
   const { Experiment } = await params; 
-
+console.log('exuuri is',Experiment)
  
   const data = await getData(`https://sarkitshala.com/api/experiments/Arduino`, Experiment);
  
@@ -124,6 +125,10 @@ export default async function Page({ params }) {
     
       return(<LEDArduino data={data} />)
     
+    }
+    if(Experiment == 'interfacing-pir-sensor')
+    {
+       return (<PIRSensorTutorial></PIRSensorTutorial>)
     }
     
 if(data['ExperimentId'] == '9' || data['ExperimentId'] == '11' || data['ExperimentId'] == '15' || data['ExperimentId']=='16' || data['ExperimentId']=='17' || data['ExperimentId']=='18' || data['ExperimentId']=='19'  || data['ExperimentId']=='20' || data['ExperimentId']=='21' 
