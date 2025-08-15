@@ -27,7 +27,7 @@ import img3 from '../../../public/images/raspTech.webp';
 import img4 from '../../../public/images/jetsonTech.webp';
 import img5 from '../../../public/images/droneTech.webp';
 
-const words = 'Welcome To IOT best platform Sarkitshala';
+const words = 'Welcome to Sarkitshala — The Best IoT Learning Platform';
 
 const images = [
   { src: image1.src, href: '/arduino' },
@@ -143,6 +143,7 @@ export function HomePage() {
       
      
       <section className="relative mt-28 px-4 sm:px-6 max-w-7xl mx-auto">
+        
         <TextGenerateEffect words={words} />
         <div className="grid grid-cols-1 sm:mt-6 mt-10 md:grid-cols-2 gap-10 md:gap-45">
          <div className="sm:w-[47rem] rounded-xl overflow-hidden shadow-md">
@@ -230,6 +231,7 @@ export function HomePage() {
       <footer className="mt-20">
         <Footer />
       </footer>
+      
     </main>
   );
 }

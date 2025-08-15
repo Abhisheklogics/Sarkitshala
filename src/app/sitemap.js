@@ -1,67 +1,53 @@
 export default async function sitemap() {
   try {
-    
-    let resArduino = await fetch(`https://sarkitshala.com/api/experiments/Arduino`);
-    let dataArduino = resArduino.ok ? await resArduino.json() : [];
-    let ardUrls = (dataArduino || []).map(({ slug }) => ({
-      url: `https://sarkitshala.com/arduino/${slug}`,
-      priority: 0.9,
-      changeFrequency: 'weekly',
-    }));
+    const categories = [
+      { key: 'Arduino', basePath: 'arduino', priority: 0.9 },
+      { key: 'Res', basePath: 'raspberry', priority: 0.9 },
+      { key: 'Esp', basePath: 'esp', priority: 0.8 }
+    ];
 
-    
-    let resRaspberry = await fetch(`https://sarkitshala.com/api/experiments/Res`);
-    let dataRaspberry = resRaspberry.ok ? await resRaspberry.json() : [];
-    let resUrls = (dataRaspberry || []).map(({ slug }) => ({
-      url: `https://sarkitshala.com/raspberry/${slug}`,
-      priority: 0.9,
-      changeFrequency: 'weekly',
-    }));
+    const fetchCategoryUrls = async ({ key, basePath, priority }) => {
+      const res = await fetch(`https://sarkitshala.com/api/experiments/${key}`, {
+        next: { revalidate: 3600 } 
+      });
+      const data = res.ok ? await res.json() : [];
+      return data.map(({ slug, updatedAt }) => ({
+        url: `https://sarkitshala.com/${basePath}/${slug}`,
+        priority,
+        changeFrequency: 'weekly',
+        lastModified: updatedAt || new Date().toISOString()
+      }));
+    };
 
-    
-    let resEsp = await fetch(`https://sarkitshala.com/api/experiments/Esp`);
-    let dataEsp = resEsp.ok ? await resEsp.json() : [];
-    let espUrls = (dataEsp || []).map(({ slug }) => ({
-      url: `https://sarkitshala.com/esp/${slug}`,
-      priority: 0.8,
-      changeFrequency: 'weekly',
-    }));
-   
+    const allCategoryUrls = await Promise.all(categories.map(fetchCategoryUrls));
 
     return [
      
-      {
-        url: `https://sarkitshala.com/arduino`,
+      ...categories.map(c => ({
+        url: `https://sarkitshala.com/${c.basePath}`,
         changeFrequency: 'weekly',
         priority: 1,
-      },
-      ...ardUrls,
-      {
-        url: `https://sarkitshala.com/raspberry`,
-        changeFrequency: 'weekly',
-        priority: 1,
-      },
-      ...resUrls,
-      {
-        url: `https://sarkitshala.com/esp`,
-        changeFrequency: 'weekly',
-        priority: 0.8,
-      },
-      ...espUrls,
+        lastModified: new Date().toISOString()
+      })),
+     
+      ...allCategoryUrls.flat(),
+      
       {
         url: `https://sarkitshala.com/about`,
         changeFrequency: 'monthly',
         priority: 0.7,
+        lastModified: new Date().toISOString()
       },
       {
         url: `https://sarkitshala.com/jetson`,
         changeFrequency: 'monthly',
         priority: 0.7,
+        lastModified: new Date().toISOString()
       }
     ];
 
   } catch (error) {
     console.error("Sitemap generation failed:", error);
-    return []; 
+    return [];
   }
 }
