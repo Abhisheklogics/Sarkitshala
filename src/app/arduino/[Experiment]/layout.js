@@ -38,22 +38,23 @@ const experiments = [
         { href: `/arduino/${'interfacing-metal-touch-sensor'}`, text: "Interfacing Metal Touch Sensor Module" },
         { href: `/arduino/${'interfacing-line-sensor-module'}`, text: "Interfacing Line Sensor Module" },
         { href: `/arduino/${'interfacing-linear-magnetic-hall-sensor'}`, text: "Interfacing Liner Magnetic Hall Sensor Module" },
-        { href: `/arduino/${'interfacing-thermostat-switch'}`, text: "Interfacing Digital Microcomputer Thermostat switch" },
 
+     
     ],
   },
   {
     label: "Intermediate Experiments",
     key: "intermediate",
     links: [
+              { href: `/arduino/${'interfacing-thermostat-switch'}`, text: "Interfacing Digital Microcomputer Thermostat switch" },
+
      { href: `/arduino/${'interfacing-humidity-controller'}`, text: "Interfacing Humidity Controller Module" },
         { href: `/arduino/${'interfacing-stainless-steel-probe-temperature-sensor'}`, text: "Interfacing Stainless Steel Probe Temperature Sensor" },
         { href: `/arduino/${'interfacing-thermocouple-sensor'}`, text: "Interfacing Thermocouple Sensor Module" },
         { href: `/arduino/${'interfacing-ir-temperature-sensor'}`, text: "Interfacing Non-contact IR Temperature Sensor Module" },
         { href: `/arduino/${'interfacing-analog-temperature-sensor'}`, text: "Interfacing Analog Temperature Sensor Module" },
         { href: `/arduino/${'interfacing-voice-recognition-module'}`, text: "Interfacing Voice Recognition Module" },
-        { href: `/arduino/${'interfacing-sound-detection-sensor'}`, text: "Interfacing Sound Detection Sensor Module" },
-     
+      
         { href: `/arduino/${'interfacing-analog-sound-sensor'}`, text: "Interfacing Analog Sound Sensor Module" },
         { href: `/arduino/${'interfacing-ambient-light-sensor'}`, text: "Interfacing Ambient Light Sensor Module" },
         { href: `/arduino/${'interfacing-light-intensity-sensor'}`, text: "Interfacing Light Intensity Sensor Module" },

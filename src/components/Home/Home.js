@@ -27,7 +27,7 @@ import img3 from '../../../public/images/raspTech.webp';
 import img4 from '../../../public/images/jetsonTech.webp';
 import img5 from '../../../public/images/droneTech.webp';
 
-const words = 'Welcome to Sarkitshala — The Best IoT Learning Platform';
+const words = 'Welcome to Sarkitshala — The Best IOT Learning Platform';
 
 const images = [
   { src: image1.src, href: '/arduino' },
