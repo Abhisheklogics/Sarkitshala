@@ -23,7 +23,7 @@
 
 html {
   scroll-behavior: smooth;
-background: linear-gradient(to right, #0c0a20);
+background:  #0c0a20;
 
   color: var(--clr-text-primary);
   
