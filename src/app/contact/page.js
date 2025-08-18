@@ -39,7 +39,7 @@ export default function ContactPage() {
 
 
   return (
-    <div className="articleContainer mt-20 md:ml-[400px] xl:ml-[500px]">
+    <div className="articleContainer mt-20 w-[60%] md:ml-[250px]">
       <h2 className="text-2xl font-bold mb-4 ">Send Us a Suggestion</h2>
 
       <form onSubmit={handleSubmit} className="flex flex-col gap-4">

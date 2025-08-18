@@ -6,7 +6,7 @@ import { ShootingStars } from "@/components/ui/shooting-stars";
 
 const pricingOptions = ["All", "Free", "Freemium", "Paid"];
 
-// Step 1: Add `category` to each tool
+
 const aiTools = [
   {
     "name": "Google Gemini",
@@ -728,7 +728,7 @@ const aiTools = [
 
 
 
-// Utility to group tools by category
+
 const groupByCategory = (tools) => {
   return tools.reduce((groups, tool) => {
     const cat = tool.category || "Other";
