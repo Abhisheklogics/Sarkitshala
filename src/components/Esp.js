@@ -4,8 +4,8 @@ const CodeBox = dynamic(() => import('@/components/code.jsx'));
 
 export default function Esp({ data }) {
   return (
-    <div className="articleContainer   mt-12 md:mt-8    md:w-[90%] md:ml-0">
-      
+    <div className="articleContainer   mt-12 md:mt-8    w-[90%] md:ml-2">
+      <main>
       <h1 >{data.mainTitle}</h1>
 
       {/* Title 1 - Introduction */}
@@ -121,6 +121,7 @@ export default function Esp({ data }) {
           <p>{data.conclusion}</p>
         </section>
       )}
+      </main>
     </div>
   );
 }

@@ -23,7 +23,7 @@
 
 html {
   scroll-behavior: smooth;
-background:  #0c0a20;
+background:  #070613;
 
   color: var(--clr-text-primary);
   
@@ -71,21 +71,22 @@ body {
   display: grid;
   grid-template-columns: 1fr;
   min-height: 100vh;
+   width: 80%;
   padding-top: 6rem;
   color: #e2e8f0;
-  background-color: #10002b;
+  
   transition: all 0.3s ease-in-out;
 }
 
 @media (min-width: 1024px) {
   .layout-wrapper {
-    grid-template-columns: 280px 1fr;
+    grid-template-columns: 260px 1fr;
   }
 }
 
 /* === Sidebar === */
 .sidebar-wrapper {
- background:  #1d1b38;
+ background:  #11091a;
 
   height: 80%;
   width: 320px;
@@ -210,8 +211,7 @@ body {
 
 
 .main-content {
- 
-   width: 90%;
+  max-width: 85rem;
  
   margin: auto;
  
@@ -240,8 +240,9 @@ body {
 
 /* Article Container */
 .articleContainer {
+    max-width: 85rem;
   padding: 1.5rem 2rem;
-  background: linear-gradient(to right, #0f0c29, #302b63, #302041);
+background: linear-gradient(to right, #0f0c29, #302b63, #302041);
 
   border-radius: 1.25rem;
   box-shadow: var(--clr-shadow);

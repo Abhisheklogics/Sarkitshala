@@ -50,7 +50,7 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-lg bg-[#0b1120]/70 border-b border-white/10 shadow-sm">
+    <header className=" fixed top-0 inset-x-0 z-50 backdrop-blur-lg bg-[#0b1120]/70 border-b border-white/10 shadow-sm">
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 lg:px-8">
         <Link href="/" className="flex items-center space-x-2 text-xl font-bold text-white">
           <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
