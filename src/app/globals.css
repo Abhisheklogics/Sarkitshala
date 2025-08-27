@@ -85,7 +85,7 @@ body {
 
 /* === Sidebar === */
 .sidebar-wrapper {
- background: linear-gradient(to right, #0f0c29, #302b63, #452369);
+ background:  #1d1b38;
 
   height: 80%;
   width: 320px;
@@ -210,7 +210,8 @@ body {
 
 
 .main-content {
-  max-width: 85rem;
+ 
+   width: 90%;
  
   margin: auto;
  
@@ -240,7 +241,7 @@ body {
 /* Article Container */
 .articleContainer {
   padding: 1.5rem 2rem;
-background: linear-gradient(to right, #0f0c29, #302b63, #302041);
+  background: linear-gradient(to right, #0f0c29, #302b63, #302041);
 
   border-radius: 1.25rem;
   box-shadow: var(--clr-shadow);
