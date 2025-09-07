@@ -9,9 +9,9 @@ import { InfiniteMovingCards } from '../ui/infinite-moving-cards';
 import { LampContainer } from '../ui/lamp';
 import Footer from '../Footer/Footer';
 import MyBook from '../ArdBook';
-
+import Search from "../Search/Search";
 import RecentPosts from '../recentPost/Recent';
-import Search from '../Search/Search';
+
 import { Spotlight } from '../ui/spotlight-new';
 import { BackgroundBeamsWithCollision } from '../ui/background-beams-with-collision';
 import image1 from '../../../public/images/Arduino_SKT.webp';
@@ -145,7 +145,7 @@ export function HomePage() {
       <BackgroundBeamsWithCollision>
         <Spotlight />
         <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 lg:px-8">
-          <div className="mt-24 md:mt-28 lg:mt-32 md:p-0 p-2">
+          <div className="mt-20 md:mt-24 lg:mt-32 md:p-0 p-2">
             <h1 className="md:font-extrabold text-white text-3xl text-3xl md:text-6xl leading-tight">
               Welcome to{" "}
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
@@ -158,13 +158,14 @@ export function HomePage() {
                 IoT Learners
               </span>
             </h2>
+             <div className="ml-4 mt-2">
+                        <Search />
+                      </div>
             <p className="mt-4 text-gray-200 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
               On this platform, you’ll find the best documentation about
               technologies, tutorials, and projects to boost your IoT journey.
             </p>
-            <div className="mt-4 w-full max-w-lg mx-auto">
-              <Search />
-            </div>
+            
           </div>
 
           {/* Category Buttons */}
@@ -189,7 +190,7 @@ export function HomePage() {
       </BackgroundBeamsWithCollision>
 
       {/* Image Slider + Recent Posts */}
-      <section className="relative mt-20 px-4 sm:px-6 max-w-7xl mx-auto">
+      <section className="relative md:mt-20 mt-4 px-4 sm:px-6 max-w-7xl mx-auto">
         <div className="grid grid-cols-1 sm:mt-6 mt-4 md:grid-cols-2 gap-10 md:gap-45">
           <div className="sm:w-[47rem] rounded-xl overflow-hidden shadow-md">
             <ImagesSlider

@@ -53,7 +53,7 @@ export default function Search() {
 
   return (
     <div ref={inputRef} className="relative w-full max-w-md mx-auto">
-  {/* Input Field */}
+
   <div className="relative">
     <input
       type="text"
@@ -74,14 +74,14 @@ export default function Search() {
       "
     />
 
-    {/* Search Icon */}
+   
     <div className="absolute left-4 top-1/2 transform -translate-y-1/2 text-gray-400 pointer-events-none">
       <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 103 10.5a7.5 7.5 0 0013.15 6.15z" />
       </svg>
     </div>
 
-    {/* Clear Button */}
+ 
     {search && (
       <button
         onClick={clearSearch}
@@ -93,7 +93,7 @@ export default function Search() {
     )}
   </div>
 
-  {/* Suggestions */}
+
   {applyData.length > 0 && showApplyData && (
     <div className="absolute left-0 right-0 top-full mt-2 bg-gray-800 border border-gray-600 rounded-lg shadow-lg z-50 max-h-64 overflow-y-auto backdrop-blur-md">
       {applyData.map((data) => (
