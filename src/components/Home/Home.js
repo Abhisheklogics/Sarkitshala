@@ -11,8 +11,9 @@ import Footer from '../Footer/Footer';
 import MyBook from '../ArdBook';
 
 import RecentPosts from '../recentPost/Recent';
-import { TextGenerateEffect } from '../ui/text-generate-effect';
-
+import Search from '../Search/Search';
+import { Spotlight } from '../ui/spotlight-new';
+import { BackgroundBeamsWithCollision } from '../ui/background-beams-with-collision';
 import image1 from '../../../public/images/Arduino_SKT.webp';
 import image2 from '../../../public/images/jetson_Sarkitshala.webp';
 import image4 from '../../../public/images/Bristo.webp';
@@ -27,7 +28,7 @@ import img3 from '../../../public/images/raspTech.webp';
 import img4 from '../../../public/images/jetsonTech.webp';
 import img5 from '../../../public/images/droneTech.webp';
 
-const words = 'Welcome to Sarkitshala — The Best IOT Learning Platform';
+
 
 const images = [
   { src: image1.src, href: '/arduino' },
@@ -139,37 +140,75 @@ const testimonials = [
 
 export function HomePage() {
   return (
-    <main className="   text-gray-100">
-      
-     
-      <section className="relative mt-28 px-4 sm:px-6 max-w-7xl mx-auto">
-        
-        <TextGenerateEffect words={words} />
-        <div className="grid grid-cols-1 sm:mt-6 mt-10 md:grid-cols-2 gap-10 md:gap-45">
-         <div className="sm:w-[47rem] rounded-xl overflow-hidden shadow-md">
-  <ImagesSlider
-    className="h-[13rem] md:h-[26rem] rounded-xl"
-    images={images.map((img) => img.src)}
-  >
-    {images.map((img, index) => (
-      <motion.div
-        key={index}
-        initial={{ opacity: 0, y: -80 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.6 }}
-        className="z-50 flex justify-center items-center h-full w-full"
-      >
-        <Link
-          href={img.href}
-          className="block w-full h-full"
-        >
-          {/* Optional: agar tum image dikhana chahte ho yahaan */}
-        </Link>
-      </motion.div>
-    ))}
-  </ImagesSlider>
-</div>
+    <main className="text-gray-100">
+      {/* Hero Section */}
+      <BackgroundBeamsWithCollision>
+        <Spotlight />
+        <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 lg:px-8">
+          <div className="mt-24 md:mt-28 lg:mt-32">
+            <h1 className="font-extrabold text-white text-3xl sm:text-5xl md:text-6xl leading-tight">
+              Welcome to{" "}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                Sarkitshala
+              </span>
+            </h1>
+            <h2 className="mt-4 font-semibold text-white text-xl sm:text-3xl md:text-4xl">
+              The Best Learning Platform for{" "}
+              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                IoT Learners
+              </span>
+            </h2>
+            <p className="mt-6 text-gray-200 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
+              On this platform, you’ll find the best documentation about
+              technologies, tutorials, and projects to boost your IoT journey.
+            </p>
+            <div className="mt-6 w-full max-w-lg mx-auto">
+              <Search />
+            </div>
+          </div>
 
+          {/* Category Buttons */}
+          <div className="hidden md:flex flex-wrap justify-center gap-4 mt-10">
+            {[
+              { name: "Arduino", href: "/arduino" },
+              { name: "Raspberry", href: "/raspberry" },
+              { name: "ESP32", href: "/esp" },
+              { name: "Protocols", href: "/iotProtocols" },
+              { name: "Jetson", href: "/jetson" },
+            ].map((item, idx) => (
+              <Link key={idx} href={item.href}>
+                <button className="bg-gray-800/70 backdrop-blur-md px-5 py-2 rounded-xl shadow-lg text-lg font-semibold transition-all duration-300 hover:bg-black hover:scale-105">
+                  <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+                    {item.name}
+                  </span>
+                </button>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </BackgroundBeamsWithCollision>
+
+      {/* Image Slider + Recent Posts */}
+      <section className="relative mt-20 px-4 sm:px-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+          <div className="w-full rounded-xl overflow-hidden shadow-md">
+            <ImagesSlider
+              className="h-[15rem] sm:h-[20rem] md:h-[26rem] rounded-xl"
+              images={images.map((img) => img.src)}
+            >
+              {images.map((img, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: -80 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6 }}
+                  className="z-50 flex justify-center items-center h-full w-full"
+                >
+                  <Link href={img.href} className="block w-full h-full" />
+                </motion.div>
+              ))}
+            </ImagesSlider>
+          </div>
           <div className="w-full rounded-xl overflow-hidden">
             <RecentPosts />
           </div>
@@ -177,9 +216,9 @@ export function HomePage() {
       </section>
 
       {/* Explore Technologies */}
-      <section className="relative mt-20 px-4 max-w-7xl mx-auto">
+      <section className="relative mt-24 px-4 max-w-7xl mx-auto">
         <LampContainer />
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mt-12">
           {exploreTechnologies.map((tech, index) => (
             <Link
               key={index}
@@ -192,7 +231,7 @@ export function HomePage() {
                   alt={tech.title}
                   width={300}
                   height={200}
-                  className="w-full h-48 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
+                  className="w-full h-44 sm:h-48 object-cover rounded-xl group-hover:scale-105 transition-transform duration-300"
                 />
               </div>
               <h3 className="text-lg font-semibold">{tech.title}</h3>
@@ -202,11 +241,8 @@ export function HomePage() {
         </div>
       </section>
 
-
-
-
-
-      <section className="mt-16 px-4 max-w-7xl mx-auto">
+      {/* Arduino Book */}
+      <section className="mt-20 px-4 max-w-7xl mx-auto">
         <h2 className="text-blue-400 text-3xl font-semibold text-center mb-6">
           Arduino Book
         </h2>
@@ -214,11 +250,11 @@ export function HomePage() {
       </section>
 
       {/* Testimonials */}
-      <section className="h-auto mt-16 rounded-md flex flex-col items-center justify-center overflow-hidden px-4 max-w-7xl mx-auto py-10">
-        <h2 className="text-blue-400 font-bold text-3xl sm:text-4xl mb-4 text-center">
+      <section className="mt-20 px-4 max-w-7xl mx-auto py-12">
+        <h2 className="text-blue-400 font-bold text-3xl sm:text-4xl mb-6 text-center">
           Latest Tech Insights
         </h2>
-        <div className="w-full max-w-6xl">
+        <div className="w-full max-w-6xl mx-auto">
           <InfiniteMovingCards
             items={testimonials}
             direction="right"
@@ -228,10 +264,9 @@ export function HomePage() {
       </section>
 
       {/* Footer */}
-      <footer className="mt-20">
+      <footer className="mt-20 border-t border-gray-800 py-10">
         <Footer />
       </footer>
-      
     </main>
   );
 }

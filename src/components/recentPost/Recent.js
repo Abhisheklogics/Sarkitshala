@@ -48,41 +48,44 @@ const RecentPosts = () => {
   }, [isUserInteracting]);
 
   return (
-   <div className="w-full max-w-[420px] h-[420px] bg-gradient-to-br from-[#1e293b] to-[#0f172a] rounded-2xl mx-auto md:mx-0 relative md:absolute grid grid-cols-1 md:ml-20 shadow-xl border border-gray-800 overflow-hidden transition-all duration-300">
-  {/* Header */}
-  <div className="sticky top-0 z-10 px-5 py-3 bg-[#0f172a] text-white font-bold text-lg md:text-xl rounded-t-2xl shadow-md flex items-center justify-between">
-    <span> Recent Posts</span>
+    <div className="w-full max-w-[420px] h-[420px] mx-auto md:mx-0 relative md:absolute md:ml-20 rounded-2xl shadow-2xl border border-gray-700 bg-gradient-to-br from-[#1e293b]/90 to-[#0f172a]/90 backdrop-blur-xl overflow-hidden transition-all duration-300">
+      {/* Header */}
+      <div className="sticky top-0 z-10 px-5 py-3 bg-gradient-to-r from-[#0f172a] to-[#1e293b] text-white font-bold text-lg md:text-xl rounded-t-2xl shadow-md flex items-center justify-between">
+        <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          Recent Posts
+        </span>
+      </div>
 
-  </div>
-
-  
-  <ul
-    ref={listRef}
-    className="h-[calc(100%-56px)] overflow-y-auto md:overflow-hidden  px-4 py-3 space-y-6 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent"
-    onMouseEnter={() => setIsUserInteracting(true)}
-    onMouseLeave={() => setIsUserInteracting(false)}
-    onTouchStart={() => setIsUserInteracting(true)}
-    onTouchEnd={() => setIsUserInteracting(false)}
-  >
-    {posts.map(({ id, slug, title, image }) => (
-      <Link key={id} href={`/${slug}`}>
-        <li className="flex items-center gap-4 rounded-xl p-3 bg-[#1e293b] hover:bg-[#334155] hover:shadow-md transition duration-200 text-white cursor-pointer active:scale-[0.98]">
-          <Image
+      {/* List */}
+      <ul
+        ref={listRef}
+        className="h-[calc(100%-56px)] overflow-y-auto md:overflow-hidden px-4 py-3 space-y-4 scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-transparent"
+        onMouseEnter={() => setIsUserInteracting(true)}
+        onMouseLeave={() => setIsUserInteracting(false)}
+        onTouchStart={() => setIsUserInteracting(true)}
+        onTouchEnd={() => setIsUserInteracting(false)}
+      >
+        {posts.map(({ id, slug, title, image }) => (
+          <Link key={id} href={`/${slug}`}>
+            <li className="flex items-center gap-4 rounded-xl p-3 bg-[#1e293b]/60 hover:bg-[#334155]/80 hover:shadow-lg transition-all duration-300 text-white cursor-pointer active:scale-[0.98]">
+              <Image
                 src={image}
                 alt={title}
                 width={60}
                 height={60}
-                className="rounded-md object-cover w-[60px] h-[60px]"
+                className="rounded-lg object-cover w-[60px] h-[60px] shadow-md"
               />
-          <p className="text-sm md:text-base  line-clamp-2">
-            {title}
-          </p>
-        </li>
-      </Link>
-    ))}
-  </ul>
-</div>
+              <p className="text-sm md:text-base font-medium leading-snug line-clamp-2">
+                {title}
+              </p>
+            </li>
+          </Link>
+        ))}
+      </ul>
 
+      {/* Scroll Fade Effect */}
+      <div className="absolute bottom-0 left-0 w-full h-12 bg-gradient-to-t from-[#0f172a] to-transparent pointer-events-none"></div>
+    </div>
   );
 };
 

@@ -23,7 +23,7 @@
 
 html {
   scroll-behavior: smooth;
-background:  #070613;
+background: rgb(2, 0, 12);
 
   color: var(--clr-text-primary);
   
