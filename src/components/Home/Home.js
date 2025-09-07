@@ -145,7 +145,7 @@ export function HomePage() {
       <BackgroundBeamsWithCollision>
         <Spotlight />
         <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 lg:px-8">
-          <div className="mt-20 md:mt-24 lg:mt-32 md:p-0 p-2">
+          <div className="mt-20  lg:mt-24 md:p-0 p-2">
             <h1 className="md:font-extrabold text-white text-3xl text-3xl md:text-6xl leading-tight">
               Welcome to{" "}
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">

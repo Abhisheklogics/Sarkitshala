@@ -5,7 +5,7 @@ export default function STM32SetupBlog() {
         <div className="max-w-4xl mx-auto">
           <header className="mb-8">
             <h1 className="text-4xl font-extrabold mb-2">
-              STM32 Setup — Step-by-step (English)
+              STM32 Setup — Step-by-step 
             </h1>
             <p className="text-gray-400">
               This guide is for beginners: covering hardware, toolchain, CubeMX/IDE,
