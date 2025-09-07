@@ -4,7 +4,7 @@ import CodeBox from './code.jsx';
 export default function AllCom({ data }) {
   return (
     <>
-      <div className="articleContainer mt-12 md:mt-4 w-[90%] ml-[10px] md:ml-0">
+      <div className="articleContainer mt-12 md:mt-2 ml-[10px] md:ml-0">
         {/* Main Title */}
         {data.mainTitle && <h1 className="text-3xl font-bold mb-4">{data.mainTitle}</h1>}
 

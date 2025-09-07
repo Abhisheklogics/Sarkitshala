@@ -160,7 +160,7 @@ if(data['ExperimentId'] == '9' || data['ExperimentId'] == '11' || data['Experime
   return (
     <>
   
-    <div className="articleContainer mt-12 md:mt-8  w-[90%]  ml-[10px]">
+    <div className="articleContainer mt-12 md:mt-8    ml-[10px]">
 
     
         <h1>{data.ExperimentName}</h1>
