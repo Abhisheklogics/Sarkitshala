@@ -49,19 +49,19 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 inset-x-0 z-50 backdrop-blur-lg bg-[#0b1120]/70 border-b border-white/10 shadow-md">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-3 md:px-6 lg:px-8">
+      <div className="mx-auto flex max-w-7xl items-center md:justify-center justify-between px-4 py-3 md:px-6 lg:px-8">
         {/* Logo */}
         <Link
           href="/"
           className="flex items-center space-x-1 text-xl font-extrabold"
         >
-          <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
+          <span className="md:ml-[-250px] bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
             Sarkitshala
           </span>
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="ml-[-100px] hidden md:flex items-center space-x-6">
+        <nav className=" hidden md:flex items-center  space-x-6">
           {/* IoT Dropdown */}
           <div className="relative group">
             <button

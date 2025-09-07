@@ -145,8 +145,8 @@ export function HomePage() {
       <BackgroundBeamsWithCollision>
         <Spotlight />
         <div className="relative z-10 flex flex-col items-center text-center px-4 sm:px-6 lg:px-8">
-          <div className="mt-24 md:mt-28 lg:mt-32">
-            <h1 className="font-extrabold text-white text-3xl sm:text-5xl md:text-6xl leading-tight">
+          <div className="mt-24 md:mt-28 lg:mt-32 md:p-0 p-2">
+            <h1 className="md:font-extrabold text-white text-3xl text-3xl md:text-6xl leading-tight">
               Welcome to{" "}
               <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
                 Sarkitshala
@@ -158,11 +158,11 @@ export function HomePage() {
                 IoT Learners
               </span>
             </h2>
-            <p className="mt-6 text-gray-200 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
+            <p className="mt-4 text-gray-200 text-base sm:text-lg md:text-xl max-w-2xl mx-auto">
               On this platform, you’ll find the best documentation about
               technologies, tutorials, and projects to boost your IoT journey.
             </p>
-            <div className="mt-6 w-full max-w-lg mx-auto">
+            <div className="mt-4 w-full max-w-lg mx-auto">
               <Search />
             </div>
           </div>
@@ -190,10 +190,10 @@ export function HomePage() {
 
       {/* Image Slider + Recent Posts */}
       <section className="relative mt-20 px-4 sm:px-6 max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div className="w-full rounded-xl overflow-hidden shadow-md">
+        <div className="grid grid-cols-1 sm:mt-6 mt-4 md:grid-cols-2 gap-10 md:gap-45">
+          <div className="sm:w-[47rem] rounded-xl overflow-hidden shadow-md">
             <ImagesSlider
-              className="h-[15rem] sm:h-[20rem] md:h-[26rem] rounded-xl"
+              className="h-[13rem] md:h-[26rem] rounded-xl"
               images={images.map((img) => img.src)}
             >
               {images.map((img, index) => (
