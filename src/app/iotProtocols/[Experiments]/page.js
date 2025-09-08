@@ -181,7 +181,7 @@ function Lwm2mExperimentCom({ data }) {
 }
 function ProtocolsCom({ data }) {
   return (
-    <div className="articleContainer mt-14 w-[90%] md:mt-10 md:ml-0">
+    <div className="articleContainer mt-14 w-[80%] md:mt-10 md:ml-0">
       <h1 className="text-3xl font-bold text-center mb-6 ">{data.title}</h1>
 
       <section className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">

@@ -196,7 +196,7 @@ export default function Page() {
               {[
                 { slug: 'interfacing-pir-sensor', text: 'Interfacing Arduino with PIR Sensor' },
                 { slug: 'interfacing-rgb-led', text: 'Interfacing RGB LED' },
-                { slug: 'interfacing-7-segment-display', text: 'Interfacing 7-Segment Display' },
+                { slug: 'interfacing-seven-segment-display', text: 'Interfacing 7-Segment Display' },
                 { slug: 'interfacing-ir-sensor', text: 'Interfacing IR Sensor' },
               ].map((item, idx) => (
                 <Link
