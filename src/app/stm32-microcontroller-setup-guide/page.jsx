@@ -1,13 +1,13 @@
 export default function STM32SetupBlog() {
   return (
     <>
-      <article className="articleContainer mt-20 md:ml-[100px] w-[90%]">
+      <article className="articleContainer mt-20 md:ml-[300px] md:w-[700px]">
         <div className="max-w-4xl mx-auto">
           <header className="mb-8">
             <h1 className="text-4xl font-extrabold mb-2">
               STM32 Setup — Step-by-step 
             </h1>
-            <p className="text-gray-400">
+            <p className="text-gray-100">
               This guide is for beginners: covering hardware, toolchain, CubeMX/IDE,
               example code, and debugging tips.
             </p>

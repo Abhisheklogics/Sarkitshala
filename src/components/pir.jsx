@@ -3,7 +3,7 @@ import Image from 'next/image';
 import CodeBox from './code';
 export default function PIRSensorTutorial() {
   return (
-    <div className="articleContainer md:ml-0 mt-10 ">
+    <div className="articleContainer md:ml-0 mt-10 w-[100%] ">
       <h1 className="headingClass">Interfacing Arduino with PIR Sensor</h1>
       <Image src={pir} 
         alt="Pir sensor Projects at Sarkitshala"
