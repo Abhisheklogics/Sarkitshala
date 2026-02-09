@@ -27,8 +27,6 @@ export default function Header() {
     { href: "/esp", label: "ESP32" },
     
     { href: "/raspberry", label: "Raspberry Pi" },
-
-    { href: "/iotProtocols", label: "Protocols" },
   ];
 
   const NavLink = ({ href, label, external = false }) => {
