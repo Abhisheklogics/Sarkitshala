@@ -334,3 +334,250 @@ body {
     max-width: 100%;
   }
 }
+
+/* ========== ROOT / GLOBAL ========== */
+:root {
+  --font-body: "Inter", sans-serif;
+  --font-mono: "Fira Code", monospace;
+  --clr-bg: #f8fafc;           /* Light background */
+  --clr-text: #1f2937;         /* Dark text */
+  --clr-accent: #3b82f6;       /* Blue accent */
+  --clr-secondary: #9333ea;    /* Purple accent */
+  --clr-border: #e5e7eb;       /* Light gray borders */
+  --clr-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--clr-bg);
+  color: var(--clr-text);
+  scroll-behavior: smooth;
+}
+
+/* ================= HEADER ================= */
+header {
+  background-color: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--clr-border);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 50;
+}
+
+header a {
+  transition: all 0.3s ease;
+}
+
+header .logo {
+  font-weight: 800;
+  font-size: 1.75rem;
+  background: linear-gradient(to right, var(--clr-accent), var(--clr-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header nav a {
+  color: var(--clr-text);
+  font-weight: 500;
+}
+
+header nav a:hover {
+  color: var(--clr-accent);
+}
+
+/* Dropdown */
+header nav .dropdown {
+  position: relative;
+}
+
+header nav .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid var(--clr-border);
+  border-radius: 0.75rem;
+  box-shadow: var(--clr-shadow);
+  padding: 0.5rem 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  min-width: 180px;
+  z-index: 40;
+}
+
+header nav .dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+}
+
+header nav .dropdown-menu a {
+  display: block;
+  padding: 0.5rem 1rem;
+  color: var(--clr-text);
+  font-weight: 500;
+}
+
+header nav .dropdown-menu a:hover {
+  background-color: var(--clr-accent);
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+/* ================= SEARCH BAR ================= */
+header .search-bar {
+  position: relative;
+  max-width: 300px;
+  width: 100%;
+  margin-left: 1rem;
+}
+
+header .search-bar input {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 2rem;
+  border: 1px solid var(--clr-border);
+  border-radius: 1rem;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  color: var(--clr-text);
+  transition: all 0.3s ease;
+}
+
+header .search-bar input:focus {
+  outline: none;
+  border-color: var(--clr-accent);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+}
+
+header .search-bar svg {
+  position: absolute;
+  top: 50%;
+  left: 0.75rem;
+  transform: translateY(-50%);
+  color: #9ca3af;
+}
+
+header .search-results {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid var(--clr-border);
+  border-radius: 0.75rem;
+  box-shadow: var(--clr-shadow);
+  max-height: 240px;
+  overflow-y: auto;
+  z-index: 40;
+}
+
+header .search-results a {
+  display: block;
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  color: var(--clr-text);
+}
+
+header .search-results a:hover {
+  background-color: var(--clr-accent);
+  color: #fff;
+  border-radius: 0.5rem;
+}
+
+/* ================= HERO ================= */
+.hero-section {
+  background: linear-gradient(to right, #eff6ff, #f0f9ff);
+  padding-top: 8rem;
+  text-align: center;
+  padding-bottom: 6rem;
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  background: linear-gradient(to right, var(--clr-accent), var(--clr-secondary));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.hero-section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--clr-text);
+  margin-bottom: 2rem;
+}
+
+.hero-section .category-buttons button {
+  padding: 0.75rem 1.5rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: #e0f2fe;
+  color: var(--clr-accent);
+}
+
+.hero-section .category-buttons button:hover {
+  background-color: var(--clr-accent);
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* ================= FEATURES / CARDS ================= */
+.card {
+  background-color: #ffffff;
+  border: 1px solid var(--clr-border);
+  border-radius: 1rem;
+  padding: 1rem;
+  transition: all 0.3s ease;
+  box-shadow: var(--clr-shadow);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.12);
+}
+
+.card img {
+  border-radius: 0.75rem;
+  transition: transform 0.3s ease;
+}
+
+.card:hover img {
+  transform: scale(1.05);
+}
+
+/* ================= FOOTER ================= */
+footer {
+  background: #f3f4f6;
+  padding: 4rem 1rem 2rem 1rem;
+  color: var(--clr-text);
+}
+
+footer a {
+  color: var(--clr-accent);
+  transition: all 0.3s ease;
+}
+
+footer a:hover {
+  color: var(--clr-secondary);
+}
+
+footer h1, footer h2 {
+  color: var(--clr-text);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 1024px) {
+  .hero-section h1 { font-size: 2rem; }
+  .hero-section h2 { font-size: 1.25rem; }
+  header .search-bar { max-width: 200px; }
+}
+
+@media (max-width: 640px) {
+  .hero-section h1 { font-size: 1.75rem; }
+  .hero-section h2 { font-size: 1.1rem; }
+  header .search-bar { max-width: 100%; margin-left: 0; margin-top: 0.5rem; }
+}
+
