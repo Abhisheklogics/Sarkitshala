@@ -13,7 +13,7 @@ export const metadata = {
 export default function Page() {
   return (
     <div className="articleContainer mt-10 md:mt-8  md:w-[90%] ">
-      <h1 className="text-3xl font-bold mb-4 text-blue-700 text-center">Welcome to IoT Protocols</h1>
+      <h1 className="text-3xl font-bold mb-4 text-white text-center">Welcome to IoT Protocols</h1>
 
       <p className="mb-3 p-4 rounded-lg border border-gray-300 shadow-sm">
         IoT (Internet of Things) devices need robust and efficient communication protocols to exchange data across networks. These protocols determine how devices communicate, how data is structured, and how reliable or secure that communication is. Below is an in-depth look at the most widely used IoT communication protocols.
